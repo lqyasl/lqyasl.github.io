@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>heloword</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="less 即css预处理器 vscode 编辑器 下载插件 easy less 声明编码集  @charset “utf-8”声明变量 声明变量(原始值类型) @bb:#ff0000;           使用变量    color:@bb; 声明变量（路劲类型） @img:”../images”;       使用变量    background-image:url(“@{img}/1.jpg”">
+<meta name="keywords" content="js vue node c5 css3 es6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="heloword">
+<meta property="og:url" content="http://yoursite.com/2019/04/16/less/index.html">
+<meta property="og:site_name" content="heloword">
+<meta property="og:description" content="less 即css预处理器 vscode 编辑器 下载插件 easy less 声明编码集  @charset “utf-8”声明变量 声明变量(原始值类型) @bb:#ff0000;           使用变量    color:@bb; 声明变量（路劲类型） @img:”../images”;       使用变量    background-image:url(“@{img}/1.jpg”">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-16T16:08:36.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="heloword">
+<meta name="twitter:description" content="less 即css预处理器 vscode 编辑器 下载插件 easy less 声明编码集  @charset “utf-8”声明变量 声明变量(原始值类型) @bb:#ff0000;           使用变量    color:@bb; 声明变量（路劲类型） @img:”../images”;       使用变量    background-image:url(“@{img}/1.jpg”">
+  
+    <link rel="alternate" href="/atom.xml" title="heloword" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="./source/css/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">heloword</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-less" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/16/less/" class="article-date">
+  <time datetime="2019-04-16T15:03:28.325Z" itemprop="datePublished">2019-04-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="less-即css预处理器"><a href="#less-即css预处理器" class="headerlink" title="less 即css预处理器"></a>less 即css预处理器</h4><ul>
+<li>vscode 编辑器 下载插件 easy less</li>
+<li>声明编码集  @charset “utf-8”<h4 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h4></li>
+<li>声明变量(原始值类型) @bb:#ff0000;           使用变量    color:@bb;</li>
+<li>声明变量（路劲类型） @img:”../images”;       使用变量    background-image:url(“@{img}/1.jpg”)</li>
+<li>声明变量(属性类型)   @ww:width;            使用变量    @{ww}:100px;<h4 id="混合方式"><a href="#混合方式" class="headerlink" title="混合方式"></a>混合方式</h4></li>
+<li>带默认参数     <pre><code>定义 .border-r(@radius:5px){        使用 .box{
+        border-radiis:@radius;                .border-r;         传参即.border-r(10px);
+     }                                     }
+</code></pre></li>
+<li>接收多个参数<pre><code>定义 .box-s(@x, @y, @blur, @color){        使用 .box{
+        box-shadow:@arguments;                    .box-s(3px,4px,5px,red)
+     }                                         }
+</code></pre><h4 id="color-函数-了解就行"><a href="#color-函数-了解就行" class="headerlink" title="color 函数 了解就行"></a>color 函数 了解就行</h4></li>
+</ul>
+<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><ul>
+<li>各种可以计算的都可以计算 包括颜色值</li>
+<li>支持运算符 +  -  *  /   即加减乘除<h4 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h4></li>
+<li>它用于将mixins分组在通用名称下。 </li>
+<li>使用命名空间可以避免名称冲突，并从外部封装mixin组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">定义：</span><br><span class="line">#bgcolor()&#123; 	// 加 () 默认不输出</span><br><span class="line">	background: #ffffff;</span><br><span class="line">    .a&#123;</span><br><span class="line">        color: #888888;</span><br><span class="line">        &amp;:hover&#123;</span><br><span class="line">            color: green;</span><br><span class="line">        &#125;</span><br><span class="line">        .b&#123;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">使用：</span><br><span class="line">.bgcolor1&#123;</span><br><span class="line">    background: yellow;</span><br><span class="line">    #bgcolor&gt;.a;    // &gt;符号表示选中混合中的每一个样式</span><br><span class="line">&#125;</span><br><span class="line">.bgcolor2&#123;</span><br><span class="line">    // #bgcolor&gt;.a&gt;.b;</span><br><span class="line">    #bgcolor .a .b;  // 省略写法：将&gt;换成空格即可</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="避免编译"><a href="#避免编译" class="headerlink" title="避免编译"></a>避免编译</h4><ul>
+<li>我们能在编译后的css文件中看到 它 编译计算之前的样子</li>
+<li>最终的编译计算由浏览器来完成</li>
+<li>css3中有这样一个函数calc()</li>
+<li><p>less里面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">	width:~&apos;calc(300px - 10px)&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译完的 css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">	width:calc(300px - 10px)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="important"><a href="#important" class="headerlink" title="!important"></a>!important</h4><ul>
+<li>css 样式中 用来提升优先级（最高）</li>
+<li>less 中 一样 常用来调试代码</li>
+<li>比如 某一段样式不起作用，不知道是继承还是覆盖等造成的</li>
+<li>给他加上 !important 还不起作用的话 就说明代码书写有误</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/16/less/" data-id="cjujzft150001tcumzi161nyy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/16/vuenote/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vue 学习笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/16/less/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/16/vuenote/">vue 学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/16/haha/">哈哈，棒棒哒</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/16/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Liu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
