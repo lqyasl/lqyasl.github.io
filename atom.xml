@@ -5,12 +5,12 @@
   <subtitle>好啊好啊</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://shulu520.com/"/>
   <updated>2019-04-16T17:34:42.378Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://shulu520.com/</id>
   
   <author>
-    <name>Liu</name>
+    <name>刘秋云</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>vue 学习笔记</title>
-    <link href="http://yoursite.com/2019/04/17/vuenote/"/>
-    <id>http://yoursite.com/2019/04/17/vuenote/</id>
+    <link href="https://shulu520.com/2019/04/17/vuenote/"/>
+    <id>https://shulu520.com/2019/04/17/vuenote/</id>
     <published>2019-04-17T12:00:21.954Z</published>
     <updated>2019-04-16T17:34:42.378Z</updated>
     
@@ -36,8 +36,8 @@
   
   <entry>
     <title>less 学习笔记</title>
-    <link href="http://yoursite.com/2019/04/17/less/"/>
-    <id>http://yoursite.com/2019/04/17/less/</id>
+    <link href="https://shulu520.com/2019/04/17/less/"/>
+    <id>https://shulu520.com/2019/04/17/less/</id>
     <published>2019-04-17T12:00:21.909Z</published>
     <updated>2019-04-16T17:33:50.916Z</updated>
     
@@ -54,8 +54,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/04/17/hello-world/"/>
-    <id>http://yoursite.com/2019/04/17/hello-world/</id>
+    <link href="https://shulu520.com/2019/04/17/hello-world/"/>
+    <id>https://shulu520.com/2019/04/17/hello-world/</id>
     <published>2019-04-17T12:00:21.871Z</published>
     <updated>2019-04-16T05:42:35.808Z</updated>
     
@@ -75,8 +75,8 @@
   
   <entry>
     <title>哈哈，棒棒哒</title>
-    <link href="http://yoursite.com/2019/04/17/haha/"/>
-    <id>http://yoursite.com/2019/04/17/haha/</id>
+    <link href="https://shulu520.com/2019/04/17/haha/"/>
+    <id>https://shulu520.com/2019/04/17/haha/</id>
     <published>2019-04-17T12:00:21.821Z</published>
     <updated>2019-04-16T06:16:23.650Z</updated>
     
