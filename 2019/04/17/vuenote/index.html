@@ -1,87 +1,13 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
+  
 
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="heloword" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。">
+  <title>vue 学习笔记 | heloword</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。">
 <meta name="keywords" content="js vue node c5 css3 es6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue 学习笔记">
@@ -100,234 +26,77 @@
 <meta name="twitter:title" content="vue 学习笔记">
 <meta name="twitter:description" content="人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。">
 <meta name="twitter:image" content="http://yoursite.com/2019/04/17/vuenote/vuenote_files/3.jpg">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2019/04/17/vuenote/">
-
-
-
-
-
-  <title>vue 学习笔记 | heloword</title>
   
-
-
-
-
-
-
-
-
+    <link rel="alternate" href="/atom.xml" title="heloword" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="[object Object]">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">heloword</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">heloword</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">好啊好啊</a>
+        </h2>
+      
     </div>
-      
-        <p class="site-subtitle">好啊好啊</p>
-      
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
   </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vuenote" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/17/vuenote/" class="article-date">
+  <time datetime="2019-04-17T12:00:21.954Z" itemprop="datePublished">2019-04-17</time>
+</a>
+    
   </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
+  <div class="article-inner">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/vuenote/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="heloword">
-    </span>
-
     
-      <header class="post-header">
-
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">vue 学习笔记</h1>
-        
+  
+    <h1 class="article-title" itemprop="name">
+      vue 学习笔记
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T20:00:21+08:00">
-                2019-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+    <div class="article-entry" itemprop="articleBody">
       
         <h4 id="人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。"><a href="#人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。" class="headerlink" title="人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。"></a>人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。</h4><h4 id="要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……"><a href="#要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……" class="headerlink" title="要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……"></a>要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……</h4><h4 id="但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。"><a href="#但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。" class="headerlink" title="但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。"></a>但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。</h4><a id="more"></a>
 <h4 id="Vue-的特点"><a href="#Vue-的特点" class="headerlink" title="Vue 的特点"></a>Vue 的特点</h4><ul>
@@ -763,367 +532,109 @@ vuex 核心概念和 API
 
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/04/17/less/" rel="next" title="less 学习笔记">
-                <i class="fa fa-chevron-left"></i> less 学习笔记
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/17/vuenote/" data-id="cjuovkale00060gum2j6hds6n" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
     
-    <div class="sidebar-inner">
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/17/less/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">less 学习笔记</div>
+    </a>
+  
+</nav>
 
-      
+  
+</article>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/17/vuenote/">vue 学习笔记</a>
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
+        
+          <li>
+            <a href="/2019/04/17/less/">less 学习笔记</a>
           </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Liu</p>
-              <p class="site-description motion-element" itemprop="description">js vue node h5 css3 es6</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。"><span class="nav-number">1.</span> <span class="nav-text">人生即在于体验，而体验源于去尝试，去折腾，去改变，去塑新。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……"><span class="nav-number">2.</span> <span class="nav-text">要知道：过一个平凡无趣的人生实在太容易了，你可以不读书，不冒险，不运动，不写作，不外出，不折腾……</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。"><span class="nav-number">3.</span> <span class="nav-text">但是，人生最后悔的事情就是：我本可以。生活也好，职场也罢，亦同此理；编程则更如其是。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-的特点"><span class="nav-number">4.</span> <span class="nav-text">Vue 的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MVVM-的理解"><span class="nav-number">5.</span> <span class="nav-text">MVVM  的理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件-即-局部功能界面-，是提供某一完整功能的模块"><span class="nav-number">6.</span> <span class="nav-text">组件 即 局部功能界面  ，是提供某一完整功能的模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模板的理解：动态的html页面，包含了一些js语法代码"><span class="nav-number">7.</span> <span class="nav-text">模板的理解：动态的html页面，包含了一些js语法代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-扩展组件"><span class="nav-number">8.</span> <span class="nav-text">vue 扩展组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编程方式"><span class="nav-number">9.</span> <span class="nav-text">编程方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组的扩展-array-some-和array-every-区别"><span class="nav-number">10.</span> <span class="nav-text">数组的扩展-array.some()和array.every()区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#挂载元素app"><span class="nav-number">11.</span> <span class="nav-text">挂载元素app</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-指令"><span class="nav-number">12.</span> <span class="nav-text">vue 指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-计算属性-computed"><span class="nav-number">13.</span> <span class="nav-text">vue 计算属性 computed</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-的方法-methods"><span class="nav-number">14.</span> <span class="nav-text">vue 的方法 methods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-的watch"><span class="nav-number">15.</span> <span class="nav-text">vue 的watch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定-style-class"><span class="nav-number">16.</span> <span class="nav-text">绑定 style class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象更新"><span class="nav-number">17.</span> <span class="nav-text">对象更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组更新检测"><span class="nav-number">18.</span> <span class="nav-text">数组更新检测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用事件修饰符"><span class="nav-number">19.</span> <span class="nav-text">常用事件修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用按键修饰符"><span class="nav-number">20.</span> <span class="nav-text">常用按键修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标修饰符"><span class="nav-number">21.</span> <span class="nav-text">鼠标修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#系统修饰键"><span class="nav-number">22.</span> <span class="nav-text">系统修饰键</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表单数据的自动收集"><span class="nav-number">23.</span> <span class="nav-text">表单数据的自动收集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue实例的-生命周期（钩子函数）-大致有三个阶段"><span class="nav-number">24.</span> <span class="nav-text">vue实例的 生命周期（钩子函数） 大致有三个阶段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-过渡-amp-动画"><span class="nav-number">25.</span> <span class="nav-text">vue 过渡&amp;动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤"><span class="nav-number">26.</span> <span class="nav-text">过滤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令"><span class="nav-number">27.</span> <span class="nav-text">指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义指令"><span class="nav-number">28.</span> <span class="nav-text">自定义指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-自定义插件-plugin"><span class="nav-number">29.</span> <span class="nav-text">vue 自定义插件 plugin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-组件"><span class="nav-number">30.</span> <span class="nav-text">vue 组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-组件间通信"><span class="nav-number">31.</span> <span class="nav-text">vue 组件间通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块导出为函数还是对象的依据"><span class="nav-number">32.</span> <span class="nav-text">模块导出为函数还是对象的依据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax-插件相关知识"><span class="nav-number">33.</span> <span class="nav-text">ajax 插件相关知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组方法之map方法的特点：数组里面的对象变，但数组对象的个数不变"><span class="nav-number">34.</span> <span class="nav-text">数组方法之map方法的特点：数组里面的对象变，但数组对象的个数不变</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件名称-路由相关"><span class="nav-number">35.</span> <span class="nav-text">组件名称 路由相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存路由组件对象"><span class="nav-number">36.</span> <span class="nav-text">缓存路由组件对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向路由组件传递数据"><span class="nav-number">37.</span> <span class="nav-text">向路由组件传递数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编程式路由导航-即用js-的方法实现而非-标签方式"><span class="nav-number">38.</span> <span class="nav-text">编程式路由导航 即用js 的方法实现而非 标签方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈-队列"><span class="nav-number">39.</span> <span class="nav-text">栈 队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#call-方法调用"><span class="nav-number">40.</span> <span class="nav-text">call 方法调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-源码分析知识点分析-vue-作为一个-MVVM-框架的基本实现原理"><span class="nav-number">41.</span> <span class="nav-text">vue 源码分析知识点分析 vue 作为一个 MVVM 框架的基本实现原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据代理的实现"><span class="nav-number">42.</span> <span class="nav-text">数据代理的实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本实现流程"><span class="nav-number">43.</span> <span class="nav-text">基本实现流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模板解析"><span class="nav-number">44.</span> <span class="nav-text">模板解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#call-apply-bind"><span class="nav-number">45.</span> <span class="nav-text">call   apply bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据绑定"><span class="nav-number">46.</span> <span class="nav-text">数据绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双向数据绑定"><span class="nav-number">47.</span> <span class="nav-text">双向数据绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vuex-是vue-的一个插件"><span class="nav-number">48.</span> <span class="nav-text">vuex 是vue 的一个插件</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
+        
+          <li>
+            <a href="/2019/04/17/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/17/haha/">哈哈，棒棒哒</a>
+          </li>
+        
+      </ul>
     </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Liu</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
   </div>
 
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
+</aside>
+        
+      </div>
+      <footer id="footer">
   
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Liu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
   
+    <a href="/" class="mobile-nav-link">Home</a>
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
+</nav>
+    
 
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
 
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
+<script src="/js/script.js"></script>
 
 
-  
 
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
+  </div>
 </body>
 </html>
