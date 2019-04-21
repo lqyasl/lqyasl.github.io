@@ -1962,7 +1962,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a7f9d5;
+  background: #5e227e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2504,13 +2504,6 @@ pre .javascript .function {
 .site-pv .busuanzi-value,
 .page-pv .busuanzi-value {
   margin: 0 5px;
-}
-.site-uv {
-  margin-right: 10px;
-}
-.site-uv::after {
-  content: "|";
-  padding-left: 10px;
 }
 .page-archive .archive-page-counter {
   position: relative;
@@ -3145,4 +3138,10 @@ pre {
 code,
 pre {
   border: 1px solid #d6d6d6;
+}
+* {
+  cursor: url("https://www.xgboke.com/wp-content/uploads/2018/03/2018031606171178.png"), auto !important;
+}
+:active {
+  cursor: url("http://www.xgboke.com/wp-content/uploads/2018/03/2018031606171010.png"), auto !important;
 }
