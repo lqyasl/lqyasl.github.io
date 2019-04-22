@@ -19,12 +19,12 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F04%2F20%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[这里输入文字，自定义字体大小 这里输入文字，自定义字体颜色这里输入文字，自定义字体背景色这是综合起来的效果 这是综合起来的效果2 半方大的空白&amp;ensp;或&amp;#8194;全方大的空白&amp;emsp;或&amp;#8195;不断行的空白格&amp;nbsp;或&amp;#160;人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰&ensp;人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡&emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡 &emsp;&emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡 &nbsp;以后无论我去哪我都把你带着我看账你帮我打算盘我谈生意你帮我出主意一起把吴家东院发扬光大做到陕西第一天下第一。———那年花开月正圆周莹经典台词 插入表格，这种的不错 函数名 功能 max 求最大值 min 求最小值 Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[在 xxx.md文件插入html效果测试 直接写html 即可 这里输入文字，自定义字体大小 这里输入文字，自定义字体颜色这里输入文字，自定义字体背景色这是综合起来的效果 这是综合起来的效果2 首行缩进效果测试 其中的 &amp;emsp;&amp;emsp; 即缩进两个字最常见 人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰 半方大的空白&amp;ensp;或&amp;#8194;&ensp;人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡 全方大的空白&amp;emsp;或&amp;#8195;&emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡 &emsp;&emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡 不断行的空白格&amp;nbsp;或&amp;#160;&nbsp;以后无论我去哪我都把你带着我看账你帮我打算盘我谈生意你帮我出主意一起把吴家东院发扬光大做到陕西第一天下第一。———那年花开月正圆周莹经典台词 插入表格效果测试 直接写html标签也可以，但是这种的效果更佳 函数名 功能 max 求最大值 min 求最小值 文章内自定义链接效果测试 那就来个我的博客网址吧myblog]]></content>
       <categories>
-        <category>第一步</category>
+        <category>测试</category>
       </categories>
       <tags>
-        <tag>第一步</tag>
+        <tag>md写作</tag>
       </tags>
   </entry>
   <entry>

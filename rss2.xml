@@ -53,33 +53,11 @@
       <pubDate>Sat, 20 Apr 2019 14:23:44 GMT</pubDate>
       <description>
       
-        &lt;font size=&quot;4&quot;&gt; 这里输入文字，自定义字体大小 &lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#FF0000&quot;&gt; 这里输入文字，自定义字体颜色&lt;/font&gt;&lt;br&gt;&lt;span style=&quot;background-color: #ff6600;&quot;&gt;这里输入文字，自定义字体背景色&lt;/span&gt;&lt;br&gt;&lt;font color=&quot;#000000&quot; size=&quot;4&quot;&gt;&lt;span style=&quot;background-color: #ADFF2F;&quot;&gt;这是综合起来的效果 &lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#FFFFFF&quot; size=&quot;4&quot;&gt;&lt;span style=&quot;background-color: #68228B;&quot;&gt;这是综合起来的效果2 &lt;/span&gt;&lt;/font&gt;
-
-&lt;p&gt;半方大的空白&lt;code&gt;&amp;amp;ensp;&lt;/code&gt;或&lt;code&gt;&amp;amp;#8194&lt;/code&gt;;&lt;br&gt;全方大的空白&lt;code&gt;&amp;amp;emsp;&lt;/code&gt;或&lt;code&gt;&amp;amp;#8195&lt;/code&gt;;&lt;br&gt;不断行的空白格&lt;code&gt;&amp;amp;nbsp;&lt;/code&gt;或&lt;code&gt;&amp;amp;#160&lt;/code&gt;;&lt;br&gt;人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰&lt;br&gt;&amp;ensp;人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰&lt;br&gt;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡&lt;br&gt;&amp;emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡&lt;/p&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;以后无论我去哪我都把你带着我看账你帮我打算盘我谈生意你帮我出主意一起把吴家东院发扬光大做到陕西第一天下第一。———那年花开月正圆周莹经典台词&lt;/p&gt;
-&lt;h4 id=&quot;插入表格，这种的不错&quot;&gt;&lt;a href=&quot;#插入表格，这种的不错&quot; class=&quot;headerlink&quot; title=&quot;插入表格，这种的不错&quot;&gt;&lt;/a&gt;插入表格，这种的不错&lt;/h4&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;函数名&lt;/th&gt;
-&lt;th&gt;功能&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;max&lt;/td&gt;
-&lt;td&gt;求最大值&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;min&lt;/td&gt;
-&lt;td&gt;求最小值&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+        本篇文章为博客搭建测试篇。这里是对文章的表述说明，会显示在主页上。
       
       </description>
       
-      <content:encoded><![CDATA[<font size="4"> 这里输入文字，自定义字体大小 </font><br><font color="#FF0000"> 这里输入文字，自定义字体颜色</font><br><span style="background-color: #ff6600;">这里输入文字，自定义字体背景色</span><br><font color="#000000" size="4"><span style="background-color: #ADFF2F;">这是综合起来的效果 </span></font><br><font color="#FFFFFF" size="4"><span style="background-color: #68228B;">这是综合起来的效果2 </span></font><p>半方大的空白<code>&amp;ensp;</code>或<code>&amp;#8194</code>;<br>全方大的空白<code>&amp;emsp;</code>或<code>&amp;#8195</code>;<br>不断行的空白格<code>&amp;nbsp;</code>或<code>&amp;#160</code>;<br>人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰<br>&ensp;人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰<br>内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡<br>&emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡</p><p>&emsp;&emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡</p><p>&nbsp;以后无论我去哪我都把你带着我看账你帮我打算盘我谈生意你帮我出主意一起把吴家东院发扬光大做到陕西第一天下第一。———那年花开月正圆周莹经典台词</p><h4 id="插入表格，这种的不错"><a href="#插入表格，这种的不错" class="headerlink" title="插入表格，这种的不错"></a>插入表格，这种的不错</h4><table><thead><tr><th>函数名</th><th>功能</th></tr></thead><tbody><tr><td>max</td><td>求最大值</td></tr><tr><td>min</td><td>求最小值</td></tr></tbody></table><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content:encoded>
+      <content:encoded><![CDATA[<h4 id="在-xxx-md文件插入html效果测试"><a href="#在-xxx-md文件插入html效果测试" class="headerlink" title="在 xxx.md文件插入html效果测试"></a>在 xxx.md文件插入html效果测试</h4><ul><li>直接写html 即可<font size="4"> 这里输入文字，自定义字体大小 </font><br><font color="#FF0000"> 这里输入文字，自定义字体颜色</font><br><span style="background-color: #ff6600;">这里输入文字，自定义字体背景色</span><br><font color="#000000" size="4"><span style="background-color: #ADFF2F;">这是综合起来的效果 </span></font><br><font color="#FFFFFF" size="4"><span style="background-color: #68228B;">这是综合起来的效果2 </span></font></li></ul><h4 id="首行缩进效果测试"><a href="#首行缩进效果测试" class="headerlink" title="首行缩进效果测试"></a>首行缩进效果测试</h4><ul><li>其中的 <code>&amp;emsp;&amp;emsp;</code> 即缩进两个字<code>最常见</code></li></ul><p>人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰</p><ul><li>半方大的空白<code>&amp;ensp;</code>或<code>&amp;#8194</code>;<br>&ensp;人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。———罗曼·罗兰<br>内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡</li><li>全方大的空白<code>&amp;emsp;</code>或<code>&amp;#8195</code>;<br>&emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡</li></ul><p>&emsp;&emsp;内容充实的生命就是长久的生命。我们要以行为而不是以时间来衡量生命。 ——小塞涅卡</p><ul><li>不断行的空白格<code>&amp;nbsp;</code>或<code>&amp;#160</code>;<br>&nbsp;以后无论我去哪我都把你带着我看账你帮我打算盘我谈生意你帮我出主意一起把吴家东院发扬光大做到陕西第一天下第一。———那年花开月正圆周莹经典台词<a id="more"></a></li></ul><h4 id="插入表格效果测试"><a href="#插入表格效果测试" class="headerlink" title="插入表格效果测试"></a>插入表格效果测试</h4><ul><li>直接写html标签也可以，但是这种的效果更佳</li></ul><table><thead><tr><th>函数名</th><th>功能</th></tr></thead><tbody><tr><td>max</td><td>求最大值</td></tr><tr><td>min</td><td>求最小值</td></tr></tbody></table><h4 id="文章内自定义链接效果测试"><a href="#文章内自定义链接效果测试" class="headerlink" title="文章内自定义链接效果测试"></a>文章内自定义链接效果测试</h4><ul><li>那就来个我的博客网址吧<br><a href="https://shulu520.com">myblog</a></li></ul>]]></content:encoded>
       
       <comments>https://shulu520.com/2019/04/20/hello-world/#disqus_thread</comments>
     </item>
