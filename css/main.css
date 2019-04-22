@@ -2100,7 +2100,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #95d0f6;
+  background: #466e01;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2642,6 +2642,13 @@ pre .javascript .function {
 .site-pv .busuanzi-value,
 .page-pv .busuanzi-value {
   margin: 0 5px;
+}
+.site-uv {
+  margin-right: 10px;
+}
+.site-uv::after {
+  content: "|";
+  padding-left: 10px;
 }
 #needsharebutton-postbottom {
   position: relative;
@@ -3300,9 +3307,9 @@ code {
   margin: 2px;
 }
 .post {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 15px 4px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
