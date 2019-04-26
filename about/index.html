@@ -1,1 +1,21 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>heloword</title><style>*{margin:0;padding:0}li{list-style:none}a{text-decoration:none}#about{height:100%;width:100%;background-color:rgba(69,117,59,.2)}</style></head><body><div id="about"> 关于我： 念在天涯，心在咫尺 愿你都懂，愿你由衷海上总有波澜，人生总有遗憾。夏末物语已知秋跳出空白格六月，醉了一朵花的遇见莅住时光，暖意生香在薄情的世界里，深情地等你别陌生了回家的路</div><script></script></body></html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Graduation countdown</title><meta name="description" content=""><meta name="keywords" content=""><link href="" rel="stylesheet"><style type="text/css">*{margin:0;padding:0}body{width:100%;height:100%}#box{width:980px;height:200px;margin:100px auto;line-height:200px;text-align:center;background-color:pink;font-size:55px;border-radius:20px;box-shadow:3px 7px #ccc;color:#fff}.content p{margin:20px;padding:10px;font-weight:700}</style></head><body><div id="box"></div><div class="content-wrap"><div class="content"><p> &nbsp;&nbsp;嗯，马上就要毕业了，我得抓紧时间学习知识，毕业才能找到心仪的工作。 美好的时光总是短暂的，四年的大学生活转瞬即逝。 这四年里，我虽然没有脱单(有点小遗憾)，但我一直都在努力寻找脱贫的道路。 穷小子，谈什么感情，真的是不敢玩，因为输不起，不想因为情感的波动而扰乱我未来的方向。 所以我想对未来的她说一声：对不起，我没能在那最美好的大学时光里，给予你该拥有的小浪漫。 无论人生何种境遇， 我们都要告诉自己： 'Everything will be okay in the end. If it's not okay, it's not the end.' —— John Lennon</p></div></div><script type="text/javascript">
+        let obox = document.getElementById("box"),
+            graduationTime = new Date("2020/6/15");//大学毕业找工作时间
+        setInterval(() => {
+            let date =graduationTime - new Date(),
+                dd = Math.floor(date/1000/60/60/24),
+                hh = Math.floor(date/1000/60/60)%24,
+                mm = Math.floor(date/1000/60)%60,
+                ss = Math.floor(date/1000)%60,
+                str = `离毕业还有${addZero(dd)}天${addZero(hh)}时${addZero(mm)}分${addZero(ss)}秒`;
+                obox.innerHTML = str;
+        },1000);
+
+         function addZero(n) {//此函数用来增加个位数前面的补位，为了好看
+            return n < 10 ? "0" + n : n + "";
+            // return n.String.padStart(2,"0");//这种用法不熟，报错
+             // return ("0" + n).slice(-2); //这种只针对只有两位数的情况
+        }
+
+
+    </script></body></html>
