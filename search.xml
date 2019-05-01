@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[window-hotkey]]></title>
-    <url>%2Fwindow%2Fwindow-hotkey%2F</url>
-    <content type="text"><![CDATA[引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。 windows 最常用快捷键 ctrl w 关闭当前网页 f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名 f4: 重复上步操作 f5: 刷新桌面 刷新网页 f11: 全屏显示网页 shift : 省略号 shift + 数字6 （表示六个点） …… 书名号 shift + &lt;&gt; (小于大于） 分隔号 单独按 数字1 前面的键 《简 · 爱》 Alt + 单击拖动 为矩形选择 AlT + f4 关闭当前程序 删除 选中后 按delete 永久删除 选中后 shift +delete 截屏 PrtSc 截全屏 Alt +PrtSc 截当前窗口 ctrl alt delete 任务管理器 windows 打开开始菜单 ctrl shift n 新建文件夹 window e 打开文件资源管理器 alt tab 切换窗口 window d 回到桌面 vscode 常用快捷键 上下移动一行： Alt+Up 或 Alt+Down 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down 同时选中所有匹配： Ctrl+Shift+L Ctrl+D 下一个匹配的也被选中 Alt + 单击 ：插入光标 Ctrl + F2 选择当前字的所有出现 ctrl shift k 删除整行 后记：快捷键还有很多，学到了再来补充]]></content>
+    <title><![CDATA[git-note]]></title>
+    <url>%2Fgit%2Fgit-note%2F</url>
+    <content type="text"><![CDATA[引言：人是不能闲的，一闲就会想得太多，一闲就会感情泛滥，所谓矫情屁事多，空虚寂寞冷，都是因为懒散寂寞闲。 git 的优秀之处 它跟踪并管理的是文件的修改，而非文件。Git有不少命令中有“-”，有时候是“-”，有时候是“–”。学过linux的命令行就懂了，”-“ 后面跟的是单个字母的参数，如-m， “–”后面跟的是多个字母的参数，如–readme.txt 在大多数情况下成立的 创建版本库cd 到目录文件夹下mkdir learn-git 新建文件夹，即版本库（repository）git init 初始化版本库,即把这个目录变成git 可以管理的仓库ctrl + l 清屏，以防代码太多看着难受ls 查看目录下的文件ls -a 查看不可见的文件touch git-test.txt 创建 txt文件 或者用vscode编辑器创建，别用windows 自带的记事本，因为记事本在编码方面有弱智的行为，键盘上的上键 返回上一步命令git add git-test.txt 添加要提交的文件，可多次添加多个文件，将文件添加到暂存区（stage即阶段的意思）git commit -m “添加描述内容，如 这是第一次使用commit提交” 可以一次提交多个文件，默认提交到master 分支时光穿梭机git status 查看仓库当前的状态git diff 查看文件的具体修改的内容 输出变化前后的内容git log 显示从最近到最远的提交日志git reset –hard HEAD^ 回退到上一个版本，HEAD表示当前版本，HEAD^即上一个版本，往上100个版本为HEAD~100git reflog 用来记录我们的每一次命令即commit 的idgit reset –hard commit_id commit_id 为某一版本提交的具体ID名词解释说明 工作区： 即我们电脑上的项目文件夹，版本库 ：即工作区里面的一个叫 .git 的隐藏目录，版本库里面有暂存区，有git 为我们创建的master 分支，以及指向master的一个指针HEAD管理修改 每次修改，如果不用git add 到暂存区，就不会加入到commit 中git checkout – git-test.txt 让这个文件回到最近一次git commit 或 git add 时的状态，注意–是单独的即后面有空格 ，git checkout 使用版本库里面的版本替换工作区的版本 ，无论工作区是修改还是删除，都可以一键还原。 我测试时为什么不行呢cat git-test.txt 查看文件的内容 后记：今晚到此为止，明天再写。]]></content>
       <categories>
-        <category>window</category>
+        <category>git</category>
       </categories>
       <tags>
-        <tag>hotkey</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -20,6 +20,17 @@
       </categories>
       <tags>
         <tag>random</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[window-hotkey]]></title>
+    <url>%2Fwindow%2Fwindow-hotkey%2F</url>
+    <content type="text"><![CDATA[引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。 windows 最常用快捷键 ctrl w 关闭当前网页 f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名 f4: 重复上步操作 f5: 刷新桌面 刷新网页 f11: 全屏显示网页 shift : 省略号 shift + 数字6 （表示六个点） …… 书名号 shift + &lt;&gt; (小于大于） 分隔号 单独按 数字1 前面的键 《简 · 爱》 Alt + 单击拖动 为矩形选择 AlT + f4 关闭当前程序 删除 选中后 按delete 永久删除 选中后 shift +delete 截屏 PrtSc 截全屏 Alt +PrtSc 截当前窗口 ctrl alt delete 任务管理器 windows 打开开始菜单 ctrl shift n 新建文件夹 window e 打开文件资源管理器 alt tab 切换窗口 window d 回到桌面 vscode 常用快捷键 上下移动一行： Alt+Up 或 Alt+Down 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down 同时选中所有匹配： Ctrl+Shift+L Ctrl+D 下一个匹配的也被选中 Alt + 单击 ：插入光标 Ctrl + F2 选择当前字的所有出现 ctrl shift k 删除整行 后记：快捷键还有很多，学到了再来补充]]></content>
+      <categories>
+        <category>window</category>
+      </categories>
+      <tags>
+        <tag>hotkey</tag>
       </tags>
   </entry>
   <entry>
