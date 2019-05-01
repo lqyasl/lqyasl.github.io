@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Math-random]]></title>
-    <url>%2FMath%2FMath-random%2F</url>
-    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[max,min]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
-      <categories>
-        <category>Math</category>
-      </categories>
-      <tags>
-        <tag>random</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[window-hotkey]]></title>
     <url>%2Fwindow%2Fwindow-hotkey%2F</url>
     <content type="text"><![CDATA[引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。 windows 最常用快捷键 ctrl w 关闭当前网页 f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名 f4: 重复上步操作 f5: 刷新桌面 刷新网页 f11: 全屏显示网页 shift : 省略号 shift + 数字6 （表示六个点） …… 书名号 shift + &lt;&gt; (小于大于） 分隔号 单独按 数字1 前面的键 《简 · 爱》 Alt + 单击拖动 为矩形选择 AlT + f4 关闭当前程序 删除 选中后 按delete 永久删除 选中后 shift +delete 截屏 PrtSc 截全屏 Alt +PrtSc 截当前窗口 ctrl alt delete 任务管理器 windows 打开开始菜单 ctrl shift n 新建文件夹 window e 打开文件资源管理器 alt tab 切换窗口 window d 回到桌面 vscode 常用快捷键 上下移动一行： Alt+Up 或 Alt+Down 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down 同时选中所有匹配： Ctrl+Shift+L Ctrl+D 下一个匹配的也被选中 Alt + 单击 ：插入光标 Ctrl + F2 选择当前字的所有出现 ctrl shift k 删除整行 后记：快捷键还有很多，学到了再来补充]]></content>
@@ -20,6 +9,17 @@
       </categories>
       <tags>
         <tag>hotkey</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Math-random]]></title>
+    <url>%2FMath%2FMath-random%2F</url>
+    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[max,min]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>random</tag>
       </tags>
   </entry>
   <entry>

@@ -8,24 +8,8 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>君子生非异也，善假于物也.</description>
-    <pubDate>Wed, 01 May 2019 07:38:53 GMT</pubDate>
+    <pubDate>Wed, 01 May 2019 08:48:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>Math-random</title>
-      <link>https://shulu520.com/Math/Math-random/</link>
-      <guid>https://shulu520.com/Math/Math-random/</guid>
-      <pubDate>Tue, 30 Apr 2019 16:50:45 GMT</pubDate>
-      <description>
-      
-        js常见的几种随机数，及常见用法。
-      
-      </description>
-      
-      <content:encoded><![CDATA[<center>引言：希望你睡不着时，想起的都是那些让你开心的事</center>                <p></p><h3 style="color:blue">常见的问题：如何生成一个区间[max,min]内的随机整数？</h3><br>答案很简单，即 <code>Math.random()*(max-min)+min</code><p></p><p>以下是一些其他的方法。<br><a id="more"></a></p><h2 id="new-Date-0"><a href="#new-Date-0" class="headerlink" title="new Date() - 0"></a>new Date() - 0</h2><ul><li>new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒”</li><li>(new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数</li></ul><h2 id="toString-指定进制-方法的调用"><a href="#toString-指定进制-方法的调用" class="headerlink" title="toString(指定进制) 方法的调用"></a>toString(指定进制) 方法的调用</h2><ul><li>与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些</li><li>随便一个随机数.toString(36)得随机字符，但有数字，且长短不一</li></ul><h2 id="随机字符串函数，长度固定，且都是字母"><a href="#随机字符串函数，长度固定，且都是字母" class="headerlink" title="随机字符串函数，长度固定，且都是字母"></a>随机字符串函数，长度固定，且都是字母</h2><ul><li>从固定的字典中抽取字符构成随机字符串</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 在大小写字母之间随机生成 x 个字符</span><br><span class="line">function randStr(x)&#123;</span><br><span class="line">    var s = &apos;&apos;;</span><br><span class="line">    while(s.length &lt; x &amp;&amp; x &gt; 0)&#123;</span><br><span class="line">        var r = Math.random();</span><br><span class="line">        s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65))</span><br><span class="line">    &#125;;</span><br><span class="line">    return s;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(randStr(3)); //KzE 三个随机字符</span><br></pre></td></tr></table></figure><h2 id="颜色随机函数"><a href="#颜色随机函数" class="headerlink" title="颜色随机函数"></a>颜色随机函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function randomColor()&#123;  </span><br><span class="line">    var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6);</span><br><span class="line">    return rand;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><ul><li>随机数相关得知识还又有很多，后面学到了再来补充笔记</li></ul>]]></content:encoded>
-      
-      <comments>https://shulu520.com/Math/Math-random/#disqus_thread</comments>
-    </item>
     
     <item>
       <title>window-hotkey</title>
@@ -41,6 +25,22 @@
       <content:encoded><![CDATA[<center>引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。</center><a id="more"></a><h2 id="windows-最常用快捷键"><a href="#windows-最常用快捷键" class="headerlink" title="windows 最常用快捷键"></a>windows 最常用快捷键</h2><ul><li><p>ctrl  w  关闭当前网页</p></li><li><p>f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名</p></li><li><p>f4: 重复上步操作</p></li><li><p>f5: 刷新桌面 刷新网页</p></li><li><p>f11: 全屏显示网页</p></li><li><p>shift :<br>  省略号    shift + 数字6  （表示六个点）    ……</p><p>  书名号     shift + &lt;&gt;   (小于大于）</p></li><li><p>分隔号   单独按 数字1 前面的键    《简 · 爱》</p></li><li><p>Alt + 单击拖动  为矩形选择</p></li><li><p>AlT + f4 关闭当前程序</p></li><li><p>删除  选中后 按delete </p></li><li><p>永久删除  选中后  shift +delete</p></li><li><p>截屏   PrtSc     截全屏<br>  Alt  +PrtSc  截当前窗口</p></li><li><p>ctrl alt delete 任务管理器</p></li><li><p>windows 打开开始菜单</p></li><li><p>ctrl shift n  新建文件夹</p></li><li><p>window e 打开文件资源管理器</p></li><li><p>alt tab 切换窗口 </p></li><li><p>window d 回到桌面</p></li></ul><h2 id="vscode-常用快捷键"><a href="#vscode-常用快捷键" class="headerlink" title="vscode 常用快捷键"></a>vscode 常用快捷键</h2><ul><li><p>上下移动一行： Alt+Up 或 Alt+Down</p></li><li><p>向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down</p></li><li><p>同时选中所有匹配： Ctrl+Shift+L</p></li><li><p>Ctrl+D 下一个匹配的也被选中 </p></li><li><p>Alt + 单击  ：插入光标</p></li><li><p>Ctrl + F2    选择当前字的所有出现</p></li><li><p>ctrl  shift  k   删除整行</p></li></ul><center>后记：快捷键还有很多，学到了再来补充</center>]]></content:encoded>
       
       <comments>https://shulu520.com/window/window-hotkey/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Math-random</title>
+      <link>https://shulu520.com/Math/Math-random/</link>
+      <guid>https://shulu520.com/Math/Math-random/</guid>
+      <pubDate>Tue, 30 Apr 2019 16:50:45 GMT</pubDate>
+      <description>
+      
+        js常见的几种随机数，及常见用法。
+      
+      </description>
+      
+      <content:encoded><![CDATA[<center>引言：希望你睡不着时，想起的都是那些让你开心的事</center>                <p></p><h3 style="color:blue">常见的问题：如何生成一个区间[max,min]内的随机整数？</h3><br>答案很简单，即 <code>Math.random()*(max-min)+min</code><p></p><p>以下是一些其他的方法。<br><a id="more"></a></p><h2 id="new-Date-0"><a href="#new-Date-0" class="headerlink" title="new Date() - 0"></a>new Date() - 0</h2><ul><li>new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒”</li><li>(new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数</li></ul><h2 id="toString-指定进制-方法的调用"><a href="#toString-指定进制-方法的调用" class="headerlink" title="toString(指定进制) 方法的调用"></a>toString(指定进制) 方法的调用</h2><ul><li>与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些</li><li>随便一个随机数.toString(36)得随机字符，但有数字，且长短不一</li></ul><h2 id="随机字符串函数，长度固定，且都是字母"><a href="#随机字符串函数，长度固定，且都是字母" class="headerlink" title="随机字符串函数，长度固定，且都是字母"></a>随机字符串函数，长度固定，且都是字母</h2><ul><li>从固定的字典中抽取字符构成随机字符串</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 在大小写字母之间随机生成 x 个字符</span><br><span class="line">function randStr(x)&#123;</span><br><span class="line">    var s = &apos;&apos;;</span><br><span class="line">    while(s.length &lt; x &amp;&amp; x &gt; 0)&#123;</span><br><span class="line">        var r = Math.random();</span><br><span class="line">        s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65))</span><br><span class="line">    &#125;;</span><br><span class="line">    return s;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(randStr(3)); //KzE 三个随机字符</span><br></pre></td></tr></table></figure><h2 id="颜色随机函数"><a href="#颜色随机函数" class="headerlink" title="颜色随机函数"></a>颜色随机函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function randomColor()&#123;  </span><br><span class="line">    var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6);</span><br><span class="line">    return rand;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><ul><li>随机数相关得知识还又有很多，后面学到了再来补充笔记</li></ul>]]></content:encoded>
+      
+      <comments>https://shulu520.com/Math/Math-random/#disqus_thread</comments>
     </item>
     
     <item>
