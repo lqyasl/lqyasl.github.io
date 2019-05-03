@@ -10,7 +10,7 @@
 			let display = document.getElementById('display');
 			for (let i = 0; i < str.length; i++) {
 				let span = document.createElement('span');
-				let num = (Math.random()*16+22);
+				let num = (Math.random()*14+24);
 				span.innerHTML = arr[i];
 				span.style.color = randomColor();
 				span.style.fontSize = num + 'px';
@@ -25,5 +25,5 @@
 				if(j === arr.length){
 					clearInterval(timer);
 				}
-			},250);
+			},230);
 		</script><script>daovoice("init",{app_id:"5af61f84"}),daovoice("update")</script></body></html>
