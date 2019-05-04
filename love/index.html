@@ -3,14 +3,14 @@
 				var rand = '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6);
 				return rand;
 			};
-			let str = '愿你过得好，祝我也顺心。不谈亏欠，谢谢我们以前遇见。我遇见你，所以我喜欢你。我喜欢你，所以我想陪伴你。在成长的路上，我们从青涩走到成熟，感谢那时的相遇，因为我始终坚信，命运在当时把你安排到我的世界，总有他的道理。在成长的路上，我们学会了少一些抱怨，多了一些理解，反思自己更加进步。漫漫人生，你能够选取平庸，也能够选取轰轰烈烈，不忘初心，让每一天都是新的的世界。虽然我们日复一日地过着，但是生活迎接我们的每一秒都是新的。正如那句歌词：后来，我总算学会了如何去爱。可惜你早已远去，消失在人海。后来，终于在眼泪中明白，有些人一旦错过就不再。永远不会再重来，有一个男孩爱着那个女孩。渐渐地，你在我的心中成了一份美好的存在。喜欢你，希望以后你有个好对象，那便是我最大的幸福。' ;
+			let str = '愿你过得好，祝我也顺心。感谢那时遇见你，让我能有美好的回忆。你在我心中是一份美好的存在。希望你做个全世界最美的女孩，永远有颗少女心，天真热烈，对世界永远充满善意，也希望你能遇见一个人，替你在前面承担上所有的风雨，让你一辈子做个心思单纯的女孩' ;
 			console.log(str.length);
 			let arr = [];
 			arr = str.split('');
 			let display = document.getElementById('display');
 			for (let i = 0; i < str.length; i++) {
 				let span = document.createElement('span');
-				let num = (Math.random()*14+24);
+				let num = (Math.random()*12+26);
 				span.innerHTML = arr[i];
 				span.style.color = randomColor();
 				span.style.fontSize = num + 'px';

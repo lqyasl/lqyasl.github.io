@@ -30,23 +30,6 @@
     </item>
     
     <item>
-      <title>search-skills</title>
-      <link>https://shulu520.com/search/search-skills/</link>
-      <guid>https://shulu520.com/search/search-skills/</guid>
-      <pubDate>Tue, 30 Apr 2019 16:50:45 GMT</pubDate>
-      <description>
-      
-        &lt;hr&gt;
-&lt;hr&gt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<hr><hr><a id="more"></a><h2 id="口语转变为关键词"><a href="#口语转变为关键词" class="headerlink" title="口语转变为关键词"></a>口语转变为关键词</h2><ul><li>关键词之间打上空格</li></ul><h2 id="限定在特定网站内"><a href="#限定在特定网站内" class="headerlink" title="限定在特定网站内"></a>限定在特定网站内</h2><ul><li>关键词 site:某一站点</li><li>注意：站点前不用加www或http</li></ul><h2 id="限定文件类型"><a href="#限定文件类型" class="headerlink" title="限定文件类型"></a>限定文件类型</h2><ul><li>关键词 filetype:文件格式</li></ul><h2 id="限定时间段"><a href="#限定时间段" class="headerlink" title="限定时间段"></a>限定时间段</h2><ul><li>关键词 20xx..20xx</li><li>注意：中间是两个英文句号</li></ul><h2 id="排除某个关键词"><a href="#排除某个关键词" class="headerlink" title="排除某个关键词"></a>排除某个关键词</h2><ul><li>关键词 -广告 -推广</li></ul><h2 id="将关键词限定在标题中"><a href="#将关键词限定在标题中" class="headerlink" title="将关键词限定在标题中"></a>将关键词限定在标题中</h2><ul><li>关键词 intitle:限定内容</li></ul><p>## </p>]]></content:encoded>
-      
-      <comments>https://shulu520.com/search/search-skills/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>Math-random</title>
       <link>https://shulu520.com/Math/Math-random/</link>
       <guid>https://shulu520.com/Math/Math-random/</guid>
@@ -92,6 +75,23 @@
       <content:encoded><![CDATA[<center>引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。</center><a id="more"></a><h2 id="windows-最常用快捷键"><a href="#windows-最常用快捷键" class="headerlink" title="windows 最常用快捷键"></a>windows 最常用快捷键</h2><ul><li><p>ctrl  w  关闭当前网页</p></li><li><p>f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名</p></li><li><p>f4: 重复上步操作</p></li><li><p>f5: 刷新桌面 刷新网页</p></li><li><p>f11: 全屏显示网页</p></li><li><p>shift :<br>  省略号    shift + 数字6  （表示六个点）    ……</p><p>  书名号     shift + &lt;&gt;   (小于大于）</p></li><li><p>分隔号   单独按 数字1 前面的键    《简 · 爱》</p></li><li><p>Alt + 单击拖动  为矩形选择</p></li><li><p>AlT + f4 关闭当前程序</p></li><li><p>删除  选中后 按delete </p></li><li><p>永久删除  选中后  shift +delete</p></li><li><p>截屏   PrtSc     截全屏<br>  Alt  +PrtSc  截当前窗口</p></li><li><p>ctrl alt delete 任务管理器</p></li><li><p>windows 打开开始菜单</p></li><li><p>ctrl shift n  新建文件夹</p></li><li><p>window e 打开文件资源管理器</p></li><li><p>alt tab 切换窗口 </p></li><li><p>window d 回到桌面</p></li></ul><h2 id="vscode-常用快捷键"><a href="#vscode-常用快捷键" class="headerlink" title="vscode 常用快捷键"></a>vscode 常用快捷键</h2><ul><li><p>上下移动一行： Alt+Up 或 Alt+Down</p></li><li><p>向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down</p></li><li><p>同时选中所有匹配： Ctrl+Shift+L</p></li><li><p>Ctrl+D 下一个匹配的也被选中 </p></li><li><p>Alt + 单击  ：插入光标</p></li><li><p>Ctrl + F2    选择当前字的所有出现</p></li><li><p>ctrl  shift  k   删除整行</p></li><li><p>ctrl  shift  a   多行注释</p><center>后记：快捷键还有很多，学到了再来补充</center></li></ul>]]></content:encoded>
       
       <comments>https://shulu520.com/windows/windows-hotkey/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>search-skills</title>
+      <link>https://shulu520.com/search/search-skills/</link>
+      <guid>https://shulu520.com/search/search-skills/</guid>
+      <pubDate>Tue, 30 Apr 2019 16:50:45 GMT</pubDate>
+      <description>
+      
+        &lt;hr&gt;
+&lt;hr&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<hr><hr><a id="more"></a><h2 id="口语转变为关键词"><a href="#口语转变为关键词" class="headerlink" title="口语转变为关键词"></a>口语转变为关键词</h2><ul><li>关键词之间打上空格</li></ul><h2 id="限定在特定网站内"><a href="#限定在特定网站内" class="headerlink" title="限定在特定网站内"></a>限定在特定网站内</h2><ul><li>关键词 site:某一站点</li><li>注意：站点前不用加www或http</li></ul><h2 id="限定文件类型"><a href="#限定文件类型" class="headerlink" title="限定文件类型"></a>限定文件类型</h2><ul><li>关键词 filetype:文件格式</li></ul><h2 id="限定时间段"><a href="#限定时间段" class="headerlink" title="限定时间段"></a>限定时间段</h2><ul><li>关键词 20xx..20xx</li><li>注意：中间是两个英文句号</li></ul><h2 id="排除某个关键词"><a href="#排除某个关键词" class="headerlink" title="排除某个关键词"></a>排除某个关键词</h2><ul><li>关键词 -广告 -推广</li></ul><h2 id="将关键词限定在标题中"><a href="#将关键词限定在标题中" class="headerlink" title="将关键词限定在标题中"></a>将关键词限定在标题中</h2><ul><li>关键词 intitle:限定内容</li></ul><p>## </p>]]></content:encoded>
+      
+      <comments>https://shulu520.com/search/search-skills/#disqus_thread</comments>
     </item>
     
     <item>
