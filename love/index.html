@@ -5,12 +5,11 @@
 			};
 			let display = document.getElementById('display');
 			let str = '愿你过得好，祝我也顺心。感谢那时遇见你，让我能有美好的回忆。你在我心中是一份美好的存在。希望你做个全世界最美的女孩，永远有颗少女心，天真热烈，对世界永远充满善意，也希望你能遇见一个人，替你在前面承担上所有的风雨，让你一辈子做个心思单纯的女孩' ;
-			console.log(str.length);
 			let arr = [];
 			arr = str.split('');
 			for (let i = 0; i < str.length; i++) {
 				let span = document.createElement('span');
-				let num = (Math.random()*16+30);
+				let num = (Math.random()*16+34);
 				span.innerHTML = arr[i];
 				span.style.color = randomColor();
 				span.style.fontSize = num + 'px';
@@ -24,6 +23,10 @@
 				j++;
 				if(j === arr.length){
 					clearInterval(timer);
+					setInterval(() => {
+						let x = Math.floor((Math.random()*arr.length));
+						spans[x].style.color = randomColor();
+					}, 300);
 				}
 			},230);
 		</script><script>daovoice("init",{app_id:"5af61f84"}),daovoice("update")</script></body></html>
