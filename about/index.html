@@ -1,4 +1,8 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Graduation-countdown</title><link rel="stylesheet" href="css/style.css" media="screen" type="text/css"><script>!function(t,e,o,c,n,a,i){t.DaoVoiceObject=n,t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},t[n].l=1*new Date,a=e.createElement(o),i=e.getElementsByTagName(o)[0],a.async=1,a.src=c,a.charset="utf-8",i.parentNode.insertBefore(a,i)}(window,document,"script",("https:"==document.location.protocol?"https:":"http:")+"//widget.daovoice.io/widget/5af61f84.js","daovoice")</script></head><body><div id="box"></div><div class="content-wrap"><div class="content"><div id="time"><canvas id="canvas"></canvas></div><div id="gohome"> <a href="https://shulu520.com/">👫home</a></div></div></div><script src="js/dat.gui.min.js"></script><script src="js/index.js"></script><script type="text/javascript">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Graduation-countdown</title><link rel="stylesheet" href="css/style.css" media="screen" type="text/css"><script>!function(t,e,o,c,n,a,i){t.DaoVoiceObject=n,t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},t[n].l=1*new Date,a=e.createElement(o),i=e.getElementsByTagName(o)[0],a.async=1,a.src=c,a.charset="utf-8",i.parentNode.insertBefore(a,i)}(window,document,"script",("https:"==document.location.protocol?"https:":"http:")+"//widget.daovoice.io/widget/5af61f84.js","daovoice")</script></head><body id="body"><div><p id="beye">毕业倒计时</p><div id="box"></div></div><div class="content-wrap"><div class="content"><div id="time"><canvas id="canvas"></canvas></div><div id="gohome"> <a href="https://shulu520.com/">👫home</a></div></div></div><script src="js/dat.gui.min.js"></script><script src="js/index.js"></script><script type="text/javascript">
+		function randomColor(){  
+			var rand = '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6);
+			return rand;
+		};
 	    let obox = document.getElementById("box"),
 	        graduationTime = new Date("2020/6/15");//大学毕业找工作时间
 	    setInterval(() => {
@@ -7,9 +11,15 @@
 	            hh = Math.floor(date/1000/60/60)%24,
 	            mm = Math.floor(date/1000/60)%60,
 	            ss = Math.floor(date/1000)%60,
-	            str = `离毕业还有${addZero(dd)}天${addZero(hh)}时${addZero(mm)}分${addZero(ss)}秒`;
+	            str = `${addZero(dd)}天${addZero(hh)}时${addZero(mm)}分${addZero(ss)}秒`;
 	            obox.innerHTML = str;
+				obox.style.color = randomColor();
 	    },1000);
+
+		setInterval(() => {
+			let beye = document.getElementById('beye');
+			beye.style.color = randomColor();
+		},2000)
 	
 	     function addZero(n) {//此函数用来增加个位数前面的补位，为了好看
 	        return n < 10 ? "0" + n : n + "";
