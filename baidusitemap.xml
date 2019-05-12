@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shulu520.com/start/friends/</loc>
-    <lastmod>2019-05-10</lastmod>
+    <loc>https://shulu520.com/book-note/book-fengchuan/</loc>
+    <lastmod>2019-05-12</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/H5/h5-guigu-music/</loc>
+    <lastmod>2019-05-12</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/git/git-guigu-note/</loc>
+    <lastmod>2019-05-12</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/git/git-liao-note/</loc>
+    <lastmod>2019-05-12</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/vue/vue-tour/</loc>
+    <lastmod>2019-05-12</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/start/friends/</loc>
     <lastmod>2019-05-10</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/http/http/</loc>
@@ -25,12 +37,6 @@
     <loc>https://shulu520.com/vue/vue-note/</loc>
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/git/git-note/</loc>
-    <lastmod>2019-05-05</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/book-skills/fengchuan/</loc>
-    <lastmod>2019-05-04</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/friends/shanjuan/</loc>
     <lastmod>2019-05-04</lastmod>
   </url>  <url>
@@ -43,13 +49,7 @@
     <loc>https://shulu520.com/start/hello-world/</loc>
     <lastmod>2019-05-02</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/H5/guigu-h5-music/</loc>
-    <lastmod>2019-04-26</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/less/less/</loc>
-    <lastmod>2019-04-26</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/start/haha/</loc>
     <lastmod>2019-04-26</lastmod>
   </url>
 </urlset>
