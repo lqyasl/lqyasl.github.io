@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[es6-zhuf-01.md]]></title>
+    <url>%2Fes6%2Fes6-zhuf-01%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;想要的东西，会以最快的速度来到你的身边。 var 与 let 和 const 的区别新的方法解决了老方法遗留的问题 var 在同一作用域内可以对同一变量重复声明 不能定义常量(控制不了，因为可以修改，写了等于没写) 不支持块级作用域 let 在同一作用域内不能对同一变量重复声明 变量不会提升 变量定义之前使用会报错 有块级作用域 {这里面为块级作用域} 以前js只有两种作用域 一个是全局 一个是函数级 作用域经典问题： for 循环里面套 定时器 当时的解决方法 给定时器包一层自执行的匿名函数并将循环变量传进去 本质上是作用域问题 现在用let声明变量就可以了 const 在同一作用域内不能对同一变量重复声明 专门声明常量 常量声明后不可修改 但若此常量是一个引用类型的话(例如一个对象) 引用对象的属性还是可以改的 例如：定义 const USER = {name: ‘shulu’} 更改为 USER.name = ‘lqy’ 可以的 解构 分解一个对象的解构 解构的时候 等号的两边解构相似 右边必须是一个真实的值 数组的省略赋值 let arr = [1, 2, 3]; let [,,x] = arr 则只拿到x=3的值 模板字符串 以前是字符串拼串 现在是这个符号 可以折行 换行 模板语言的原理 正则实现 面试 带参数的模板字符串 字符串的新方法 返回布尔值 str.startWith(‘http’) str.endsWith(‘.com’) str.includes(‘shulu’) 以前 str.indexOf(‘shulu’) == -1 做判断 str.repeat(10) 重复10次 es6 函数 &emsp;&emsp;未完待续……]]></content>
+      <categories>
+        <category>es6</category>
+      </categories>
+      <tags>
+        <tag>es6</tag>
+        <tag>zhuf</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git-guigu-note]]></title>
     <url>%2Fgit%2Fgit-guigu-note%2F</url>
-    <content type="text"><![CDATA[&emsp;&emsp;在衰老到来之前，做一件值得做的事情。做这件事不是为了别的，而是为了证明自己是好样的。-《似水流年》 复制 选中后 Ctrl+ins 即键盘右上角的insert键粘贴 相应的位置 Shift+ins查看git 配置信息cat ~/.gitconfig状态查看 git status 查看工作区、暂存区状态文件内容查看 cat haha.txt添加操作 git add [file_name]git commit -m ‘说明信息’ [file_name]创建文件 touch haha.txt 或 vim good.txt 字母ll 列出本地库所有文件和文件总数，创建日期 时间 创建人 文件名 git add haha.txt 后 若想返回add前的状态 根据提示 git rm –cached haha.txt 即可返回，此删除只是从暂存区里面删除，工作区的文件还在git commit haha.txt 这里没带-m ‘说明信息’ 回车后会进入vim 编辑器 可以编写大量的说明信息 首先 按a键 进入插入模式，之后就可以进行编辑了。 编辑完了就可以按Esc键退出插入模式，然后输出:wq即可退出vim编辑器，回到git bash界面。 查看提交记录 git log 打印的记录风格： 分散 有作者 邮箱 日期提示，显示内容详细，内容多了，多屏显示控制方式：桥空格为向下翻页，b键为向上翻页，q 键为退出查看 git log –oneline 打印效果为一行 git reflog 打印的记录风格： 紧凑 在一行显示并有提示版本回退数字提示 版本前进后退 基于索引值操作 任意版本穿梭 推荐方法 git reset –hard alfe9cd 这里alfe9cd为某一版本的提交id值即索引值 基于符号 ^ 只能后退 返回上一个版本 git reset –hard HEAD^ 版本倒退三个 git reset –hard HEAD^^^ 基于符号 ~ 只能后退 版本倒退三个 git reset –hard HEAD~3 reset 命令的三个参数对比 –soft 仅仅在本地库移动HEAD指针 –mixed 在本地库移动HEAD指针,重置暂存区 –hard 在本地库移动HEAD指针,重置暂存区,重置工作区，三个区位置保持一致 删除文件 rm aaa.txt git status 显示为 红色 deleted: aaa.txt 提示要add该文件 git add aaa.txt git status 显示为 绿色 表示已添加到暂存区 git commit -m ‘deleted aaa.txt’ 将这次删除操作提交到本地库 删除文件并恢复 前提：删除前 文件的状态提交到了本地库 操作： git reset –hard [指针位置] 删除操作已经提交到本地库：指针位置指向包含删除文件的历史纪录 删除操作尚未提交到本地库：指针位置使用HEAD 比较文件差异 git diff [文件名] 将工作区的文件和暂存区进行比较 git diff [本地库中历史版本] [文件名] 将工作区的文件和本地历史记录比较 git diff 不带文件名 比较多个文件 &emsp;&emsp;未完待续……]]></content>
+    <content type="text"><![CDATA[&emsp;&emsp;在衰老到来之前，做一件值得做的事情。做这件事不是为了别的，而是为了证明自己是好样的。-《似水流年》 复制 选中后 Ctrl+ins 即键盘右上角的insert键粘贴 相应的位置 Shift+ins查看git 配置信息cat ~/.gitconfig状态查看 git status 查看工作区、暂存区状态文件内容查看 cat haha.txt添加操作 git add [file_name]git commit -m ‘说明信息’ [file_name]创建文件 touch haha.txt 或 vim good.txt 字母ll 列出本地库所有文件和文件总数，创建日期 时间 创建人 文件名 git add haha.txt 后 若想返回add前的状态 根据提示 git rm –cached haha.txt 即可返回，此删除只是从暂存区里面删除，工作区的文件还在git commit haha.txt 这里没带-m ‘说明信息’ 回车后会进入vim 编辑器 可以编写大量的说明信息 首先 按a键 进入插入模式，之后就可以进行编辑了。 编辑完了就可以按Esc键退出插入模式，然后输出:wq即可退出vim编辑器，回到git bash界面。 查看提交记录 git log 打印的记录风格： 分散 有作者 邮箱 日期提示，显示内容详细，内容多了，多屏显示控制方式：桥空格为向下翻页，b键为向上翻页，q 键为退出查看 git log –oneline 打印效果为一行 git reflog 打印的记录风格： 紧凑 在一行显示并有提示版本回退数字提示 版本前进后退 基于索引值操作 任意版本穿梭 推荐方法 git reset –hard alfe9cd 这里alfe9cd为某一版本的提交id值即索引值 基于符号 ^ 只能后退 返回上一个版本 git reset –hard HEAD^ 版本倒退三个 git reset –hard HEAD^^^ 基于符号 ~ 只能后退 版本倒退三个 git reset –hard HEAD~3 reset 命令的三个参数对比 –soft 仅仅在本地库移动HEAD指针 –mixed 在本地库移动HEAD指针,重置暂存区 –hard 在本地库移动HEAD指针,重置暂存区,重置工作区，三个区位置保持一致 删除文件 rm aaa.txt git status 显示为 红色 deleted: aaa.txt 提示要add该文件 git add aaa.txt git status 显示为 绿色 表示已添加到暂存区 git commit -m ‘deleted aaa.txt’ 将这次删除操作提交到本地库 删除文件并恢复 前提：删除前 文件的状态提交到了本地库 操作： git reset –hard [指针位置] 删除操作已经提交到本地库：指针位置指向包含删除文件的历史纪录 删除操作尚未提交到本地库：指针位置使用HEAD 比较文件差异 git diff [文件名] 将工作区的文件和暂存区进行比较 git diff [本地库中历史版本] [文件名] 将工作区的文件和本地历史记录比较 git diff 不带文件名 比较多个文件 分支管理 热修复 主分支的bug 更改 分一个 hot_fix 分支 分支的好处： 查看分支 git branch -v 创建分支 git branch hot_fix 切换分支 git checkout hot_fix 切换到这个分支 合并分支 第一步：切换到接受修改的分支(被合并，增加新内容)上 git checkout [接受修改的分支] 第二步：在接受修改的分支上执行命令 git merge [有新内容的分支] 解决合并分支后产生的冲突 分别在两个分支上修改内容 分别提交到本地库 比如都在haha.txt上做修改 将两个分支合并到一个分支上 出现合并冲突 vim haha.txt 查看合并后的状态 HEAD 部分表示当前分支的修改 在一行========之下为另一个分支上做的修改 解决方法： 一：删掉那些特殊符号 并手动将内容修改为满意的状态 期间可能与分支伙伴商量 保存退出 二：git add [文件名] 三：git commit -m &apos;日志说明&apos; 注意：此时commit `一定不能带 文件名` git 原理 哈希算法 明文 加密 得 密文 常见的 md5算法 git 底层 SHA-1算法 github克隆的效果 完整的把远程库克隆到本地 初始化本地库 邀请队员加入 github进入相应的项目 /settings/Collaborators/ 在Search by username 之下 添加成员的github账号名 add collaborator copy invite link 发送给队员（qq或邮箱等方式）等其他方式把邀请链接发送给队员 队员 登录github 后 Accepe invitation 队员拉取操作 pull=fetch+merge git fetch [远程库地址别名] [远程分支名] git merge [远程库地址别名/远程分支名] git pull [远程库地址别名] [远程分支名] 解决冲突 如果不是基于 GitHub 远程库的最新版所做的修改，则不能推送，必须先拉取。 拉取下来后如果进入冲突状态，则按照“分支冲突解决”操作解决即 跨团队协作 外团队人员fork 该项目 git 工作流分支种类 主干分支 master主要负责管理正在运行的生产环境代码。永远保持与正在运行的生产环境完全一致。 开发分支 develop主要负责管理正在开发过程中的代码。一般情况下应该是最新的代码。 bug 修理分支 hotfix主要负责管理生产环境下出现的紧急修复的代码。 从主干分支分出，修理完毕并测试上线后，并回主干分支。并回后，视情况可以删除该分支。 准生产分支（预发布分支） release较大的版本上线前，会从开发分支中分出准生产分支，进行最后阶段的集成测试。该版本上线后，会合并到主干分支。生产环境运行一段阶段较稳定后可以视情况删除。 功能分支 feature为了不影响较短周期的开发工作，一般把中长期开发模块，会从开发分支 中独立出来。 开发完成后会合并到开发分支。&emsp;&emsp;完 更多笔记看git&amp;github.pdf详细笔记]]></content>
       <categories>
         <category>git</category>
       </categories>
@@ -61,11 +73,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[book-fengchuan]]></title>
-    <url>%2Fbook-note%2Fbook-fengchuan%2F</url>
-    <content type="text"><![CDATA[深夜时，人会更加容易情绪化，所以无论多难过，都要告诉自己，没有那麽糟糕，睡一觉就好了。 相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。从古至今，故事一直都是人们分享信息的重要工具。诱因，让人产生联想，看到这个，就会想到那个。打折规则，100元以上，降价多少元，以下为打几折。&emsp;&emsp;那么如何打造-个疯传的产品呢?第一，让你的产品成为一种社交货币，也就是说人们会通过分享它来赢得别人的好感和兴趣;第二，要利用诱因引发消费者的联想;第三，要带动消费者的情绪，让他们不断频繁地分享;第四，让你的产品尽可能出现在大家眼前，让人们不看都不行;第五，记得，简单实用的东西自然会受人欢迎;最后，帮你的产品量身打造一一个足够有意思的故事。&emsp;&emsp;两个可行的建议。首先，可以让你的产品带上点竞争元素。就是说利用人们的游戏心理，大家在玩游戏的时候都喜欢跟别人比赛，获得胜利之后，会得意地和别人分享自己的战绩，同时也就相当于告诉了别人某个产品。所以，如果你的产品有了游戏元素，就能鼓励消费者用你的产品进行某种互动，这样就提高了产品被分享的可能。]]></content>
+    <title><![CDATA[search-skills]]></title>
+    <url>%2Fsearch%2Fsearch-skills%2F</url>
+    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容 ##]]></content>
       <categories>
-        <category>book-note</category>
+        <category>search</category>
       </categories>
       <tags>
         <tag>skills</tag>
@@ -83,22 +95,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Math-random]]></title>
-    <url>%2FMath%2FMath-random%2F</url>
-    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
+    <title><![CDATA[book-fengchuan]]></title>
+    <url>%2Fbook-note%2Fbook-fengchuan%2F</url>
+    <content type="text"><![CDATA[深夜时，人会更加容易情绪化，所以无论多难过，都要告诉自己，没有那麽糟糕，睡一觉就好了。 相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。从古至今，故事一直都是人们分享信息的重要工具。诱因，让人产生联想，看到这个，就会想到那个。打折规则，100元以上，降价多少元，以下为打几折。&emsp;&emsp;那么如何打造-个疯传的产品呢?第一，让你的产品成为一种社交货币，也就是说人们会通过分享它来赢得别人的好感和兴趣;第二，要利用诱因引发消费者的联想;第三，要带动消费者的情绪，让他们不断频繁地分享;第四，让你的产品尽可能出现在大家眼前，让人们不看都不行;第五，记得，简单实用的东西自然会受人欢迎;最后，帮你的产品量身打造一一个足够有意思的故事。&emsp;&emsp;两个可行的建议。首先，可以让你的产品带上点竞争元素。就是说利用人们的游戏心理，大家在玩游戏的时候都喜欢跟别人比赛，获得胜利之后，会得意地和别人分享自己的战绩，同时也就相当于告诉了别人某个产品。所以，如果你的产品有了游戏元素，就能鼓励消费者用你的产品进行某种互动，这样就提高了产品被分享的可能。]]></content>
       <categories>
-        <category>Math</category>
-      </categories>
-      <tags>
-        <tag>random</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[search-skills]]></title>
-    <url>%2Fsearch%2Fsearch-skills%2F</url>
-    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容 ##]]></content>
-      <categories>
-        <category>search</category>
+        <category>book-note</category>
       </categories>
       <tags>
         <tag>skills</tag>
@@ -113,6 +114,17 @@
       </categories>
       <tags>
         <tag>hotkey</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Math-random]]></title>
+    <url>%2FMath%2FMath-random%2F</url>
+    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>random</tag>
       </tags>
   </entry>
   <entry>

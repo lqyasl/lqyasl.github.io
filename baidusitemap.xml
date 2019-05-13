@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://shulu520.com/git/git-guigu-note/</loc>
+    <lastmod>2019-05-13</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/es6/es6-zhuf-01/</loc>
+    <lastmod>2019-05-13</lastmod>
+  </url>  <url>
     <loc>https://shulu520.com/book-note/book-fengchuan/</loc>
     <lastmod>2019-05-12</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/H5/h5-guigu-music/</loc>
-    <lastmod>2019-05-12</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/git/git-guigu-note/</loc>
     <lastmod>2019-05-12</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/git/git-liao-note/</loc>
