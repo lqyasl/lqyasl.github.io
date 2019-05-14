@@ -1,16 +1,17 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title></title><link rel="stylesheet" href="css/style.css"><script>!function(t,e,o,c,n,a,i){t.DaoVoiceObject=n,t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},t[n].l=1*new Date,a=e.createElement(o),i=e.getElementsByTagName(o)[0],a.async=1,a.src=c,a.charset="utf-8",i.parentNode.insertBefore(a,i)}(window,document,"script",("https:"==document.location.protocol?"https:":"http:")+"//widget.daovoice.io/widget/5af61f84.js","daovoice")</script></head><body><div class="heart3d"><div class="rib1"></div><div class="rib2"></div><div class="rib3"></div><div class="rib4"></div><div class="rib5"></div><div class="rib6"></div><div class="rib7"></div><div class="rib8"></div><div class="rib9"></div><div class="rib10"></div><div class="rib11"></div><div class="rib12"></div><div class="rib13"></div><div class="rib14"></div><div class="rib15"></div><div class="rib16"></div><div class="rib17"></div><div class="rib18"></div><div class="rib19"></div><div class="rib20"></div><div class="rib21"></div><div class="rib22"></div><div class="rib23"></div><div class="rib24"></div><div class="rib25"></div><div class="rib26"></div><div class="rib27"></div><div class="rib28"></div><div class="rib29"></div><div class="rib30"></div><div class="rib31"></div><div class="rib32"></div><div class="rib33"></div><div class="rib34"></div><div class="rib35"></div><div class="rib36"></div><div class="per"><div class="img"><img width="50" height="50" src="images/ns.gif"></div><div class="img"><img width="50" height="50" src="images/love.gif"></div><div class="img"><img width="50" height="50" src="images/lq.jpg"></div><div class="img"><img width="50" height="50" src="images/love.gif"></div><div class="img"><img width="50" height="50" src="images/lq.jpg"></div><div class="img"><img width="50" height="50" src="images/ns.gif"></div></div></div><div id="display"></div><div id="gohome"> <a href="https://shulu520.com/">👫home</a></div><script>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title></title><link rel="stylesheet" href="css/style.css"></head><body><div class="heart3d"><div class="rib1"></div><div class="rib2"></div><div class="rib3"></div><div class="rib4"></div><div class="rib5"></div><div class="rib6"></div><div class="rib7"></div><div class="rib8"></div><div class="rib9"></div><div class="rib10"></div><div class="rib11"></div><div class="rib12"></div><div class="rib13"></div><div class="rib14"></div><div class="rib15"></div><div class="rib16"></div><div class="rib17"></div><div class="rib18"></div><div class="rib19"></div><div class="rib20"></div><div class="rib21"></div><div class="rib22"></div><div class="rib23"></div><div class="rib24"></div><div class="rib25"></div><div class="rib26"></div><div class="rib27"></div><div class="rib28"></div><div class="rib29"></div><div class="rib30"></div><div class="rib31"></div><div class="rib32"></div><div class="rib33"></div><div class="rib34"></div><div class="rib35"></div><div class="rib36"></div><div class="per"><div class="img"><img width="50" height="50" src="images/ns.gif"></div><div class="img"><img width="50" height="50" src="images/love.gif"></div><div class="img"><img width="50" height="50" src="images/lq.jpg"></div><div class="img"><img width="50" height="50" src="images/love.gif"></div><div class="img"><img width="50" height="50" src="images/lq.jpg"></div><div class="img"><img width="50" height="50" src="images/ns.gif"></div></div></div><div id="display"></div><div id="dance"> <span class="dance-content">you</span> <span class="dance-content">are</span> <span class="dance-content">the</span> <span class="dance-content">centre</span> <span class="dance-content">of</span> <span class="dance-content">my</span> <span class="dance-content">world</span></div><div id="gohome"> <a href="https://shulu520.com/">👫home</a></div><script>
 			function randomColor(){  
 				var rand = '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6);
 				return rand;
 			};
 			let display = document.getElementById('display');
-			let str = '愿你过得好，祝我也顺心。感谢那时遇见你，让我能有美好的回忆。你在我心中是一份美好的存在。希望你做个全世界最美的女孩，永远有颗少女心，天真热烈，对世界永远充满善意，也希望你能遇见一个人，替你在前面承担上所有的风雨，让你一辈子做个心思单纯的女孩。不管世界多么糟糕也好，我只希望你不被打扰到，我希望你的旅途都繁花似锦，而你依旧是那个十七八岁快来无比的姑娘。' ;
+			let str = '愿你过得好，祝我也顺心。感谢那时遇见你，让我能有美好的回忆。希望你做个全世界最美的女孩，永远有颗少女心，天真热烈，对世界永远充满善意，也希望你能遇见一个人，替你在前面承担上所有的风雨，让你一辈子做个心思单纯的女孩。不管世界多么糟糕也好，我只希望你不被打扰到，我希望你的旅途都繁花似锦，而你依旧是那个十七八岁快乐无比的姑娘。' ;
 			let arr = [];
 			arr = str.split('');
 			for (let i = 0; i < str.length; i++) {
 				let span = document.createElement('span');
 				let num = (Math.random()*16+34);
 				span.innerHTML = arr[i];
+				span.classList.add('text');
 				span.style.color = randomColor();
 				span.style.fontSize = num + 'px';
 				span.style.opacity = 0;
@@ -18,7 +19,8 @@
 			}
 			let j = 0;
 			let timer = setInterval(() => {
-				var spans = document.getElementsByTagName('span');
+				// var spans = document.getElementsByTagName('span');
+				spans = document.getElementsByClassName('text')
 				spans[j].style.opacity = 1;
 				j++;
 				if(j === arr.length){
@@ -30,4 +32,4 @@
 					}, 500);
 				}
 			},230);
-		</script><script>daovoice("init",{app_id:"5af61f84"}),daovoice("update")</script></body></html>
+		</script></body></html>

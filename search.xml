@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[nodejs-guigu-note]]></title>
+    <url>%2Fnode%2Fnodejs-guigu-note%2F</url>
+    <content type="text"><![CDATA[write to me &emsp;&emsp;我期待有一天背着背包出现在你的城市。 环境变量 小娜 输入 环境变量 进入环境变量/用户变量/path 点开 里面是一条条的文件路劲 可以新建一个文件的路劲 在这里配置了 相当于 声明了一个 类似于 js 中的全局变量 为作用域链的最高层 可以将一些常用的文件或程序的路劲添加到path下 这样我们就可以在任意的位置访问他们了 进程 线程 进程 负责为程序的运行提供必备的环境 工厂的车间 线程 负责执行进程中的程序 车间工人 单线程 一个人干活 多线程 多人合作干一个活 node.js 事件驱动 非阻塞 异步I/O (性能瓶颈阶段) input写入操作 output读操作 版本 奇数为开发版 偶数为稳定版 node.js 模块化 新建一个js文件就是一个模块 这个模块里面写的代码其实是包在一个函数里面的 即 123456789101112131415funcyion (exports, require, module, _filename, _dirname) &#123; /* 这里是我们写的代码 外面其实包了一层这个函数 默认不可见 可以通过console.log(arguments.callee) 或 console.log(arguments.callee + &quot;&quot;) 将此函数打印出来 该函数执行时传进了5个参数 所以模块里面的代码是局部变量 exports参数 用来将变量或函数暴露到外边 require参数 用来引入外部的模块 module参数 代表模块本身 exports是module的属性 _filename 当前模块的完整路劲 _dirname 当前模块所在文件夹的路劲 */&#125; module.exports 与exports的区别 module.exports == exports true exports 只能使用.的方式向外暴露 若exports = {} 这样向外暴露的话就修改了exports的引用对象 module.exports 既可以通过.的形式 也可以直接赋值 推荐写法 核心模块 由node 提供的模块 node_moudle中的 引入时直接写模块名字 不需要路劲 文件模块 由我们自己创建的模块 引入时添加./或../等路劲 包 package 包实际上就是一个压缩文件 解压以后还原为目录 规范的目录包含以下文件： -package.json 包描述文件 (必须的) 里面不能写注释 -bin 可执行二进制文件 binary 二进制 -lib js代码 library 库 图书馆 -doc 文档 document -test 单元测试 npm 即 (Node Package Manager) node包管理器 commonjs包规范的是一种理论 npm是其中一种实践 对node而言 npm帮助其完成了第三方模块的发布安和依赖 借助npm 使得node与第三方模块之间形成一个生态系统 查看版本 npm version查看相关的版本 或npm -v npm search 包名 搜索包 npm init 在某一文件夹下初始化该文件夹 帮助我们根据提示生成一个package.json的文件 在初始化后的文件夹下 安装搜索的包 并新建一个index.js 入口文件在里面就可以直接引入math模块使用了 npm install 包名 安装 包 或npm i npm remove 或 npm r 删除包 npm install 包名 杠杠save 安装包并添加到依赖中 npm install 下载当前项目所依赖的包 npm install 包名 -g 全局安装包 一般是安装一些工具 如vue-cli cnpm 也可以用 快速 node在使用下载的包时 会沿着作用域链一直往上找直到磁盘根目录找不到则报错 这就解释了某的包在删除之后依然能用的情况 Buffer （缓冲区） 结构和数组很相似 方法也类似 补充了数组方法的不足 Buffer专门存贮二进制数据的 使用buffer无需引入模块 直接使用即可 Buffer.from(str) 将字符串str转为buffer二进制数据 在buffer中存贮的都是二进制数据 但在显示时都是以16进制的形式显示的 二进制 00-255 或 00-ff 计算机 一个0或一个1 称为一位(bit) 8bit = 1byte(字节) 最小单位 中文一个汉字占用三个字节 创建一个制定大小的buffer Buffer.alloc(10) 10字节大小 可通过索引来操作buffer中的元素 Buffer的大小一旦确定 不能再更该 因为存储空间是连续的 性能好 buf.toString() 将缓冲区buf中的数据转换为字符串 fs (文件系统) 核心模块 直接引入使用 const fs = require(‘fs’) fs 模块中所有的操作都有两种形式 同步(会阻塞 带sync) 异步(不会阻塞 带回调函数) 同步文件的写入： 1.打开文件 操作方式为定为写 即 var fd = fs.openSync(path, flags) 参数为字符串类型 path即文件的路劲 flags即 r表示读操作 w表示写入操作 通过返回的描述符fd对文件进行各种操作 2.写入内容数据 fs.writeSync(fd, string) fd文件的描述符 需要传入文件的描述符 string要写入的内容 3.关闭文件 考虑性能 fs.closeSync(fd) 异步文件写入 1.打开文件 fs.open(path, flags, function (err, fd) { if (!err) { 2.在这里往文件写入内容 写操作 fs.write(fd, &apos;要异步写入的内容&apos;, function (err) { if (!err) { console.log(&apos;write success&apos;) } fs.close(fd, function (err) { if (!err) { console.log(&apos;close success&apos;) } }) }) console.log(fd) }else{ console.log(err) } }) 返回值为 callback的参数 简单文件写入 简单同步文件 fs.write 简单异步文案 fs.writeFile(‘hello.txt’, ‘shulu520’, {flag: ‘a’} function (err) { //flag: ‘a’ 追加文件内容 不会覆盖原来的 如果文件不存在则创建 flag还有好多的模式 if (!err) { console.log(&apos;write success&apos;) } //文件路劲可以是F:\JSdownload\npm-test 这种 `但是要变为`F:\\JSdownload\\npm-test或F:/JSdownload/npm-test }) 同步 异步 简单文件 的写入都不适合大文件爱的写入 易导致内存溢出 性能差 流式文件写入 创建流 var ws = fs.createWriteStream(path) 监听事件 once绑定一次性的事件 ws.once(‘open’, function () { console.log(&apos;stream success&apos;) }) ws.once(‘close’, function () {console.log(&apos;stream close&apos;) }) 写入内容 大量内容 ws.write(‘写入内容1’) ws.write(‘写入内容2’) ws.write(‘写入内容3’) ws.write(‘写入内容4’) …… 关闭流 在流开始的一方结束流 ws.end() &emsp;&emsp;未完待续……&emsp;&emsp;write to me]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>guigu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[es6-zhuf-01.md]]></title>
     <url>%2Fes6%2Fes6-zhuf-01%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp;想要的东西，会以最快的速度来到你的身边。 var 与 let 和 const 的区别新的方法解决了老方法遗留的问题 var 在同一作用域内可以对同一变量重复声明 不能定义常量(控制不了，因为可以修改，写了等于没写) 不支持块级作用域 let 在同一作用域内不能对同一变量重复声明 变量不会提升 变量定义之前使用会报错 有块级作用域 {这里面为块级作用域} 以前js只有两种作用域 一个是全局 一个是函数级 作用域经典问题： for 循环里面套 定时器 当时的解决方法 给定时器包一层自执行的匿名函数并将循环变量传进去 本质上是作用域问题 现在用let声明变量就可以了 const 在同一作用域内不能对同一变量重复声明 专门声明常量 常量声明后不可修改 但若此常量是一个引用类型的话(例如一个对象) 引用对象的属性还是可以改的 例如：定义 const USER = {name: ‘shulu’} 更改为 USER.name = ‘lqy’ 可以的 解构 分解一个对象的解构 解构的时候 等号的两边解构相似 右边必须是一个真实的值 数组的省略赋值 let arr = [1, 2, 3]; let [,,x] = arr 则只拿到x=3的值 模板字符串 以前是字符串拼串 现在是这个符号 可以折行 换行 模板语言的原理 正则实现 面试 带参数的模板字符串 字符串的新方法 返回布尔值 str.startWith(‘http’) str.endsWith(‘.com’) str.includes(‘shulu’) 以前 str.indexOf(‘shulu’) == -1 做判断 str.repeat(10) 重复10次 es6 函数 &emsp;&emsp;未完待续……]]></content>
@@ -73,14 +85,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[search-skills]]></title>
-    <url>%2Fsearch%2Fsearch-skills%2F</url>
-    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容 ##]]></content>
+    <title><![CDATA[Math-random]]></title>
+    <url>%2FMath%2FMath-random%2F</url>
+    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
       <categories>
-        <category>search</category>
+        <category>Math</category>
       </categories>
       <tags>
-        <tag>skills</tag>
+        <tag>random</tag>
       </tags>
   </entry>
   <entry>
@@ -95,17 +107,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Math-random]]></title>
-    <url>%2FMath%2FMath-random%2F</url>
-    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
-      <categories>
-        <category>Math</category>
-      </categories>
-      <tags>
-        <tag>random</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[git-liao-note]]></title>
     <url>%2Fgit%2Fgit-liao-note%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp;人是不能闲的，一闲就会想得太多，一闲就会感情泛滥，所谓矫情屁事多，空虚寂寞冷，都是因为懒散寂寞闲。 git 的优秀之处 它跟踪并管理的是文件的修改，而非文件。Git有不少命令中有“-”，有时候是“-”，有时候是“–”。学过linux的命令行就懂了，单个”-“ 后面跟的是单个字母的参数，如-m， 两个”–”后面跟的是多个字母的参数，如–readme.txt 在大多数情况下成立的。注意:我的博客页面上显示的效果都只有一个’-‘,若’-‘线条显示的比较细，则表示两个’-‘ 创建本地版本库cd 到目录文件夹下mkdir learn-git 新建文件夹，即版本库（repository）git init 初始化版本库,即把这个目录变成git 可以管理的仓库ctrl + l 清屏，以防代码太多看着难受ls 查看目录下的文件ls -a 查看不可见的文件touch git-test.txt 创建 txt文件 或者用vscode编辑器创建，别用windows 自带的记事本，因为记事本在编码方面有弱智的行为，键盘上的上键 返回上一步命令git add git-test.txt 添加要提交的文件，可多次添加多个文件，将文件添加到暂存区（stage即阶段的意思）git commit -m “添加描述内容，如 这是第一次使用commit提交” 可以一次提交多个文件，默认提交到master 分支时光穿梭机git status 查看仓库当前的状态git diff 查看文件的具体修改的内容 输出变化前后的内容git log 显示从最近到最远的提交日志git reset –hard HEAD^ 回退到上一个版本，HEAD表示当前版本，HEAD^即上一个版本，往上100个版本为HEAD~100git reflog 用来记录我们的每一次命令即commit 的idgit reset –hard commit_id commit_id 为某一版本提交的具体ID名词解释说明 工作区： 即我们电脑上的项目文件夹，版本库 ：即工作区里面的一个叫 .git 的隐藏目录，版本库里面有暂存区，有git 为我们创建的master 分支，以及指向master的一个指针HEAD 管理修改 每次修改，如果不用git add 到暂存区，就不会加入到commit 中git checkout – git-test.txt 让这个文件回到最近一次git commit 或 git add 时的状态，注意–是单独的即后面有空格 ，git checkout 使用版本库里面的版本替换工作区的版本 ，无论工作区是修改还是删除，都可以一键还原。 我测试时为什么不行呢cat git-test.txt 查看文件的内容 远程仓库github 上创建一个仓库就行了，最好与本地仓库同名根据提示：将本地仓库与远程仓库关联并推送到远程123…or push an existing repository from the command linegit remote add origin https://github.com/lqyasl/learn-git.git (关联)git push -u origin master (本地推送到远程) 把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。一个项目库第一次推送成功后，后面 只要本地做了提交，就可以 git push origin master 不用加参数-u分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了。前面是先有本地仓库，再有远程库。如何关联远程库。现在，最好的方式是，先创建远程库，再从远程库里面克隆到本地。首先在github上创建一个 仓库 并勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。我这里创建了一个gitskills的库。git clone git@github.com:lqyasl/gitskills.git 或 git clone https://github.com/lqyasl/gitskills.git 等多种方式， 推荐使用前一种，其速度最快。cd gitskills 进入克隆的库ls 展开文件列表 可以看到已经有一叫README.md 的文件了分支管理分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。现在有了分支，就不用怕了。你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。 与其他svn 版本控制系统相比， git 超级快。每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。一开始的时候，master分支是一条线，Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点。每次提交，master分支都会向前移动一步，这样，随着你不断提交，master分支的线也越来越长。当我们创建新的分支，例如dev时，Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，就表示当前分支在dev上。从现在开始，对工作区的修改和提交就是针对dev分支了，比如新提交一次后，dev指针往前移动一步，而master指针不变。假如我们在dev上的工作完成了，就可以把dev合并到master上。Git怎么合并呢？最简单的方法，就是直接把master指向dev的当前提交，就完成了合并。合并完分支后，甚至可以删除dev分支。删除dev分支就是把dev指针给删掉，删掉后，我们就剩下了一条master分支。实战部分git checkout -b dev 创建dev分支，然后切换到dev分支： 这里git checkout命令加上-b参数表示创建一个分支并切换到这个分支。 checkout这里表示切换的意思。git branch 查看当前分支，git branch命令会列出所有分支，当前分支前面会标一个*号。对README.md 文件做修改，比如加一点内容。然后 git add README.md 以及 git commit -m ‘分支测试’ ，我们就可以在dev分支上正常提交现在，dev分支的工作完成，我们就可以切换回master分支 git checkout master现在，我们把dev分支的工作成果合并到master分支上 git merge dev 这里git merge命令用于合并指定分支到当前分支。注意到上面的Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。合并完成后，就可以放心地删除dev分支了。 git branch -d dev因为创建、合并和删除分支非常快，所以Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在master分支上工作效果是一样的，但过程更安全。gti branch 查看分支，可以看到只剩下一个master主分支了。创建分支与合并小结 Git鼓励大量使用分支： 查看分支：git branch 创建分支：git branch 切换分支：git checkout 创建+切换分支：git checkout -b 合并某分支到当前分支：git merge 删除分支：git branch -d 解决冲突创建新的feature1分支，继续我们的新分支开发 git checkout -b feature1修改 README.md 文件的内容在feature1分支上提交 git add README.md 以及 git commit -m ‘AND simple’切换到master分支 git checkout masterGit还会自动提示我们当前master分支比远程的master分支要超前1个提交在master分支上把readme.txt文件的最后一行改为：Creating a new branch is quick &amp; simple.提交README.md 文件现在，master分支和feature1分支各自都分别有新的提交这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突，我们试试看 gti merge feature1 结果显示： Automatic merge failed; fix conflicts and then commit the result.果然冲突了！Git告诉我们，readme.txt文件存在冲突，必须手动解决冲突后再提交。git status也可以告诉我们冲突的文件修改README.md 并提交 解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。最后，删除feature1分支： git branch -d feature1分支管理策略通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。下面我们实战一下–no-ff方式的git merge：首先，仍然创建并切换dev分支：git checkout -b dev## &emsp;&emsp;今晚到此为止，明天再写。]]></content>
@@ -114,6 +115,17 @@
       </categories>
       <tags>
         <tag>git-note</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[search-skills]]></title>
+    <url>%2Fsearch%2Fsearch-skills%2F</url>
+    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容 ##]]></content>
+      <categories>
+        <category>search</category>
+      </categories>
+      <tags>
+        <tag>skills</tag>
       </tags>
   </entry>
   <entry>
@@ -141,7 +153,7 @@
   <entry>
     <title><![CDATA[friends]]></title>
     <url>%2Fstart%2Ffriends%2F</url>
-    <content type="text"><![CDATA[来撩我啊 &emsp;&emsp;终于等到你，还好我没放弃：来了就好好逛逛，这里既是我的学习园地，也是我的精神家园，欢迎常来看看。在手机上一些效果表现不出来，双击试试看。欢迎匿名来撩，无需登录，及时互动。快点击右下角聊天按钮，说点什么吧。 来撩我啊 将进酒 李白 君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发，朝如青丝暮成雪。人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。烹羊宰牛且为乐，会须一饮三百杯。岑夫子，丹丘生，将进酒，杯莫停。与君歌一曲，请君为我倾耳听。钟鼓馔玉不足贵，但愿长醉不复醒。古来圣贤皆寂寞，惟有饮者留其名。陈王昔时宴平乐，斗酒十千恣欢谑。主人何为言少钱，径须沽取对君酌。五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。‘Everything will be okay in the end. If it’s not okay, it’s not the end.’]]></content>
+    <content type="text"><![CDATA[来撩我啊 &emsp;&emsp;终于等到你，还好我没放弃：来了就好好逛逛，这里既是我的学习园地，也是我的精神家园，欢迎常来看看。在手机上一些效果表现不出来，双击试试看。欢迎匿名来撩，无需登录，及时互动。快点击右下角聊天按钮，说点什么吧。 将进酒 李白 君不见，黄河之水天上来，奔流到海不复回。君不见，高堂明镜悲白发，朝如青丝暮成雪。人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。烹羊宰牛且为乐，会须一饮三百杯。岑夫子，丹丘生，将进酒，杯莫停。与君歌一曲，请君为我倾耳听。钟鼓馔玉不足贵，但愿长醉不复醒。古来圣贤皆寂寞，惟有饮者留其名。陈王昔时宴平乐，斗酒十千恣欢谑。主人何为言少钱，径须沽取对君酌。五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。‘Everything will be okay in the end. If it’s not okay, it’s not the end.’]]></content>
       <categories>
         <category>start</category>
       </categories>
