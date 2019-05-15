@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vim-note.md]]></title>
+    <url>%2Fvim%2Fvim-note-md%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;You only live on this earth once. 快捷强大的vim vimium能提升我们的浏览速度, 鼠标比键盘简单, 键盘比鼠标快! 快速向下滚动d 快速向上滚动u 滚动到页面顶部gg 滚动到页面底部G 神技! 快速搜索 (相当于浏览器顶部搜索框), 并在新标签打开 大写的O 关闭页面x 恢复页面X 主动脱离焦点esc 比如按下o搜索退出时按esc shift+/,查看所有快捷键 &emsp;&emsp;未完待续…… write to me by QQ email]]></content>
+      <categories>
+        <category>vim</category>
+      </categories>
+      <tags>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[nodejs-guigu-note]]></title>
     <url>%2Fnode%2Fnodejs-guigu-note%2F</url>
-    <content type="text"><![CDATA[write to me &emsp;&emsp;我期待有一天背着背包出现在你的城市。 环境变量 小娜 输入 环境变量 进入环境变量/用户变量/path 点开 里面是一条条的文件路劲 可以新建一个文件的路劲 在这里配置了 相当于 声明了一个 类似于 js 中的全局变量 为作用域链的最高层 可以将一些常用的文件或程序的路劲添加到path下 这样我们就可以在任意的位置访问他们了 进程 线程 进程 负责为程序的运行提供必备的环境 工厂的车间 线程 负责执行进程中的程序 车间工人 单线程 一个人干活 多线程 多人合作干一个活 node.js 事件驱动 非阻塞 异步I/O (性能瓶颈阶段) input写入操作 output读操作 版本 奇数为开发版 偶数为稳定版 node.js 模块化 新建一个js文件就是一个模块 这个模块里面写的代码其实是包在一个函数里面的 即 123456789101112131415funcyion (exports, require, module, _filename, _dirname) &#123; /* 这里是我们写的代码 外面其实包了一层这个函数 默认不可见 可以通过console.log(arguments.callee) 或 console.log(arguments.callee + &quot;&quot;) 将此函数打印出来 该函数执行时传进了5个参数 所以模块里面的代码是局部变量 exports参数 用来将变量或函数暴露到外边 require参数 用来引入外部的模块 module参数 代表模块本身 exports是module的属性 _filename 当前模块的完整路劲 _dirname 当前模块所在文件夹的路劲 */&#125; module.exports 与exports的区别 module.exports == exports true exports 只能使用.的方式向外暴露 若exports = {} 这样向外暴露的话就修改了exports的引用对象 module.exports 既可以通过.的形式 也可以直接赋值 推荐写法 核心模块 由node 提供的模块 node_moudle中的 引入时直接写模块名字 不需要路劲 文件模块 由我们自己创建的模块 引入时添加./或../等路劲 包 package 包实际上就是一个压缩文件 解压以后还原为目录 规范的目录包含以下文件： -package.json 包描述文件 (必须的) 里面不能写注释 -bin 可执行二进制文件 binary 二进制 -lib js代码 library 库 图书馆 -doc 文档 document -test 单元测试 npm 即 (Node Package Manager) node包管理器 commonjs包规范的是一种理论 npm是其中一种实践 对node而言 npm帮助其完成了第三方模块的发布安和依赖 借助npm 使得node与第三方模块之间形成一个生态系统 查看版本 npm version查看相关的版本 或npm -v npm search 包名 搜索包 npm init 在某一文件夹下初始化该文件夹 帮助我们根据提示生成一个package.json的文件 在初始化后的文件夹下 安装搜索的包 并新建一个index.js 入口文件在里面就可以直接引入math模块使用了 npm install 包名 安装 包 或npm i npm remove 或 npm r 删除包 npm install 包名 杠杠save 安装包并添加到依赖中 npm install 下载当前项目所依赖的包 npm install 包名 -g 全局安装包 一般是安装一些工具 如vue-cli cnpm 也可以用 快速 node在使用下载的包时 会沿着作用域链一直往上找直到磁盘根目录找不到则报错 这就解释了某的包在删除之后依然能用的情况 Buffer （缓冲区） 结构和数组很相似 方法也类似 补充了数组方法的不足 Buffer专门存贮二进制数据的 使用buffer无需引入模块 直接使用即可 Buffer.from(str) 将字符串str转为buffer二进制数据 在buffer中存贮的都是二进制数据 但在显示时都是以16进制的形式显示的 二进制 00-255 或 00-ff 计算机 一个0或一个1 称为一位(bit) 8bit = 1byte(字节) 最小单位 中文一个汉字占用三个字节 创建一个制定大小的buffer Buffer.alloc(10) 10字节大小 可通过索引来操作buffer中的元素 Buffer的大小一旦确定 不能再更该 因为存储空间是连续的 性能好 buf.toString() 将缓冲区buf中的数据转换为字符串 fs (文件系统) 核心模块 直接引入使用 const fs = require(‘fs’) fs 模块中所有的操作都有两种形式 同步(会阻塞 带sync) 异步(不会阻塞 带回调函数) 同步文件的写入： 1.打开文件 操作方式为定为写 即 var fd = fs.openSync(path, flags) 参数为字符串类型 path即文件的路劲 flags即 r表示读操作 w表示写入操作 通过返回的描述符fd对文件进行各种操作 2.写入内容数据 fs.writeSync(fd, string) fd文件的描述符 需要传入文件的描述符 string要写入的内容 3.关闭文件 考虑性能 fs.closeSync(fd) 异步文件写入 1.打开文件 fs.open(path, flags, function (err, fd) { if (!err) { 2.在这里往文件写入内容 写操作 fs.write(fd, &apos;要异步写入的内容&apos;, function (err) { if (!err) { console.log(&apos;write success&apos;) } fs.close(fd, function (err) { if (!err) { console.log(&apos;close success&apos;) } }) }) console.log(fd) }else{ console.log(err) } }) 返回值为 callback的参数 简单文件写入 简单同步文件 fs.write 简单异步文案 fs.writeFile(‘hello.txt’, ‘shulu520’, {flag: ‘a’} function (err) { //flag: ‘a’ 追加文件内容 不会覆盖原来的 如果文件不存在则创建 flag还有好多的模式 if (!err) { console.log(&apos;write success&apos;) } //文件路劲可以是F:\JSdownload\npm-test 这种 `但是要变为`F:\\JSdownload\\npm-test或F:/JSdownload/npm-test }) 同步 异步 简单文件 的写入都不适合大文件爱的写入 易导致内存溢出 性能差 流式文件写入 创建流 var ws = fs.createWriteStream(path) 监听事件 once绑定一次性的事件 ws.once(‘open’, function () { console.log(&apos;stream success&apos;) }) ws.once(‘close’, function () {console.log(&apos;stream close&apos;) }) 写入内容 大量内容 ws.write(‘写入内容1’) ws.write(‘写入内容2’) ws.write(‘写入内容3’) ws.write(‘写入内容4’) …… 关闭流 在流开始的一方结束流 ws.end() &emsp;&emsp;未完待续……&emsp;&emsp;write to me]]></content>
+    <content type="text"><![CDATA[&emsp;&emsp;我期待有一天背着背包出现在你的城市。 环境变量 小娜 输入 环境变量 进入环境变量/用户变量/path 点开 里面是一条条的文件路劲 可以新建一个文件的路劲 在这里配置了 相当于 声明了一个 类似于 js 中的全局变量 为作用域链的最高层 可以将一些常用的文件或程序的路劲添加到path下 这样我们就可以在任意的位置访问他们了 进程 线程 进程 负责为程序的运行提供必备的环境 工厂的车间 线程 负责执行进程中的程序 车间工人 单线程 一个人干活 多线程 多人合作干一个活 node.js 事件驱动 非阻塞 异步I/O (性能瓶颈阶段) input写入操作 output读操作 版本 奇数为开发版 偶数为稳定版 在Node中，模块分为三类：一类是底层由C++编写的内建模块，一类是Node提供的核心模块；还有一类是用户编写的模块，称为文件模块。node.js 模块化 新建一个js文件就是一个模块 这个模块里面写的代码其实是包在一个函数里面的 即 123456789101112131415funcyion (exports, require, module, _filename, _dirname) &#123; /* 这里是我们写的代码 外面其实包了一层这个函数 默认不可见 可以通过console.log(arguments.callee) 或 console.log(arguments.callee + &quot;&quot;) 将此函数打印出来 该函数执行时传进了5个参数 所以模块里面的代码是局部变量 exports参数 用来将变量或函数暴露到外边 require参数 用来引入外部的模块 module参数 代表模块本身 exports是module的属性 _filename 当前模块的完整路劲 _dirname 当前模块所在文件夹的路劲 */&#125; module.exports 与exports的区别 module.exports == exports true exports 只能使用.的方式向外暴露 若exports = {} 这样向外暴露的话就修改了exports的引用对象 module.exports 既可以通过.的形式 也可以直接赋值 推荐写法 核心模块 由node 提供的模块 node_moudle中的 引入时直接写模块名字 不需要路劲 文件模块 由我们自己创建的模块 引入时添加./或../等路劲 包 package 包实际上就是一个压缩文件 解压以后还原为目录 规范的目录包含以下文件： -package.json 包描述文件 (必须的) 里面不能写注释 -bin 可执行二进制文件 binary 二进制 -lib js代码 library 库 图书馆 -doc 文档 document -test 单元测试 npm 即 (Node Package Manager) node包管理器 commonjs包规范的是一种理论 npm是其中一种实践 对node而言 npm帮助其完成了第三方模块的发布安和依赖 借助npm 使得node与第三方模块之间形成一个生态系统 查看版本 npm version查看相关的版本 或npm -v npm search 包名 搜索包 npm init 在某一文件夹下初始化该文件夹 帮助我们根据提示生成一个package.json的文件 在初始化后的文件夹下 安装搜索的包 并新建一个index.js 入口文件在里面就可以直接引入math模块使用了 npm install 包名 安装 包 或npm i npm remove 或 npm r 删除包 npm install 包名 杠杠save 安装包并添加到依赖中 npm install 下载当前项目所依赖的包 npm install 包名 -g 全局安装包 一般是安装一些工具 如vue-cli cnpm 也可以用 快速 node在使用下载的包时 会沿着作用域链一直往上找直到磁盘根目录找不到则报错 这就解释了某的包在删除之后依然能用的情况 Buffer （缓冲区） 结构和数组很相似 方法也类似 补充了数组方法的不足 Buffer专门存贮二进制数据的 实际上Buffer中的内存不是通过JavaScript分配的，而是在底层通过C++申请的。也就是我们可以直接通过Buffer来创建内存中的空间。 使用buffer无需引入模块 直接使用即可 Buffer.from(str) 将字符串str转为buffer二进制数据 在buffer中存贮的都是二进制数据 但在显示时都是以16进制的形式显示的 二进制 00-255 或 00-ff 计算机 一个0或一个1 称为一位(bit) 8bit = 1byte(字节) 最小单位 中文一个汉字占用三个字节 创建一个制定大小的buffer Buffer.alloc(10) 10字节大小 可通过索引来操作buffer中的元素 Buffer的大小一旦确定 不能再更该 因为存储空间是连续的 性能好 Buffer与字符串间的转换 支持的编码: ASCII、UTF-8、UTF-16LE/UCS-2、Base64、Binary、Hex 字符串转Buffer Buffer.from(str , [encoding]); Buffer转字符串 buf.toString() buf.toString([encoding] , [start] , [end]); 复制缓冲区 buf.copy(target[, targetStart[, sourceStart[, sourceEnd]]]) 对缓冲区切片 buf.slice([start[, end]]) 拼接缓冲区 Buffer.concat(list[, totalLength]) fs (文件系统) 在Node中，与文件系统的交互是非常重要的，服务器的本质就将本地的文件发送给远程的客户端 核心模块 直接引入使用 const fs = require(‘fs’) fs 模块中所有的操作都有两种形式 同步(会阻塞 带sync) 异步(不会阻塞 带回调函数) fs模块中所有的操作都有两种形式可供选择同步和异步 同步文件系统会阻塞程序的执行，也就是除非操作完毕，否则不会向下执行代码。异步文件系统不会阻塞程序的执行，而是在操作完成时，通过回调函数将结果返回。 打开文件 fs.open(path, flags[, mode], callback) fs.openSync(path, flags[, mode]) 关闭文件 fs.close(fd, callback) fs.closeSync(fd) fs中提供了四种不同的方式将数据写入文件 简单文件写入 同步文件写入 异步文件写入 流式文件写入 同步文件的写入： 1.打开文件 操作方式为定为写 即 var fd = fs.openSync(path, flags) 参数为字符串类型 path即文件的路劲 flags即 r表示读操作 w表示写入操作 通过返回的描述符fd对文件进行各种操作 2.写入内容数据 fs.writeSync(fd, string) fd文件的描述符 需要传入文件的描述符 string要写入的内容 3.关闭文件 考虑性能 fs.closeSync(fd) 异步文件写入 1.打开文件 123456789101112131415161718fs.open(path, flags, function (err, fd) &#123; if (!err) &#123; 2.在这里往文件写入内容 写操作 fs.write(fd, &apos;要异步写入的内容&apos;, function (err) &#123; if (!err) &#123; console.log(&apos;write success&apos;) &#125; fs.close(fd, function (err) &#123; if (!err) &#123; console.log(&apos;close success&apos;) &#125; &#125;) &#125;) console.log(fd) &#125;else&#123; console.log(err) &#125;&#125;) 返回值为 callback的参数 简单文件写入 简单同步文件 fs.write 简单异步文件 123456fs.writeFile(&apos;hello.txt&apos;, &apos;shulu520&apos;, &#123;flag: &apos;a&apos;&#125; function (err) &#123; //flag: &apos;a&apos; 追加文件内容 不会覆盖原来的 如果文件不存在则创建 flag还有好多的模式 if (!err) &#123; console.log(&apos;write success&apos;) &#125; //文件路劲可以是F:\JSdownload\npm-test 这种 `但是要变为`F:\\JSdownload\\npm-test或F:/JSdownload/npm-test&#125;) 同步 异步 简单文件 的写入都不适合大文件爱的写入 易导致内存溢出 性能差 流式文件写入 12345678910111213141516171819202122232425 创建流 var ws = fs.createWriteStream(path) 监听事件 once绑定一次性的事件 ws.once(&apos;open&apos;, function () &#123; console.log(&apos;stream success&apos;) &#125;) ws.once(&apos;close&apos;, function () &#123; console.log(&apos;stream close&apos;) &#125;) 写入内容 大量内容 ws.write(&apos;写入内容1&apos;) ws.write(&apos;写入内容2&apos;) ws.write(&apos;写入内容3&apos;) ws.write(&apos;写入内容4&apos;) …… 关闭流 在流开始的一方结束流 ws.end()``` + fs中提供了四种读取文件的方式 简单文件读取 同步文件读取 异步文件读取 流式文件读取+ 简单文件读取 简单异步文件读取 const fs = require(‘fs’);fs.readFile(‘shulu.jpg’, (err, data) =&gt; { if(!err) { fs.writeFile(‘桌面路劲/lqy.jpg’, data, () =&gt; { if(!err) { console.log(‘文件写入成功 ‘) } }) }})12+ 流式文件读取 适用于大文件 const fs = require(‘fs’);1.创建读取流const rs = fs.createReadStream(‘shulu.jpg’);2.监听流的开启和关闭rs.once(‘open’, () =&gt; { console.log(‘流打开成功了’)})rs.once(‘close’, () =&gt; { console.log(‘流关闭了’)})3.读取数据rs.on(‘data’, (data) =&gt; { console.log(data) //多次分批读取大数据}) pipe 流方法 12 const fs = require(‘fs’);const rs = fs.createReadStream(‘shulu.mp3’);const ws = fs.createWriteStrem(‘lqy.mp3’);rs.pipe(ws); 读取后直接流入 1234567891011121314151617181920212223242526272829+ fs 模块其他操作 检查一个文件是否存在+ 列出文件 fs.readdir(path[, options], callback) fs.readdirSync(path[, options])+ 截断文件 fs.truncate(path, len, callback) fs.truncateSync(path, len)+ 建立目录 fs.mkdir(path[, mode], callback) fs.mkdirSync(path[, mode])+ 验证路径是否存在 fs.existsSync(path)+ 获取文件信息 fs.stat(path, callback) fs.statSync(path)+ 删除文件 fs.unlink(path, callback) fs.unlinkSync(path)+ 删除目录 fs.rmdir(path, callback) fs.rmdirSync(path)+ 重命名文件和目录 fs.rename(oldPath, newPath, callback) fs.renameSync(oldPath, newPath)+ 监视文件更改写入 fs.watchFile(filename[, options], listener) const fs = require(‘fs’);const isExists = fs.existsSync(‘shulu.mp3’);console.log(isExists);` &emsp;&emsp;未完待续……&emsp;&emsp;write to me]]></content>
       <categories>
         <category>node</category>
       </categories>
@@ -85,25 +96,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Math-random]]></title>
-    <url>%2FMath%2FMath-random%2F</url>
-    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
+    <title><![CDATA[win-vscode-hotkey]]></title>
+    <url>%2Fwin-vscode%2Fwin-vscode-hotkey%2F</url>
+    <content type="text"><![CDATA[引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。## windows 最常用快捷键+ ctrl w 关闭当前网页+ f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名+ f4: 重复上步操作+ f5: 刷新桌面 刷新网页+ f11: 全屏显示网页+ shift : 省略号 shift + 数字6 （表示六个点） …… 书名号 shift + &lt;&gt; (小于大于）+ 分隔号 单独按 数字1 前面的键 《简 · 爱》+ Alt + 单击拖动 为矩形选择+ AlT + f4 关闭当前程序+ 删除 选中后 按delete+ 永久删除 选中后 shift +delete+ 截屏 PrtSc 截全屏 Alt +PrtSc 截当前窗口+ ctrl alt delete 任务管理器+ windows 打开开始菜单+ ctrl shift n 新建文件夹+ window e 打开文件资源管理器+ alt tab 切换窗口+ window d 回到桌面## vscode 常用快捷键+ 上下移动一行： Alt+Up 或 Alt+Down+ 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down+ 同时选中所有匹配： Ctrl+Shift+L+ Ctrl+D 下一个匹配的也被选中+ Alt + 单击 ：插入光标+ Ctrl + F2 选择当前字的所有出现+ ctrl shift k 删除整行+ ctrl shift a 多行注释+ ctrl f 当前文件内搜索相关代码，终于找到这个功能了，哈哈，右上角会有弹框，其中有前后箭头，表示搜索的代码上一次、下一次出现的位置，点击直接会跳转到相应的位置，并且侧边上有相应的位置标识。+ ctrl - 整体缩小+ ctrl = 整体放大+ 文件/首选项/设置 搜索zoom 根据配置 可以更精细的对大小进行操作 ctrl 加滚轮后记：快捷键还有很多，学到了再来补充]]></content>
       <categories>
-        <category>Math</category>
+        <category>win-vscode</category>
       </categories>
       <tags>
-        <tag>random</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[book-fengchuan]]></title>
-    <url>%2Fbook-note%2Fbook-fengchuan%2F</url>
-    <content type="text"><![CDATA[深夜时，人会更加容易情绪化，所以无论多难过，都要告诉自己，没有那麽糟糕，睡一觉就好了。 相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。从古至今，故事一直都是人们分享信息的重要工具。诱因，让人产生联想，看到这个，就会想到那个。打折规则，100元以上，降价多少元，以下为打几折。&emsp;&emsp;那么如何打造-个疯传的产品呢?第一，让你的产品成为一种社交货币，也就是说人们会通过分享它来赢得别人的好感和兴趣;第二，要利用诱因引发消费者的联想;第三，要带动消费者的情绪，让他们不断频繁地分享;第四，让你的产品尽可能出现在大家眼前，让人们不看都不行;第五，记得，简单实用的东西自然会受人欢迎;最后，帮你的产品量身打造一一个足够有意思的故事。&emsp;&emsp;两个可行的建议。首先，可以让你的产品带上点竞争元素。就是说利用人们的游戏心理，大家在玩游戏的时候都喜欢跟别人比赛，获得胜利之后，会得意地和别人分享自己的战绩，同时也就相当于告诉了别人某个产品。所以，如果你的产品有了游戏元素，就能鼓励消费者用你的产品进行某种互动，这样就提高了产品被分享的可能。]]></content>
-      <categories>
-        <category>book-note</category>
-      </categories>
-      <tags>
-        <tag>skills</tag>
+        <tag>hotkey</tag>
       </tags>
   </entry>
   <entry>
@@ -129,14 +129,25 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[win-vscode-hotkey]]></title>
-    <url>%2Fwin-vscode%2Fwin-vscode-hotkey%2F</url>
-    <content type="text"><![CDATA[引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。 windows 最常用快捷键 ctrl w 关闭当前网页 f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名 f4: 重复上步操作 f5: 刷新桌面 刷新网页 f11: 全屏显示网页 shift : 省略号 shift + 数字6 （表示六个点） …… 书名号 shift + &lt;&gt; (小于大于） 分隔号 单独按 数字1 前面的键 《简 · 爱》 Alt + 单击拖动 为矩形选择 AlT + f4 关闭当前程序 删除 选中后 按delete 永久删除 选中后 shift +delete 截屏 PrtSc 截全屏 Alt +PrtSc 截当前窗口 ctrl alt delete 任务管理器 windows 打开开始菜单 ctrl shift n 新建文件夹 window e 打开文件资源管理器 alt tab 切换窗口 window d 回到桌面 vscode 常用快捷键 上下移动一行： Alt+Up 或 Alt+Down 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down 同时选中所有匹配： Ctrl+Shift+L Ctrl+D 下一个匹配的也被选中 Alt + 单击 ：插入光标 Ctrl + F2 选择当前字的所有出现 ctrl shift k 删除整行 ctrl shift a 多行注释 ctrl f 当前文件内搜索相关代码，终于找到这个功能了，哈哈，右上角会有弹框，其中有前后箭头，表示搜索的代码上一次、下一次出现的位置，点击直接会跳转到相应的位置，并且侧边上有相应的位置标识。 后记：快捷键还有很多，学到了再来补充]]></content>
+    <title><![CDATA[book-fengchuan]]></title>
+    <url>%2Fbook-note%2Fbook-fengchuan%2F</url>
+    <content type="text"><![CDATA[深夜时，人会更加容易情绪化，所以无论多难过，都要告诉自己，没有那麽糟糕，睡一觉就好了。 相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。从古至今，故事一直都是人们分享信息的重要工具。诱因，让人产生联想，看到这个，就会想到那个。打折规则，100元以上，降价多少元，以下为打几折。&emsp;&emsp;那么如何打造-个疯传的产品呢?第一，让你的产品成为一种社交货币，也就是说人们会通过分享它来赢得别人的好感和兴趣;第二，要利用诱因引发消费者的联想;第三，要带动消费者的情绪，让他们不断频繁地分享;第四，让你的产品尽可能出现在大家眼前，让人们不看都不行;第五，记得，简单实用的东西自然会受人欢迎;最后，帮你的产品量身打造一一个足够有意思的故事。&emsp;&emsp;两个可行的建议。首先，可以让你的产品带上点竞争元素。就是说利用人们的游戏心理，大家在玩游戏的时候都喜欢跟别人比赛，获得胜利之后，会得意地和别人分享自己的战绩，同时也就相当于告诉了别人某个产品。所以，如果你的产品有了游戏元素，就能鼓励消费者用你的产品进行某种互动，这样就提高了产品被分享的可能。]]></content>
       <categories>
-        <category>win-vscode</category>
+        <category>book-note</category>
       </categories>
       <tags>
-        <tag>hotkey</tag>
+        <tag>skills</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Math-random]]></title>
+    <url>%2FMath%2FMath-random%2F</url>
+    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>random</tag>
       </tags>
   </entry>
   <entry>
