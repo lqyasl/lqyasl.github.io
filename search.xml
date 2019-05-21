@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2Funcategorized%2Farrow-js-note%2Ftext%2F</url>
-    <content type="text"><![CDATA[heloword *{margin:0;padding:0;} li{list-style:none;} a{text-decoration: none;} L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"superSample":2,"width":160,"height":320,"position":"left","hOffset":-12,"vOffset":-43},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"tagMode":false});]]></content>
+    <title><![CDATA[node-koa2]]></title>
+    <url>%2Fnode%2Fnode-koa2%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;hello my world 开始 github创建仓库 本地git clone 仓库 项目目录下 初始化 npm initnpm start 启动快捷方法 在package.json 中添加配置 12&quot;scripts&quot;: &#123; &quot;start&quot;: &quot;node server/index.js&quot;, 添加 .gitignore 文件 1234567891011121314# dependenciesnode_modules# logsnpm-debug.log# System.DS_Store#Generatedist# Buildbulid pug 模板引擎npm i pug -S &emsp;&emsp;未完待续…… write to me by QQ email]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+        <tag>koa2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[async-fn-note]]></title>
+    <url>%2Funcategorized%2Fasync-fn-note%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp; 正文： &emsp;&emsp; write to me by QQ email]]></content>
   </entry>
   <entry>
     <title><![CDATA[arrow-js-note]]></title>
     <url>%2Farrowjs%2Farrow-js-note%2F</url>
-    <content type="text"><![CDATA[&emsp;&emsp;今天是2019年，520，在这特殊的一天我面对的依然是code, but no Object, 我希望有一天能美梦成真——面向对象面向君，不负代码不负卿。 箭头函数的经典题型 有关 this 1234567891011121314151617181920212223242526272829let obj = &#123; id: 01, say: function () &#123; // 这里的this为obj setTimeout(function () &#123; // 这里是匿名函数的this默认为window console.log(&apos;arrow id:&apos;, this.id); // undifind &#125;, 100); &#125;, sayWithThis: function () &#123; // 这里将this的值当成变量存起来 let that = this; setTimeout(function () &#123; console.log(&apos;arrow id:&apos;, that.id); // 01 &#125;, 100); &#125;, sayWithArrow: function () &#123; // 这里的this为obj setTimeout(() =&gt; &#123; console.log(&apos;arrow id:&apos;, this.id); // 01 &#125;, 100); &#125;, sayWithGlobalArrow: () =&gt; &#123; // 这里的this已经为全局的this了 setTimeout(() =&gt; &#123; console.log(&apos;arrow id:&apos;, this.id); // undifind &#125;, 100); &#125;&#125;; &emsp;&emsp; write to me by QQ email]]></content>
+    <content type="text"><![CDATA[&emsp;&emsp;今天是2019年，520，在这特殊的一天我面对的依然是code, but no Object, 我希望有一天能美梦成真——面向对象面向君，不负代码不负卿。 箭头函数的经典题型 有关 this 1234567891011121314151617181920212223242526272829let obj = &#123; id: 01, say: function () &#123; // 这里的this为obj setTimeout(function () &#123; // 这里是匿名函数的this默认为window console.log(&apos;arrow id:&apos;, this.id); // undifind &#125;, 100); &#125;, sayWithThis: function () &#123; // 这里将this的值当成变量存起来 let that = this; setTimeout(function () &#123; console.log(&apos;arrow id:&apos;, that.id); // 01 &#125;, 100); &#125;, sayWithArrow: function () &#123; // 这里的this为obj setTimeout(() =&gt; &#123; console.log(&apos;arrow id:&apos;, this.id); // 01 &#125;, 100); &#125;, sayWithGlobalArrow: () =&gt; &#123; // 这里的this已经为全局的this了 setTimeout(() =&gt; &#123; console.log(&apos;arrow id:&apos;, this.id); // undifind &#125;, 100); &#125;&#125;; &emsp;&emsp;未完待续…… write to me by QQ email]]></content>
       <categories>
         <category>arrowjs</category>
       </categories>
@@ -157,14 +169,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[search-skills]]></title>
-    <url>%2Fsearch%2Fsearch-skills%2F</url>
-    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容 ##]]></content>
+    <title><![CDATA[Math-random]]></title>
+    <url>%2FMath%2FMath-random%2F</url>
+    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
       <categories>
-        <category>search</category>
+        <category>Math</category>
       </categories>
       <tags>
-        <tag>skills</tag>
+        <tag>random</tag>
       </tags>
   </entry>
   <entry>
@@ -179,6 +191,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[search-skills]]></title>
+    <url>%2Fsearch%2Fsearch-skills%2F</url>
+    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容 ##]]></content>
+      <categories>
+        <category>search</category>
+      </categories>
+      <tags>
+        <tag>skills</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[win-vscode-hotkey]]></title>
     <url>%2Fwin-vscode%2Fwin-vscode-hotkey%2F</url>
     <content type="text"><![CDATA[引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。## windows 最常用快捷键+ ctrl w 关闭当前网页+ f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名+ f4: 重复上步操作+ f5: 刷新桌面 刷新网页+ f11: 全屏显示网页+ shift : 省略号 shift + 数字6 （表示六个点） …… 书名号 shift + &lt;&gt; (小于大于）+ 分隔号 单独按 数字1 前面的键 《简 · 爱》+ Alt + 单击拖动 为矩形选择+ AlT + f4 关闭当前程序+ 删除 选中后 按delete+ 永久删除 选中后 shift +delete+ 截屏 PrtSc 截全屏 Alt +PrtSc 截当前窗口+ ctrl alt delete 任务管理器+ windows 打开开始菜单+ ctrl shift n 新建文件夹+ window e 打开文件资源管理器+ alt tab 切换窗口+ window d 回到桌面## vscode 常用快捷键+ 上下移动一行： Alt+Up 或 Alt+Down+ 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down+ 同时选中所有匹配： Ctrl+Shift+L+ Ctrl+D 下一个匹配的也被选中+ Alt + 单击 ：插入光标+ Ctrl + F2 选择当前字的所有出现+ ctrl shift k 删除整行+ ctrl shift a 多行注释+ ctrl f 当前文件内搜索相关代码，终于找到这个功能了，哈哈，右上角会有弹框，其中有前后箭头，表示搜索的代码上一次、下一次出现的位置，点击直接会跳转到相应的位置，并且侧边上有相应的位置标识。+ ctrl - 整体缩小+ ctrl = 整体放大+ 文件/首选项/设置 搜索zoom 根据配置 可以更精细的对大小进行操作 ctrl 加滚轮后记：快捷键还有很多，学到了再来补充]]></content>
@@ -187,17 +210,6 @@
       </categories>
       <tags>
         <tag>hotkey</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Math-random]]></title>
-    <url>%2FMath%2FMath-random%2F</url>
-    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
-      <categories>
-        <category>Math</category>
-      </categories>
-      <tags>
-        <tag>random</tag>
       </tags>
   </entry>
   <entry>
