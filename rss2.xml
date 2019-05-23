@@ -8,24 +8,40 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>君子生非异也，善假于物也.</description>
-    <pubDate>Thu, 23 May 2019 06:06:31 GMT</pubDate>
+    <pubDate>Thu, 23 May 2019 16:32:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>qq-talk</title>
-      <link>https://shulu520.com/uncategorized/qq-talk/</link>
-      <guid>https://shulu520.com/uncategorized/qq-talk/</guid>
-      <pubDate>Thu, 23 May 2019 04:48:48 GMT</pubDate>
+      <title>modularize-history</title>
+      <link>https://shulu520.com/modularize/modularize-history/</link>
+      <guid>https://shulu520.com/modularize/modularize-history/</guid>
+      <pubDate>Thu, 23 May 2019 14:17:24 GMT</pubDate>
       <description>
       
-        &lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
-&lt;center&gt;👇&lt;a target=&quot;_blank&quot; style=&quot;color:hotpink;font-weight:bold;text-decration:none&quot; href=&quot;http://wpa.qq.com/msgrd?v=3&amp;uin=2642816105&amp;site=qq&amp;menu=yes&quot;&gt;来QQ撩我啊&lt;/a&gt;&lt;/center&gt;
+        modularize js模块化历程
       
       </description>
       
-      <content:encoded><![CDATA[<p>&emsp;&emsp;</p><center>👇<a target="_blank" style="color:hotpink;font-weight:bold;text-decration:none" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">来QQ撩我啊</a></center><a id="more"></a><p>这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片v</p><hr><p>&emsp;&emsp;</p><center>👉<a target="_blank" style="color:hotpink;font-weight:bold;text-decration:none" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">点这里，跟我QQ聊天呗</a></center>]]></content:encoded>
+      <content:encoded><![CDATA[<p>&emsp;&emsp;</p><center>👉<a target="_blank" style="color:hotpink;font-weight:bold;text-decration:none" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">来QQ撩我啊</a></center><a id="more"></a><h2 id="modularize"><a href="#modularize" class="headerlink" title="modularize"></a>modularize</h2><ul><li>一阶段 所有的代码都写在一个文件下 即暴露在全局环境下 污染环境</li><li>二阶段 将某些api 放到一个对象之中 使用时通过obj.xxx来调用 不安全 因为在别处同样可以通过obj.xxx来将其修改掉</li><li>三阶段 匿名函数自执行(闭包)  安全 JQuery 就是这么做的 引入js文件太多 请求过多 依赖模糊</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(function( window )&#123;</span><br><span class="line">  function foo () &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">  // 将foo方法挂载到window上的xxx属性对象上</span><br><span class="line">  // 调用时xxx.foo()即可</span><br><span class="line">  window.xxx = &#123; foo &#125;</span><br><span class="line"></span><br><span class="line">  // 或将foo方法挂载到window上的xxx属性对象上，作为一个函数</span><br><span class="line">  // 调用时直接foo()执行即可</span><br><span class="line">  window.xxx = foo </span><br><span class="line">&#125;)( window )</span><br></pre></td></tr></table></figure><h2 id="模块化规范"><a href="#模块化规范" class="headerlink" title="模块化规范"></a>模块化规范</h2><h3 id="commonJs"><a href="#commonJs" class="headerlink" title="commonJs"></a>commonJs</h3><ul><li>一个js文件就是一个模块</li><li>向外暴露1 module.exports = value  value可以是任意值</li><li>向外暴露2 exports.xxx = value  value可以是任意值</li><li>引入模块 require(‘包名’) 自己写的文件要相对路劲</li></ul><h2 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h2><ul><li>define<h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2></li><li>阿里大牛结合commonjs和AMD写的 卖给老外了 <h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2></li></ul><hr><p>&emsp;&emsp;</p><center>👉<a target="_blank" style="color:hotpink;font-weight:bold;text-decration:none" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">点这里，跟我聊QQ</a></center>]]></content:encoded>
       
-      <comments>https://shulu520.com/uncategorized/qq-talk/#disqus_thread</comments>
+      <comments>https://shulu520.com/modularize/modularize-history/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>IT-proper-nouns</title>
+      <link>https://shulu520.com/uncategorized/IT-proper-nouns/</link>
+      <guid>https://shulu520.com/uncategorized/IT-proper-nouns/</guid>
+      <pubDate>Thu, 23 May 2019 14:02:57 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
+&lt;center&gt;👉&lt;a target=&quot;_blank&quot; style=&quot;color:hotpink;font-weight:bold;text-decoration:none&quot; href=&quot;http://wpa.qq.com/msgrd?v=3&amp;uin=2642816105&amp;site=qq&amp;menu=yes&quot;&gt;来QQ撩我啊&lt;/a&gt;&lt;/center&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>&emsp;&emsp;</p><center>👉<a target="_blank" style="color:hotpink;font-weight:bold;text-decoration:none" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">来QQ撩我啊</a></center><a id="more"></a><h2 id="api"><a href="#api" class="headerlink" title="api"></a>api</h2><ul><li>Application Programming Interface</li></ul><hr><p>&emsp;&emsp;</p><center>👉<a target="_blank" style="color:hotpink;font-weight:bold;text-decoration:none" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">点这里，跟我QQ聊天呗</a></center>]]></content:encoded>
+      
+      <comments>https://shulu520.com/uncategorized/IT-proper-nouns/#disqus_thread</comments>
     </item>
     
     <item>
@@ -254,8 +270,8 @@
     
     <item>
       <title>shanjuan</title>
-      <link>https://shulu520.com/friends/shanjuan/</link>
-      <guid>https://shulu520.com/friends/shanjuan/</guid>
+      <link>https://shulu520.com/diary/diary-shanjuan/</link>
+      <guid>https://shulu520.com/diary/diary-shanjuan/</guid>
       <pubDate>Fri, 03 May 2019 06:18:17 GMT</pubDate>
       <description>
       
@@ -267,23 +283,7 @@
       
       <content:encoded><![CDATA[<hr><p>&emsp;&emsp;juan，我的好朋友，好久不见，今偶然间，美好的回忆又浮现眼前，于是赶紧记下那些美好。</p><hr><a id="more"></a><h2 style="color:orange"><br>&emsp;&emsp;拿起雪糕想起了你。<br>&emsp;&emsp;雪糕这玩意和辣条一样是我小时候的最爱，只是随着年岁渐长，慢慢留在记忆里了。<br>昨晚室友叫我一起去超市，逛了一圈不知买点啥，看到有人买雪糕，心想，天气热了就买个尝尝吧。打开柜子，拿起雪糕，恍惚间，温暖的记忆又浮现在眼前。<br>&emsp;&emsp;juan，我的高中同学，朋友，那时经常作我的同桌，人美心善，跟同学关系都挺好。当然对我也很好。常给我糖果啊各种小吃的，我用的笔啊书和本子啊经常从juan那直接拿。<br>&emsp;&emsp;我对juan的第一印象：juan是一个可爱的小公主，而且很高洁。机缘巧合之下，我有幸认识了juan，而且常常作同桌。这让我们之间的距离又近了一点。juan是我去到十班最早认识的同学之一。<br>&emsp;&emsp;时间久了，发生过的好多事情我就不记得了。所以我此时此刻在努力的将往事回忆，我生怕等我老了的时候，年轻时的这些美好时光要是再也回想不起来了，那样想想多遗憾啊。<br>&emsp;&emsp;juan对我一直很好，就像对其他人一样。我们除了讨论学习，还聊小时候，聊未来。关于未来，其实都是我在表达对未来的迷惑，而juan一直在开导我。juan说我们可以永远做朋友。<br>&emsp;&emsp;一个雪糕，那是高三时的一天中午你送我的，当时教室里是有其同学的，但是你只送给了我。在高三那个本就燥热的季节，让我清凉了一整个夏天。<br>&emsp;&emsp;如今再拿起雪糕，眼前浮现出都是你对我的好。感谢那时的遇见，让我能有这么美好的回忆。juan，也愿你过得好，有个好对象。要是余生能再见，我想你还是那么的漂亮，那么温柔与大气。<br>&emsp;&emsp;朋友的友谊不是三言两语就道的尽的，但都是埋藏在我的心底里的。<br></h2><hr><p>&emsp;&emsp;刚刚看qq空间里你发的说说–有人拿走了你的外卖，🤣🤣🤣</p><hr>]]></content:encoded>
       
-      <comments>https://shulu520.com/friends/shanjuan/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>win-vscode-hotkey</title>
-      <link>https://shulu520.com/win-vscode/win-vscode-hotkey/</link>
-      <guid>https://shulu520.com/win-vscode/win-vscode-hotkey/</guid>
-      <pubDate>Tue, 30 Apr 2019 16:50:45 GMT</pubDate>
-      <description>
-      
-        windows操作系统，vscode代码编辑器 常见的几种快捷键，及常见用法。
-      
-      </description>
-      
-      <content:encoded><![CDATA[<center>引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。</center><br><a id="more"></a><br><br>## windows 最常用快捷键<br>+ ctrl  w  关闭当前网页<br><br>+ f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名<br><br>+ f4: 重复上步操作<br><br>+ f5: 刷新桌面 刷新网页<br><br>+ f11: 全屏显示网页<br><br>+ shift :<br>    省略号    shift + 数字6  （表示六个点）    ……<br><br>    书名号     shift + &lt;&gt;   (小于大于）<br><br>+ 分隔号   单独按 数字1 前面的键    《简 · 爱》<br><br>+ Alt + 单击拖动  为矩形选择<br><br>+ AlT + f4 关闭当前程序<br><br>+ 删除  选中后 按delete<br>+ 永久删除  选中后  shift +delete<br><br>+ 截屏   PrtSc     截全屏<br>    Alt  +PrtSc  截当前窗口<br><br>+ ctrl alt delete 任务管理器<br><br>+ windows 打开开始菜单<br><br>+ ctrl shift n  新建文件夹<br><br>+ window e 打开文件资源管理器<br><br>+ alt tab 切换窗口<br><br>+ window d 回到桌面<br><br>## vscode 常用快捷键<br><br>+ 上下移动一行： Alt+Up 或 Alt+Down<br><br>+ 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down<br><br>+ 同时选中所有匹配： Ctrl+Shift+L<br><br>+ Ctrl+D 下一个匹配的也被选中<br><br>+ Alt + 单击  ：插入光标<br><br>+ Ctrl + F2    选择当前字的所有出现<br><br>+ ctrl  shift  k   删除整行<br><br>+ ctrl  shift  a   多行注释<br><br>+ ctrl  f     当前文件内搜索相关代码，终于找到这个功能了，哈哈，右上角会有弹框，其中有前后箭头，表示搜索的代码上一次、下一次出现的位置，点击直接会跳转到相应的位置，并且侧边上有相应的位置标识。<br><br>+ ctrl - 整体缩小<br><br>+ ctrl = 整体放大<br><br>+ 文件/首选项/设置 搜索zoom 根据配置 可以更精细的对大小进行操作 ctrl 加滚轮<br><center>后记：快捷键还有很多，学到了再来补充</center>]]></content:encoded>
-      
-      <comments>https://shulu520.com/win-vscode/win-vscode-hotkey/#disqus_thread</comments>
+      <comments>https://shulu520.com/diary/diary-shanjuan/#disqus_thread</comments>
     </item>
     
     <item>

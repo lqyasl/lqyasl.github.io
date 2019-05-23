@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shulu520.com/uncategorized/qq-talk/</loc>
+    <loc>https://shulu520.com/uncategorized/IT-proper-nouns/</loc>
+    <lastmod>2019-05-23</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/diary/diary-shanjuan/</loc>
+    <lastmod>2019-05-23</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/modularize/modularize-history/</loc>
     <lastmod>2019-05-23</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/node/node-koa2/</loc>
@@ -66,9 +72,6 @@
   </url>  <url>
     <loc>https://shulu520.com/vue/vue-note/</loc>
     <lastmod>2019-05-05</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/friends/shanjuan/</loc>
-    <lastmod>2019-05-04</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/search/search-skills/</loc>
     <lastmod>2019-05-03</lastmod>
