@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>君子生非异也，善假于物也.</description>
-    <pubDate>Thu, 23 May 2019 05:15:28 GMT</pubDate>
+    <pubDate>Thu, 23 May 2019 06:06:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -19,11 +19,11 @@
       <description>
       
         &lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
-&lt;center&gt;👉&lt;a target=&quot;_blank&quot; href=&quot;http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes&quot;&gt;来QQ撩我啊&lt;/a&gt;&lt;/center&gt;
+&lt;center&gt;👇&lt;a target=&quot;_blank&quot; style=&quot;color:hotpink;font-weight:bold;text-decration:none&quot; href=&quot;http://wpa.qq.com/msgrd?v=3&amp;uin=2642816105&amp;site=qq&amp;menu=yes&quot;&gt;来QQ撩我啊&lt;/a&gt;&lt;/center&gt;
       
       </description>
       
-      <content:encoded><![CDATA[<p>&emsp;&emsp;</p><center>👉<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes">来QQ撩我啊</a></center><a id="more"></a><p>这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片v</p><hr><p>&emsp;&emsp;</p><center>👉<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes">来QQ撩我啊，一键跳转到QQ</a></center>]]></content:encoded>
+      <content:encoded><![CDATA[<p>&emsp;&emsp;</p><center>👇<a target="_blank" style="color:hotpink;font-weight:bold;text-decration:none" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">来QQ撩我啊</a></center><a id="more"></a><p>这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片这是QQ交谈测试片v</p><hr><p>&emsp;&emsp;</p><center>👉<a target="_blank" style="color:hotpink;font-weight:bold;text-decration:none" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">点这里，跟我QQ聊天呗</a></center>]]></content:encoded>
       
       <comments>https://shulu520.com/uncategorized/qq-talk/#disqus_thread</comments>
     </item>
@@ -271,6 +271,22 @@
     </item>
     
     <item>
+      <title>win-vscode-hotkey</title>
+      <link>https://shulu520.com/win-vscode/win-vscode-hotkey/</link>
+      <guid>https://shulu520.com/win-vscode/win-vscode-hotkey/</guid>
+      <pubDate>Tue, 30 Apr 2019 16:50:45 GMT</pubDate>
+      <description>
+      
+        windows操作系统，vscode代码编辑器 常见的几种快捷键，及常见用法。
+      
+      </description>
+      
+      <content:encoded><![CDATA[<center>引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。</center><br><a id="more"></a><br><br>## windows 最常用快捷键<br>+ ctrl  w  关闭当前网页<br><br>+ f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名<br><br>+ f4: 重复上步操作<br><br>+ f5: 刷新桌面 刷新网页<br><br>+ f11: 全屏显示网页<br><br>+ shift :<br>    省略号    shift + 数字6  （表示六个点）    ……<br><br>    书名号     shift + &lt;&gt;   (小于大于）<br><br>+ 分隔号   单独按 数字1 前面的键    《简 · 爱》<br><br>+ Alt + 单击拖动  为矩形选择<br><br>+ AlT + f4 关闭当前程序<br><br>+ 删除  选中后 按delete<br>+ 永久删除  选中后  shift +delete<br><br>+ 截屏   PrtSc     截全屏<br>    Alt  +PrtSc  截当前窗口<br><br>+ ctrl alt delete 任务管理器<br><br>+ windows 打开开始菜单<br><br>+ ctrl shift n  新建文件夹<br><br>+ window e 打开文件资源管理器<br><br>+ alt tab 切换窗口<br><br>+ window d 回到桌面<br><br>## vscode 常用快捷键<br><br>+ 上下移动一行： Alt+Up 或 Alt+Down<br><br>+ 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down<br><br>+ 同时选中所有匹配： Ctrl+Shift+L<br><br>+ Ctrl+D 下一个匹配的也被选中<br><br>+ Alt + 单击  ：插入光标<br><br>+ Ctrl + F2    选择当前字的所有出现<br><br>+ ctrl  shift  k   删除整行<br><br>+ ctrl  shift  a   多行注释<br><br>+ ctrl  f     当前文件内搜索相关代码，终于找到这个功能了，哈哈，右上角会有弹框，其中有前后箭头，表示搜索的代码上一次、下一次出现的位置，点击直接会跳转到相应的位置，并且侧边上有相应的位置标识。<br><br>+ ctrl - 整体缩小<br><br>+ ctrl = 整体放大<br><br>+ 文件/首选项/设置 搜索zoom 根据配置 可以更精细的对大小进行操作 ctrl 加滚轮<br><center>后记：快捷键还有很多，学到了再来补充</center>]]></content:encoded>
+      
+      <comments>https://shulu520.com/win-vscode/win-vscode-hotkey/#disqus_thread</comments>
+    </item>
+    
+    <item>
       <title>search-skills</title>
       <link>https://shulu520.com/search/search-skills/</link>
       <guid>https://shulu520.com/search/search-skills/</guid>
@@ -288,35 +304,19 @@
     </item>
     
     <item>
-      <title>Math-random</title>
-      <link>https://shulu520.com/Math/Math-random/</link>
-      <guid>https://shulu520.com/Math/Math-random/</guid>
+      <title>book-fengchuan</title>
+      <link>https://shulu520.com/book-note/book-fengchuan/</link>
+      <guid>https://shulu520.com/book-note/book-fengchuan/</guid>
       <pubDate>Tue, 30 Apr 2019 16:50:45 GMT</pubDate>
       <description>
       
-        js常见的几种随机数，及常见用法。
+        《疯传》读书笔记摘要
       
       </description>
       
-      <content:encoded><![CDATA[<center>引言：希望你睡不着时，想起的都是那些让你开心的事</center>                <p></p><h3 style="color:blue">常见的问题：如何生成一个区间[min,max]内的随机整数？</h3><br>答案很简单，即 <code>Math.random()*(max-min)+min</code><p></p><p>以下是一些其他的方法。<br><a id="more"></a></p><h2 id="new-Date-0"><a href="#new-Date-0" class="headerlink" title="new Date() - 0"></a>new Date() - 0</h2><ul><li>new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒”</li><li>(new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数</li></ul><h2 id="toString-指定进制-方法的调用"><a href="#toString-指定进制-方法的调用" class="headerlink" title="toString(指定进制) 方法的调用"></a>toString(指定进制) 方法的调用</h2><ul><li>与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些</li><li>随便一个随机数.toString(36)得随机字符，但有数字，且长短不一</li></ul><h2 id="随机字符串函数，长度固定，且都是字母"><a href="#随机字符串函数，长度固定，且都是字母" class="headerlink" title="随机字符串函数，长度固定，且都是字母"></a>随机字符串函数，长度固定，且都是字母</h2><ul><li>从固定的字典中抽取字符构成随机字符串</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 在大小写字母之间随机生成 x 个字符</span><br><span class="line">function randStr(x)&#123;</span><br><span class="line">    var s = &apos;&apos;;</span><br><span class="line">    while(s.length &lt; x &amp;&amp; x &gt; 0)&#123;</span><br><span class="line">        var r = Math.random();</span><br><span class="line">        s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65))</span><br><span class="line">    &#125;;</span><br><span class="line">    return s;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(randStr(3)); //KzE 三个随机字符</span><br></pre></td></tr></table></figure><h2 id="颜色随机函数"><a href="#颜色随机函数" class="headerlink" title="颜色随机函数"></a>颜色随机函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function randomColor()&#123;  </span><br><span class="line">    var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6);</span><br><span class="line">    return rand;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><ul><li>随机数相关得知识还又有很多，后面学到了再来补充笔记</li></ul>]]></content:encoded>
+      <content:encoded><![CDATA[<hr><p>&emsp;&emsp;深夜时，人会更加容易情绪化，所以无论多难过，都要告诉自己，没有那麽糟糕，睡一觉就好了。</p><hr><a id="more"></a><h2 id="相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。"><a href="#相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。" class="headerlink" title="相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。"></a>相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。</h2><h2 id="某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。"><a href="#某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。" class="headerlink" title="某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。"></a>某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。</h2><h2 id="从古至今，故事一直都是人们分享信息的重要工具。"><a href="#从古至今，故事一直都是人们分享信息的重要工具。" class="headerlink" title="从古至今，故事一直都是人们分享信息的重要工具。"></a>从古至今，故事一直都是人们分享信息的重要工具。</h2><h2 id="诱因，让人产生联想，看到这个，就会想到那个。"><a href="#诱因，让人产生联想，看到这个，就会想到那个。" class="headerlink" title="诱因，让人产生联想，看到这个，就会想到那个。"></a>诱因，让人产生联想，看到这个，就会想到那个。</h2><h2 id="打折规则，100元以上，降价多少元，以下为打几折。"><a href="#打折规则，100元以上，降价多少元，以下为打几折。" class="headerlink" title="打折规则，100元以上，降价多少元，以下为打几折。"></a>打折规则，100元以上，降价多少元，以下为打几折。</h2><h2><br>&emsp;&emsp;那么如何打造-个疯传的产品呢?第一，让你的产品成为一种社交货币，也就是说人们会通过分享它来赢得别人的好感和兴趣;第二，要利用诱因引发消费者的联想;第三，要带动消费者的情绪，让他们不断频繁地分享;第四，让你的产品尽可能出现在大家眼前，让人们不看都不行;第五，记得，简单实用的东西自然会受人欢迎;最后，帮你的产品量身打造一一个足够有意思的故事。<br><br>&emsp;&emsp;两个可行的建议。首先，可以让你的产品带上点竞争元素。就是说利用人们的游戏心理，大家在玩游戏的时候都喜欢跟别人比赛，获得胜利之后，会得意地和别人分享自己的战绩，同时也就相当于告诉了别人某个产品。所以，如果你的产品有了游戏元素，就能鼓励消费者用你的产品进行某种互动，这样就提高了产品被分享的可能。<br></h2>]]></content:encoded>
       
-      <comments>https://shulu520.com/Math/Math-random/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>win-vscode-hotkey</title>
-      <link>https://shulu520.com/win-vscode/win-vscode-hotkey/</link>
-      <guid>https://shulu520.com/win-vscode/win-vscode-hotkey/</guid>
-      <pubDate>Tue, 30 Apr 2019 16:50:45 GMT</pubDate>
-      <description>
-      
-        windows操作系统，vscode代码编辑器 常见的几种快捷键，及常见用法。
-      
-      </description>
-      
-      <content:encoded><![CDATA[<center>引言：如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。</center><br><a id="more"></a><br><br>## windows 最常用快捷键<br>+ ctrl  w  关闭当前网页<br><br>+ f2键 ：选中后按f2键即可重命名文件，另一种方法，点一下文件名，稍等，再点一下，即可重命名<br><br>+ f4: 重复上步操作<br><br>+ f5: 刷新桌面 刷新网页<br><br>+ f11: 全屏显示网页<br><br>+ shift :<br>    省略号    shift + 数字6  （表示六个点）    ……<br><br>    书名号     shift + &lt;&gt;   (小于大于）<br><br>+ 分隔号   单独按 数字1 前面的键    《简 · 爱》<br><br>+ Alt + 单击拖动  为矩形选择<br><br>+ AlT + f4 关闭当前程序<br><br>+ 删除  选中后 按delete<br>+ 永久删除  选中后  shift +delete<br><br>+ 截屏   PrtSc     截全屏<br>    Alt  +PrtSc  截当前窗口<br><br>+ ctrl alt delete 任务管理器<br><br>+ windows 打开开始菜单<br><br>+ ctrl shift n  新建文件夹<br><br>+ window e 打开文件资源管理器<br><br>+ alt tab 切换窗口<br><br>+ window d 回到桌面<br><br>## vscode 常用快捷键<br><br>+ 上下移动一行： Alt+Up 或 Alt+Down<br><br>+ 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down<br><br>+ 同时选中所有匹配： Ctrl+Shift+L<br><br>+ Ctrl+D 下一个匹配的也被选中<br><br>+ Alt + 单击  ：插入光标<br><br>+ Ctrl + F2    选择当前字的所有出现<br><br>+ ctrl  shift  k   删除整行<br><br>+ ctrl  shift  a   多行注释<br><br>+ ctrl  f     当前文件内搜索相关代码，终于找到这个功能了，哈哈，右上角会有弹框，其中有前后箭头，表示搜索的代码上一次、下一次出现的位置，点击直接会跳转到相应的位置，并且侧边上有相应的位置标识。<br><br>+ ctrl - 整体缩小<br><br>+ ctrl = 整体放大<br><br>+ 文件/首选项/设置 搜索zoom 根据配置 可以更精细的对大小进行操作 ctrl 加滚轮<br><center>后记：快捷键还有很多，学到了再来补充</center>]]></content:encoded>
-      
-      <comments>https://shulu520.com/win-vscode/win-vscode-hotkey/#disqus_thread</comments>
+      <comments>https://shulu520.com/book-note/book-fengchuan/#disqus_thread</comments>
     </item>
     
     <item>
