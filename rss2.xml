@@ -8,8 +8,24 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>君子生非异也，善假于物也.</description>
-    <pubDate>Thu, 30 May 2019 15:43:30 GMT</pubDate>
+    <pubDate>Fri, 31 May 2019 15:59:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>js-advance-four</title>
+      <link>https://shulu520.com/js-advance/js-advance-four/</link>
+      <guid>https://shulu520.com/js-advance/js-advance-four/</guid>
+      <pubDate>Fri, 31 May 2019 02:57:20 GMT</pubDate>
+      <description>
+      
+        guigu js 高级教程笔记④——线程机制和事件机制
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>&emsp;&emsp;</p><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p><h2 id="线程与进程"><a href="#线程与进程" class="headerlink" title="线程与进程"></a>线程与进程</h2><ul><li>进程:<ul><li>程序的一次执行, 它占有一片独有的内存空间</li><li>可以通过windows任务管理器查看进程</li></ul></li><li>线程:<ul><li>是进程内的一个独立执行单元</li><li>是程序执行的一个完整流程</li><li>是CPU的最小的调度单元</li></ul></li><li>关系<ul><li>一个进程至少有一个线程(主)</li><li>程序是在某个进程中的某个线程执行的</li></ul></li></ul><p><img src="https://www.z4a.net/images/2019/05/31/20190531222313.md.png" alt="线程与进程图"></p><ul><li>应用程序必须运行在某个进程的某个线程上</li><li>一个进程中至少有一个运行的线程: 主线程,  进程启动后自动创建</li><li>一个进程内的数据可以供其中的多个线程直接共享</li><li>多个进程之间的数据是不能直接共享的</li><li>线程池(thread pool): 保存多个线程对象的容器, 实现线程对象的反复利用</li><li><p>何为多进程与多线程?</p><ul><li>多进程运行: 一应用程序可以同时启动多个实例运行</li><li>多线程: 在一个进程内, 同时有多个线程运行</li></ul></li><li><p>比较单线程与多线程?</p><ul><li>多线程<br>优点：能有效提升CPU的利用率<br>缺点：创建多线程开销 线程间切换开销 死锁与状态同步问题</li><li>单线程<br>优点：顺序编程简单易懂<br>缺点：效率低</li></ul></li><li>JS是单线程还是多线程?<ul><li>js是单线程运行的</li><li>但使用H5中的 Web Workers可以多线程运行</li></ul></li><li>浏览器运行是单进程还是多进程?<ul><li>有的是单进程 firefox 老版IE</li><li>有的是多进程 chrome 新版IE</li></ul></li><li><p>如何查看浏览器是否是多进程运行的呢?</p><ul><li>任务管理器 —&gt; 进程</li></ul></li><li><p>浏览器内核</p></li><li>支撑浏览器运行的最核心的程序</li><li>不同的浏览器可能不一样<ul><li>Chrome, Safari : webkit</li><li>firefox : Gecko</li><li>IE: Trident</li><li>360,搜狗等国内浏览器: Trident + webkit</li></ul></li></ul><h2 id="浏览器内核模块组成"><a href="#浏览器内核模块组成" class="headerlink" title="浏览器内核模块组成"></a>浏览器内核模块组成</h2><ul><li>主线程<ul><li>js引擎模块 : 负责js程序的编译与运行</li><li>html,css文档解析模块 : 负责页面文本的解析</li><li>DOM/CSS模块 : 负责dom/css在内存中的相关处理 </li><li>布局和渲染模块 : 负责页面的布局和效果的绘制(内存中的对象)</li></ul></li><li>分线程<ul><li>定时器模块 : 负责定时器的管理</li><li>DOM事件模块 : 负责事件的管理</li><li>网络请求模块 : 负责Ajax请求</li></ul></li></ul><h2 id="js线程"><a href="#js线程" class="headerlink" title="js线程"></a>js线程</h2><ul><li>js是单线程执行的(回调函数也是在主线程)</li><li>H5提出了实现多线程的方案: Web Workers</li><li>只能是主线程更新界面</li></ul><h2 id="定时器问题"><a href="#定时器问题" class="headerlink" title="定时器问题:"></a>定时器问题:</h2><ul><li>定时器并不真正完全定时</li><li>如果在主线程执行了一个长时间的操作, 可能导致延时才处理</li></ul><h2 id="事件处理机制-图"><a href="#事件处理机制-图" class="headerlink" title="事件处理机制(图)"></a>事件处理机制(图)</h2><ul><li>代码分类<ul><li>初始化执行代码: 包含绑定dom事件监听, 设置定时器, 发送ajax请求的代码</li><li>回调执行代码: 处理回调逻辑</li></ul></li><li>js引擎执行代码的基本流程: <ul><li>初始化代码===&gt;回调代码</li></ul></li><li>模型的2个重要组成部分:<ul><li>事件管理模块</li><li>回调队列</li></ul></li><li>模型的运转流程<ul><li>执行初始化代码, 将事件回调函数交给对应模块管理</li><li>当事件发生时, 管理模块会将回调函数及其数据添加到回调列队中</li><li>只有当初始化代码执行完后(可能要一定时间), 才会遍历读取回调队列中的回调函数执行</li></ul></li></ul><h2 id="H5-Web-Workers"><a href="#H5-Web-Workers" class="headerlink" title="H5 Web Workers"></a>H5 Web Workers</h2><ul><li>可以让js在分线程执行</li><li><p>Worker</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var worker = new Worker(&apos;worker.js&apos;);</span><br><span class="line">worker.onMessage = function(event)&#123;event.data&#125; : 用来接收另一个线程发送过来的数据的回调</span><br><span class="line">worker.postMessage(data1) : 向另一个线程发送数据</span><br></pre></td></tr></table></figure></li><li><p>问题:</p><ul><li>worker内代码不能操作DOM更新UI</li><li>不是每个浏览器都支持这个新特性</li><li>不能跨域加载JS</li></ul></li><li><p>svn版本控制</p></li><li>svn server</li></ul><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p><center><img width="50px" height="50px" src="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png" alt="QQ" border="0"><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">来我QQ撩我哦👇</a></center>]]></content:encoded>
+      
+      <comments>https://shulu520.com/js-advance/js-advance-four/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>js-advance-three</title>
@@ -313,22 +329,6 @@
       <content:encoded><![CDATA[<hr><p>&emsp;&emsp;</p><hr><a id="more"></a><h2 id="GET-POST-的区别-前提-web浏览器环境下的RFC规范GET-用来获取信息，POST用来发送信息"><a href="#GET-POST-的区别-前提-web浏览器环境下的RFC规范GET-用来获取信息，POST用来发送信息" class="headerlink" title="GET  POST 的区别 前提:web浏览器环境下的RFC规范GET 用来获取信息，POST用来发送信息"></a>GET  POST 的区别 前提:web浏览器环境下的RFC规范GET 用来获取信息，POST用来发送信息</h2><ul><li>可见性</li><li>安全性</li><li>数据大小</li><li>编码类型</li><li>能否收藏为书签，GET可以</li><li>刷新，后退按钮，GET无影响，POST重新提交</li><li>能否保留到浏览器历史，GET保留</li></ul><hr><p>&emsp;&emsp;</p><hr>]]></content:encoded>
       
       <comments>https://shulu520.com/http/http/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>net-model</title>
-      <link>https://shulu520.com/net/net-model/</link>
-      <guid>https://shulu520.com/net/net-model/</guid>
-      <pubDate>Mon, 06 May 2019 15:28:43 GMT</pubDate>
-      <description>
-      
-        对五层网络模型的初步认识
-      
-      </description>
-      
-      <content:encoded><![CDATA[<hr><hr><a id="more"></a><h2 id="应用层-程序，软件，应用层协议，http协议，DNS协议-域名解析-，FTP协议-文件传输协议-，SMTP-邮件传输协议"><a href="#应用层-程序，软件，应用层协议，http协议，DNS协议-域名解析-，FTP协议-文件传输协议-，SMTP-邮件传输协议" class="headerlink" title="应用层:  程序，软件，应用层协议，http协议，DNS协议(域名解析)，FTP协议(文件传输协议)，SMTP(邮件传输协议)"></a>应用层:  程序，软件，应用层协议，http协议，DNS协议(域名解析)，FTP协议(文件传输协议)，SMTP(邮件传输协议)</h2><h2 id="传输层-对数据传输的建立和管理，传输层协议，UDP协议-有丢包的可能-，TCP-保证数据的正确性，顺序性"><a href="#传输层-对数据传输的建立和管理，传输层协议，UDP协议-有丢包的可能-，TCP-保证数据的正确性，顺序性" class="headerlink" title="传输层: 对数据传输的建立和管理，传输层协议，UDP协议(有丢包的可能)，TCP(保证数据的正确性，顺序性)"></a>传输层: 对数据传输的建立和管理，传输层协议，UDP协议(有丢包的可能)，TCP(保证数据的正确性，顺序性)</h2><h2 id="网络层-好比交通网络，IP协议-IP加端口号来确定一个程序的位置"><a href="#网络层-好比交通网络，IP协议-IP加端口号来确定一个程序的位置" class="headerlink" title="网络层: 好比交通网络，IP协议(IP加端口号来确定一个程序的位置)"></a>网络层: 好比交通网络，IP协议(IP加端口号来确定一个程序的位置)</h2><h2 id="数据链路层-两个子层，一个叫逻辑链路控制子层，另一个叫媒体访问控制子层-MAC地址"><a href="#数据链路层-两个子层，一个叫逻辑链路控制子层，另一个叫媒体访问控制子层-MAC地址" class="headerlink" title="数据链路层: 两个子层，一个叫逻辑链路控制子层，另一个叫媒体访问控制子层(MAC地址)"></a>数据链路层: 两个子层，一个叫逻辑链路控制子层，另一个叫媒体访问控制子层(MAC地址)</h2><h2 id="物理层-坐公交，扫码骑车。"><a href="#物理层-坐公交，扫码骑车。" class="headerlink" title="物理层: 坐公交，扫码骑车。"></a>物理层: 坐公交，扫码骑车。</h2><h2 id="除了五层网络模型之外还有七层网络模型，那么七层网络模型是什么呢？就是将应用层一分为三，分别为：应用层，表示层和会话层。新出来的表示层和会话层没有相应的协议。一般表示层做的是数据格式化，或者加密等操作。"><a href="#除了五层网络模型之外还有七层网络模型，那么七层网络模型是什么呢？就是将应用层一分为三，分别为：应用层，表示层和会话层。新出来的表示层和会话层没有相应的协议。一般表示层做的是数据格式化，或者加密等操作。" class="headerlink" title="除了五层网络模型之外还有七层网络模型，那么七层网络模型是什么呢？就是将应用层一分为三，分别为：应用层，表示层和会话层。新出来的表示层和会话层没有相应的协议。一般表示层做的是数据格式化，或者加密等操作。"></a>除了五层网络模型之外还有七层网络模型，那么七层网络模型是什么呢？就是将应用层一分为三，分别为：应用层，表示层和会话层。新出来的表示层和会话层没有相应的协议。一般表示层做的是数据格式化，或者加密等操作。</h2>]]></content:encoded>
-      
-      <comments>https://shulu520.com/net/net-model/#disqus_thread</comments>
     </item>
     
   </channel>
