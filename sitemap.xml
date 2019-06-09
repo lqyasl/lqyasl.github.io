@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://shulu520.com/git/git-linux/</loc>
+    
+    <lastmod>2019-06-09T16:22:14.454Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shulu520.com/js-advance/js-advance-four/</loc>
+    
+    <lastmod>2019-06-08T07:04:54.130Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://shulu520.com/webpack/webpack-mooc/</loc>
     
-    <lastmod>2019-06-06T15:40:05.094Z</lastmod>
+    <lastmod>2019-06-07T03:00:27.318Z</lastmod>
     
   </url>
   
@@ -19,13 +33,6 @@
     <loc>https://shulu520.com/js-modularize/js-modularize/</loc>
     
     <lastmod>2019-06-01T15:57:35.557Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shulu520.com/js-advance/js-advance-four/</loc>
-    
-    <lastmod>2019-06-01T15:13:51.671Z</lastmod>
     
   </url>
   
