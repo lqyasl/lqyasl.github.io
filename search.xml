@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js-design-mode-decorator]]></title>
+    <url>%2Fjs-design-mode%2Fjs-design-mode-decorator%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp; 介绍 菜鸟教程 大牛解读es7装饰器 为对象添加功能 不改变其原有的结构和功能 代码演示 画圆 12345678910111213141516171819202122232425class Circle &#123; draw() &#123; console.log(&apos;画一个圆&apos;) &#125;&#125;class Decorator &#123; constructor(circle) &#123; this.circle = circle &#125; draw() &#123; this.circle.draw() this.setRedBorder(this.circle) &#125; setRedBorder(circle) &#123; console.log(&apos;给圆设置红色的边框&apos;) &#125;&#125;// 测试let circle = new Circle()circle.draw() //画一个圆let dec = new Decorator(circle)dec.draw() //画一个圆 给圆设置红色的边框 装饰器 ES7 中的 decorator 同样借鉴了python语法糖，不过依赖于 ES5 的 Object.defineProperty 方法 。 Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。 Object.defineProperty(obj, prop, descriptor) obj：要在其上定义属性的对象。 prop：要定义或修改的属性的名称。 descriptor：将被定义或修改的属性描述符。 返回值：被传递给函数的对象。 属性描述符 对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。 数据描述符是一个具有值的属性，该值可能是可写的，也可能不是可写的。 存取描述符是由 getter-setter 函数对描述的属性。 描述符必须是这两种形式之一；不能同时是两者。 数据描述符和存取描述符均具有以下可选键值: configurable 可修改 布尔值 enumerable 可枚举 布尔值 value 该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。默认为 undefined。 writable 可写 布尔值 get 一个给属性提供 getter 的方法 set 一个给属性提供 setter 的方法 Object.assign Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。 语法 Object.assign(target, …sources)参数 target 目标对象。 sources 源对象。 返回值 目标对象。 core-decorators装饰器库的使用 安装插件 12345678910111213141516171819202122npm install --save-dev @babel/plugin-proposal-class-properties npm install --save-dev @babel/plugin-proposal-decoratorsnpm install --save-dev babel-plugin-transform-decorators-legacynpm install --save-dev core-decorators当然还有以下依赖的支持&quot;dependencies&quot;: &#123; &quot;@babel/core&quot;: &quot;^7.4.4&quot;, &quot;@babel/plugin-proposal-class-properties&quot;: &quot;^7.4.4&quot;, &quot;@babel/plugin-proposal-decorators&quot;: &quot;^7.4.4&quot;, &quot;@babel/preset-env&quot;: &quot;^7.4.4&quot;, &quot;babel-loader&quot;: &quot;^8.0.5&quot;, &quot;babel-plugin-transform-decorators-legacy&quot;: &quot;^1.3.5&quot;, &quot;babel-preset-env&quot;: &quot;^1.7.0&quot;, &quot;core-decorators&quot;: &quot;^0.20.0&quot;&#125; .babelrc文件的配置 12345678910111213141516171819202122&#123; &quot;presets&quot;: [ [&quot;@babel/preset-env&quot;, &#123; &quot;useBuiltIns&quot;: &quot;usage&quot;,// 在每个文件中使用polyfill时，为polyfill添加特定导入。利用捆绑器只加载一次相同的polyfill。 &quot;modules&quot;: false,// 启用将ES6模块语法转换为其他模块类型，设置为false不会转换模块。 &quot;targets&quot;: &#123; //浏览器兼容 &quot;browsers&quot;: &quot;last 2 versions, not ie &lt;= 9&quot; &#125; &#125;] ], &quot;plugins&quot;: [ [ &quot;@babel/plugin-proposal-decorators&quot;, &#123; &quot;legacy&quot;: true &#125; ], [&quot;@babel/plugin-transform-runtime&quot;, &#123; &quot;helpers&quot;: false &#125;] ]&#125; 简单使用 1 123456789101112131415import &#123; readonly &#125; from &apos;core-decorators&apos;class Demo &#123; @readonly sayName() &#123; console.log(&apos;shulu&apos;) &#125;&#125;let demo = new Demo()demo.sayName() //shuludemo.sayName = function () &#123; console.log(&apos;lqy love shulu&apos;) //Uncaught TypeError: Cannot assign to read only property &apos;sayName&apos; of object &apos;#&lt;Demo&gt;&apos;&#125; 简单使用 2 123456789101112import &#123; deprecate &#125; from &apos;core-decorators&apos;class Demo &#123; @deprecate(&apos;此方法即将废除&apos; ,&#123;url: &apos;https://shulu520.com&apos;&#125;) getName() &#123; console.log(&apos;lqy&apos;) &#125;&#125;let demo = new Demo()demo.getName() //lqy DEPRECATION Demo#getName: 此方法即将废除 See https://shulu520.com for more details. 还有多种好用的方法…… 有事您Q我👇]]></content>
+      <categories>
+        <category>js-design-mode</category>
+      </categories>
+      <tags>
+        <tag>mooc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js-design-mode-adapter]]></title>
+    <url>%2Fjs-design-mode%2Fjs-design-mode-adapter%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;江南的雨季，西北的惆怅。感君一回顾，思君朝与暮。 设计模式之适配器介绍 菜鸟教程 适配器模式（Adapter Pattern）是作为两个不兼容的接口之间的桥梁。这种类型的设计模式属于结构型模式，它结合了两个独立接口的功能。 这种模式涉及到一个单一的类，该类负责加入独立的或不兼容的接口功能。举个真实的例子，读卡器是作为内存卡和笔记本之间的适配器。您将内存卡插入读卡器，再将读卡器插入笔记本，这样就可以通过笔记本来读取内存卡。 代码演示 12345678910111213141516171819class OldStandard &#123; oldRequest() &#123; return &apos;老式标准插头&apos; &#125;&#125;class Adapter &#123; constructor() &#123; this.standard = new OldStandard() &#125; newRequest() &#123; let info = this.standard.oldRequest() return `新标准插头---&gt;适配器---&gt;$&#123;info&#125;` &#125;&#125;let adater = new Adapter()let res = adater.newRequest()console.log(&apos;res :&apos;, res) //res : 新标准插头---&gt;适配器---&gt;老式标准插头 经典案例 vue的computed计算属性 设计原则验证 将旧接口和使用者分离 开放封闭原则 有事您Q我👇]]></content>
+      <categories>
+        <category>js-design-mode</category>
+      </categories>
+      <tags>
+        <tag>mooc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js-design-mode-singleton]]></title>
+    <url>%2Fjs-design-mode%2Fjs-design-mode-singleton%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;I love the World. 单例模式介绍 菜鸟教程 系统中唯一被使用 一个类只有一个实例 私有化构造函数，外部不能new 只能内部new !!!!! instance实例是唯一被new出来的对象 代码演示123456789101112131415161718192021222324252627class SingleObject &#123; login() &#123; console.log(&apos;login&apos;) &#125; &#125;// 静态方法SingleObject.getInstance = (function() &#123; let instance return function() &#123; if (!instance) &#123; instance = new SingleObject() &#125; return instance &#125;&#125;)()let obj1 = SingleObject.getInstance()obj1.login() //loginlet obj2 = SingleObject.getInstance()obj2.login() //loginconsole.log(&apos;obj1===obj2 :&apos;, obj1===obj2) //obj1===obj2 : truelet obj3 = new SingleObject() //外部不能new,但是无法完全控制console.log(&apos;obj3===obj1 :&apos;, obj3===obj1) //obj3===obj1 : false 单例模式使用场景 jQuery 的 $ 模拟登录框 购物车 vuex react 中的store 代码实现登录框 12345678910111213141516171819202122232425262728293031323334353637383940414243class LoginForm &#123; constructor () &#123; this.state = &apos;hide&apos; &#125; show () &#123; if (this.state === &apos;show&apos;) &#123; console.log(&apos;已经显示&apos;) return &#125; this.state = &apos;show&apos; console.log(&apos;已经登录成功&apos;) &#125; hide () &#123; if (this.state === &apos;hide&apos;) &#123; console.log(&apos;已经隐藏&apos;) return &#125; this.state = &apos;hide&apos; console.log(&apos;已经隐藏成功&apos;) &#125;&#125;// 静态方法LoginForm.getInstance = (() =&gt; &#123; let instance return () =&gt; &#123; if (!instance) &#123; instance = new LoginForm() &#125; return instance &#125;&#125;)()let login1 = LoginForm.getInstance()login1.show() //已经登录成功let login2 = LoginForm.getInstance()login2.show() //已经显示login2.hide() //已经隐藏成功console.log(&apos;login1===login2 :&apos;, login1===login2)// login1===login2 : true// 这就说明login1 和login2是同一个实例 设计原则验证 符合单一职责原则，只实例化唯一的对象 有事您Q我👇]]></content>
+      <categories>
+        <category>js-design-mode</category>
+      </categories>
+      <tags>
+        <tag>mooc</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hotkey-vscode]]></title>
     <url>%2Fhotkey%2Fhotkey-vscode%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp;如果你想要个和现在不同的人生，就必须去做你从未做过的事情。努力之后最坏的结果是失败，但不尝试的结果则是无止境的懊悔、怀疑和平庸。 vscode 常用快捷键 上下移动一行： Alt+Up 或 Alt+Down 向上或向下复制一行： Shift+Alt+Up 或 Shift+Alt+Down 同时选中所有匹配： Ctrl+Shift+L Ctrl+D 下一个匹配的也被选中 Alt + 单击 ：插入光标 Ctrl + F2 选择当前字的所有出现 ctrl shift k 删除整行 ctrl shift a 多行注释 ctrl f 当前文件内搜索相关代码，终于找到这个功能了，哈哈，右上角会有弹框，其中有前后箭头，表示搜索的代码上一次、下一次出现的位置，点击直接会跳转到相应的位置，并且侧边上有相应的位置标识。 ctrl - 整体缩小 ctrl = 整体放大 文件/首选项/设置 搜索zoom 根据配置 可以更精细的对大小进行操作 ctrl 加滚轮 col 选第一个 即console.log()的快捷键 且效果很棒 有事您Q我👇]]></content>
@@ -14,7 +47,7 @@
   <entry>
     <title><![CDATA[js-design-mode-factory]]></title>
     <url>%2Fjs-design-mode%2Fjs-design-mode-factory%2F</url>
-    <content type="text"><![CDATA[&emsp;&emsp;愿你做一个快乐的小仙女。 代码实现 方法定义 12345678910111213141516// Product产品生产流水线class Product &#123; constructor (name) &#123; this.name = name &#125; getName () &#123; return `my name is $&#123;this.name&#125;` &#125;&#125;// Creator 工厂class Creator &#123; create (name) &#123; return new Product(name) &#125;&#125; 测试 123456789101112131415161718192021/* 普通调用 用户直接面对某一流水线，要产品 用户每次拿产品都得直接与产品流水线打交道*/ // 书写极其麻烦const p1 = new Product(&apos;phone&apos;)const p2 = new Product(&apos;book&apos;)console.log(&apos;p1 :&apos;, p1)console.log(&apos;p2 :&apos;, p2)/* 工厂函数 用户直接面对生产厂家，要产品 也就是说，用户无需知道其内部复杂生产过程*/// 工厂函数将生产流水线封装起来，只对外暴露接口供用户使用const creator = new Creator()//实例化一个工厂const pa = creator.create(&apos;boy&apos;)const pb = creator.create(&apos;girl&apos;)console.log(&apos;pa :&apos;, pa)console.log(&apos;pb :&apos;, pb) 工厂函数的例子 jQuery react.createElement vue异步组件 验证设计原则 构造函数和创建者分离 符合开放封闭原则 有事您Q我👇]]></content>
+    <content type="text"><![CDATA[&emsp;&emsp;愿你做一个快乐的小仙女。 介绍 菜鸟教程 代码实现 方法定义 12345678910111213141516// Product产品生产流水线class Product &#123; constructor (name) &#123; this.name = name &#125; getName () &#123; return `my name is $&#123;this.name&#125;` &#125;&#125;// Creator 工厂class Creator &#123; create (name) &#123; return new Product(name) &#125;&#125; 测试 123456789101112131415161718192021/* 普通调用 用户直接面对某一流水线，要产品 用户每次拿产品都得直接与产品流水线打交道*/ // 书写极其麻烦const p1 = new Product(&apos;phone&apos;)const p2 = new Product(&apos;book&apos;)console.log(&apos;p1 :&apos;, p1)console.log(&apos;p2 :&apos;, p2)/* 工厂函数 用户直接面对生产厂家，要产品 也就是说，用户无需知道其内部复杂生产过程*/// 工厂函数将生产流水线封装起来，只对外暴露接口供用户使用const creator = new Creator()//实例化一个工厂const pa = creator.create(&apos;boy&apos;)const pb = creator.create(&apos;girl&apos;)console.log(&apos;pa :&apos;, pa)console.log(&apos;pb :&apos;, pb) 工厂函数的例子 jQuery react.createElement vue异步组件 验证设计原则 构造函数和创建者分离 符合开放封闭原则 有事您Q我👇]]></content>
       <categories>
         <category>js-design-mode</category>
       </categories>
@@ -295,8 +328,8 @@
         <category>es6</category>
       </categories>
       <tags>
-        <tag>zhuf</tag>
         <tag>es6</tag>
+        <tag>zhuf</tag>
       </tags>
   </entry>
   <entry>
@@ -360,17 +393,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[skills-search]]></title>
-    <url>%2Fskills%2Fskills-search%2F</url>
-    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容]]></content>
-      <categories>
-        <category>skills</category>
-      </categories>
-      <tags>
-        <tag>search</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[book-fengchuan]]></title>
     <url>%2Fbook-note%2Fbook-fengchuan%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp;深夜时，人会更加容易情绪化，所以无论多难过，都要告诉自己，没有那麽糟糕，睡一觉就好了。 相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。从古至今，故事一直都是人们分享信息的重要工具。诱因，让人产生联想，看到这个，就会想到那个。打折规则，100元以上，降价多少元，以下为打几折。&emsp;&emsp;那么如何打造-个疯传的产品呢?第一，让你的产品成为一种社交货币，也就是说人们会通过分享它来赢得别人的好感和兴趣;第二，要利用诱因引发消费者的联想;第三，要带动消费者的情绪，让他们不断频繁地分享;第四，让你的产品尽可能出现在大家眼前，让人们不看都不行;第五，记得，简单实用的东西自然会受人欢迎;最后，帮你的产品量身打造一一个足够有意思的故事。&emsp;&emsp;两个可行的建议。首先，可以让你的产品带上点竞争元素。就是说利用人们的游戏心理，大家在玩游戏的时候都喜欢跟别人比赛，获得胜利之后，会得意地和别人分享自己的战绩，同时也就相当于告诉了别人某个产品。所以，如果你的产品有了游戏元素，就能鼓励消费者用你的产品进行某种互动，这样就提高了产品被分享的可能。]]></content>
@@ -401,6 +423,17 @@
       </categories>
       <tags>
         <tag>git-note</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[skills-search]]></title>
+    <url>%2Fskills%2Fskills-search%2F</url>
+    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容]]></content>
+      <categories>
+        <category>skills</category>
+      </categories>
+      <tags>
+        <tag>search</tag>
       </tags>
   </entry>
   <entry>

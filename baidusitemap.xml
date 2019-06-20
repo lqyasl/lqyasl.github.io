@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://shulu520.com/js-design-mode/js-design-mode-decorator/</loc>
+    <lastmod>2019-06-20</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/js-design-mode/js-design-mode-adapter/</loc>
+    <lastmod>2019-06-20</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/js-design-mode/js-design-mode-factory/</loc>
+    <lastmod>2019-06-20</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/js-design-mode/js-design-mode-singleton/</loc>
+    <lastmod>2019-06-20</lastmod>
+  </url>  <url>
     <loc>https://shulu520.com/hello/friends/</loc>
     <lastmod>2019-06-19</lastmod>
   </url>  <url>
@@ -8,9 +20,6 @@
     <lastmod>2019-06-19</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/hotkey/hotkey-vim/</loc>
-    <lastmod>2019-06-19</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/js-design-mode/js-design-mode-factory/</loc>
     <lastmod>2019-06-19</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/js-design-mode/js-design-mode-design-philosophy/</loc>
