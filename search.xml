@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js-design-mode-observer]]></title>
+    <url>%2Fjs-design-mode%2Fjs-design-mode-observer%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp; 介绍 前端运用最广泛的设计模式 当一个对象被修改时，则会自动通知它的依赖对象。 注意，不一定是一对多哦，也可以一对一的。 菜鸟教程 代码实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657// 主题，保存状态，状态发生变化后触发所有观察者对象class Subject &#123; constructor() &#123; this.state = 0 this.observers = [] &#125; getState() &#123; return this.state &#125; setState(state) &#123; this.state = state this.notifyAllObservers() &#125; // 通知所有的观察者 notifyAllObservers() &#123; this.observers.forEach((observer) =&gt; &#123; observer.update() &#125;) &#125; // 添加新的观察者 attach(observer) &#123; this.observers.push(observer) &#125;&#125;// 观察者class Observer &#123; constructor(name, subject) &#123; this.name = name this.subject = subject this.subject.attach(this) &#125; update() &#123; console.log(`$&#123;this.name&#125; updated, now-state:$&#123;this.subject.getState()&#125;`); &#125;&#125;// 测试let s = new Subject()let o1 = new Observer(&apos;o1&apos;, s)let o2 = new Observer(&apos;o2&apos;, s)let o3 = new Observer(&apos;o3&apos;, s)s.setState(1) s.setState(2)s.setState(3)/* //打印结果 o1 updated, now-state:1 o2 updated, now-state:1 o3 updated, now-state:1 o1 updated, now-state:2 o2 updated, now-state:2 o3 updated, now-state:2 o1 updated, now-state:3 o2 updated, now-state:3 o3 updated, now-state:3*/ 使用场景 网页事件绑定 Promise jQuery callbacks nodejs 自定义事件 有事您Q我👇]]></content>
+      <categories>
+        <category>js-design-mode</category>
+      </categories>
+      <tags>
+        <tag>mooc</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js-design-mode-proxy]]></title>
     <url>%2Fjs-design-mode%2Fjs-design-mode-proxy%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp; 代理模式简介 菜鸟教程 科学上网 明星经纪人 使用场景 网页事件代理 jQuery的 $.proxy() es6的proxy 代码实现明星经纪人 1234567891011121314151617181920212223242526272829303132333435363738394041// 明星let star = &#123; name: &apos;shulu&apos;, age: &apos;18&apos;, phone: &apos;star: 18366666666&apos;&#125;// 经纪人let agent = new Proxy(star, &#123; get(target, key) &#123; if (key === &apos;phone&apos;) &#123; // 返回经纪人(代理)的电话 return &apos;agent: 12353434343&apos; &#125; if (key === &apos;price&apos;) &#123; // 明星不报价，由经纪人报价 return &apos;agent: 1232323$&apos; &#125; return target[key] &#125;, set(target, key, val) &#123; if (key === &apos;customPrice&apos;) &#123; if (val &lt; 10000) &#123; // 最低价格 throw new Error(&apos;价格太低！&apos;) &#125;else&#123; target[key] = val return true &#125; &#125; &#125;&#125;)console.log(&apos;agent.name :&apos;, agent.name) //agent.name : shuluconsole.log(&apos;agent.age :&apos;, agent.age) //agent.age : 18console.log(&apos;agent.phone :&apos;, agent.phone) //agent.phone : agent: 12353434343console.log(&apos;agent.price :&apos;, agent.price) //agent.price : agent: 1232323$agent.customPrice = 1212 //价格太低！agent.customPrice = 100000 有事您Q我👇]]></content>
@@ -415,14 +426,14 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Math-random]]></title>
-    <url>%2FMath%2FMath-random%2F</url>
-    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
+    <title><![CDATA[skills-search]]></title>
+    <url>%2Fskills%2Fskills-search%2F</url>
+    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容]]></content>
       <categories>
-        <category>Math</category>
+        <category>skills</category>
       </categories>
       <tags>
-        <tag>random</tag>
+        <tag>search</tag>
       </tags>
   </entry>
   <entry>
@@ -448,14 +459,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[skills-search]]></title>
-    <url>%2Fskills%2Fskills-search%2F</url>
-    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容]]></content>
+    <title><![CDATA[Math-random]]></title>
+    <url>%2FMath%2FMath-random%2F</url>
+    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
       <categories>
-        <category>skills</category>
+        <category>Math</category>
       </categories>
       <tags>
-        <tag>search</tag>
+        <tag>random</tag>
       </tags>
   </entry>
   <entry>
