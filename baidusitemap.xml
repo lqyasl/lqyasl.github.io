@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://shulu520.com/Array/Array-note/</loc>
+    <lastmod>2019-06-23</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/hello/friends/</loc>
+    <lastmod>2019-06-23</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/js-design-mode/js-design-mode-iterator/</loc>
+    <lastmod>2019-06-23</lastmod>
+  </url>  <url>
     <loc>https://shulu520.com/js-design-mode/js-design-mode-observer/</loc>
     <lastmod>2019-06-22</lastmod>
   </url>  <url>
@@ -21,9 +30,6 @@
   </url>  <url>
     <loc>https://shulu520.com/js-design-mode/js-design-mode-singleton/</loc>
     <lastmod>2019-06-20</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/hello/friends/</loc>
-    <lastmod>2019-06-19</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/hotkey/hotkey-vscode/</loc>
     <lastmod>2019-06-19</lastmod>
@@ -72,9 +78,6 @@
   </url>  <url>
     <loc>https://shulu520.com/hotkey/hotkey-listary/</loc>
     <lastmod>2019-05-28</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/Array/Array-note/</loc>
-    <lastmod>2019-05-27</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/md/markdown/</loc>
     <lastmod>2019-05-27</lastmod>
