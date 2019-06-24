@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shulu520.com/Array/Array-note/</loc>
-    <lastmod>2019-06-23</lastmod>
+    <loc>https://shulu520.com/js-design-mode/js-design-mode-state/</loc>
+    <lastmod>2019-06-24</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/hello/friends/</loc>
+    <lastmod>2019-06-24</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/Array/Array-note/</loc>
     <lastmod>2019-06-23</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/js-design-mode/js-design-mode-iterator/</loc>
