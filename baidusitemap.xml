@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://shulu520.com/less/css3-less/</loc>
+    <lastmod>2019-07-27</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/sass/css3-sass/</loc>
+    <lastmod>2019-07-27</lastmod>
+  </url>  <url>
     <loc>https://shulu520.com/css3/css3-new-ui/</loc>
-    <lastmod>2019-07-16</lastmod>
+    <lastmod>2019-07-26</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/css3/css3-BFC/</loc>
+    <lastmod>2019-07-22</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/css3/css3-flex/</loc>
+    <lastmod>2019-07-19</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/css3/css3-animation/</loc>
+    <lastmod>2019-07-18</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/css3/css3-transform/</loc>
+    <lastmod>2019-07-18</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/IT/IT-proper-nouns/</loc>
+    <lastmod>2019-07-17</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/css3/css3-transition/</loc>
+    <lastmod>2019-07-17</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/css3/css3-selectors/</loc>
     <lastmod>2019-07-16</lastmod>
@@ -21,9 +45,6 @@
   </url>  <url>
     <loc>https://shulu520.com/%E7%BB%8F%E6%B5%8E%E5%AD%A6/%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
     <lastmod>2019-07-16</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/IT/IT-proper-nouns/</loc>
-    <lastmod>2019-07-14</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/axios/axios/</loc>
     <lastmod>2019-07-04</lastmod>
