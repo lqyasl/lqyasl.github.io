@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://shulu520.com/hello/friends/</loc>
+    <lastmod>2019-08-10</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/this/this/</loc>
+    <lastmod>2019-08-10</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/Regex/js-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    <lastmod>2019-08-10</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/js-copy/js-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%AF%B9%E8%B1%A1%E6%8B%B7%E8%B4%9D/</loc>
+    <lastmod>2019-08-10</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/js-advance/js-advance-four/</loc>
+    <lastmod>2019-08-09</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/js-oop/js-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E7%BB%A7%E6%89%BF/</loc>
+    <lastmod>2019-08-07</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/ECMAScript/js-%E7%BB%84%E6%88%90-ECMAScript-%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2019-08-06</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/DOM/js-%E7%BB%84%E6%88%90-DOM-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2019-08-03</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/js-BOM/js-%E7%BB%84%E6%88%90-BOM-web-api/</loc>
+    <lastmod>2019-08-03</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/npm/npm/</loc>
+    <lastmod>2019-07-31</lastmod>
+  </url>  <url>
     <loc>https://shulu520.com/H5/H5-Document-header/</loc>
     <lastmod>2019-07-31</lastmod>
   </url>  <url>
@@ -34,7 +64,7 @@
     <loc>https://shulu520.com/css3/css3-transform/</loc>
     <lastmod>2019-07-18</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/IT/IT-proper-nouns/</loc>
+    <loc>https://shulu520.com/IT/IT-%E4%B8%93%E6%9C%89%E5%90%8D%E8%AF%8D/</loc>
     <lastmod>2019-07-17</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/css3/css3-transition/</loc>
@@ -73,9 +103,6 @@
     <loc>https://shulu520.com/js-design-mode/js-design-mode-state/</loc>
     <lastmod>2019-06-24</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/hello/friends/</loc>
-    <lastmod>2019-06-24</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/Array/Array-note/</loc>
     <lastmod>2019-06-23</lastmod>
   </url>  <url>
@@ -86,9 +113,6 @@
     <lastmod>2019-06-22</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/js-design-mode/js-design-mode-proxy/</loc>
-    <lastmod>2019-06-21</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/this/this/</loc>
     <lastmod>2019-06-21</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/js-design-mode/js-design-mode-decorator/</loc>
@@ -133,13 +157,10 @@
     <loc>https://shulu520.com/git/git-linux/</loc>
     <lastmod>2019-06-10</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/js-advance/js-advance-four/</loc>
-    <lastmod>2019-06-08</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/webpack/webpack-mooc/</loc>
     <lastmod>2019-06-07</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/js-modularize/js-modularize/</loc>
+    <loc>https://shulu520.com/js-modularize/js-%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
     <lastmod>2019-06-01</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/js-advance/js-advance-two/</loc>
