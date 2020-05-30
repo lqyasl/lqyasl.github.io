@@ -1,4 +1,30 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Graduation-countdown</title><link rel="stylesheet" href="css/style.css" media="screen" type="text/css"></head><body id="body"><div><p id="beye">毕业倒计时</p><div id="box"></div></div><div class="content-wrap"><div class="content"><div id="time"><canvas id="canvas"></canvas></div><div id="gohome"> <a href="https://shulu520.com/">👫home</a></div></div></div><script src="js/dat.gui.min.js"></script><script src="js/index.js"></script><script type="text/javascript">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Graduation-countdown</title>
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body id="body">
+	<div>
+		<p id="beye">毕业倒计时</p>
+		<div id="box"></div>
+	</div>
+	<div class="content-wrap">
+		<div class="content">
+			<div id="time">
+				<canvas id="canvas"></canvas>
+			</div>
+			<div id="gohome">
+				<a href="https://shulu520.com/">👫home</a>
+			</div>
+		</div>
+	</div>
+	<script src='js/dat.gui.min.js'></script>
+	<script src="js/index.js"></script>
+	
+	<script type="text/javascript">
 		function randomColor(){  
 			var rand = '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6);
 			return rand;
@@ -26,4 +52,6 @@
 	        // return n.String.padStart(2,"0");//这种用法不熟，报错
 	         // return ("0" + n).slice(-2); //这种只针对只有两位数的情况
 	    }
-	</script></body></html>
+	</script>
+</body>
+</html>

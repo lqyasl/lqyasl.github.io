@@ -1,4 +1,1156 @@
-<!DOCTYPE html><html class="theme-next pisces use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script></script><script src="/lib/pace/pace.min.js?v=1.0.2"></script><link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="baidu-site-verification" content="J3muXvxFkF"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.jpg?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4"><link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222"><meta name="keywords" content="DOM,"><link rel="alternate" href="/rss2.xml" title="梦不成" type="application/atom+xml"><script>!function(e,t,o,c,i,a,n){e.DaoVoiceObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,a=t.createElement(o),n=t.getElementsByTagName(o)[0],a.async=1,a.src=c,a.charset="utf-8",n.parentNode.insertBefore(a,n)}(window,document,"script",("https:"==document.location.protocol?"https:":"http:")+"//widget.daovoice.io/widget/0f81ff2f.js","daovoice"),daovoice("init",{app_id:"5af61f84"}),daovoice("update")</script><meta name="description" content="DOM文档对象模型相关操作"><meta name="keywords" content="DOM"><meta property="og:type" content="article"><meta property="og:title" content="js-DOM"><meta property="og:url" content="https://shulu520.com/DOM/js-组成-DOM-基本操作/index.html"><meta property="og:site_name" content="梦不成"><meta property="og:description" content="DOM文档对象模型相关操作"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png"><meta property="og:updated_time" content="2019-08-12T15:03:29.355Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="js-DOM"><meta name="twitter:description" content="DOM文档对象模型相关操作"><meta name="twitter:image" content="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Pisces",version:"5.1.4",sidebar:{position:"left",display:"post",offset:12,b2t:!0,scrollpercent:!0,onmobile:!1},fancybox:!0,tabs:!0,motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="https://shulu520.com/DOM/js-组成-DOM-基本操作/"><title>js-DOM | 梦不成</title></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div> <a href="https://github.com/lqyasl"><img style="position:absolute;top:0;right:0;boder:0;z-index:9999" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">梦不成</span><span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle">思念如马-自别离-未停蹄</p></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br> 关于我</a></li><li class="menu-item menu-item-love"><a href="/love/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i><br> love</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 文章标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 文章分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 文章归档</a></li><li class="menu-item menu-item-留言板"><a href="/guestbook" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i><br> 留言板</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> search</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="来啊，快来探索我的秘密吧..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav><link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet"></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://shulu520.com/DOM/js-组成-DOM-基本操作/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="梦不成"><meta itemprop="description" content><meta itemprop="image" content="/images/head_icon.gif"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="梦不成"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">js-DOM</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-03T18:53:10+08:00">2019-08-03</time> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-calendar-check-o"></i></span> <span class="post-meta-item-text">更新&#58;</span> <time title="更新" itemprop="dateModified" datetime="2019-08-12T23:03:29+08:00">2019-08-12</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DOM/" itemprop="url" rel="index"><span itemprop="name">DOM</span></a></span></span> <span class="post-meta-divider">|</span><span class="page-pv"><i class="fa fa-free-code-camp"></i> 热度<span class="busuanzi-value" id="busuanzi_value_page_pv"></span> 🔥</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数&#58;</span> <span title="字数">1.4k 字</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">5 分钟</span></div><div class="post-description"> DOM文档对象模型相关操作</div></div></header><div class="post-body" itemprop="articleBody"><blockquote><p>&emsp;&emsp;</p></blockquote><p></p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a><p></p><h1 id="dom获取"><a href="#dom获取" class="headerlink" title="dom获取"></a>dom获取</h1><ul><li>JS获取DOM元素的方法（8种）</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">通过ID获取 getElementById</span><br><span class="line">通过name属性 getElementsByName</span><br><span class="line">通过标签名 getElementsByTagName</span><br><span class="line">通过类名 getElementsByClassName</span><br><span class="line">获取html的方法 <span class="built_in">document</span>.documentElement</span><br><span class="line">获取body的方法 <span class="built_in">document</span>.body</span><br><span class="line"></span><br><span class="line">通过选择器获取一个元素 querySelector</span><br><span class="line">通过选择器获取一组元素 querySelectorAll</span><br></pre></td></tr></table></figure><h1 id="html属性操作"><a href="#html属性操作" class="headerlink" title="html属性操作"></a>html属性操作</h1><h2 id="dataset-H5自定义属性操作"><a href="#dataset-H5自定义属性操作" class="headerlink" title="dataset H5自定义属性操作"></a>dataset H5自定义属性操作</h2><p>&emsp;&emsp;在通过dataset添加自定义属性的时候，不能带有”data-“。浏览器会自动添加data-。<br>&emsp;&emsp;data-前缀后面的属性名称也可以带有连字符。<br>&emsp;&emsp;当使用dataset属性进行动态操作的时候，需要转换连字符为驼峰写法，结果显示为连字符。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">添加自定义属性 并赋值</span><br><span class="line">div.dataset.shulu=<span class="string">"舒璐"</span>;</span><br><span class="line">div.dataset.lqyLove = <span class="string">"哈哈哈"</span> <span class="comment">//想要lqy-love写法，但得驼峰写法，最终显示为lqy-love</span></span><br><span class="line">    </span><br><span class="line">浏览器查看结果为：</span><br><span class="line">&lt;div data-shulu=<span class="string">"舒璐"</span> data-lqy-love=<span class="string">"哈哈哈"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure><h2 id="getAttribute-setAttribute属性操作"><a href="#getAttribute-setAttribute属性操作" class="headerlink" title="getAttribute/setAttribute属性操作"></a>getAttribute/setAttribute属性操作</h2><ul><li>getAttribute() 获取标签行内属性</li><li>setAttribute() 设置标签行内属性</li><li>removeAttribute() 移除标签行内属性</li></ul><blockquote><p>如果一个属性可能不存在于指定的元素上，在调用 getAttribute() 之前，你应该使用 element.hasAttribute() 来检测该属性是否存在。</p></blockquote><h2 id="dataset与getAttribute-setAttribute的区别"><a href="#dataset与getAttribute-setAttribute的区别" class="headerlink" title="dataset与getAttribute/setAttribute的区别:"></a>dataset与getAttribute/setAttribute的区别:</h2><ul><li>getAttribute和setAttribute方法也可以设置和获取元素的属性，主要区别如下：</li></ul><ol><li><p>上述两方法更加博爱，无论是否符合data-*语法格式，都可以顺利获取或者设置。</p></li><li><p>dataset则是专门针对符合HTML5规范的自定义属性的管理，更加方便。</p></li><li><p>dataset属性返回值是DOMStringMap对象，也就是说针对DOMStringMap对象的操作，然后影响到HTML元素，而getAttribute/setAttribute方法则是针对字符串的操作。</p></li></ol><h2 id="获取操作样式属性"><a href="#获取操作样式属性" class="headerlink" title="获取操作样式属性"></a>获取操作样式属性</h2><ul><li><p>获取元素的行间样式属性 element.style.样式属性</p></li><li><p>读取的样式是最终样式属性 getComputedStyle(element, 样式属性)</p></li></ul><blockquote><p>取相应属性值得时候都是采用的 CSS 驼峰式写法.</p></blockquote><ul><li><p>element.style 既支持读也支持写，我们通过 element.style 即可改写元素的样式。</p></li><li><p>而 getComputedStyle 仅支持读并不支持写入。我们可以通过使用 getComputedStyle 读取样式，通过 element.style 修改样式</p></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">获取最终样式属性方法</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getComputed</span> (<span class="params">ele, prop</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span>  ele.currentStyle ? ele.currentStyle(prop) : <span class="built_in">window</span>.getComputedStyle(ele, <span class="literal">null</span>)[prop]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="classList-类名操作"><a href="#classList-类名操作" class="headerlink" title="classList 类名操作"></a>classList 类名操作</h1><ol><li>add()：添加样式类。</li><li>item()：返回指定索引的样式类。</li><li>remove()：删除指定样式类。</li><li>toggle()：切换样式类</li><li>contains() 检查是否包含某属性</li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.classList.add(<span class="string">'love'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(app.classList.item(<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">app.classList.remove(<span class="string">'lqy'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  app.classList.toggle(<span class="string">'love'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log( app.classList.contains(<span class="string">'shulu'</span>))</span><br></pre></td></tr></table></figure><h1 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h1><ol><li>appendChild()</li><li>insertBefore()</li><li>removeChild()</li><li>replaceChild()</li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.body;</span><br><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">body.appendChild(div);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> firstEle = body.children[<span class="number">0</span>];</span><br><span class="line">body.insertBefore(div, firstEle);</span><br><span class="line"></span><br><span class="line">body.removeChild(firstEle);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> text = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</span><br><span class="line">body.replaceChild(text, div);</span><br></pre></td></tr></table></figure><h2 id="节点-元素层级获取"><a href="#节点-元素层级获取" class="headerlink" title="节点/元素层级获取"></a>节点/元素层级获取</h2><ul><li>节点包括了text文本节点等</li><li>元素只是就是HTML元素</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> app = <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>) </span><br><span class="line"><span class="built_in">console</span>.log(app.parentNode)             <span class="comment">// 父节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.childNodes)             <span class="comment">// 子节点集合</span></span><br><span class="line"><span class="built_in">console</span>.log(app.children)               <span class="comment">// 子元素</span></span><br><span class="line"><span class="built_in">console</span>.log(app.nextSibling)            <span class="comment">// 下一个兄弟节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.previousSibling)        <span class="comment">// 下一个兄弟节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.firstChild)             <span class="comment">// 第一个子节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.lastChild)              <span class="comment">// 最后一个子节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.nextElementSibling)     <span class="comment">// 下一个兄弟元素</span></span><br><span class="line"><span class="built_in">console</span>.log(app.previousElementSibling) <span class="comment">// 上一个兄弟元素</span></span><br></pre></td></tr></table></figure><h1 id="Dom事件"><a href="#Dom事件" class="headerlink" title="Dom事件"></a>Dom事件</h1><p>##基本概念 Dom事件级别</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Dom <span class="number">0</span>级事件：element.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;</span><br><span class="line">Dom <span class="number">2</span>级事件：element.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;)</span><br><span class="line">Dom <span class="number">3</span>级事件：element.addEventListener(<span class="string">'keyup'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;) 鼠标事件 键盘事件</span><br></pre></td></tr></table></figure><h2 id="Dom事件模型"><a href="#Dom事件模型" class="headerlink" title="Dom事件模型"></a>Dom事件模型</h2><ul><li>事件捕获 由上到下</li><li>事件冒泡 由下到上</li></ul><h2 id="Dom事件流"><a href="#Dom事件流" class="headerlink" title="Dom事件流"></a>Dom事件流</h2><ol><li>捕获阶段 由上到下</li><li>目标阶段</li><li>冒泡阶段 由下到上</li></ol><h2 id="描述Dom事件捕获的具体流程"><a href="#描述Dom事件捕获的具体流程" class="headerlink" title="描述Dom事件捕获的具体流程"></a>描述Dom事件捕获的具体流程</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span></span><br><span class="line">  <span class="built_in">document</span></span><br><span class="line">    html   (用js获取html标签：<span class="built_in">document</span>.documentElement)</span><br><span class="line">      body</span><br><span class="line">        ...</span><br><span class="line">          目标元素</span><br></pre></td></tr></table></figure><h2 id="捕获阶段触发事件-addEventListener的第三个参数为true即可"><a href="#捕获阶段触发事件-addEventListener的第三个参数为true即可" class="headerlink" title="捕获阶段触发事件 addEventListener的第三个参数为true即可"></a>捕获阶段触发事件 addEventListener的第三个参数为true即可</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">span.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'span'</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'以上事件为捕获阶段触发的'</span>)</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'window'</span>)</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'document'</span>)</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">document</span>.documentElement.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'html'</span>)</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br></pre></td></tr></table></figure><h2 id="冒泡阶段触发事件"><a href="#冒泡阶段触发事件" class="headerlink" title="冒泡阶段触发事件"></a>冒泡阶段触发事件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'window'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'document'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">document</span>.documentElement.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'html'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">span.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'以下事件为冒泡阶段触发的'</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'span'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="Event对象的常见应用"><a href="#Event对象的常见应用" class="headerlink" title="Event对象的常见应用"></a>Event对象的常见应用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">event.preventDefault() 阻止默认事件</span><br><span class="line">event.stopPropagation() 阻止事件冒泡</span><br><span class="line">event.stopImmediatePropagation() 阻止事件冒泡并且阻止相同事件的其他侦听器被调用。</span><br><span class="line">event.currentTarget 事件的当前目标。它总是指向事件绑定的元素。通常为父元素。代理事件的元素。</span><br><span class="line">event.target 触发事件的对象 (某个DOM元素) 的引用。通常为子元素。 常见如 event.target.nodeName.toLowerCase() == <span class="string">'li'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> p = <span class="built_in">document</span>.querySelector(<span class="string">'p'</span>);</span><br><span class="line">p.addEventListener(<span class="string">"click"</span>, (event) =&gt; &#123;</span><br><span class="line">    alert(<span class="string">"我是p元素上被绑定的第一个监听函数"</span>);</span><br><span class="line">  &#125;, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">p.addEventListener(<span class="string">"click"</span>, (event) =&gt; &#123;</span><br><span class="line">  alert(<span class="string">"我是p元素上被绑定的第二个监听函数"</span>);</span><br><span class="line"></span><br><span class="line">  event.stopImmediatePropagation();</span><br><span class="line">  </span><br><span class="line"><span class="comment">//执行stopImmediatePropagation方法,阻止click事件冒泡,并且阻止p元素上绑定的其他click事件的事件监听函数的执行.</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">p.addEventListener(<span class="string">"click"</span>,(event) =&gt; &#123;</span><br><span class="line">  alert(<span class="string">"我是p元素上被绑定的第三个监听函数"</span>);</span><br><span class="line">  <span class="comment">// 该监听函数排在上个函数后面，该函数不会被执行</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure><h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><ul><li>创建一个自定义事件</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myevent =  <span class="keyword">new</span> Event(<span class="string">'custom'</span>)</span><br><span class="line"><span class="comment">// 监听事件</span></span><br><span class="line">btn.addEventListener(<span class="string">'custom'</span>, () =&gt; &#123;</span><br><span class="line">  alert(<span class="string">'custom事件触发了'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 触发事件 自定义触发条件</span></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  btn.dispatchEvent(myevent)</span><br><span class="line">&#125;,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure><p></p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><p></p><center><img width="50px" height="50px" src="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png" alt="QQ" border="0"><a target="_blank" style="color:#87ceeb;font-weight:700" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center></div><div><div style="text-align:center;color:#006400;font-size:14px"> ------ The Happy Ending<i class="fa fa-paw"></i>Thanks for your reading! ------</div></div><div><div style="padding:10px 0;margin:20px auto;width:90%;text-align:center"><div>文章棒棒哒😜赏作者1个小糖果🍬</div> <button id="rewardButton" disable="enable" onclick='var qr=document.getElementById("QR");"none"===qr.style.display?qr.style.display="block":qr.style.display="none"'> <span>🤞🤞🤞</span></button><div id="QR" style="display:none"><div id="wechat" style="display:inline-block"> <img id="wechat_qr" src="/images/wechatpay.jpg" alt="梦不成 微信支付"><p>微信支付</p></div><div id="alipay" style="display:inline-block"> <img id="alipay_qr" src="/images/alipay.jpg" alt="梦不成 支付宝"><p>支付宝</p></div></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"> <strong>本文作者：</strong> 梦不成</li><li class="post-copyright-link"> <strong>原始链接：</strong> <a href="https://shulu520.com/DOM/js-组成-DOM-基本操作/" title="js-DOM">https://shulu520.com/DOM/js-组成-DOM-基本操作/</a></li><li class="post-copyright-license"> <strong>版权声明：</strong> 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。欢迎转载，请保留原文链接及作者</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/tags/DOM/" rel="tag"><i class="fa fa-tag"></i> DOM</a></div><div class="post-widgets"><div class="wp_rating"><div id="wpac-rating"></div></div><div id="needsharebutton-postbottom"><span class="btn"><i class="fa fa-share-alt" aria-hidden="true"></i></span></div></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/ECMAScript/js-组成-ES-语法基础/" rel="next" title="js-ECMAScript"><i class="fa fa-chevron-left"></i> js-ECMAScript</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/js-BOM/js-组成-BOM-web-api/" rel="prev" title="js-BOM-web-api">js-BOM-web-api<i class="fa fa-chevron-right"></i></a></div></div></footer></div></article><div class="post-spread"><script>with(document)(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="//bdimg.share.baidu.com/static/api/js/share.js?cdnversion="+~(-new Date/36e5)</script></div></div></div><div class="comments" id="comments"><div id="lv-container" data-id="city" data-uid="MTAyMC80MzgyMi8yMDM1Nw=="></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap"> 站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/images/head_icon.gif" alt="梦不成"><p class="site-author-name" itemprop="name">梦不成</p><p class="site-description motion-element" itemprop="description">君子生非异也，善假于物也.</p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">104</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">53</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">57</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/rss2.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/lqyasl" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="mailto:2642816105@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i> E-Mail</a></span><span class="links-of-author-item"><a href="https://www.zhihu.com/people/wu-jia-yi-26-93/activities" target="_blank" title="知乎"><i class="fa fa-fw fa-gratipay"></i> 知乎</a></span><span class="links-of-author-item"><a href="https://www.jianshu.com/u/c3c177adad8e" target="_blank" title="简书"><i class="fa fa-fw fa-globe"></i> 简书</a></span></div><div class="links-of-blogroll motion-element links-of-blogroll-block"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> 友链</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"> <a href="http://date.jobbole.com" title="面向对象" target="_blank">面向对象</a></li></ul></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dom获取"><span class="nav-number">1.</span> <span class="nav-text">dom获取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html属性操作"><span class="nav-number">2.</span> <span class="nav-text">html属性操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset-H5自定义属性操作"><span class="nav-number">2.1.</span> <span class="nav-text">dataset H5自定义属性操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getAttribute-setAttribute属性操作"><span class="nav-number">2.2.</span> <span class="nav-text">getAttribute/setAttribute属性操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset与getAttribute-setAttribute的区别"><span class="nav-number">2.3.</span> <span class="nav-text">dataset与getAttribute/setAttribute的区别:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取操作样式属性"><span class="nav-number">2.4.</span> <span class="nav-text">获取操作样式属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#classList-类名操作"><span class="nav-number">3.</span> <span class="nav-text">classList 类名操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#节点操作"><span class="nav-number">4.</span> <span class="nav-text">节点操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#节点-元素层级获取"><span class="nav-number">4.1.</span> <span class="nav-text">节点/元素层级获取</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dom事件"><span class="nav-number">5.</span> <span class="nav-text">Dom事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dom事件模型"><span class="nav-number">5.1.</span> <span class="nav-text">Dom事件模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dom事件流"><span class="nav-number">5.2.</span> <span class="nav-text">Dom事件流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述Dom事件捕获的具体流程"><span class="nav-number">5.3.</span> <span class="nav-text">描述Dom事件捕获的具体流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#捕获阶段触发事件-addEventListener的第三个参数为true即可"><span class="nav-number">5.4.</span> <span class="nav-text">捕获阶段触发事件 addEventListener的第三个参数为true即可</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡阶段触发事件"><span class="nav-number">5.5.</span> <span class="nav-text">冒泡阶段触发事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Event对象的常见应用"><span class="nav-number">5.6.</span> <span class="nav-text">Event对象的常见应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义事件"><span class="nav-number">5.7.</span> <span class="nav-text">自定义事件</span></a></li></ol></li></ol></div></div></section><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="copyright">&copy; <span itemprop="copyrightYear">2019</span><span class="with-love"><i class="fa fa-heartbeat"></i></span> <span class="author" itemprop="copyrightHolder">梦不成</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-area-chart"></i></span> <span class="post-meta-item-text">本站字数共计&#58;</span> <span title="本站字数共计">97k</span></div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span><script>var now=new Date;function createtime(){var n=new Date("04/17/2019 11:28:36");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="本站已安全运行 "+dnum+" 天 ",document.getElementById("times").innerHTML=hnum+" 小时 "+mnum+" 分 "+snum+" 秒"}setInterval("createtime()",250)</script><div class="busuanzi-count"><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span class="site-uv"><i class="fa fa-users"></i> 有朋自远方来<span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 位</span></div></div></footer></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/lib/three/three.min.js"></script><script type="text/javascript" src="/lib/three/three-waves.min.js"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><script type="text/javascript">!function(e,t){var n,c=e.getElementsByTagName(t)[0];"function"!=typeof LivereTower&&((n=e.createElement(t)).src="https://cdn-city.livere.com/js/embed.dist.js",n.async=!0,c.parentNode.insertBefore(n,c))}(document,"script")</script><script type="text/javascript">
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('博主私有文章，请输入密码:  shulu520') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="J3muXvxFkF">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="DOM,">
+
+
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="梦不成" type="application/atom+xml">
+
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "5af61f84"
+    });
+  daovoice('update');
+  </script>
+
+
+<meta name="description" content="DOM文档对象模型相关操作">
+<meta name="keywords" content="DOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js-DOM">
+<meta property="og:url" content="https://shulu520.com/DOM/js-组成-DOM-基本操作/index.html">
+<meta property="og:site_name" content="梦不成">
+<meta property="og:description" content="DOM文档对象模型相关操作">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png">
+<meta property="og:updated_time" content="2019-08-12T15:03:29.355Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js-DOM">
+<meta name="twitter:description" content="DOM文档对象模型相关操作">
+<meta name="twitter:image" content="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shulu520.com/DOM/js-组成-DOM-基本操作/">
+
+
+
+
+
+  <title>js-DOM | 梦不成</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/lqyasl"><img style="position:absolute;top:0;right:0;boder:0;z-index:9999" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梦不成</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">思念如马-自别离-未停蹄</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-love">
+          <a href="/love/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            love
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            文章标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            文章分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            文章归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-留言板">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="来啊，快来探索我的秘密吧..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+
+<link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet"> </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shulu520.com/DOM/js-组成-DOM-基本操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head_icon.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦不成">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js-DOM</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-03T18:53:10+08:00">
+                2019-08-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新&#58;</span>
+              
+              <time title="更新" itemprop="dateModified" datetime="2019-08-12T23:03:29+08:00">
+                2019-08-12
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DOM/" itemprop="url" rel="index">
+                    <span itemprop="name">DOM</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-free-code-camp"></i> 热度
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>🔥
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  1.4k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  DOM文档对象模型相关操作
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>&emsp;&emsp;</p>
+</blockquote>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
+<h1 id="dom获取"><a href="#dom获取" class="headerlink" title="dom获取"></a>dom获取</h1><ul>
+<li>JS获取DOM元素的方法（8种）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">通过ID获取 getElementById</span><br><span class="line">通过name属性 getElementsByName</span><br><span class="line">通过标签名 getElementsByTagName</span><br><span class="line">通过类名 getElementsByClassName</span><br><span class="line">获取html的方法 <span class="built_in">document</span>.documentElement</span><br><span class="line">获取body的方法 <span class="built_in">document</span>.body</span><br><span class="line"></span><br><span class="line">通过选择器获取一个元素 querySelector</span><br><span class="line">通过选择器获取一组元素 querySelectorAll</span><br></pre></td></tr></table></figure>
+<h1 id="html属性操作"><a href="#html属性操作" class="headerlink" title="html属性操作"></a>html属性操作</h1><h2 id="dataset-H5自定义属性操作"><a href="#dataset-H5自定义属性操作" class="headerlink" title="dataset H5自定义属性操作"></a>dataset H5自定义属性操作</h2><p>&emsp;&emsp;在通过dataset添加自定义属性的时候，不能带有”data-“。浏览器会自动添加data-。<br>&emsp;&emsp;data-前缀后面的属性名称也可以带有连字符。<br>&emsp;&emsp;当使用dataset属性进行动态操作的时候，需要转换连字符为驼峰写法，结果显示为连字符。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">添加自定义属性 并赋值</span><br><span class="line">div.dataset.shulu=<span class="string">"舒璐"</span>;</span><br><span class="line">div.dataset.lqyLove = <span class="string">"哈哈哈"</span> <span class="comment">//想要lqy-love写法，但得驼峰写法，最终显示为lqy-love</span></span><br><span class="line">    </span><br><span class="line">浏览器查看结果为：</span><br><span class="line">&lt;div data-shulu=<span class="string">"舒璐"</span> data-lqy-love=<span class="string">"哈哈哈"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="getAttribute-setAttribute属性操作"><a href="#getAttribute-setAttribute属性操作" class="headerlink" title="getAttribute/setAttribute属性操作"></a>getAttribute/setAttribute属性操作</h2><ul>
+<li>getAttribute() 获取标签行内属性</li>
+<li>setAttribute() 设置标签行内属性</li>
+<li>removeAttribute() 移除标签行内属性</li>
+</ul>
+<blockquote>
+<p>如果一个属性可能不存在于指定的元素上，在调用 getAttribute() 之前，你应该使用 element.hasAttribute() 来检测该属性是否存在。</p>
+</blockquote>
+<h2 id="dataset与getAttribute-setAttribute的区别"><a href="#dataset与getAttribute-setAttribute的区别" class="headerlink" title="dataset与getAttribute/setAttribute的区别:"></a>dataset与getAttribute/setAttribute的区别:</h2><ul>
+<li>getAttribute和setAttribute方法也可以设置和获取元素的属性，主要区别如下：</li>
+</ul>
+<ol>
+<li><p>上述两方法更加博爱，无论是否符合data-*语法格式，都可以顺利获取或者设置。</p>
+</li>
+<li><p>dataset则是专门针对符合HTML5规范的自定义属性的管理，更加方便。</p>
+</li>
+<li><p>dataset属性返回值是DOMStringMap对象，也就是说针对DOMStringMap对象的操作，然后影响到HTML元素，而getAttribute/setAttribute方法则是针对字符串的操作。</p>
+</li>
+</ol>
+<h2 id="获取操作样式属性"><a href="#获取操作样式属性" class="headerlink" title="获取操作样式属性"></a>获取操作样式属性</h2><ul>
+<li><p>获取元素的行间样式属性 element.style.样式属性</p>
+</li>
+<li><p>读取的样式是最终样式属性 getComputedStyle(element, 样式属性)</p>
+</li>
+</ul>
+<blockquote>
+<p>取相应属性值得时候都是采用的 CSS 驼峰式写法.</p>
+</blockquote>
+<ul>
+<li><p>element.style 既支持读也支持写，我们通过 element.style 即可改写元素的样式。</p>
+</li>
+<li><p>而 getComputedStyle 仅支持读并不支持写入。我们可以通过使用 getComputedStyle 读取样式，通过 element.style 修改样式</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">获取最终样式属性方法</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getComputed</span> (<span class="params">ele, prop</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span>  ele.currentStyle ? ele.currentStyle(prop) : <span class="built_in">window</span>.getComputedStyle(ele, <span class="literal">null</span>)[prop]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="classList-类名操作"><a href="#classList-类名操作" class="headerlink" title="classList 类名操作"></a>classList 类名操作</h1><ol>
+<li>add()：添加样式类。</li>
+<li>item()：返回指定索引的样式类。</li>
+<li>remove()：删除指定样式类。</li>
+<li>toggle()：切换样式类</li>
+<li>contains() 检查是否包含某属性</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.classList.add(<span class="string">'love'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(app.classList.item(<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">app.classList.remove(<span class="string">'lqy'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  app.classList.toggle(<span class="string">'love'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log( app.classList.contains(<span class="string">'shulu'</span>))</span><br></pre></td></tr></table></figure>
+<h1 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h1><ol>
+<li>appendChild()</li>
+<li>insertBefore()</li>
+<li>removeChild()</li>
+<li>replaceChild()</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.body;</span><br><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">body.appendChild(div);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> firstEle = body.children[<span class="number">0</span>];</span><br><span class="line">body.insertBefore(div, firstEle);</span><br><span class="line"></span><br><span class="line">body.removeChild(firstEle);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> text = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</span><br><span class="line">body.replaceChild(text, div);</span><br></pre></td></tr></table></figure>
+<h2 id="节点-元素层级获取"><a href="#节点-元素层级获取" class="headerlink" title="节点/元素层级获取"></a>节点/元素层级获取</h2><ul>
+<li>节点包括了text文本节点等</li>
+<li>元素只是就是HTML元素</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> app = <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>) </span><br><span class="line"><span class="built_in">console</span>.log(app.parentNode)             <span class="comment">// 父节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.childNodes)             <span class="comment">// 子节点集合</span></span><br><span class="line"><span class="built_in">console</span>.log(app.children)               <span class="comment">// 子元素</span></span><br><span class="line"><span class="built_in">console</span>.log(app.nextSibling)            <span class="comment">// 下一个兄弟节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.previousSibling)        <span class="comment">// 下一个兄弟节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.firstChild)             <span class="comment">// 第一个子节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.lastChild)              <span class="comment">// 最后一个子节点</span></span><br><span class="line"><span class="built_in">console</span>.log(app.nextElementSibling)     <span class="comment">// 下一个兄弟元素</span></span><br><span class="line"><span class="built_in">console</span>.log(app.previousElementSibling) <span class="comment">// 上一个兄弟元素</span></span><br></pre></td></tr></table></figure>
+<h1 id="Dom事件"><a href="#Dom事件" class="headerlink" title="Dom事件"></a>Dom事件</h1><p>##基本概念 Dom事件级别</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Dom <span class="number">0</span>级事件：element.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;</span><br><span class="line">Dom <span class="number">2</span>级事件：element.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;)</span><br><span class="line">Dom <span class="number">3</span>级事件：element.addEventListener(<span class="string">'keyup'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;...&#125;) 鼠标事件 键盘事件</span><br></pre></td></tr></table></figure>
+<h2 id="Dom事件模型"><a href="#Dom事件模型" class="headerlink" title="Dom事件模型"></a>Dom事件模型</h2><ul>
+<li>事件捕获 由上到下</li>
+<li>事件冒泡 由下到上</li>
+</ul>
+<h2 id="Dom事件流"><a href="#Dom事件流" class="headerlink" title="Dom事件流"></a>Dom事件流</h2><ol>
+<li>捕获阶段 由上到下</li>
+<li>目标阶段</li>
+<li>冒泡阶段 由下到上</li>
+</ol>
+<h2 id="描述Dom事件捕获的具体流程"><a href="#描述Dom事件捕获的具体流程" class="headerlink" title="描述Dom事件捕获的具体流程"></a>描述Dom事件捕获的具体流程</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span></span><br><span class="line">  <span class="built_in">document</span></span><br><span class="line">    html   (用js获取html标签：<span class="built_in">document</span>.documentElement)</span><br><span class="line">      body</span><br><span class="line">        ...</span><br><span class="line">          目标元素</span><br></pre></td></tr></table></figure>
+<h2 id="捕获阶段触发事件-addEventListener的第三个参数为true即可"><a href="#捕获阶段触发事件-addEventListener的第三个参数为true即可" class="headerlink" title="捕获阶段触发事件 addEventListener的第三个参数为true即可"></a>捕获阶段触发事件 addEventListener的第三个参数为true即可</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">span.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'span'</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'以上事件为捕获阶段触发的'</span>)</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'window'</span>)</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'document'</span>)</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">document</span>.documentElement.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'html'</span>)</span><br><span class="line">&#125;, <span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="冒泡阶段触发事件"><a href="#冒泡阶段触发事件" class="headerlink" title="冒泡阶段触发事件"></a>冒泡阶段触发事件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'window'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'document'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">document</span>.documentElement.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'html'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">span.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'以下事件为冒泡阶段触发的'</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'span'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Event对象的常见应用"><a href="#Event对象的常见应用" class="headerlink" title="Event对象的常见应用"></a>Event对象的常见应用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">event.preventDefault() 阻止默认事件</span><br><span class="line">event.stopPropagation() 阻止事件冒泡</span><br><span class="line">event.stopImmediatePropagation() 阻止事件冒泡并且阻止相同事件的其他侦听器被调用。</span><br><span class="line">event.currentTarget 事件的当前目标。它总是指向事件绑定的元素。通常为父元素。代理事件的元素。</span><br><span class="line">event.target 触发事件的对象 (某个DOM元素) 的引用。通常为子元素。 常见如 event.target.nodeName.toLowerCase() == <span class="string">'li'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> p = <span class="built_in">document</span>.querySelector(<span class="string">'p'</span>);</span><br><span class="line">p.addEventListener(<span class="string">"click"</span>, (event) =&gt; &#123;</span><br><span class="line">    alert(<span class="string">"我是p元素上被绑定的第一个监听函数"</span>);</span><br><span class="line">  &#125;, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">p.addEventListener(<span class="string">"click"</span>, (event) =&gt; &#123;</span><br><span class="line">  alert(<span class="string">"我是p元素上被绑定的第二个监听函数"</span>);</span><br><span class="line"></span><br><span class="line">  event.stopImmediatePropagation();</span><br><span class="line">  </span><br><span class="line"><span class="comment">//执行stopImmediatePropagation方法,阻止click事件冒泡,并且阻止p元素上绑定的其他click事件的事件监听函数的执行.</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">p.addEventListener(<span class="string">"click"</span>,(event) =&gt; &#123;</span><br><span class="line">  alert(<span class="string">"我是p元素上被绑定的第三个监听函数"</span>);</span><br><span class="line">  <span class="comment">// 该监听函数排在上个函数后面，该函数不会被执行</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><ul>
+<li>创建一个自定义事件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myevent =  <span class="keyword">new</span> Event(<span class="string">'custom'</span>)</span><br><span class="line"><span class="comment">// 监听事件</span></span><br><span class="line">btn.addEventListener(<span class="string">'custom'</span>, () =&gt; &#123;</span><br><span class="line">  alert(<span class="string">'custom事件触发了'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 触发事件 自定义触发条件</span></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  btn.dispatchEvent(myevent)</span><br><span class="line">&#125;,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
+<center><img width="50px" height="50px" src="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png" alt="QQ" border="0"><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        
+<div style="text-align:center;color: #006400;font-size:14px;">
+	------ The Happy Ending<i class="fa fa-paw"></i>Thanks for your reading! ------</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>文章棒棒哒😜赏作者1个小糖果🍬</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>🤞🤞🤞</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="梦不成 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="梦不成 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不成
+  </li>
+  <li class="post-copyright-link">
+    <strong>原始链接：</strong>
+    <a href="https://shulu520.com/DOM/js-组成-DOM-基本操作/" title="js-DOM">https://shulu520.com/DOM/js-组成-DOM-基本操作/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。欢迎转载，请保留原文链接及作者
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DOM/" rel="tag"><i class="fa fa-tag"></i> DOM</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/ECMAScript/js-组成-ES-语法基础/" rel="next" title="js-ECMAScript">
+                <i class="fa fa-chevron-left"></i> js-ECMAScript
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/js-BOM/js-组成-BOM-web-api/" rel="prev" title="js-BOM-web-api">
+                js-BOM-web-api <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzgyMi8yMDM1Nw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head_icon.gif" alt="梦不成">
+            
+              <p class="site-author-name" itemprop="name">梦不成</p>
+              <p class="site-description motion-element" itemprop="description">君子生非异也，善假于物也.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">105</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lqyasl" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2642816105@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/wu-jia-yi-26-93/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-gratipay"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/c3c177adad8e" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-globe"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://date.jobbole.com" title="面向对象" target="_blank">面向对象</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dom获取"><span class="nav-number">1.</span> <span class="nav-text">dom获取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html属性操作"><span class="nav-number">2.</span> <span class="nav-text">html属性操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset-H5自定义属性操作"><span class="nav-number">2.1.</span> <span class="nav-text">dataset H5自定义属性操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getAttribute-setAttribute属性操作"><span class="nav-number">2.2.</span> <span class="nav-text">getAttribute/setAttribute属性操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset与getAttribute-setAttribute的区别"><span class="nav-number">2.3.</span> <span class="nav-text">dataset与getAttribute/setAttribute的区别:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取操作样式属性"><span class="nav-number">2.4.</span> <span class="nav-text">获取操作样式属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#classList-类名操作"><span class="nav-number">3.</span> <span class="nav-text">classList 类名操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#节点操作"><span class="nav-number">4.</span> <span class="nav-text">节点操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#节点-元素层级获取"><span class="nav-number">4.1.</span> <span class="nav-text">节点/元素层级获取</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dom事件"><span class="nav-number">5.</span> <span class="nav-text">Dom事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dom事件模型"><span class="nav-number">5.1.</span> <span class="nav-text">Dom事件模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dom事件流"><span class="nav-number">5.2.</span> <span class="nav-text">Dom事件流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述Dom事件捕获的具体流程"><span class="nav-number">5.3.</span> <span class="nav-text">描述Dom事件捕获的具体流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#捕获阶段触发事件-addEventListener的第三个参数为true即可"><span class="nav-number">5.4.</span> <span class="nav-text">捕获阶段触发事件 addEventListener的第三个参数为true即可</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡阶段触发事件"><span class="nav-number">5.5.</span> <span class="nav-text">冒泡阶段触发事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Event对象的常见应用"><span class="nav-number">5.6.</span> <span class="nav-text">Event对象的常见应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义事件"><span class="nav-number">5.7.</span> <span class="nav-text">自定义事件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梦不成</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">本站字数共计&#58;</span>
+    
+    <span title="本站字数共计">97.1k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("04/17/2019 11:28:36");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-users"></i> 有朋自远方来
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      位
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -313,4 +1465,97 @@
         onPopupClose();
       }
     });
-  </script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css"><script src="/lib/needsharebutton/needsharebutton.js"></script><script>pbOptions={iconStyle:"box",boxForm:"horizontal",position:"bottomCenter",networks:"Weibo,Douban,QQZone,Twitter,Facebook"},new needShareButton("#needsharebutton-postbottom",pbOptions)</script><script type="text/javascript">wpac_init=window.wpac_init||[],wpac_init.push({widget:"Rating",id:18789,el:"wpac-rating",color:"fc6423"}),function(){if(!("WIDGETPACK_LOADED"in window)){WIDGETPACK_LOADED=!0;var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//embed.widgetpack.com/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t.nextSibling)}}()</script><canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:1;pointer-events:none"></canvas><script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="/js/src/fireworks.js"></script> undefined<script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/src/custom.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({pluginRootPath:"live2dw/",pluginJsPath:"lib/",pluginModelPath:"assets/",model:{scale:1,hHeadPos:.5,vHeadPos:.618,jsonPath:"/live2dw/assets/shizuku.model.json"},display:{superSample:2,width:160,height:320,position:"left",hOffset:-12,vOffset:-43},mobile:{show:!0,scale:.5},react:{opacityDefault:.7,opacityOnHover:.2},log:!1,tagMode:!1})</script></body></html><script type="text/javascript" src="/js/src/clicklove.js"></script>
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 18789,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
+
+  
+
+  
+
+  
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+  
+  undefined
+
+  <!-- 点击复制按钮 -->
+  <script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"superSample":2,"width":160,"height":320,"position":"left","hOffset":-12,"vOffset":-43},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"tagMode":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
