@@ -1038,14 +1038,14 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[book-fengchuan]]></title>
-    <url>%2Fbook-note%2Fbook-fengchuan%2F</url>
-    <content type="text"><![CDATA[&emsp;&emsp;深夜时，人会更加容易情绪化，所以无论多难过，都要告诉自己，没有那麽糟糕，睡一觉就好了。 相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。从古至今，故事一直都是人们分享信息的重要工具。诱因，让人产生联想，看到这个，就会想到那个。打折规则，100元以上，降价多少元，以下为打几折。&emsp;&emsp;那么如何打造-个疯传的产品呢?第一，让你的产品成为一种社交货币，也就是说人们会通过分享它来赢得别人的好感和兴趣;第二，要利用诱因引发消费者的联想;第三，要带动消费者的情绪，让他们不断频繁地分享;第四，让你的产品尽可能出现在大家眼前，让人们不看都不行;第五，记得，简单实用的东西自然会受人欢迎;最后，帮你的产品量身打造一一个足够有意思的故事。&emsp;&emsp;两个可行的建议。首先，可以让你的产品带上点竞争元素。就是说利用人们的游戏心理，大家在玩游戏的时候都喜欢跟别人比赛，获得胜利之后，会得意地和别人分享自己的战绩，同时也就相当于告诉了别人某个产品。所以，如果你的产品有了游戏元素，就能鼓励消费者用你的产品进行某种互动，这样就提高了产品被分享的可能。]]></content>
+    <title><![CDATA[Math-random]]></title>
+    <url>%2FMath%2FMath-random%2F</url>
+    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
       <categories>
-        <category>book-note</category>
+        <category>Math</category>
       </categories>
       <tags>
-        <tag>skills</tag>
+        <tag>random</tag>
       </tags>
   </entry>
   <entry>
@@ -1060,14 +1060,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Math-random]]></title>
-    <url>%2FMath%2FMath-random%2F</url>
-    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
+    <title><![CDATA[book-fengchuan]]></title>
+    <url>%2Fbook-note%2Fbook-fengchuan%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;深夜时，人会更加容易情绪化，所以无论多难过，都要告诉自己，没有那麽糟糕，睡一觉就好了。 相比广告营销，口口相传更有效，分享能让我们感觉良好，因为他会让我们显得高大上。我们更愿意与人分享能提升个人形象的信息。某些产品，思想或行为，经常出现在我们眼前时，他们的影响力和传染力就会大大增加。从古至今，故事一直都是人们分享信息的重要工具。诱因，让人产生联想，看到这个，就会想到那个。打折规则，100元以上，降价多少元，以下为打几折。&emsp;&emsp;那么如何打造-个疯传的产品呢?第一，让你的产品成为一种社交货币，也就是说人们会通过分享它来赢得别人的好感和兴趣;第二，要利用诱因引发消费者的联想;第三，要带动消费者的情绪，让他们不断频繁地分享;第四，让你的产品尽可能出现在大家眼前，让人们不看都不行;第五，记得，简单实用的东西自然会受人欢迎;最后，帮你的产品量身打造一一个足够有意思的故事。&emsp;&emsp;两个可行的建议。首先，可以让你的产品带上点竞争元素。就是说利用人们的游戏心理，大家在玩游戏的时候都喜欢跟别人比赛，获得胜利之后，会得意地和别人分享自己的战绩，同时也就相当于告诉了别人某个产品。所以，如果你的产品有了游戏元素，就能鼓励消费者用你的产品进行某种互动，这样就提高了产品被分享的可能。]]></content>
       <categories>
-        <category>Math</category>
+        <category>book-note</category>
       </categories>
       <tags>
-        <tag>random</tag>
+        <tag>skills</tag>
       </tags>
   </entry>
   <entry>
