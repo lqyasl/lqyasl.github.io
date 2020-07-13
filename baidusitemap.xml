@@ -49,9 +49,6 @@
     <loc>https://shulu520.com/responsive/m-%E5%93%8D%E5%BA%94%E5%BC%8F%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2019-08-29</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/responsive/m-%E5%93%8D%E5%BA%94%E5%BC%8Fbootstrap/</loc>
-    <lastmod>2019-08-29</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/mobile/m-%E7%A7%BB%E5%8A%A8%E7%AB%AF-%E6%8F%92%E4%BB%B6/</loc>
     <lastmod>2019-08-28</lastmod>
   </url>  <url>
@@ -223,9 +220,6 @@
     <loc>https://shulu520.com/Promise/Promise-zhuf/</loc>
     <lastmod>2019-06-11</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/localStorage/localStorage/</loc>
-    <lastmod>2019-06-11</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/cookie/cookie-js/</loc>
     <lastmod>2019-06-11</lastmod>
   </url>  <url>
@@ -253,26 +247,14 @@
     <loc>https://shulu520.com/js-advance/js-advance-one/</loc>
     <lastmod>2019-05-27</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/vue/vue-source-guigu/</loc>
-    <lastmod>2019-05-27</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/safe/safe-xss/</loc>
-    <lastmod>2019-05-27</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/skills/skills-search/</loc>
     <lastmod>2019-05-27</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/hotkey/hotkey-windows/</loc>
     <lastmod>2019-05-27</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/vue/vue-guigu/</loc>
-    <lastmod>2019-05-27</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/diary/diary-shanjuan/</loc>
     <lastmod>2019-05-23</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/node/node-koa2/</loc>
-    <lastmod>2019-05-21</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/arrowjs/arrow-js-note/</loc>
     <lastmod>2019-05-21</lastmod>
@@ -286,12 +268,6 @@
     <loc>https://shulu520.com/book-note/book-fengchuan/</loc>
     <lastmod>2019-05-19</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/es6/es6-zhuf-01/</loc>
-    <lastmod>2019-05-18</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/node/node-blue-note-md/</loc>
-    <lastmod>2019-05-18</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/git/git-qa-note/</loc>
     <lastmod>2019-05-18</lastmod>
   </url>  <url>
@@ -299,9 +275,6 @@
     <lastmod>2019-05-13</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/git/git-liao-note/</loc>
-    <lastmod>2019-05-12</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/vue/vue-tour/</loc>
     <lastmod>2019-05-12</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/http/http/</loc>
@@ -312,8 +285,5 @@
   </url>  <url>
     <loc>https://shulu520.com/Math/Math-random/</loc>
     <lastmod>2019-05-02</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/less/less/</loc>
-    <lastmod>2019-04-26</lastmod>
   </url>
 </urlset>
