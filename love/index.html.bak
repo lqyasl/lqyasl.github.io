@@ -107,7 +107,7 @@
 						let gohome = document.getElementById('gohome');
 						gohome.style.backgroundColor = randomColor();
 						display.classList.add('display');
-					}, 550);
+					}, 1150);
 				}
 			},250);
 		</script>

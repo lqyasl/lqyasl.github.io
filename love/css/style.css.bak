@@ -233,8 +233,7 @@
          position: relative; 
          top: 10px;
          left: 35%;
-         margin: 5px;
-		 font-size: 30px;
+         margin: 5px; 
      }  
  
      #dance span.dance-content:nth-child(1){  
