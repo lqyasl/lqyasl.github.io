@@ -972,14 +972,14 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Math-random]]></title>
-    <url>%2FMath%2FMath-random%2F</url>
-    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
+    <title><![CDATA[skills-search]]></title>
+    <url>%2Fskills%2Fskills-search%2F</url>
+    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容]]></content>
       <categories>
-        <category>Math</category>
+        <category>skills</category>
       </categories>
       <tags>
-        <tag>random</tag>
+        <tag>search</tag>
       </tags>
   </entry>
   <entry>
@@ -1005,14 +1005,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[skills-search]]></title>
-    <url>%2Fskills%2Fskills-search%2F</url>
-    <content type="text"><![CDATA[口语转变为关键词 关键词之间打上空格 限定在特定网站内 关键词 site:某一站点 注意：站点前不用加www或http 限定文件类型 关键词 filetype:文件格式 限定时间段 关键词 20xx..20xx 注意：中间是两个英文句号 排除某个关键词 关键词 -广告 -推广 将关键词限定在标题中 关键词 intitle:限定内容]]></content>
+    <title><![CDATA[Math-random]]></title>
+    <url>%2FMath%2FMath-random%2F</url>
+    <content type="text"><![CDATA[引言：希望你睡不着时，想起的都是那些让你开心的事 常见的问题：如何生成一个区间[min,max]内的随机整数？答案很简单，即 Math.random()*(max-min)+min 以下是一些其他的方法。 new Date() - 0 new Date() 日期函数 默认会显示年月日等字符，new Date() - 0 会得到数字“秒” (new Date() - 0)%2239 ,得到取模数值分之一概率的随机数，即[0,2239]范围内一随机数 toString(指定进制) 方法的调用 与parseInt() 方法一样，进制区间为 [2,36]，取36得字母多一些 随便一个随机数.toString(36)得随机字符，但有数字，且长短不一 随机字符串函数，长度固定，且都是字母 从固定的字典中抽取字符构成随机字符串 12345678910// 在大小写字母之间随机生成 x 个字符function randStr(x)&#123; var s = &apos;&apos;; while(s.length &lt; x &amp;&amp; x &gt; 0)&#123; var r = Math.random(); s += String.fromCharCode(Math.floor(r*26) + (r &gt; 0.5 ? 97 : 65)) &#125;; return s;&#125;;console.log(randStr(3)); //KzE 三个随机字符 颜色随机函数1234function randomColor()&#123; var rand = &apos;#&apos;+(&apos;00000&apos;+(Math.random()*0x1000000&lt;&lt;0).toString(16)).slice(-6); return rand;&#125;; 后记 随机数相关得知识还又有很多，后面学到了再来补充笔记]]></content>
       <categories>
-        <category>skills</category>
+        <category>Math</category>
       </categories>
       <tags>
-        <tag>search</tag>
+        <tag>random</tag>
       </tags>
   </entry>
   <entry>
