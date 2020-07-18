@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://shulu520.com/hello/friends/</loc>
+    <lastmod>2020-07-18</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/%E7%BB%8F%E6%B5%8E%E5%AD%A6/%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
+    <lastmod>2020-07-18</lastmod>
+  </url>  <url>
     <loc>https://shulu520.com/%E5%A3%81%E7%BA%B8/%E5%A3%81%E7%BA%B8/</loc>
     <lastmod>2020-07-13</lastmod>
   </url>  <url>
@@ -100,9 +106,6 @@
     <loc>https://shulu520.com/ajax/ajax/</loc>
     <lastmod>2019-08-11</lastmod>
   </url>  <url>
-    <loc>https://shulu520.com/hello/friends/</loc>
-    <lastmod>2019-08-10</lastmod>
-  </url>  <url>
     <loc>https://shulu520.com/this/this/</loc>
     <lastmod>2019-08-10</lastmod>
   </url>  <url>
@@ -161,9 +164,6 @@
     <lastmod>2019-07-16</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/%E7%94%B5%E5%BD%B1%E5%AD%A6/%E7%94%B5%E5%BD%B1%E5%AD%A6/</loc>
-    <lastmod>2019-07-16</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/%E7%BB%8F%E6%B5%8E%E5%AD%A6/%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
     <lastmod>2019-07-16</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/axios/ajax-axios/</loc>
