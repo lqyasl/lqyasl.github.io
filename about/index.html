@@ -8,8 +8,17 @@
 </head>
 <body id="body">
 	<div>
-		<p id="beye">毕业倒计时</p>
+		<p id="beye">工作计时器</p>
 		<div id="box"></div>
+	</div>
+	<div>
+		
+		<input id="valueOne" type="text" placeholder="请输入裂解总进料量">
+		<input id="valueTwo" type="text" placeholder="请输入氯乙烯总出料量">
+		<input id="valueThree" type="text" placeholder="请输入进料纯度,默认为1">
+		<button onclick="liejielv()" style="width: 80px;height: 20px;color:white;background-color: rgb(20, 4, 4);">计算裂解率</button>
+		<p id="result">裂解率=</p>
+		<button onclick="result()" style="width: 60px;height: 20px;color:white;background-color: rgb(20, 4, 4);">清空重算</button>
 	</div>
 	<div class="content-wrap">
 		<div class="content">
@@ -30,7 +39,7 @@
 			return rand;
 		};
 	    let obox = document.getElementById("box"),
-	        graduationTime = new Date("2020/6/15");//大学毕业找工作时间
+	        graduationTime = new Date("2020/7/20");//开始工作时间
 	    setInterval(() => {
 	        let date =graduationTime - new Date(),
 	            dd = Math.floor(date/1000/60/60/24),
@@ -51,7 +60,21 @@
 	        return n < 10 ? "0" + n : n + "";
 	        // return n.String.padStart(2,"0");//这种用法不熟，报错
 	         // return ("0" + n).slice(-2); //这种只针对只有两位数的情况
-	    }
+			}
+			let Clickvalue = document.getElementById("result");
+			
+			function liejielv () {
+				let a = 99, b = 62.5, c = 0, d = valueThree.value || 1
+				c = (a * valueTwo.value) / (b * valueOne.value * d)
+
+				Clickvalue.innerText ='裂解率=' + '' + c.toFixed(4)*100 + "%"
+			}
+			function result () {
+				valueOne.value = ''
+				valueTwo.value = ''
+				valueThree.value = ''
+				Clickvalue.innerText = '裂解率='
+			}
 	</script>
 </body>
 </html>

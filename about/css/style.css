@@ -8,7 +8,7 @@
 	#beye{
 		margin-top: 10px;
 		text-align: center;
-		font-size: 55px
+		font-size: 30px;
 
 	}
 	body{
@@ -16,15 +16,15 @@
 		height: 100%;
 		overflow: hidden;
 		border: 24px solid transparent;
-  	border-image: url(../assets/img/border.png) 80 100 repeat ;
+  	/* border-image: url(../assets/img/border.png) 80 100 repeat ; */
 		background-color: pink;
 	}
     #box{
-        height: 180px;
+        height: 140px;
         margin: 80px auto;
-        line-height: 180px;
+        line-height: 140px;
         text-align: center;
-        font-size: 54px;
+        font-size: 38px;
         border-radius: 20px;
         color: red;
     }
