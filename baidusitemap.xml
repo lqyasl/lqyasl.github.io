@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://shulu520.com/sp%E5%BF%83%E5%BE%97/sp%E5%BF%83%E5%BE%976/</loc>
+    <lastmod>2020-09-06</lastmod>
+  </url>  <url>
+    <loc>https://shulu520.com/md/markdown/</loc>
+    <lastmod>2020-09-06</lastmod>
+  </url>  <url>
     <loc>https://shulu520.com/sp%E5%BF%83%E5%BE%97/sp%E5%BF%83%E5%BE%975/</loc>
     <lastmod>2020-08-30</lastmod>
   </url>  <url>
@@ -261,9 +267,6 @@
   </url>  <url>
     <loc>https://shulu520.com/hotkey/hotkey-listary/</loc>
     <lastmod>2019-05-28</lastmod>
-  </url>  <url>
-    <loc>https://shulu520.com/md/markdown/</loc>
-    <lastmod>2019-05-27</lastmod>
   </url>  <url>
     <loc>https://shulu520.com/node/nodejs-guigu/</loc>
     <lastmod>2019-05-27</lastmod>
