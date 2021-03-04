@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('博主私有文章，请输入密码:  shulu520') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="J3muXvxFkF">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python,">
+
+
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="梦不成" type="application/atom+xml">
+
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "5af61f84"
+    });
+  daovoice('update');
+  </script>
+
+
+<meta name="description" content="终于开始了Python编程的学习之路，哈哈哈">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础">
+<meta property="og:url" content="https://shulu520.com/Python语法/Python基础/index.html">
+<meta property="og:site_name" content="梦不成">
+<meta property="og:description" content="终于开始了Python编程的学习之路，哈哈哈">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-03-03T11:27:15.543Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python基础">
+<meta name="twitter:description" content="终于开始了Python编程的学习之路，哈哈哈">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shulu520.com/Python语法/Python基础/">
+
+
+
+
+
+  <title>Python基础 | 梦不成</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梦不成</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">思念如马-自别离-未停蹄</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-love">
+          <a href="/love/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            love
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            文章标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            文章分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            文章归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-留言板">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="来啊，快来探索我的秘密吧..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+
+<link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet"> </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shulu520.com/Python语法/Python基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head_icon.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦不成">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-02-04T06:05:24+08:00">
+                2021-02-04
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新&#58;</span>
+              
+              <time title="更新" itemprop="dateModified" datetime="2021-03-03T19:27:15+08:00">
+                2021-03-03
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python语法/" itemprop="url" rel="index">
+                    <span itemprop="name">Python语法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-free-code-camp"></i> 热度
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>🔥
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  1.6k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  终于开始了Python编程的学习之路，哈哈哈
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>&emsp;&emsp;最帅的人就是我</p>
+</blockquote>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
+<h2 id="变量-标识符-开头只能是字母数字或下划线"><a href="#变量-标识符-开头只能是字母数字或下划线" class="headerlink" title="变量(标识符)开头只能是字母数字或下划线"></a>变量(标识符)开头只能是字母数字或下划线</h2><h2 id="print-函数-打印输出"><a href="#print-函数-打印输出" class="headerlink" title="print 函数 打印输出"></a>print 函数 打印输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(520)</span><br><span class="line">print(1+1)</span><br><span class="line">print(&quot;shulu520&quot;)</span><br><span class="line">print(&quot;sdsdsd&quot;)</span><br></pre></td></tr></table></figure>
+<h2 id="将数据输出到文件中-’a-’意思是文件不存在的话就创建，已经存在的话就追加内容"><a href="#将数据输出到文件中-’a-’意思是文件不存在的话就创建，已经存在的话就追加内容" class="headerlink" title="将数据输出到文件中,’a+’意思是文件不存在的话就创建，已经存在的话就追加内容"></a>将数据输出到文件中,’a+’意思是文件不存在的话就创建，已经存在的话就追加内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ft = open(&apos;E:/love.txt&apos;,&apos;a+&apos;) </span><br><span class="line">print(&apos;helloworld&apos;,file=ft)</span><br><span class="line">ft.close()</span><br></pre></td></tr></table></figure>
+<h2 id="不进行换行输出，使用逗号分隔"><a href="#不进行换行输出，使用逗号分隔" class="headerlink" title="不进行换行输出，使用逗号分隔"></a>不进行换行输出，使用逗号分隔</h2><p><code>print(11,111,333,&#39;erere&#39;)</code></p>
+<h2 id="转义字符，反斜杠-转义字符的首字母-n-newline的首字母"><a href="#转义字符，反斜杠-转义字符的首字母-n-newline的首字母" class="headerlink" title="转义字符，反斜杠+转义字符的首字母,n newline的首字母"></a>转义字符，反斜杠+转义字符的首字母,n newline的首字母</h2><p><code>print(&#39;shulu\n520&#39;)</code></p>
+<h2 id="制表符-不太懂"><a href="#制表符-不太懂" class="headerlink" title="制表符 不太懂"></a>制表符 不太懂</h2><p><code>print(&#39;hello\tshulu&#39;)</code><br><code>print(&#39;hellooooo\tshulu&#39;)</code></p>
+<h2 id="覆盖"><a href="#覆盖" class="headerlink" title="覆盖"></a>覆盖</h2><p><code>print(&#39;shulu\r520&#39;)</code></p>
+<h2 id="退格，将u退没了"><a href="#退格，将u退没了" class="headerlink" title="退格，将u退没了"></a>退格，将u退没了</h2><p><code>print(&#39;shulu\b520&#39;)</code></p>
+<h2 id="双反斜杠的应用"><a href="#双反斜杠的应用" class="headerlink" title="双反斜杠的应用"></a>双反斜杠的应用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(&apos;https:\\shulu520.com&apos;)</span><br><span class="line">print(&apos;https:\\\\shulu520.com&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h2><p><code>print(&#39;shulu说:\&#39;i love you\&#39;&#39;)</code></p>
+<h2 id="原字符-不让字符串中的转义字符起作用-注意字符串最后一个不能是反斜杠"><a href="#原字符-不让字符串中的转义字符起作用-注意字符串最后一个不能是反斜杠" class="headerlink" title="原字符 不让字符串中的转义字符起作用,注意字符串最后一个不能是反斜杠"></a>原字符 不让字符串中的转义字符起作用,注意字符串最后一个不能是反斜杠</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(r&apos;shulu\n520&apos;)</span><br><span class="line">print(R&apos;shulu\n520&apos;)</span><br><span class="line">print(R&apos;shulu\n520\\&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="变量直接写，不用声明"><a href="#变量直接写，不用声明" class="headerlink" title="变量直接写，不用声明"></a>变量直接写，不用声明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name=&apos;shulu&apos;</span><br><span class="line">age=18</span><br><span class="line">money=100.888</span><br><span class="line">bo=True</span><br><span class="line">print(name,age,money,bo)</span><br></pre></td></tr></table></figure>
+<h2 id="变量的内存地址，变量类型"><a href="#变量的内存地址，变量类型" class="headerlink" title="变量的内存地址，变量类型"></a>变量的内存地址，变量类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(id(name),type(name))</span><br><span class="line">print(id(age),type(age))</span><br><span class="line">print(id(money),type(money))</span><br><span class="line">print(id(bo),type(bo))</span><br></pre></td></tr></table></figure>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(type(str(age)))</span><br><span class="line">print(type(str(money)))</span><br><span class="line"></span><br><span class="line">print(float(age),type(float(age)))</span><br><span class="line">print(int(money),type(int(money)))</span><br><span class="line"></span><br><span class="line">print(int(bo),type(int(bo)))</span><br><span class="line">print(float(bo),type(float(bo)))</span><br></pre></td></tr></table></figure>
+<h2 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;&apos;</span><br><span class="line">这是多行注释</span><br><span class="line">&apos;&apos;&apos;</span><br></pre></td></tr></table></figure>
+<h2 id="input输入函数，接收用户的输入，做提示语"><a href="#input输入函数，接收用户的输入，做提示语" class="headerlink" title="input输入函数，接收用户的输入，做提示语"></a>input输入函数，接收用户的输入，做提示语</h2><h2 id="运行代码，输入答案回车看看"><a href="#运行代码，输入答案回车看看" class="headerlink" title="运行代码，输入答案回车看看"></a>运行代码，输入答案回车看看</h2><p><code>print(input(&#39;你爱我吗&#39;))</code></p>
+<h2 id="算数运算符，整除"><a href="#算数运算符，整除" class="headerlink" title="算数运算符，整除"></a>算数运算符，整除</h2><p><code>print(11//2)</code></p>
+<h2 id="一正一负，整除，向下取整"><a href="#一正一负，整除，向下取整" class="headerlink" title="一正一负，整除，向下取整"></a>一正一负，整除，向下取整</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(-9//4)</span><br><span class="line">print(9//-4)</span><br></pre></td></tr></table></figure>
+<h2 id="幂运算"><a href="#幂运算" class="headerlink" title="幂运算"></a>幂运算</h2><p><code>print(2**3)</code></p>
+<h2 id="取余"><a href="#取余" class="headerlink" title="取余"></a>取余</h2><p><code>print(11%2)</code></p>
+<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a,b,c = 1,2,3</span><br><span class="line">print(a,b,c)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">交换两个变量的值</span><br><span class="line">c,d = 4,5</span><br><span class="line">print(&apos;交换之前&apos;,c,d)</span><br><span class="line">c,d = d,c</span><br><span class="line">print(&apos;交换之后&apos;,c,d)</span><br></pre></td></tr></table></figure>
+<h2 id="比较运算符-比较的是值，is比较内存地址"><a href="#比较运算符-比较的是值，is比较内存地址" class="headerlink" title="比较运算符==,比较的是值，is比较内存地址"></a>比较运算符==,比较的是值，is比较内存地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a,b,c = 1,2,1</span><br><span class="line">print(a==b) </span><br><span class="line">print(a&gt;b)</span><br><span class="line">print(a&lt;b)</span><br><span class="line">print(id(a),id(c))</span><br><span class="line">print(a==c)</span><br><span class="line">print(a is c) #比较的是内存地址id，此处为True</span><br><span class="line"></span><br><span class="line">lt1 = [11,22,33]</span><br><span class="line">lt2 = [11,22,33]</span><br><span class="line">print(id(lt1),id(lt2))</span><br><span class="line">print(lt1==lt2)</span><br><span class="line">print(lt1 is lt2) #比较的是内存地址id，此处为False</span><br><span class="line">print(lt1 is not lt2) #True</span><br></pre></td></tr></table></figure>
+<h2 id="布尔运算算符and，当两个云算数都为True时结果才为True"><a href="#布尔运算算符and，当两个云算数都为True时结果才为True" class="headerlink" title="布尔运算算符and，当两个云算数都为True时结果才为True"></a>布尔运算算符and，当两个云算数都为True时结果才为True</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a,b=1,2</span><br><span class="line">print(a==1 and b==2) #True and True为True</span><br><span class="line">print(a==2 and b==2) #False and True为False</span><br><span class="line">print(a!=1 and b!=2) #False and False为False</span><br></pre></td></tr></table></figure>
+<h2 id="or"><a href="#or" class="headerlink" title="or"></a>or</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a,b=1,2</span><br><span class="line">print(a!=1 or b==2)</span><br></pre></td></tr></table></figure>
+<h2 id="not对布尔值取反"><a href="#not对布尔值取反" class="headerlink" title="not对布尔值取反"></a>not对布尔值取反</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c,d=True,False</span><br><span class="line">print(not c, not d)</span><br></pre></td></tr></table></figure>
+<h2 id="in-not-in"><a href="#in-not-in" class="headerlink" title="in,not in"></a>in,not in</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">love=&apos;shulu&apos;</span><br><span class="line">print(&apos;s&apos; in love, &apos;x&apos; not in love)</span><br></pre></td></tr></table></figure>
+<h2 id="对象的布尔值-使用内置函数bool-查看"><a href="#对象的布尔值-使用内置函数bool-查看" class="headerlink" title="对象的布尔值,使用内置函数bool()查看"></a>对象的布尔值,使用内置函数bool()查看</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">以下对象的布尔值为False</span><br><span class="line"></span><br><span class="line">print(bool(False))</span><br><span class="line">print(bool(0))</span><br><span class="line">print(bool(0.0))</span><br><span class="line">print(bool(&apos;&apos;))</span><br><span class="line">print(bool(&quot;&quot;))</span><br><span class="line">print(bool(None))</span><br><span class="line">print(bool([])) #空列表</span><br><span class="line">print(bool(list())) #空列表</span><br><span class="line">print(bool(())) #空元组</span><br><span class="line">print(bool(tuple())) #空元组</span><br><span class="line">print(bool(&#123;&#125;)) #空字典</span><br><span class="line">print(bool(dict())) #空字典</span><br><span class="line">print(bool(set())) #空集合</span><br></pre></td></tr></table></figure>
+<h2 id="分支结构-if-elif-else"><a href="#分支结构-if-elif-else" class="headerlink" title="分支结构 if elif else"></a>分支结构 if elif else</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">score=int(input(&apos;请输入成绩&apos;))</span><br><span class="line">if score&gt;=90 and score&lt;=100 :</span><br><span class="line">  print(&apos;A&apos;)</span><br><span class="line">elif score&gt;=80 and score&lt;90 :</span><br><span class="line">  print(&apos;B&apos;)</span><br><span class="line">elif score&lt;80:</span><br><span class="line">  print(&apos;不合格&apos;)</span><br><span class="line">else:</span><br><span class="line">  print(&apos;成绩有误&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">可以用数学中的方式来简写</span><br><span class="line">score=int(input(&apos;请输入成绩&apos;))</span><br><span class="line">if 90&lt;=score&lt;=100 :</span><br><span class="line">  print(&apos;A&apos;)</span><br><span class="line">elif 80&lt;=score&lt;90 :</span><br><span class="line">  print(&apos;B&apos;)</span><br><span class="line">elif score&lt;80:</span><br><span class="line">  print(&apos;不合格&apos;)</span><br><span class="line">else:</span><br><span class="line">  print(&apos;成绩有误&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="if-else-条件表达式，双分支结构的简写"><a href="#if-else-条件表达式，双分支结构的简写" class="headerlink" title="if else 条件表达式，双分支结构的简写"></a>if else 条件表达式，双分支结构的简写</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">money=1000</span><br><span class="line">s=int(input(&apos;请输入取款金额&apos;))</span><br><span class="line"></span><br><span class="line">if money&gt;=s:</span><br><span class="line">  money-=s</span><br><span class="line">  print(&apos;您的余额为：&apos;,money)</span><br><span class="line">else:</span><br><span class="line">  print(&apos;钱不够，快去挣钱呀&apos;)</span><br><span class="line"></span><br><span class="line">等于下面的代码</span><br><span class="line">print(&apos;您的余额为：&apos;+str(money-s) if money&gt;=s else &apos;钱不够，快去挣钱呀&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="模糊匹配"><a href="#模糊匹配" class="headerlink" title="模糊匹配"></a>模糊匹配</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 用户输入部分搜索内容后，根据这部分内容去模糊匹配，然后列出所有的匹配项，供其再次精确选择</span><br><span class="line"># https://www.cnblogs.com/weiman3389/p/6047017.html</span><br><span class="line"># 以下代码作者优化的挺好的</span><br><span class="line">import re</span><br><span class="line">def fuzzyfinder(user_input, collection):</span><br><span class="line">  suggestions = []</span><br><span class="line">  pattern = &apos;.*?&apos;.join(user_input)    # Converts &apos;djm&apos; to &apos;d.*?j.*?m&apos;</span><br><span class="line">  regex = re.compile(pattern)         # Compiles a regex.</span><br><span class="line">  for item in collection:</span><br><span class="line">    match = regex.search(item)      # Checks if the current item matches the regex.</span><br><span class="line">    if match:</span><br><span class="line">      suggestions.append((len(match.group()), match.start(), item))</span><br><span class="line">  return [x for _, _, x in sorted(suggestions)]</span><br><span class="line"></span><br><span class="line">lst=[&apos;清华大学&apos;,&apos;北京大学&apos;,&apos;苏州的大学&apos;,&apos;兰州大学&apos;,&apos;经济学院&apos;,&apos;化工学院&apos;]</span><br><span class="line"></span><br><span class="line">user_input=input(&apos;请输入学校名称：&apos;)</span><br><span class="line">fuzzy_result=fuzzyfinder(user_input,lst)</span><br><span class="line">print(fuzzy_result)</span><br></pre></td></tr></table></figure>
+<h2 id="续行符"><a href="#续行符" class="headerlink" title="续行符 \"></a>续行符 \</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 当某一段代码太长了，可以这么干</span><br><span class="line">s=&apos;你好啊你好啊你好啊你好啊\</span><br><span class="line">  你好啊你好啊你好啊你好啊你好啊\</span><br><span class="line">  你好啊你好啊你好啊你好啊你好啊&apos;</span><br><span class="line"></span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+<h2 id="打包成-exe可执行文件"><a href="#打包成-exe可执行文件" class="headerlink" title="打包成.exe可执行文件"></a>打包成.exe可执行文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name=input(&apos;请输入你的名字：&apos;)</span><br><span class="line">age=eval(input(&apos;请输入你的年龄：&apos;))</span><br><span class="line">with open(&apos;可执行文件.txt&apos;,&apos;w&apos;) as file:</span><br><span class="line">  file.write(name+&apos;----&apos;+str(age))</span><br><span class="line"></span><br><span class="line">while True:</span><br><span class="line">  answer=input(&apos;退出吗？y/n&apos;)</span><br><span class="line">  if answer==&apos;y&apos;:</span><br><span class="line">    break</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 程序写好之后，进入cmd</span><br><span class="line"># 输入 pyinstaller -F 你的.py文件的绝对路径</span><br><span class="line"># 如：pyinstaller -F E:\Users\lqy\Desktop\xuexiPy\word\14.py</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 这是一个简单的生成一个文本文件的程序，</span><br><span class="line"># 如果程序运行中需要用到图片视频等文件时，</span><br><span class="line"># 只需将他们放到C:\Users\Administrator\dist这个目录下</span><br><span class="line"># 这是可执行文件打包后的位置</span><br><span class="line"></span><br><span class="line"># 练习时发现，电脑病毒报错，</span><br><span class="line"># 打开设置，进入Windows Defender，</span><br><span class="line"># 点击病毒和威胁防护，点击‘病毒和威胁防护’设置，将实时保护关闭。</span><br><span class="line"># 待软件安装完成之后，再将实时保护关闭即可。</span><br></pre></td></tr></table></figure>
+<h2 id="字符串的反向输出"><a href="#字符串的反向输出" class="headerlink" title="字符串的反向输出"></a>字符串的反向输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s=&apos;12345678&apos;</span><br><span class="line">print(s[::-1]) #87654321</span><br></pre></td></tr></table></figure>
+<h2 id="进制转换函数"><a href="#进制转换函数" class="headerlink" title="进制转换函数"></a>进制转换函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">number=888</span><br><span class="line"># 转为二进制</span><br><span class="line">print(bin(number)) #0b1101111000</span><br><span class="line"></span><br><span class="line"># 转为八进制</span><br><span class="line">print(oct(number)) #0o1570</span><br><span class="line"></span><br><span class="line"># 转为16进制</span><br><span class="line">print(hex(number)) #0x378</span><br></pre></td></tr></table></figure>
+<h2 id="常见的datetime日期时间模块"><a href="#常见的datetime日期时间模块" class="headerlink" title="常见的datetime日期时间模块"></a>常见的datetime日期时间模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># datetime模块重新封装了time模块</span><br><span class="line">import datetime</span><br><span class="line"></span><br><span class="line">time1=datetime.datetime.now()</span><br><span class="line">print(time1) #2021-02-27 18:59:13.885794</span><br><span class="line"></span><br><span class="line">time2=datetime.date.today()</span><br><span class="line">print(time2) #2021-02-27</span><br><span class="line"></span><br><span class="line">time3=datetime.datetime.today()</span><br><span class="line">print(time3) #2021-02-27 18:58:39.614459</span><br><span class="line"></span><br><span class="line">time4=datetime.datetime.today().timestamp()</span><br><span class="line">print(time4) #1614423830.81342</span><br><span class="line"></span><br><span class="line"># 返回当前日期时间的日期部分：2021-02-27</span><br><span class="line">print(datetime.datetime.now().date())</span><br><span class="line"></span><br><span class="line"># 返回当前日期时间的时间部分：19:13:45.310397</span><br><span class="line">print(datetime.datetime.now().time())</span><br><span class="line"></span><br><span class="line"># delta时间间隔</span><br><span class="line">past=datetime.datetime(2017, 4, 16, 21, 21, 20, 871000)</span><br><span class="line">now=datetime.datetime.now()</span><br><span class="line">delta=now-past</span><br><span class="line">print(delta) #1412 days, 22:07:46.382359</span><br><span class="line">print(delta.days) #1412</span><br></pre></td></tr></table></figure>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
+<center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        
+<div style="text-align:center;color: #006400;font-size:14px;">
+	------ The Happy Ending<i class="fa fa-paw"></i>Thanks for your reading! ------</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>写的不错嘛，赏你吃🍬</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>🤞🤞🤞</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="梦不成 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="梦不成 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不成
+  </li>
+  <li class="post-copyright-link">
+    <strong>原始链接：</strong>
+    <a href="https://shulu520.com/Python语法/Python基础/" title="Python基础">https://shulu520.com/Python语法/Python基础/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。欢迎转载，请保留原文链接及作者
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/sp心得/sp心得7/" rel="next" title="sp心得7">
+                <i class="fa fa-chevron-left"></i> sp心得7
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Python语法/Python-循环与列表/" rel="prev" title="Python-循环与列表">
+                Python-循环与列表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzgyMi8yMDM1Nw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head_icon.gif" alt="梦不成">
+            
+              <p class="site-author-name" itemprop="name">梦不成</p>
+              <p class="site-description motion-element" itemprop="description">君子生非异也，善假于物也</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lqyasl" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2642816105@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/wu-jia-yi-26-93/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-gratipay"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/c3c177adad8e" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-globe"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量-标识符-开头只能是字母数字或下划线"><span class="nav-number">1.</span> <span class="nav-text">变量(标识符)开头只能是字母数字或下划线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#print-函数-打印输出"><span class="nav-number">2.</span> <span class="nav-text">print 函数 打印输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将数据输出到文件中-’a-’意思是文件不存在的话就创建，已经存在的话就追加内容"><span class="nav-number">3.</span> <span class="nav-text">将数据输出到文件中,’a+’意思是文件不存在的话就创建，已经存在的话就追加内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不进行换行输出，使用逗号分隔"><span class="nav-number">4.</span> <span class="nav-text">不进行换行输出，使用逗号分隔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转义字符，反斜杠-转义字符的首字母-n-newline的首字母"><span class="nav-number">5.</span> <span class="nav-text">转义字符，反斜杠+转义字符的首字母,n newline的首字母</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制表符-不太懂"><span class="nav-number">6.</span> <span class="nav-text">制表符 不太懂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#覆盖"><span class="nav-number">7.</span> <span class="nav-text">覆盖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退格，将u退没了"><span class="nav-number">8.</span> <span class="nav-text">退格，将u退没了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双反斜杠的应用"><span class="nav-number">9.</span> <span class="nav-text">双反斜杠的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引号"><span class="nav-number">10.</span> <span class="nav-text">引号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原字符-不让字符串中的转义字符起作用-注意字符串最后一个不能是反斜杠"><span class="nav-number">11.</span> <span class="nav-text">原字符 不让字符串中的转义字符起作用,注意字符串最后一个不能是反斜杠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量直接写，不用声明"><span class="nav-number">12.</span> <span class="nav-text">变量直接写，不用声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的内存地址，变量类型"><span class="nav-number">13.</span> <span class="nav-text">变量的内存地址，变量类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换"><span class="nav-number">14.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多行注释"><span class="nav-number">15.</span> <span class="nav-text">多行注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#input输入函数，接收用户的输入，做提示语"><span class="nav-number">16.</span> <span class="nav-text">input输入函数，接收用户的输入，做提示语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行代码，输入答案回车看看"><span class="nav-number">17.</span> <span class="nav-text">运行代码，输入答案回车看看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算数运算符，整除"><span class="nav-number">18.</span> <span class="nav-text">算数运算符，整除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一正一负，整除，向下取整"><span class="nav-number">19.</span> <span class="nav-text">一正一负，整除，向下取整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#幂运算"><span class="nav-number">20.</span> <span class="nav-text">幂运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取余"><span class="nav-number">21.</span> <span class="nav-text">取余</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值运算符"><span class="nav-number">22.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解构赋值"><span class="nav-number">23.</span> <span class="nav-text">解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较运算符-比较的是值，is比较内存地址"><span class="nav-number">24.</span> <span class="nav-text">比较运算符==,比较的是值，is比较内存地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔运算算符and，当两个云算数都为True时结果才为True"><span class="nav-number">25.</span> <span class="nav-text">布尔运算算符and，当两个云算数都为True时结果才为True</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#or"><span class="nav-number">26.</span> <span class="nav-text">or</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#not对布尔值取反"><span class="nav-number">27.</span> <span class="nav-text">not对布尔值取反</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#in-not-in"><span class="nav-number">28.</span> <span class="nav-text">in,not in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的布尔值-使用内置函数bool-查看"><span class="nav-number">29.</span> <span class="nav-text">对象的布尔值,使用内置函数bool()查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支结构-if-elif-else"><span class="nav-number">30.</span> <span class="nav-text">分支结构 if elif else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if-else-条件表达式，双分支结构的简写"><span class="nav-number">31.</span> <span class="nav-text">if else 条件表达式，双分支结构的简写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊匹配"><span class="nav-number">32.</span> <span class="nav-text">模糊匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#续行符"><span class="nav-number">33.</span> <span class="nav-text">续行符 \</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打包成-exe可执行文件"><span class="nav-number">34.</span> <span class="nav-text">打包成.exe可执行文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的反向输出"><span class="nav-number">35.</span> <span class="nav-text">字符串的反向输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进制转换函数"><span class="nav-number">36.</span> <span class="nav-text">进制转换函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的datetime日期时间模块"><span class="nav-number">37.</span> <span class="nav-text">常见的datetime日期时间模块</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梦不成</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">本站字数共计&#58;</span>
+    
+    <span title="本站字数共计">112.5k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("04/17/2019 11:28:36");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-users"></i> 您是第
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      位访客
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 18789,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
+
+  
+
+  
+
+  
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+  
+  undefined
+
+  <!-- 点击复制按钮 -->
+  <script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"superSample":2,"width":160,"height":320,"position":"left","hOffset":-12,"vOffset":-43},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"tagMode":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>

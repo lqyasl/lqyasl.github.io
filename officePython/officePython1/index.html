@@ -110,18 +110,18 @@
   </script>
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;">
+<meta name="description" content="&amp;emsp;&amp;emsp;python -m pip install –upgrade pip 升级pip包管理器">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="officePython1">
 <meta property="og:url" content="https://shulu520.com/officePython/officePython1/index.html">
 <meta property="og:site_name" content="梦不成">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;python -m pip install –upgrade pip 升级pip包管理器">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-02-18T04:01:21.799Z">
+<meta property="og:updated_time" content="2021-02-23T03:09:24.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="officePython1">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;python -m pip install –upgrade pip 升级pip包管理器">
 
 
 
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新&#58;</span>
               
-              <time title="更新" itemprop="dateModified" datetime="2021-02-18T12:01:21+08:00">
-                2021-02-18
+              <time title="更新" itemprop="dateModified" datetime="2021-02-23T11:09:24+08:00">
+                2021-02-23
               </time>
             
           </span>
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  7 字
+                  1.1k 字
                 </span>
               
 
@@ -464,7 +464,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -486,9 +486,20 @@
 
       
         <blockquote>
-<p>&emsp;&emsp;</p>
+<p>&emsp;&emsp;python -m pip install –upgrade pip 升级pip包管理器</p>
 </blockquote>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
+<h2 id="Excel-无法打开文件“新建-Microsoft-Excel-工作表-xlsx”，因为文件格式或文件扩展名无效-windows-r-输入regedit-打开注册表，按如下连接指示，发现问题之所在：Excel原模板路径是wps的，按照下面教程改回来就好了"><a href="#Excel-无法打开文件“新建-Microsoft-Excel-工作表-xlsx”，因为文件格式或文件扩展名无效-windows-r-输入regedit-打开注册表，按如下连接指示，发现问题之所在：Excel原模板路径是wps的，按照下面教程改回来就好了" class="headerlink" title="Excel 无法打开文件“新建 Microsoft Excel 工作表.xlsx”，因为文件格式或文件扩展名无效  windows+r 输入regedit 打开注册表，按如下连接指示，发现问题之所在：Excel原模板路径是wps的，按照下面教程改回来就好了"></a>Excel 无法打开文件“新建 Microsoft Excel 工作表.xlsx”，因为文件格式或文件扩展名无效  windows+r 输入regedit 打开注册表，按如下连接指示，发现问题之所在：Excel原模板路径是wps的，按照下面教程改回来就好了</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/learllp/article/details/79723078?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&amp;dist_request_id=229aed61-e516-4d52-bab0-8fb76592087b&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control</span><br></pre></td></tr></table></figure>
+<h2 id="os-scandir查询文件信息"><a href="#os-scandir查询文件信息" class="headerlink" title="os.scandir查询文件信息"></a>os.scandir查询文件信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import time </span><br><span class="line">import datetime </span><br><span class="line">print(os.scandir()) #得到一个可遍历的对象</span><br><span class="line">for file in os.scandir(&apos;xue3&apos;): #可以指定路径</span><br><span class="line">  print(file.stat()) # 得到好多属性</span><br><span class="line"></span><br><span class="line">  # st_size 文件的体积大小(字节)</span><br><span class="line">  # st_atime 文件最近访问时间 时间戳</span><br><span class="line">  # st_mtime 文件最近修改时间 时间戳</span><br><span class="line">  # st_ctime 文件创建时间 时间戳</span><br><span class="line"></span><br><span class="line">  print(time.ctime(file.stat().st_atime)) </span><br><span class="line">  print(time.ctime(file.stat().st_mtime))</span><br><span class="line">  print(time.ctime(file.stat().st_ctime))</span><br><span class="line">  # #Thu Feb 18 12:20:17 2021</span><br><span class="line"></span><br><span class="line">  print(datetime.datetime.fromtimestamp(file.stat().st_atime))</span><br><span class="line">  # 2021-02-18 21:09:39.046517</span><br><span class="line"></span><br><span class="line">## 某一个指定文件的信息</span><br><span class="line">print(os.stat(&apos;./xue3/3.py&apos;))</span><br></pre></td></tr></table></figure>
+<h2 id="创建临时文件、文件夹"><a href="#创建临时文件、文件夹" class="headerlink" title="创建临时文件、文件夹"></a>创建临时文件、文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 学习爬虫的时候需要使用</span><br><span class="line"># 用完之后自动删除</span><br><span class="line">from tempfile import TemporaryFile</span><br><span class="line">file=TemporaryFile(&apos;w+&apos;)</span><br><span class="line">file.write(&apos;我最帅&apos;)</span><br><span class="line">file.seek(0) # 将光标移动到第一位</span><br><span class="line">print(file.readlines())</span><br><span class="line">print(file.name) #得到文件位置和名称</span><br><span class="line">input(&apos;我去找找临时文件在哪里：随便输入&apos;)</span><br><span class="line">file.close()</span><br><span class="line"></span><br><span class="line"># 推荐这种写法</span><br><span class="line">with TemporaryFile(&apos;w+&apos;) as file:</span><br><span class="line">  file.write(&apos;你最帅了&apos;)</span><br><span class="line">  file.seek(2)</span><br><span class="line">  print(file.readlines())</span><br><span class="line"></span><br><span class="line"># 创建临时文件夹</span><br><span class="line">from tempfile import TemporaryDirectory</span><br><span class="line"></span><br><span class="line">with TemporaryDirectory() as tem_dir:</span><br><span class="line">  print(tem_dir)</span><br><span class="line">  input(&apos;我去找找它在哪里：随便输入&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="创建文件或文件夹"><a href="#创建文件或文件夹" class="headerlink" title="创建文件或文件夹"></a>创建文件或文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line"># os.mkdir(&apos;我的文件夹&apos;) #在5.py文件夹同层创建一个文件夹</span><br><span class="line"># 老师演示时创建的是与5.py文件同级的文件夹，可能是编辑器的不同</span><br><span class="line"></span><br><span class="line"># os.mkdir(&apos;xue3\我的文件夹&apos;) #创建成功了，但是有警告！！！</span><br><span class="line"></span><br><span class="line"># 先判断有没有，再创建</span><br><span class="line">if not os.path.exists(&apos;我的文件夹2&apos;):</span><br><span class="line">  os.mkdir(&apos;我的文件夹2&apos;)</span><br><span class="line"></span><br><span class="line"># 创建多层文件夹</span><br><span class="line">os.makedirs(&apos;第一层/第二层/第三层&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="复制文件、文件夹"><a href="#复制文件、文件夹" class="headerlink" title="复制文件、文件夹"></a>复制文件、文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import shutil</span><br><span class="line"># 将当前test.py复制到xue3文件夹下</span><br><span class="line">shutil.copy(&apos;test.py&apos;,&apos;xue3&apos;) </span><br><span class="line">#复制并改名字为test2.py</span><br><span class="line">shutil.copy(&apos;test.py&apos;,&apos;xue3/test2.py&apos;) </span><br><span class="line"></span><br><span class="line"># 复制文件夹</span><br><span class="line">shutil.copytree(&apos;xue3&apos;,&apos;hh/jj/xue3&apos;)</span><br><span class="line"># 注意：hh/jj/xue3 这个xue3文件夹原先要不存在才行</span><br></pre></td></tr></table></figure>
+<h2 id="剪贴文件、文件夹"><a href="#剪贴文件、文件夹" class="headerlink" title="剪贴文件、文件夹"></a>剪贴文件、文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import shutil</span><br><span class="line"># shutil.move(&apos;./xue3/test2.py&apos;,&apos;./&apos;) #移动文件</span><br><span class="line"></span><br><span class="line">#剪贴并重命名 </span><br><span class="line"># shutil.move(&apos;./test2.py&apos;,&apos;./xue3/move_test2.py&apos;) </span><br><span class="line"></span><br><span class="line"># 剪贴文件夹</span><br><span class="line">shutil.move(&apos;./test&apos;,&apos;./xue3&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="删除文件或文件夹"><a href="#删除文件或文件夹" class="headerlink" title="删除文件或文件夹"></a>删除文件或文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line"># 注意：利用Python会彻底删除</span><br><span class="line">os.remove(&apos;./xue3/move_test2.py&apos;)</span><br><span class="line"></span><br><span class="line"># 删除文件夹</span><br><span class="line">import shutil</span><br><span class="line">shutil.rmtree(&apos;./xue3/test&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="文件或文件夹重命名"><a href="#文件或文件夹重命名" class="headerlink" title="文件或文件夹重命名"></a>文件或文件夹重命名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">os.rename(&apos;./xue3/8.py&apos;,&apos;./xue3/re8.py&apos;)</span><br><span class="line">os.rename(&apos;./xue&apos;,&apos;./xue1&apos;)</span><br></pre></td></tr></table></figure>
+<h3 id="读取压缩文件包"><a href="#读取压缩文件包" class="headerlink" title="读取压缩文件包"></a>读取压缩文件包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import zipfile</span><br><span class="line">with zipfile.ZipFile(&apos;./hh.zip&apos;,&apos;r&apos;) as zipobj:</span><br><span class="line">  # 列出此压缩包下的所有文件和文件夹，带路径的</span><br><span class="line">  print(zipobj.namelist())</span><br><span class="line"></span><br><span class="line">  # 获取压缩包内文件信息</span><br><span class="line">  for file_name in zipobj.namelist():</span><br><span class="line">    info=zipobj.getinfo(file_name)</span><br><span class="line"></span><br><span class="line">    #file_size 压缩之前大小</span><br><span class="line">    #compress_size 压缩之后大小</span><br><span class="line">    print(file_name,info.file_size,info.compress_size)</span><br></pre></td></tr></table></figure>
+<h2 id="解压压缩包"><a href="#解压压缩包" class="headerlink" title="解压压缩包"></a>解压压缩包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 将压缩包内单个文件解压出来</span><br><span class="line">import zipfile</span><br><span class="line">with zipfile.ZipFile(&apos;hh.zip&apos;,&apos;r&apos;) as zipobj:</span><br><span class="line">  # extract(要解压的文件路径，解压后放置位置)</span><br><span class="line">  # 注意解压后文件的相对路径不会变，会带上路径</span><br><span class="line">  # 比如要放置的位置没有hh/jj/xue3这个路径，则会创建再放入</span><br><span class="line">  zipobj.extract(&apos;hh/jj/xue3/test2.py&apos;,&apos;./&apos;)</span><br><span class="line">  print(zipobj.namelist())</span><br><span class="line"></span><br><span class="line">  # 解压出所有的文件</span><br><span class="line">  zipobj.extractall(&apos;./zip&apos;) #要放置的位置</span><br></pre></td></tr></table></figure>
+<h2 id="创建压缩包"><a href="#创建压缩包" class="headerlink" title="创建压缩包"></a>创建压缩包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import zipfile</span><br><span class="line">file_list=[&apos;./xue3/1.py&apos;,&apos;./xue3/2.py&apos;,&apos;./xue3/3.py&apos;]</span><br><span class="line"></span><br><span class="line"># 要创建的压缩包名叫压缩包.zip,在程序中起个别名叫zipobj,方便操作</span><br><span class="line">with zipfile.ZipFile(&apos;压缩包.zip&apos;,&apos;w&apos;) as zipobj:</span><br><span class="line">  for file in file_list:</span><br><span class="line">    zipobj.write(file)</span><br><span class="line"></span><br><span class="line"># 向压缩包中添加文件 a是append的意思</span><br><span class="line">with zipfile.ZipFile(&apos;压缩包.zip&apos;,&apos;a&apos;) as zipobj:</span><br><span class="line">  zipobj.write(&apos;./test.py&apos;)</span><br></pre></td></tr></table></figure>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
 <center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
 
@@ -597,8 +608,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Python语法/Python语法7/" rel="next" title="Python语法7">
-                <i class="fa fa-chevron-left"></i> Python语法7
+              <a href="/Python语法/Python-文件系统/" rel="next" title="Python-文件系统">
+                <i class="fa fa-chevron-left"></i> Python-文件系统
               </a>
             
           </div>
@@ -606,6 +617,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/officePython/officePython2/" rel="prev" title="officePython2">
+                officePython2 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -668,8 +683,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -686,7 +710,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">113</span>
+                  <span class="site-state-item-count">116</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -697,7 +721,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-count">60</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -708,7 +732,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -767,6 +791,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Excel-无法打开文件“新建-Microsoft-Excel-工作表-xlsx”，因为文件格式或文件扩展名无效-windows-r-输入regedit-打开注册表，按如下连接指示，发现问题之所在：Excel原模板路径是wps的，按照下面教程改回来就好了"><span class="nav-number">1.</span> <span class="nav-text">Excel 无法打开文件“新建 Microsoft Excel 工作表.xlsx”，因为文件格式或文件扩展名无效  windows+r 输入regedit 打开注册表，按如下连接指示，发现问题之所在：Excel原模板路径是wps的，按照下面教程改回来就好了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-scandir查询文件信息"><span class="nav-number">2.</span> <span class="nav-text">os.scandir查询文件信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建临时文件、文件夹"><span class="nav-number">3.</span> <span class="nav-text">创建临时文件、文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建文件或文件夹"><span class="nav-number">4.</span> <span class="nav-text">创建文件或文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制文件、文件夹"><span class="nav-number">5.</span> <span class="nav-text">复制文件、文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#剪贴文件、文件夹"><span class="nav-number">6.</span> <span class="nav-text">剪贴文件、文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件或文件夹"><span class="nav-number">7.</span> <span class="nav-text">删除文件或文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件或文件夹重命名"><span class="nav-number">8.</span> <span class="nav-text">文件或文件夹重命名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#读取压缩文件包"><span class="nav-number">8.1.</span> <span class="nav-text">读取压缩文件包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压压缩包"><span class="nav-number">9.</span> <span class="nav-text">解压压缩包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建压缩包"><span class="nav-number">10.</span> <span class="nav-text">创建压缩包</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -804,7 +844,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">106.5k</span>
+    <span title="本站字数共计">112.5k</span>
   
 </div>
 
