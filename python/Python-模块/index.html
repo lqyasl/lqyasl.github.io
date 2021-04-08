@@ -110,18 +110,18 @@
   </script>
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;">
+<meta name="description" content="datetime,pickle,re">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模块">
+<meta property="og:title" content="几个小模块">
 <meta property="og:url" content="https://shulu520.com/python/Python-模块/index.html">
 <meta property="og:site_name" content="梦不成">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;">
+<meta property="og:description" content="datetime,pickle,re">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-03-04T09:48:31.043Z">
+<meta property="og:updated_time" content="2021-04-07T02:26:40.382Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="模块">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;">
+<meta name="twitter:title" content="几个小模块">
+<meta name="twitter:description" content="datetime,pickle,re">
 
 
 
@@ -157,7 +157,7 @@
 
 
 
-  <title>模块 | 梦不成</title>
+  <title>几个小模块 | 梦不成</title>
   
 
 
@@ -364,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">模块</h1>
+          <h1 class="post-title" itemprop="name headline">几个小模块</h1>
         
 
         <div class="post-meta">
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新&#58;</span>
               
-              <time title="更新" itemprop="dateModified" datetime="2021-03-04T17:48:31+08:00">
-                2021-03-04
+              <time title="更新" itemprop="dateModified" datetime="2021-04-07T10:26:40+08:00">
+                2021-04-07
               </time>
             
           </span>
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  143 字
+                  298 字
                 </span>
               
 
@@ -471,6 +471,10 @@
           
 
           
+              <div class="post-description">
+                  datetime,pickle,re
+              </div>
+          
 
         </div>
       </header>
@@ -489,14 +493,9 @@
 <p>&emsp;&emsp;</p>
 </blockquote>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
-<h1 id="常见的datetime日期时间模块"><a href="#常见的datetime日期时间模块" class="headerlink" title="常见的datetime日期时间模块"></a>常见的datetime日期时间模块</h1><h1 id="datetime模块重新封装了time模块"><a href="#datetime模块重新封装了time模块" class="headerlink" title="datetime模块重新封装了time模块"></a>datetime模块重新封装了time模块</h1><p>import datetime</p>
-<p>time1=datetime.datetime.now()<br>print(time1) #2021-02-27 18:59:13.885794</p>
-<p>time2=datetime.date.today()<br>print(time2) #2021-02-27</p>
-<p>time3=datetime.datetime.today()<br>print(time3) #2021-02-27 18:58:39.614459</p>
-<p>time4=datetime.datetime.today().timestamp()<br>print(time4) #1614423830.81342</p>
-<h1 id="返回当前日期时间的日期部分：2021-02-27"><a href="#返回当前日期时间的日期部分：2021-02-27" class="headerlink" title="返回当前日期时间的日期部分：2021-02-27"></a>返回当前日期时间的日期部分：2021-02-27</h1><p>print(datetime.datetime.now().date())</p>
-<h1 id="返回当前日期时间的时间部分：19-13-45-310397"><a href="#返回当前日期时间的时间部分：19-13-45-310397" class="headerlink" title="返回当前日期时间的时间部分：19:13:45.310397"></a>返回当前日期时间的时间部分：19:13:45.310397</h1><p>print(datetime.datetime.now().time())</p>
-<h1 id="delta时间间隔"><a href="#delta时间间隔" class="headerlink" title="delta时间间隔"></a>delta时间间隔</h1><p>past=datetime.datetime(2017, 4, 16, 21, 21, 20, 871000)<br>now=datetime.datetime.now()<br>delta=now-past<br>print(delta) #1412 days, 22:07:46.382359<br>print(delta.days) #1412</p>
+<h2 id="常见的datetime日期时间模块"><a href="#常见的datetime日期时间模块" class="headerlink" title="常见的datetime日期时间模块"></a>常见的datetime日期时间模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#datetime模块重新封装了time模块</span><br><span class="line">import datetime</span><br><span class="line"></span><br><span class="line">time1=datetime.datetime.now()</span><br><span class="line">print(time1) #2021-02-27 18:59:13.885794</span><br><span class="line"></span><br><span class="line">time2=datetime.date.today()</span><br><span class="line">print(time2) #2021-02-27</span><br><span class="line"></span><br><span class="line">time3=datetime.datetime.today()</span><br><span class="line">print(time3) #2021-02-27 18:58:39.614459</span><br><span class="line"></span><br><span class="line">time4=datetime.datetime.today().timestamp()</span><br><span class="line">print(time4) #1614423830.81342</span><br><span class="line"></span><br><span class="line"># 返回当前日期时间的日期部分：2021-02-27</span><br><span class="line">print(datetime.datetime.now().date())</span><br><span class="line"></span><br><span class="line"># 返回当前日期时间的时间部分：19:13:45.310397</span><br><span class="line">print(datetime.datetime.now().time())</span><br><span class="line"></span><br><span class="line"># delta时间间隔</span><br><span class="line">past=datetime.datetime(2017, 4, 16, 21, 21, 20, 871000)</span><br><span class="line">now=datetime.datetime.now()</span><br><span class="line">delta=now-past</span><br><span class="line">print(delta) #1412 days, 22:07:46.382359</span><br><span class="line">print(delta.days) #1412</span><br></pre></td></tr></table></figure>
+<h2 id="pickle-文件模块"><a href="#pickle-文件模块" class="headerlink" title="pickle 文件模块"></a>pickle 文件模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">pickle可以将一个对象保存成一个文件，例如列表，DataFrame等</span><br><span class="line"></span><br><span class="line">import os</span><br><span class="line">import pickle</span><br><span class="line"></span><br><span class="line">os.chdir(&apos;E:\Users\lqy\Desktop\&apos;)</span><br><span class="line">os.getcwd()</span><br><span class="line"></span><br><span class="line">data=&#123;&apos;a&apos;:[1,2,3],&apos;b&apos;:8,&apos;c&apos;:&apos;shulu&apos;&#125;</span><br><span class="line"></span><br><span class="line">创建保存文件</span><br><span class="line">pic=open(&apos;data.pkl&apos;,&apos;wb&apos;)</span><br><span class="line">pickle.dump(data,pic)</span><br><span class="line">pic.close()</span><br><span class="line">print(&quot;完成了&quot;)</span><br><span class="line"></span><br><span class="line">读取文件</span><br><span class="line">pic2=open(&apos;E:/Users/lqy/Desktop/data.pkl&apos;,&apos;rb&apos;)</span><br><span class="line">data=pickle.load(pic2)</span><br><span class="line">data</span><br></pre></td></tr></table></figure>
+<h2 id="re-正则"><a href="#re-正则" class="headerlink" title="re 正则"></a>re 正则</h2><h3 id="字符串提取数字或字母"><a href="#字符串提取数字或字母" class="headerlink" title="字符串提取数字或字母"></a>字符串提取数字或字母</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"># 字符串中提取数字</span><br><span class="line">s=&quot;sDsd123.555dfd888F&quot;</span><br><span class="line">print(re.findall(&apos;\d+\.?\d*&apos;,s))</span><br><span class="line"></span><br><span class="line"># 字符串中提取字母</span><br><span class="line">print(re.findall(&apos;[A-Za-z]&apos;, s))</span><br></pre></td></tr></table></figure>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
 <center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
 
@@ -558,7 +557,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>原始链接：</strong>
-    <a href="https://shulu520.com/python/Python-模块/" title="模块">https://shulu520.com/python/Python-模块/</a>
+    <a href="https://shulu520.com/python/Python-模块/" title="几个小模块">https://shulu520.com/python/Python-模块/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -707,7 +706,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">117</span>
+                  <span class="site-state-item-count">118</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -718,7 +717,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">61</span>
+                  <span class="site-state-item-count">62</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -797,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的datetime日期时间模块"><span class="nav-number">1.</span> <span class="nav-text">常见的datetime日期时间模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#datetime模块重新封装了time模块"><span class="nav-number">2.</span> <span class="nav-text">datetime模块重新封装了time模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#返回当前日期时间的日期部分：2021-02-27"><span class="nav-number">3.</span> <span class="nav-text">返回当前日期时间的日期部分：2021-02-27</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#返回当前日期时间的时间部分：19-13-45-310397"><span class="nav-number">4.</span> <span class="nav-text">返回当前日期时间的时间部分：19:13:45.310397</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#delta时间间隔"><span class="nav-number">5.</span> <span class="nav-text">delta时间间隔</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的datetime日期时间模块"><span class="nav-number">1.</span> <span class="nav-text">常见的datetime日期时间模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pickle-文件模块"><span class="nav-number">2.</span> <span class="nav-text">pickle 文件模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#re-正则"><span class="nav-number">3.</span> <span class="nav-text">re 正则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串提取数字或字母"><span class="nav-number">3.1.</span> <span class="nav-text">字符串提取数字或字母</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -841,7 +840,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">114.6k</span>
+    <span title="本站字数共计">116.5k</span>
   
 </div>
 

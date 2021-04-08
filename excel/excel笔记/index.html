@@ -110,18 +110,18 @@
   </script>
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;">
+<meta name="description" content="Excel使用小案例小技巧学习笔记">
 <meta name="keywords" content="love">
 <meta property="og:type" content="article">
 <meta property="og:title" content="excel笔记">
 <meta property="og:url" content="https://shulu520.com/excel/excel笔记/index.html">
 <meta property="og:site_name" content="梦不成">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;">
+<meta property="og:description" content="Excel使用小案例小技巧学习笔记">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-04T12:37:23.848Z">
+<meta property="og:updated_time" content="2021-04-08T14:18:24.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="excel笔记">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;">
+<meta name="twitter:description" content="Excel使用小案例小技巧学习笔记">
 
 
 
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新&#58;</span>
               
-              <time title="更新" itemprop="dateModified" datetime="2021-04-04T20:37:23+08:00">
-                2021-04-04
+              <time title="更新" itemprop="dateModified" datetime="2021-04-08T22:18:24+08:00">
+                2021-04-08
               </time>
             
           </span>
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  2k 字
+                  2.5k 字
                 </span>
               
 
@@ -464,12 +464,16 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7 分钟
+                  9 分钟
                 </span>
               
             </div>
           
 
+          
+              <div class="post-description">
+                  Excel使用小案例小技巧学习笔记
+              </div>
           
 
         </div>
@@ -519,6 +523,13 @@
 <h2 id="subtotal可视区域求和"><a href="#subtotal可视区域求和" class="headerlink" title="subtotal可视区域求和"></a>subtotal可视区域求和</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">先对首行做一个筛选，即点数据&gt;筛选</span><br><span class="line">对合计单元格公式  </span><br><span class="line">=CONCATENATE(&quot;合计: &quot;,SUBTOTAL(109,B2:B7))</span><br><span class="line">外层函数CONCATENATE是连接字符的函数，</span><br><span class="line">109表示求和函数，B2到B7是要求和的数据区域</span><br></pre></td></tr></table></figure>
 <h2 id="phonetic合并单元格内容到另一单元格"><a href="#phonetic合并单元格内容到另一单元格" class="headerlink" title="phonetic合并单元格内容到另一单元格"></a>phonetic合并单元格内容到另一单元格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=PHONETIC(A2:C2)</span><br></pre></td></tr></table></figure>
 <h2 id="sumifs隔列求和"><a href="#sumifs隔列求和" class="headerlink" title="sumifs隔列求和"></a>sumifs隔列求和</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=SUMIFS(B3:E3,$B$2:$E$2,$F$2)</span><br><span class="line">参数1：求和数据，2：条件区域，3：求和条件</span><br></pre></td></tr></table></figure>
+<h2 id="快速输入26个字母"><a href="#快速输入26个字母" class="headerlink" title="快速输入26个字母"></a>快速输入26个字母</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=CHAR(ROW()+63) </span><br><span class="line">假设从第二个单元格开始,则row行号等于2，</span><br><span class="line">而字母A等于65，所以加上63就是字母A了，</span><br><span class="line">向下拉即可得到26个字母</span><br></pre></td></tr></table></figure>
+<h2 id="isodd函数判断奇偶，根据身份证得到性别"><a href="#isodd函数判断奇偶，根据身份证得到性别" class="headerlink" title="isodd函数判断奇偶，根据身份证得到性别"></a>isodd函数判断奇偶，根据身份证得到性别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">身份证倒数第二位奇数表示男性</span><br><span class="line">=IF(ISODD(MID(B2,17,1)),&quot;男&quot;,&quot;女&quot;)</span><br><span class="line">if函数三个参数，第一个条件判断，</span><br><span class="line">第二个参数是为true时返回值，第三个是为false时返回值</span><br></pre></td></tr></table></figure>
+<h2 id="lookup函数做库存预警"><a href="#lookup函数做库存预警" class="headerlink" title="lookup函数做库存预警"></a>lookup函数做库存预警</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">=LOOKUP(C2,$F$1:$G$4)</span><br><span class="line">C2是库存数据单元格，第二个参数是辅助列表，</span><br><span class="line">辅助表就是两列，第一列为数据区间，第二列为对应的区间名称</span><br><span class="line">选中库存预警列，</span><br><span class="line">条件格式&gt;突出显示单元格&gt;文本包含&gt;填写文本&gt;设置样式</span><br><span class="line"></span><br><span class="line">也可以用嵌套if来实现</span><br><span class="line">=IF(C12&gt;90,&quot;优秀&quot;,IF(C12&lt;60,&quot;差&quot;,&quot;合格&quot;))</span><br></pre></td></tr></table></figure>
+<h2 id="kpi绩效计算"><a href="#kpi绩效计算" class="headerlink" title="kpi绩效计算"></a>kpi绩效计算</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=SUMPRODUCT($B$2:$E$2,B3:E3)</span><br><span class="line">B2到E2是百分比数据项，B3:E3是第一个人的各项得分</span><br></pre></td></tr></table></figure>
+<h2 id="数据有效性，新版本叫数据验证"><a href="#数据有效性，新版本叫数据验证" class="headerlink" title="数据有效性，新版本叫数据验证"></a>数据有效性，新版本叫数据验证</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">当分类较多的时候就不用重复的输入，</span><br><span class="line">简单的设置一下数据的有效性就节省了很多时间</span><br><span class="line"></span><br><span class="line">对输入的数据有了规定，或只能从给定的里面选择性输入</span><br><span class="line">有效条件可以是：整数，小数，日期，时间，文本长度，</span><br><span class="line">序列(即写出几个选项,之间用英文逗号隔开)，还可以自定义条件</span><br><span class="line"></span><br><span class="line">案例：使用date函数做动态考勤表，年份、月份可选，</span><br><span class="line">配合text函数由日期得到星期</span><br><span class="line">并且配合weekday函数设置了周末的样式，都是动态可变得</span><br></pre></td></tr></table></figure>
+<h2 id="VLOOKUP-查找"><a href="#VLOOKUP-查找" class="headerlink" title="VLOOKUP 查找"></a>VLOOKUP 查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">函数的语法结构：</span><br><span class="line">VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)</span><br><span class="line">lookup_value：查找值</span><br><span class="line">table_array：查找的区域</span><br><span class="line">col_index_num：返回数据在查找区域的第几列</span><br><span class="line">range_lookup：匹配模式（0为精确查找，1为模糊查找）</span><br></pre></td></tr></table></figure>
+<h2 id="N函数对数值类型的值做批注"><a href="#N函数对数值类型的值做批注" class="headerlink" title="N函数对数值类型的值做批注"></a>N函数对数值类型的值做批注</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=5397+N(&quot;这个妹子不错&quot;)</span><br><span class="line">当点击这个单元格的时候，上面的公式编辑栏就会出现备注内容</span><br></pre></td></tr></table></figure>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
 <center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
 
@@ -621,8 +632,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/python/Python-模块/" rel="next" title="模块">
-                <i class="fa fa-chevron-left"></i> 模块
+              <a href="/python/Python-模块/" rel="next" title="几个小模块">
+                <i class="fa fa-chevron-left"></i> 几个小模块
               </a>
             
           </div>
@@ -630,6 +641,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/NumPy/数据分析之NumPy笔记/" rel="prev" title="数据分析之NumPy笔记">
+                数据分析之NumPy笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -719,7 +734,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">117</span>
+                  <span class="site-state-item-count">118</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -730,7 +745,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">61</span>
+                  <span class="site-state-item-count">62</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -809,7 +824,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#处理带单位的运算"><span class="nav-number">1.</span> <span class="nav-text">处理带单位的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换证件照底色"><span class="nav-number">2.</span> <span class="nav-text">更换证件照底色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改第一列的索引从1开始"><span class="nav-number">3.</span> <span class="nav-text">更改第一列的索引从1开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多处自动求和"><span class="nav-number">4.</span> <span class="nav-text">多处自动求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#身份证输入"><span class="nav-number">5.</span> <span class="nav-text">身份证输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分数输入3-4"><span class="nav-number">6.</span> <span class="nav-text">分数输入3/4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工资条添加头部"><span class="nav-number">7.</span> <span class="nav-text">工资条添加头部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工号输入-前面带有0的长数字"><span class="nav-number">8.</span> <span class="nav-text">工号输入 前面带有0的长数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保护工作簿和工作表"><span class="nav-number">9.</span> <span class="nav-text">保护工作簿和工作表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将打开的两张工作簿，显示在一个一个窗口里面，方便对比"><span class="nav-number">10.</span> <span class="nav-text">将打开的两张工作簿，显示在一个一个窗口里面，方便对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印页头"><span class="nav-number">11.</span> <span class="nav-text">打印页头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印页脚"><span class="nav-number">12.</span> <span class="nav-text">打印页脚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合并的单元格公式向下填充：加法为例"><span class="nav-number">13.</span> <span class="nav-text">合并的单元格公式向下填充：加法为例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ctrl-E-快速拆分填充-2013版本新增功能"><span class="nav-number">14.</span> <span class="nav-text">ctrl+E 快速拆分填充 2013版本新增功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找和替换"><span class="nav-number">15.</span> <span class="nav-text">查找和替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CTRL-；快速输入日期"><span class="nav-number">16.</span> <span class="nav-text">CTRL+；快速输入日期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Alt-快速求和"><span class="nav-number">17.</span> <span class="nav-text">Alt+=快速求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F4重复上一步骤-添加-绝对引用符号"><span class="nav-number">18.</span> <span class="nav-text">F4重复上一步骤;添加$绝对引用符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#left函数：从左往右提取几个字符的内容left-单元格，取几个数"><span class="nav-number">19.</span> <span class="nav-text">left函数：从左往右提取几个字符的内容left(单元格，取几个数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#right函数一样用法"><span class="nav-number">20.</span> <span class="nav-text">right函数一样用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mid函数：从中间提取，mid-单元格，从第几位数开始-娶几个数"><span class="nav-number">21.</span> <span class="nav-text">mid函数：从中间提取，mid(单元格，从第几位数开始, 娶几个数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find函数，查找某一字符在数据源单元格里面出现的位置。"><span class="nav-number">22.</span> <span class="nav-text">find函数，查找某一字符在数据源单元格里面出现的位置。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#len函数求某一单元格字符的长度，配合提取函数可以组合使用"><span class="nav-number">23.</span> <span class="nav-text">len函数求某一单元格字符的长度，配合提取函数可以组合使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#row函数，返回单元格所在的行号，‘动态变化的’"><span class="nav-number">24.</span> <span class="nav-text">row函数，返回单元格所在的行号，‘动态变化的’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mod取模函数，实现隔行设置样式"><span class="nav-number">25.</span> <span class="nav-text">mod取模函数，实现隔行设置样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相对引用"><span class="nav-number">26.</span> <span class="nav-text">相对引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绝对引用"><span class="nav-number">27.</span> <span class="nav-text">绝对引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#countif函数，避免重复输入"><span class="nav-number">28.</span> <span class="nav-text">countif函数，避免重复输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根据日期得到星期几"><span class="nav-number">29.</span> <span class="nav-text">根据日期得到星期几</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#weekday设置周末样式"><span class="nav-number">30.</span> <span class="nav-text">weekday设置周末样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入内容时自动生成边框，删除时自动删除边框"><span class="nav-number">31.</span> <span class="nav-text">输入内容时自动生成边框，删除时自动删除边框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rank排序函数"><span class="nav-number">32.</span> <span class="nav-text">rank排序函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#subtotal可视区域求和"><span class="nav-number">33.</span> <span class="nav-text">subtotal可视区域求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#phonetic合并单元格内容到另一单元格"><span class="nav-number">34.</span> <span class="nav-text">phonetic合并单元格内容到另一单元格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sumifs隔列求和"><span class="nav-number">35.</span> <span class="nav-text">sumifs隔列求和</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#处理带单位的运算"><span class="nav-number">1.</span> <span class="nav-text">处理带单位的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换证件照底色"><span class="nav-number">2.</span> <span class="nav-text">更换证件照底色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改第一列的索引从1开始"><span class="nav-number">3.</span> <span class="nav-text">更改第一列的索引从1开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多处自动求和"><span class="nav-number">4.</span> <span class="nav-text">多处自动求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#身份证输入"><span class="nav-number">5.</span> <span class="nav-text">身份证输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分数输入3-4"><span class="nav-number">6.</span> <span class="nav-text">分数输入3/4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工资条添加头部"><span class="nav-number">7.</span> <span class="nav-text">工资条添加头部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工号输入-前面带有0的长数字"><span class="nav-number">8.</span> <span class="nav-text">工号输入 前面带有0的长数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保护工作簿和工作表"><span class="nav-number">9.</span> <span class="nav-text">保护工作簿和工作表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将打开的两张工作簿，显示在一个一个窗口里面，方便对比"><span class="nav-number">10.</span> <span class="nav-text">将打开的两张工作簿，显示在一个一个窗口里面，方便对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印页头"><span class="nav-number">11.</span> <span class="nav-text">打印页头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印页脚"><span class="nav-number">12.</span> <span class="nav-text">打印页脚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合并的单元格公式向下填充：加法为例"><span class="nav-number">13.</span> <span class="nav-text">合并的单元格公式向下填充：加法为例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ctrl-E-快速拆分填充-2013版本新增功能"><span class="nav-number">14.</span> <span class="nav-text">ctrl+E 快速拆分填充 2013版本新增功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找和替换"><span class="nav-number">15.</span> <span class="nav-text">查找和替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CTRL-；快速输入日期"><span class="nav-number">16.</span> <span class="nav-text">CTRL+；快速输入日期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Alt-快速求和"><span class="nav-number">17.</span> <span class="nav-text">Alt+=快速求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F4重复上一步骤-添加-绝对引用符号"><span class="nav-number">18.</span> <span class="nav-text">F4重复上一步骤;添加$绝对引用符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#left函数：从左往右提取几个字符的内容left-单元格，取几个数"><span class="nav-number">19.</span> <span class="nav-text">left函数：从左往右提取几个字符的内容left(单元格，取几个数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#right函数一样用法"><span class="nav-number">20.</span> <span class="nav-text">right函数一样用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mid函数：从中间提取，mid-单元格，从第几位数开始-娶几个数"><span class="nav-number">21.</span> <span class="nav-text">mid函数：从中间提取，mid(单元格，从第几位数开始, 娶几个数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find函数，查找某一字符在数据源单元格里面出现的位置。"><span class="nav-number">22.</span> <span class="nav-text">find函数，查找某一字符在数据源单元格里面出现的位置。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#len函数求某一单元格字符的长度，配合提取函数可以组合使用"><span class="nav-number">23.</span> <span class="nav-text">len函数求某一单元格字符的长度，配合提取函数可以组合使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#row函数，返回单元格所在的行号，‘动态变化的’"><span class="nav-number">24.</span> <span class="nav-text">row函数，返回单元格所在的行号，‘动态变化的’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mod取模函数，实现隔行设置样式"><span class="nav-number">25.</span> <span class="nav-text">mod取模函数，实现隔行设置样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相对引用"><span class="nav-number">26.</span> <span class="nav-text">相对引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绝对引用"><span class="nav-number">27.</span> <span class="nav-text">绝对引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#countif函数，避免重复输入"><span class="nav-number">28.</span> <span class="nav-text">countif函数，避免重复输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根据日期得到星期几"><span class="nav-number">29.</span> <span class="nav-text">根据日期得到星期几</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#weekday设置周末样式"><span class="nav-number">30.</span> <span class="nav-text">weekday设置周末样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入内容时自动生成边框，删除时自动删除边框"><span class="nav-number">31.</span> <span class="nav-text">输入内容时自动生成边框，删除时自动删除边框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rank排序函数"><span class="nav-number">32.</span> <span class="nav-text">rank排序函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#subtotal可视区域求和"><span class="nav-number">33.</span> <span class="nav-text">subtotal可视区域求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#phonetic合并单元格内容到另一单元格"><span class="nav-number">34.</span> <span class="nav-text">phonetic合并单元格内容到另一单元格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sumifs隔列求和"><span class="nav-number">35.</span> <span class="nav-text">sumifs隔列求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速输入26个字母"><span class="nav-number">36.</span> <span class="nav-text">快速输入26个字母</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isodd函数判断奇偶，根据身份证得到性别"><span class="nav-number">37.</span> <span class="nav-text">isodd函数判断奇偶，根据身份证得到性别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lookup函数做库存预警"><span class="nav-number">38.</span> <span class="nav-text">lookup函数做库存预警</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kpi绩效计算"><span class="nav-number">39.</span> <span class="nav-text">kpi绩效计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据有效性，新版本叫数据验证"><span class="nav-number">40.</span> <span class="nav-text">数据有效性，新版本叫数据验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VLOOKUP-查找"><span class="nav-number">41.</span> <span class="nav-text">VLOOKUP 查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#N函数对数值类型的值做批注"><span class="nav-number">42.</span> <span class="nav-text">N函数对数值类型的值做批注</span></a></li></ol></div>
             
 
           </div>
@@ -853,7 +868,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">114.6k</span>
+    <span title="本站字数共计">116.5k</span>
   
 </div>
 
