@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="梦不成">
 <meta property="og:description" content="终于开始了Python编程的学习之路，哈哈哈">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-03-03T11:27:15.543Z">
+<meta property="og:updated_time" content="2021-04-14T14:46:37.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础">
 <meta name="twitter:description" content="终于开始了Python编程的学习之路，哈哈哈">
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新&#58;</span>
               
-              <time title="更新" itemprop="dateModified" datetime="2021-03-03T19:27:15+08:00">
-                2021-03-03
+              <time title="更新" itemprop="dateModified" datetime="2021-04-14T22:46:37+08:00">
+                2021-04-14
               </time>
             
           </span>
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  1.6k 字
+                  1.8k 字
                 </span>
               
 
@@ -464,7 +464,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7 分钟
+                  8 分钟
                 </span>
               
             </div>
@@ -493,6 +493,16 @@
 <p>&emsp;&emsp;最帅的人就是我</p>
 </blockquote>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
+<h2 id="Python中字符串前“r”-“u”的作用"><a href="#Python中字符串前“r”-“u”的作用" class="headerlink" title="Python中字符串前“r”,“u”的作用"></a>Python中字符串前“r”,“u”的作用</h2><ol>
+<li>字符串前加 u</li>
+</ol>
+<p>例：u”我是含有中文字符组成的字符串。”</p>
+<p>作用：后面字符串以 Unicode 格式 进行编码，一般用在中文字符串前面，防止因为源码储存格式问题，导致再次使用时出现乱码。</p>
+<ol start="2">
+<li>字符串前加 r</li>
+</ol>
+<p>例：r”\n\n\n\n”　　表示一个普通生字符串 \n\n\n\n，而不表示换行了。</p>
+<p>作用：去掉反斜杠的转移机制。（特殊字符：即那些，反斜杠加上对应字母，表示对应的特殊含义的，比如最常见的”\n”表示换行，”\t”表示Tab等。）<br>应用：常用于正则表达式，对应着re模块。</p>
 <h2 id="变量-标识符-开头只能是字母数字或下划线"><a href="#变量-标识符-开头只能是字母数字或下划线" class="headerlink" title="变量(标识符)开头只能是字母数字或下划线"></a>变量(标识符)开头只能是字母数字或下划线</h2><h2 id="print-函数-打印输出"><a href="#print-函数-打印输出" class="headerlink" title="print 函数 打印输出"></a>print 函数 打印输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(520)</span><br><span class="line">print(1+1)</span><br><span class="line">print(&quot;shulu520&quot;)</span><br><span class="line">print(&quot;sdsdsd&quot;)</span><br></pre></td></tr></table></figure>
 <h2 id="将数据输出到文件中-’a-’意思是文件不存在的话就创建，已经存在的话就追加内容"><a href="#将数据输出到文件中-’a-’意思是文件不存在的话就创建，已经存在的话就追加内容" class="headerlink" title="将数据输出到文件中,’a+’意思是文件不存在的话就创建，已经存在的话就追加内容"></a>将数据输出到文件中,’a+’意思是文件不存在的话就创建，已经存在的话就追加内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ft = open(&apos;E:/love.txt&apos;,&apos;a+&apos;) </span><br><span class="line">print(&apos;helloworld&apos;,file=ft)</span><br><span class="line">ft.close()</span><br></pre></td></tr></table></figure>
 <h2 id="不进行换行输出，使用逗号分隔"><a href="#不进行换行输出，使用逗号分隔" class="headerlink" title="不进行换行输出，使用逗号分隔"></a>不进行换行输出，使用逗号分隔</h2><p><code>print(11,111,333,&#39;erere&#39;)</code></p>
@@ -740,7 +750,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">118</span>
+                  <span class="site-state-item-count">119</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -751,7 +761,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -762,7 +772,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -830,7 +840,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量-标识符-开头只能是字母数字或下划线"><span class="nav-number">1.</span> <span class="nav-text">变量(标识符)开头只能是字母数字或下划线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#print-函数-打印输出"><span class="nav-number">2.</span> <span class="nav-text">print 函数 打印输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将数据输出到文件中-’a-’意思是文件不存在的话就创建，已经存在的话就追加内容"><span class="nav-number">3.</span> <span class="nav-text">将数据输出到文件中,’a+’意思是文件不存在的话就创建，已经存在的话就追加内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不进行换行输出，使用逗号分隔"><span class="nav-number">4.</span> <span class="nav-text">不进行换行输出，使用逗号分隔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转义字符，反斜杠-转义字符的首字母-n-newline的首字母"><span class="nav-number">5.</span> <span class="nav-text">转义字符，反斜杠+转义字符的首字母,n newline的首字母</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制表符-不太懂"><span class="nav-number">6.</span> <span class="nav-text">制表符 不太懂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#覆盖"><span class="nav-number">7.</span> <span class="nav-text">覆盖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退格，将u退没了"><span class="nav-number">8.</span> <span class="nav-text">退格，将u退没了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双反斜杠的应用"><span class="nav-number">9.</span> <span class="nav-text">双反斜杠的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引号"><span class="nav-number">10.</span> <span class="nav-text">引号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原字符-不让字符串中的转义字符起作用-注意字符串最后一个不能是反斜杠"><span class="nav-number">11.</span> <span class="nav-text">原字符 不让字符串中的转义字符起作用,注意字符串最后一个不能是反斜杠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量直接写，不用声明"><span class="nav-number">12.</span> <span class="nav-text">变量直接写，不用声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的内存地址，变量类型"><span class="nav-number">13.</span> <span class="nav-text">变量的内存地址，变量类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换"><span class="nav-number">14.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多行注释"><span class="nav-number">15.</span> <span class="nav-text">多行注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#input输入函数，接收用户的输入，做提示语"><span class="nav-number">16.</span> <span class="nav-text">input输入函数，接收用户的输入，做提示语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行代码，输入答案回车看看"><span class="nav-number">17.</span> <span class="nav-text">运行代码，输入答案回车看看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算数运算符，整除"><span class="nav-number">18.</span> <span class="nav-text">算数运算符，整除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一正一负，整除，向下取整"><span class="nav-number">19.</span> <span class="nav-text">一正一负，整除，向下取整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#幂运算"><span class="nav-number">20.</span> <span class="nav-text">幂运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取余"><span class="nav-number">21.</span> <span class="nav-text">取余</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值运算符"><span class="nav-number">22.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解构赋值"><span class="nav-number">23.</span> <span class="nav-text">解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较运算符-比较的是值，is比较内存地址"><span class="nav-number">24.</span> <span class="nav-text">比较运算符==,比较的是值，is比较内存地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔运算算符and，当两个云算数都为True时结果才为True"><span class="nav-number">25.</span> <span class="nav-text">布尔运算算符and，当两个云算数都为True时结果才为True</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#or"><span class="nav-number">26.</span> <span class="nav-text">or</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#not对布尔值取反"><span class="nav-number">27.</span> <span class="nav-text">not对布尔值取反</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#in-not-in"><span class="nav-number">28.</span> <span class="nav-text">in,not in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的布尔值-使用内置函数bool-查看"><span class="nav-number">29.</span> <span class="nav-text">对象的布尔值,使用内置函数bool()查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支结构-if-elif-else"><span class="nav-number">30.</span> <span class="nav-text">分支结构 if elif else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if-else-条件表达式，双分支结构的简写"><span class="nav-number">31.</span> <span class="nav-text">if else 条件表达式，双分支结构的简写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊匹配"><span class="nav-number">32.</span> <span class="nav-text">模糊匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#续行符"><span class="nav-number">33.</span> <span class="nav-text">续行符 \</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打包成-exe可执行文件"><span class="nav-number">34.</span> <span class="nav-text">打包成.exe可执行文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的反向输出"><span class="nav-number">35.</span> <span class="nav-text">字符串的反向输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进制转换函数"><span class="nav-number">36.</span> <span class="nav-text">进制转换函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的datetime日期时间模块"><span class="nav-number">37.</span> <span class="nav-text">常见的datetime日期时间模块</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python中字符串前“r”-“u”的作用"><span class="nav-number">1.</span> <span class="nav-text">Python中字符串前“r”,“u”的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量-标识符-开头只能是字母数字或下划线"><span class="nav-number">2.</span> <span class="nav-text">变量(标识符)开头只能是字母数字或下划线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#print-函数-打印输出"><span class="nav-number">3.</span> <span class="nav-text">print 函数 打印输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将数据输出到文件中-’a-’意思是文件不存在的话就创建，已经存在的话就追加内容"><span class="nav-number">4.</span> <span class="nav-text">将数据输出到文件中,’a+’意思是文件不存在的话就创建，已经存在的话就追加内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不进行换行输出，使用逗号分隔"><span class="nav-number">5.</span> <span class="nav-text">不进行换行输出，使用逗号分隔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转义字符，反斜杠-转义字符的首字母-n-newline的首字母"><span class="nav-number">6.</span> <span class="nav-text">转义字符，反斜杠+转义字符的首字母,n newline的首字母</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制表符-不太懂"><span class="nav-number">7.</span> <span class="nav-text">制表符 不太懂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#覆盖"><span class="nav-number">8.</span> <span class="nav-text">覆盖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退格，将u退没了"><span class="nav-number">9.</span> <span class="nav-text">退格，将u退没了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双反斜杠的应用"><span class="nav-number">10.</span> <span class="nav-text">双反斜杠的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引号"><span class="nav-number">11.</span> <span class="nav-text">引号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原字符-不让字符串中的转义字符起作用-注意字符串最后一个不能是反斜杠"><span class="nav-number">12.</span> <span class="nav-text">原字符 不让字符串中的转义字符起作用,注意字符串最后一个不能是反斜杠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量直接写，不用声明"><span class="nav-number">13.</span> <span class="nav-text">变量直接写，不用声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的内存地址，变量类型"><span class="nav-number">14.</span> <span class="nav-text">变量的内存地址，变量类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换"><span class="nav-number">15.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多行注释"><span class="nav-number">16.</span> <span class="nav-text">多行注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#input输入函数，接收用户的输入，做提示语"><span class="nav-number">17.</span> <span class="nav-text">input输入函数，接收用户的输入，做提示语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行代码，输入答案回车看看"><span class="nav-number">18.</span> <span class="nav-text">运行代码，输入答案回车看看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算数运算符，整除"><span class="nav-number">19.</span> <span class="nav-text">算数运算符，整除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一正一负，整除，向下取整"><span class="nav-number">20.</span> <span class="nav-text">一正一负，整除，向下取整</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#幂运算"><span class="nav-number">21.</span> <span class="nav-text">幂运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取余"><span class="nav-number">22.</span> <span class="nav-text">取余</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值运算符"><span class="nav-number">23.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解构赋值"><span class="nav-number">24.</span> <span class="nav-text">解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较运算符-比较的是值，is比较内存地址"><span class="nav-number">25.</span> <span class="nav-text">比较运算符==,比较的是值，is比较内存地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔运算算符and，当两个云算数都为True时结果才为True"><span class="nav-number">26.</span> <span class="nav-text">布尔运算算符and，当两个云算数都为True时结果才为True</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#or"><span class="nav-number">27.</span> <span class="nav-text">or</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#not对布尔值取反"><span class="nav-number">28.</span> <span class="nav-text">not对布尔值取反</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#in-not-in"><span class="nav-number">29.</span> <span class="nav-text">in,not in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的布尔值-使用内置函数bool-查看"><span class="nav-number">30.</span> <span class="nav-text">对象的布尔值,使用内置函数bool()查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支结构-if-elif-else"><span class="nav-number">31.</span> <span class="nav-text">分支结构 if elif else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if-else-条件表达式，双分支结构的简写"><span class="nav-number">32.</span> <span class="nav-text">if else 条件表达式，双分支结构的简写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊匹配"><span class="nav-number">33.</span> <span class="nav-text">模糊匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#续行符"><span class="nav-number">34.</span> <span class="nav-text">续行符 \</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打包成-exe可执行文件"><span class="nav-number">35.</span> <span class="nav-text">打包成.exe可执行文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的反向输出"><span class="nav-number">36.</span> <span class="nav-text">字符串的反向输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进制转换函数"><span class="nav-number">37.</span> <span class="nav-text">进制转换函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的datetime日期时间模块"><span class="nav-number">38.</span> <span class="nav-text">常见的datetime日期时间模块</span></a></li></ol></div>
             
 
           </div>
@@ -874,7 +884,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">116.5k</span>
+    <span title="本站字数共计">127k</span>
   
 </div>
 
