@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="梦不成">
 <meta property="og:description" content="Python数据分析以及机器学习的基础知识NumPy简单了解">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-08T14:15:16.515Z">
+<meta property="og:updated_time" content="2021-04-22T12:32:44.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据分析之NumPy笔记">
 <meta name="twitter:description" content="Python数据分析以及机器学习的基础知识NumPy简单了解">
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新&#58;</span>
               
-              <time title="更新" itemprop="dateModified" datetime="2021-04-08T22:15:16+08:00">
-                2021-04-08
+              <time title="更新" itemprop="dateModified" datetime="2021-04-22T20:32:44+08:00">
+                2021-04-22
               </time>
             
           </span>
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  1.3k 字
+                  1.4k 字
                 </span>
               
 
@@ -464,7 +464,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 分钟
+                  6 分钟
                 </span>
               
             </div>
@@ -547,6 +547,8 @@
 <li>根据某个条件从数组中抽取元素，返回满足条件的元素</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=np.arange(5)</span><br><span class="line">print(np.extract(a&gt;2,a))</span><br><span class="line"># [3 4]</span><br></pre></td></tr></table></figure>
+<h2 id="arange函数用于创建等差数组"><a href="#arange函数用于创建等差数组" class="headerlink" title="arange函数用于创建等差数组"></a>arange函数用于创建等差数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange([start, ]stop, [step, ]dtype=None)</span><br></pre></td></tr></table></figure>
+<h2 id="np-random随机数"><a href="#np-random随机数" class="headerlink" title="np.random随机数"></a>np.random随机数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">rand()	</span><br><span class="line">生成一个[0,1),不包括1，之间的随机浮点数或N维浮点数组。</span><br><span class="line">1 np.random.rand(a)</span><br><span class="line">表示生成a个[0,1)的数</span><br><span class="line">2 np.random.rand(a,b))</span><br><span class="line">表示生成a行b列的二维数组，值为[0,1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">randn(d0, d1, …, dn)	产生标准正态分布随机数</span><br><span class="line"></span><br><span class="line">randint(low[, high, size, dtype])	产生随机整数</span><br><span class="line"></span><br><span class="line">random_sample([size])	在[0,1）内产生随机数</span><br><span class="line"></span><br><span class="line">choice(a[, size, replace, p])	从a中随机选择指定数据</span><br></pre></td></tr></table></figure>
 <h2 id="NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作"><a href="#NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作" class="headerlink" title="NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作"></a>NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作</h2><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
 <center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
 
@@ -805,18 +807,6 @@
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
                 
-                  <span class="links-of-author-item">
-                    <a href="https://www.zhihu.com/people/wu-jia-yi-26-93/activities" target="_blank" title="知乎">
-                      
-                        <i class="fa fa-fw fa-gratipay"></i>知乎</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://www.jianshu.com/u/c3c177adad8e" target="_blank" title="简书">
-                      
-                        <i class="fa fa-fw fa-globe"></i>简书</a>
-                  </span>
-                
             </div>
           
 
@@ -841,7 +831,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy简介"><span class="nav-number">1.</span> <span class="nav-text">NumPy简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NumPy数据结构"><span class="nav-number">1.1.</span> <span class="nav-text">NumPy数据结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Ndarray数组对象"><span class="nav-number">2.</span> <span class="nav-text">创建Ndarray数组对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用array函数"><span class="nav-number">2.1.</span> <span class="nav-text">使用array函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组形状"><span class="nav-number">3.</span> <span class="nav-text">数组形状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组类型转换"><span class="nav-number">4.</span> <span class="nav-text">数组类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组拼接"><span class="nav-number">5.</span> <span class="nav-text">数组拼接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组添加"><span class="nav-number">6.</span> <span class="nav-text">数组添加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#delete-删除"><span class="nav-number">7.</span> <span class="nav-text">delete()删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unique-去重"><span class="nav-number">8.</span> <span class="nav-text">unique()去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组拆分"><span class="nav-number">9.</span> <span class="nav-text">数组拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的复制"><span class="nav-number">10.</span> <span class="nav-text">数组的复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组索引"><span class="nav-number">11.</span> <span class="nav-text">数组索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广播"><span class="nav-number">12.</span> <span class="nav-text">广播</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extract-函数提取元素"><span class="nav-number">13.</span> <span class="nav-text">extract()函数提取元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作"><span class="nav-number">14.</span> <span class="nav-text">NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy简介"><span class="nav-number">1.</span> <span class="nav-text">NumPy简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NumPy数据结构"><span class="nav-number">1.1.</span> <span class="nav-text">NumPy数据结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Ndarray数组对象"><span class="nav-number">2.</span> <span class="nav-text">创建Ndarray数组对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用array函数"><span class="nav-number">2.1.</span> <span class="nav-text">使用array函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组形状"><span class="nav-number">3.</span> <span class="nav-text">数组形状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组类型转换"><span class="nav-number">4.</span> <span class="nav-text">数组类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组拼接"><span class="nav-number">5.</span> <span class="nav-text">数组拼接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组添加"><span class="nav-number">6.</span> <span class="nav-text">数组添加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#delete-删除"><span class="nav-number">7.</span> <span class="nav-text">delete()删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unique-去重"><span class="nav-number">8.</span> <span class="nav-text">unique()去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组拆分"><span class="nav-number">9.</span> <span class="nav-text">数组拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的复制"><span class="nav-number">10.</span> <span class="nav-text">数组的复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组索引"><span class="nav-number">11.</span> <span class="nav-text">数组索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广播"><span class="nav-number">12.</span> <span class="nav-text">广播</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extract-函数提取元素"><span class="nav-number">13.</span> <span class="nav-text">extract()函数提取元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arange函数用于创建等差数组"><span class="nav-number">14.</span> <span class="nav-text">arange函数用于创建等差数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#np-random随机数"><span class="nav-number">15.</span> <span class="nav-text">np.random随机数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作"><span class="nav-number">16.</span> <span class="nav-text">NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作</span></a></li></ol></div>
             
 
           </div>
@@ -885,7 +875,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">127k</span>
+    <span title="本站字数共计">127.1k</span>
   
 </div>
 
