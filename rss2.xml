@@ -8,8 +8,24 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>君子生非异也，善假于物也</description>
-    <pubDate>Sun, 16 May 2021 15:33:33 GMT</pubDate>
+    <pubDate>Sun, 30 May 2021 02:09:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>数据特征分析</title>
+      <link>https://shulu520.com/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%E8%83%BD%E5%8A%9B/Python%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E5%88%86%E6%9E%90/</link>
+      <guid>https://shulu520.com/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%E8%83%BD%E5%8A%9B/Python%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E5%88%86%E6%9E%90/</guid>
+      <pubDate>Sat, 29 May 2021 11:25:14 GMT</pubDate>
+      <description>
+      
+        统计分析能力强化之数据特征分析，包括分布分析、对比分析、统计分析、帕累托分析、正太性检测、相关性分析。
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote><p>&emsp;&emsp;</p></blockquote><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p><h2 id="分布分析"><a href="#分布分析" class="headerlink" title="分布分析"></a>分布分析</h2><ul><li>研究数据的分布特征和分别类型，定量定性，区分基本统计量</li><li>首先对数据做一个基本的大致分析</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line">data=pd.read_csv(&quot;E:/Users/lqy/Desktop/jupyternotebook/深圳罗湖二手房信息.csv&quot;,engine=&quot;python&quot;)</span><br><span class="line">data.describe()</span><br><span class="line"></span><br><span class="line"># 散点图看看效果</span><br><span class="line">plt.scatter(data[&apos;经度&apos;],data[&apos;纬度&apos;],</span><br><span class="line">           s=data[&apos;房屋单价&apos;] / 200, #除以200是因为数据太大了，显示图像太大</span><br><span class="line">            c=data[&apos;参考总价&apos;],</span><br><span class="line">            cmap=&apos;Reds&apos;,</span><br><span class="line">            alpha=0.5</span><br><span class="line">           )</span><br><span class="line">plt.grid() #加上网格</span><br><span class="line"></span><br><span class="line"># 极差</span><br><span class="line">key1=&quot;参考总价&quot;</span><br><span class="line">key2=&quot;参考首付&quot;</span><br><span class="line">print(key1,data[key1].max()-data[key1].min())</span><br><span class="line">print(key2,data[key2].max()-data[key2].min())</span><br><span class="line"></span><br><span class="line"># 频率分布情况 直方图</span><br><span class="line">data[key1].hist(bins=8)</span><br><span class="line"># 做到这里其实已经可以看到大致的分布情况了，</span><br><span class="line">#下面的内容只是按自己的想法拆分区间做的，效果更好看而已</span><br><span class="line">#若果需要的话，再去翻阅</span><br></pre></td></tr></table></figure><h2 id="对比分析"><a href="#对比分析" class="headerlink" title="对比分析"></a>对比分析</h2><ul><li>两个相似的指标进行比较</li><li>内容缺失<del>~</del><del>~</del><del>~</del><del>~</del>~~~~待补</li></ul><h2 id="统计分析"><a href="#统计分析" class="headerlink" title="统计分析"></a>统计分析</h2><ul><li>对定量数据常从集中趋势和离中趋势两个方面进行分析</li><li>集中：平均数，中位数，加权平均数，众数</li><li>离中：方差，标准差，分位数</li></ul><h2 id="帕累托分析"><a href="#帕累托分析" class="headerlink" title="帕累托分析"></a>帕累托分析</h2><ul><li>即贡献度分析，二八定律</li></ul><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p><center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>]]></content:encoded>
+      
+      <comments>https://shulu520.com/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%E8%83%BD%E5%8A%9B/Python%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E5%88%86%E6%9E%90/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Matplotlib</title>
@@ -334,25 +350,6 @@
       <content:encoded><![CDATA[<blockquote><p>&emsp;&emsp;嘿嘿嘿</p></blockquote><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p><ul><li>必应搜索页面<br>进入必应首页cn.bing.com，<br>点击图片右键查看网页源代码，<br>在第三行可以看到一行js代码，<br>中间有蓝色部分的图片链接，点击进入，<br>浏览器会在新页面打开这张图片，<br>右键图片另存为某地即可，<br>如果觉得好看的话，可以设置为桌面壁纸</li></ul><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p><center><img width="50px" height="50px" src="/壁纸/壁纸/./images/1592484666484.png" alt="QQ" border="0"><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>]]></content:encoded>
       
       <comments>https://shulu520.com/%E5%A3%81%E7%BA%B8/%E5%A3%81%E7%BA%B8/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>2020开篇</title>
-      <link>https://shulu520.com/uncategorized/2020%E5%BC%80%E7%AF%87/</link>
-      <guid>https://shulu520.com/uncategorized/2020%E5%BC%80%E7%AF%87/</guid>
-      <pubDate>Sat, 30 May 2020 16:10:27 GMT</pubDate>
-      <description>
-      
-        &lt;blockquote&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;代码之路停下久矣，今晚无聊之时，正好试试手，看看那些花里胡哨的操作还是否记的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;div style=&quot;width:100%;height:1px;background-color:pink;opacity:.7&quot;&gt;&lt;/div&gt;&lt;br&gt;&lt;/p&gt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<blockquote><p>&emsp;&emsp;代码之路停下久矣，今晚无聊之时，正好试试手，看看那些花里胡哨的操作还是否记的。</p></blockquote><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a><br>&emsp;&emsp;哈哈哈哈哈，还好没忘记，不错不错，阔以阔以，往后继续加油哦。</p><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p><center><img width="50px" height="50px" src="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png" alt="QQ" border="0"><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>]]></content:encoded>
-      
-      <comments>https://shulu520.com/uncategorized/2020%E5%BC%80%E7%AF%87/#disqus_thread</comments>
     </item>
     
   </channel>
