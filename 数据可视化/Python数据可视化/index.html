@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('博主私有文章，请输入密码:  shulu520') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="J3muXvxFkF">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python,">
+
+
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="梦不成" type="application/atom+xml">
+
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "5af61f84"
+    });
+  daovoice('update');
+  </script>
+
+
+<meta name="description" content="更好地进行数据结果表达">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python数据可视化-Seaborn">
+<meta property="og:url" content="https://shulu520.com/数据可视化/Python数据可视化/index.html">
+<meta property="og:site_name" content="梦不成">
+<meta property="og:description" content="更好地进行数据结果表达">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://pic.imgdb.cn/item/60bc72118355f7f718e70241.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/60bcd98d8355f7f7187834e2.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/60bcdc5d8355f7f71887b580.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/60bcdca58355f7f71888ead4.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/60bcdce18355f7f71889a208.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/60bcdd278355f7f7188a5045.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/60bde44b844ef46bb2663c96.jpg">
+<meta property="og:updated_time" content="2021-06-07T12:14:43.804Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python数据可视化-Seaborn">
+<meta name="twitter:description" content="更好地进行数据结果表达">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/60bc72118355f7f718e70241.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shulu520.com/数据可视化/Python数据可视化/">
+
+
+
+
+
+  <title>Python数据可视化-Seaborn | 梦不成</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">梦不成</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">思念如马-自别离-未停蹄</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于我
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-love">
+          <a href="/love/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            love
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            文章标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            文章分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            文章归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-留言板">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="来啊，快来探索我的秘密吧..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+
+<link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet"> </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shulu520.com/数据可视化/Python数据可视化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head_icon.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦不成">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python数据可视化-Seaborn</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-05T16:23:40+08:00">
+                2021-06-05
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新&#58;</span>
+              
+              <time title="更新" itemprop="dateModified" datetime="2021-06-07T20:14:43+08:00">
+                2021-06-07
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据可视化/" itemprop="url" rel="index">
+                    <span itemprop="name">数据可视化</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-free-code-camp"></i> 热度
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>🔥
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  2.8k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  14 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  更好地进行数据结果表达
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>&emsp;&emsp;</p>
+</blockquote>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
+<h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><ul>
+<li>Seaborn:基于Matplotlib的数据可视化库，提供更高层次的API</li>
+<li>Bokeh:可以建立一个可交互的线上可视化服务器</li>
+<li>Gephi:主要用于各种网络和复杂的关系系统</li>
+<li>空间可视化：powermap，echarts</li>
+</ul>
+<h2 id="Seaborn"><a href="#Seaborn" class="headerlink" title="Seaborn"></a>Seaborn</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 有些模拟的数据是从官方服务器上加载的</span><br><span class="line"># 但是会出现被拒绝的情况</span><br><span class="line"># 解决是访问https://github.com/mwaskom/seaborn-data打包下载</span><br><span class="line"># 里面的csv文件就是我们需要的文件</span><br><span class="line"># 我将它们放到Jupyter里面的seaborn-data</span><br><span class="line"># 用的时候读取csv文件并转为dfw文件即可如下：</span><br><span class="line">import csv</span><br><span class="line">tmp_lst = []</span><br><span class="line">with open(&apos;./seaborn-data/tips.csv&apos;, &apos;r&apos;,encoding = &apos;utf-8&apos; ) as tips: #tips 是文件名 注意更换</span><br><span class="line">    reader = csv.reader(tips) #tips 是文件名</span><br><span class="line">    for row in reader:</span><br><span class="line">        tmp_lst.append(row)</span><br><span class="line">tips = pd.DataFrame(tmp_lst[1:], columns=tmp_lst[0]) </span><br><span class="line">tips</span><br></pre></td></tr></table></figure>
+<h3 id="Seaborn-整体风格设置-颜色和比例等"><a href="#Seaborn-整体风格设置-颜色和比例等" class="headerlink" title="Seaborn 整体风格设置 颜色和比例等"></a>Seaborn 整体风格设置 颜色和比例等</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import seaborn as sns #新模块</span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 创建正弦函数</span><br><span class="line">def sinplot(flip=1):</span><br><span class="line">    x=np.linspace(0,14,100)</span><br><span class="line">    for i in range(1,7):</span><br><span class="line">        plt.plot(x,np.sin(x+i*0.5)*(7-i)*flip)</span><br><span class="line">        </span><br><span class="line">sinplot()#调用函数 绘图</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 设置默认风格 sns.set()</span><br><span class="line">sns.set() #会影响其他的图表，可以重新刷新整个jupyter</span><br><span class="line">sinplot()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># set_style 设置风格</span><br><span class="line"># 风格选择有：white、dark、whitegrid、darkgrid、ticks</span><br><span class="line"></span><br><span class="line">fig=plt.figure(figsize=(6,6)) #Matplotlib创建图表窗口</span><br><span class="line">ax1=fig.add_subplot(2,1,1)</span><br><span class="line">sns.set_style(&apos;dark&apos;) #Seaborn设置风格</span><br><span class="line"></span><br><span class="line">data=np.random.normal(size=(20,6))+np.arange(6)/2</span><br><span class="line">sns.boxplot(data=data) #Seaborn绘图</span><br><span class="line">plt.title(&apos;style-dark&apos;) #任然可以使用Matplotlib的参数</span><br><span class="line"></span><br><span class="line">ax2=fig.add_subplot(2,1,2)</span><br><span class="line">sinplot() #调用上面创建的函数绘图</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 设置图表的坐标轴 despine()</span><br><span class="line"># 默认删除上边和右边坐标轴线 sns.despine()不加参数时，参数如top=true等</span><br><span class="line"># 坐标轴偏移 sns.despine(offset=10)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># sns.axes_style 设置局部风格 配合with语句</span><br><span class="line">with sns.axes_style(&apos;ticks&apos;): #with 做代码块区分</span><br><span class="line">    plt.subplot(211)</span><br><span class="line">    sinplot()</span><br><span class="line">    </span><br><span class="line">plt.subplot(212)</span><br><span class="line">sns.set_style(&apos;dark&apos;) #外部风格</span><br><span class="line">sinplot()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 设置显示比例尺度sns.set_context()</span><br><span class="line"># 风格选择包括 paper、notebook、talk、poster</span><br><span class="line"># 默认为notebook</span><br></pre></td></tr></table></figure>
+<h3 id="调色盘"><a href="#调色盘" class="headerlink" title="调色盘"></a>调色盘</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 调色盘设置sns.color_palette()</span><br><span class="line"># sns.color_palette(palette=None, n_colors=None, desat=None, as_cmap=False)</span><br><span class="line"># 6个颜色 deep, muted, bright, pastel, dark, colorblind</span><br><span class="line"></span><br><span class="line">sns.palplot(sns.color_palette()) #默认显示10种</span><br><span class="line">sns.palplot(sns.color_palette(&apos;Reds&apos;,8)) #由浅入深8条渐变 默认6条</span><br><span class="line">sns.palplot(sns.color_palette(&apos;Reds_r&apos;)) #颜色反转 部分颜色有 带_r的有</span><br><span class="line"># sns.palplot()显示我们想要的调色盘 类似print函数</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;&apos;</span><br><span class="line">其实选择颜色色盘在下面这些现有的里面挑就行了</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"># Accent&apos;, &apos;Accent_r&apos;, &apos;Blues&apos;, &apos;Blues_r&apos;, &apos;BrBG&apos;, &apos;BrBG_r&apos;, &apos;BuGn&apos;, &apos;BuGn_r&apos;, </span><br><span class="line"># &apos;BuPu&apos;, &apos;BuPu_r&apos;, &apos;CMRmap&apos;, &apos;CMRmap_r&apos;, &apos;Dark2&apos;, &apos;Dark2_r&apos;, &apos;GnBu&apos;, &apos;GnBu_r&apos;, </span><br><span class="line"># &apos;Greens&apos;, &apos;Greens_r&apos;, &apos;Greys&apos;, &apos;Greys_r&apos;, &apos;OrRd&apos;, &apos;OrRd_r&apos;, &apos;Oranges&apos;, </span><br><span class="line"># &apos;Oranges_r&apos;, &apos;PRGn&apos;, &apos;PRGn_r&apos;, &apos;Paired&apos;, &apos;Paired_r&apos;, &apos;Pastel1&apos;, &apos;Pastel1_r&apos;, </span><br><span class="line"># &apos;Pastel2&apos;, &apos;Pastel2_r&apos;, &apos;PiYG&apos;, &apos;PiYG_r&apos;, &apos;PuBu&apos;, &apos;PuBuGn&apos;, &apos;PuBuGn_r&apos;, &apos;PuBu_r&apos;, </span><br><span class="line"># &apos;PuOr&apos;, &apos;PuOr_r&apos;, &apos;PuRd&apos;, &apos;PuRd_r&apos;, &apos;Purples&apos;, &apos;Purples_r&apos;, &apos;RdBu&apos;, &apos;RdBu_r&apos;, </span><br><span class="line"># &apos;RdGy&apos;, &apos;RdGy_r&apos;, &apos;RdPu&apos;, &apos;RdPu_r&apos;, &apos;RdYlBu&apos;, &apos;RdYlBu_r&apos;, &apos;RdYlGn&apos;, &apos;RdYlGn_r&apos;, </span><br><span class="line"># &apos;Reds&apos;, &apos;Reds_r&apos;, &apos;Set1&apos;, &apos;Set1_r&apos;, &apos;Set2&apos;, &apos;Set2_r&apos;, &apos;Set3&apos;, &apos;Set3_r&apos;, &apos;Spectral&apos;, </span><br><span class="line"># &apos;Spectral_r&apos;, &apos;Wistia&apos;, &apos;Wistia_r&apos;, &apos;YlGn&apos;, &apos;YlGnBu&apos;, &apos;YlGnBu_r&apos;, &apos;YlGn_r&apos;, </span><br><span class="line"># &apos;YlOrBr&apos;, &apos;YlOrBr_r&apos;, &apos;YlOrRd&apos;, &apos;YlOrRd_r&apos;, &apos;afmhot&apos;, &apos;afmhot_r&apos;, &apos;autumn&apos;, </span><br><span class="line"># &apos;autumn_r&apos;, &apos;binary&apos;, &apos;binary_r&apos;, &apos;bone&apos;, &apos;bone_r&apos;, &apos;brg&apos;, &apos;brg_r&apos;, &apos;bwr&apos;, </span><br><span class="line"># &apos;bwr_r&apos;, &apos;cividis&apos;, &apos;cividis_r&apos;, &apos;cool&apos;, &apos;cool_r&apos;, &apos;coolwarm&apos;, &apos;coolwarm_r&apos;, </span><br><span class="line"># &apos;copper&apos;, &apos;copper_r&apos;, &apos;crest&apos;, &apos;crest_r&apos;, &apos;cubehelix&apos;, &apos;cubehelix_r&apos;, &apos;flag&apos;, </span><br><span class="line"># &apos;flag_r&apos;, &apos;flare&apos;, &apos;flare_r&apos;, &apos;gist_earth&apos;, &apos;gist_earth_r&apos;, &apos;gist_gray&apos;, </span><br><span class="line"># &apos;gist_gray_r&apos;, &apos;gist_heat&apos;, &apos;gist_heat_r&apos;, &apos;gist_ncar&apos;, &apos;gist_ncar_r&apos;, </span><br><span class="line"># &apos;gist_rainbow&apos;, &apos;gist_rainbow_r&apos;, &apos;gist_stern&apos;, &apos;gist_stern_r&apos;, &apos;gist_yarg&apos;, </span><br><span class="line"># &apos;gist_yarg_r&apos;, &apos;gnuplot&apos;, &apos;gnuplot2&apos;, &apos;gnuplot2_r&apos;, &apos;gnuplot_r&apos;, &apos;gray&apos;, &apos;gray_r&apos;,</span><br><span class="line"># &apos;hot&apos;, &apos;hot_r&apos;, &apos;hsv&apos;, &apos;hsv_r&apos;, &apos;icefire&apos;, &apos;icefire_r&apos;, &apos;inferno&apos;, &apos;inferno_r&apos;, </span><br><span class="line"># &apos;jet&apos;, &apos;jet_r&apos;, &apos;magma&apos;, &apos;magma_r&apos;, &apos;mako&apos;, &apos;mako_r&apos;, &apos;nipy_spectral&apos;, </span><br><span class="line"># &apos;nipy_spectral_r&apos;, &apos;ocean&apos;, &apos;ocean_r&apos;, &apos;pink&apos;, &apos;pink_r&apos;, &apos;plasma&apos;, &apos;plasma_r&apos;, </span><br><span class="line"># &apos;prism&apos;, &apos;prism_r&apos;, &apos;rainbow&apos;, &apos;rainbow_r&apos;, &apos;rocket&apos;, &apos;rocket_r&apos;, &apos;seismic&apos;, </span><br><span class="line"># &apos;seismic_r&apos;, &apos;spring&apos;, &apos;spring_r&apos;, &apos;summer&apos;, &apos;summer_r&apos;, &apos;tab10&apos;, &apos;tab10_r&apos;, </span><br><span class="line"># &apos;tab20&apos;, &apos;tab20_r&apos;, &apos;tab20b&apos;, &apos;tab20b_r&apos;, &apos;tab20c&apos;, &apos;tab20c_r&apos;, &apos;terrain&apos;, </span><br><span class="line"># &apos;terrain_r&apos;, &apos;turbo&apos;, &apos;turbo_r&apos;, &apos;twilight&apos;, &apos;twilight_r&apos;, &apos;twilight_shifted&apos;, </span><br><span class="line"># &apos;twilight_shifted_r&apos;, &apos;viridis&apos;, &apos;viridis_r&apos;, &apos;vlag&apos;, &apos;vlag_r&apos;, &apos;winter&apos;, &apos;winter_r&apos;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 分组颜色设置</span><br><span class="line">sns.palplot(sns.color_palette(&apos;Paired&apos;,8))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 设置亮度饱和度</span><br><span class="line"># sns.palplot(sns.hls_palette(n_colors,h,l,s))</span><br><span class="line">sns.palplot(sns.hls_palette(6,l=0.5,s=1))</span><br><span class="line"># L :亮度</span><br><span class="line"># s:饱和度</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 按照线性增长计算颜色 sns.cubehelix_palette()</span><br><span class="line">sns.palplot(sns.cubehelix_palette(8,gamma=1))</span><br><span class="line"># sns.cubehelix_palette?</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">sns.cubehelix_palette(</span><br><span class="line">    n_colors=6, #颜色条数</span><br><span class="line">    start=0,    #[0-3],起始颜色值</span><br><span class="line">    rot=0.4,    #颜色旋转角度</span><br><span class="line">    gamma=1.0,  #越大，颜色越暗</span><br><span class="line">    hue=0.8,</span><br><span class="line">    light=0.85, #亮度</span><br><span class="line">    dark=0.15,  #暗度</span><br><span class="line">    reverse=False, #默认由浅到深</span><br><span class="line">    as_cmap=False,</span><br><span class="line">)</span><br><span class="line">&apos;&apos;&apos;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 创建分散的颜色调色盘</span><br><span class="line"># sns.diverging_palette?</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">sns.diverging_palette(</span><br><span class="line">    h_neg, #[0, 359]</span><br><span class="line">    h_pos, #[0, 359] #h_neg起始、h_pos终止颜色值</span><br><span class="line">    s=75, #[0, 100] 饱和度</span><br><span class="line">    l=50, #[0, 100] 亮度</span><br><span class="line">    sep=1,#</span><br><span class="line">    n=6,  #颜色个数</span><br><span class="line">    center=&apos;light&apos;, #中心颜色 默认浅色 可选dark</span><br><span class="line">    as_cmap=False,</span><br><span class="line">)</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">sns.palplot(sns.diverging_palette(150,280,s=88,l=25,n=7))</span><br><span class="line">sns.palplot(sns.diverging_palette(150,280,s=88,l=25,n=7,center=&apos;dark&apos;))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 做个矩阵形式的调色盘</span><br><span class="line">plt.figure(figsize=(8,6))</span><br><span class="line">x=np.arange(25).reshape(5,5)#25个数 5行5列</span><br><span class="line"># 创建调色盘</span><br><span class="line">cmap=sns.diverging_palette(200,20,sep=20,as_cmap=True)</span><br><span class="line">sns.heatmap(x,cmap=cmap) #热力图</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 这个效果不错</span><br><span class="line">sns.set_style(&apos;whitegrid&apos;)</span><br><span class="line">with sns.color_palette(&apos;PuBuGn_d&apos;):</span><br><span class="line">    plt.subplot(211)</span><br><span class="line">    sinplot()</span><br><span class="line"></span><br><span class="line">sns.set_palette(&apos;husl&apos;)</span><br><span class="line">plt.subplot(212)</span><br><span class="line">sinplot()</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/60bc72118355f7f718e70241.png" alt></p>
+<h3 id="分布式数据可视化"><a href="#分布式数据可视化" class="headerlink" title="分布式数据可视化"></a>分布式数据可视化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># 分布数据可视化 直方图与密度图</span><br><span class="line"># 通常将两个图结合起来看，这样同时观察数据的趋势和分布</span><br><span class="line"></span><br><span class="line">rs=np.random.RandomState(10)</span><br><span class="line">s=pd.Series(rs.randn(100)*100)</span><br><span class="line"></span><br><span class="line">sns.distplot(s,bins=10,hist=True,kde=True,</span><br><span class="line">            rug=True,label=&apos;displot&apos;,</span><br><span class="line">            norm_hist=False,axlabel=&apos;x&apos;)</span><br><span class="line"></span><br><span class="line"># sns.distplot?</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">sns.distplot(</span><br><span class="line">    a=None,   #数据 必须，可以为pandas的series或者list。</span><br><span class="line">    bins=None,#柱子个数</span><br><span class="line">    hist=True,#是否显示直方图</span><br><span class="line">    kde=True, #是否显示密度曲线</span><br><span class="line">    rug=False, #是否显示分布情况 靠近x轴小齿条</span><br><span class="line">    fit=None,</span><br><span class="line">    hist_kws=None,#柱子风格(bar/step/barstacked/stepfilled)，线宽/透明度/颜色</span><br><span class="line">    kde_kws=None, #密度曲线颜色，线宽，标注，线型</span><br><span class="line">    rug_kws=None, #数据频率分布颜色</span><br><span class="line">    fit_kws=None,</span><br><span class="line">    color=None, #颜色</span><br><span class="line">    vertical=False, #竖直方向</span><br><span class="line">    norm_hist=False,#直方图是否按照密度显示 标准化数据</span><br><span class="line">    axlabel=None, #x轴标注</span><br><span class="line">    label=None, #图例</span><br><span class="line">    ax=None,    #指定对应的axes坐标轴</span><br><span class="line">    x=None,</span><br><span class="line">)</span><br><span class="line">&apos;&apos;&apos;</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/60bcd98d8355f7f7187834e2.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 细微的设置</span><br><span class="line">sns.distplot(s,rug=True,rug_kws=&#123;&quot;color&quot;: &quot;r&quot;&#125;,</span><br><span class="line">             kde_kws=&#123;&quot;color&quot;: &quot;k&quot;, &quot;lw&quot;: 1, &quot;label&quot;: &quot;KDE&quot;&#125;,</span><br><span class="line">             hist_kws=&#123;&quot;histtype&quot;: &quot;bar&quot;, &quot;linewidth&quot;: 3,&quot;alpha&quot;: 1, &quot;color&quot;: &quot;g&quot;&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/60bcdc5d8355f7f71887b580.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 密度图 单独的设置 好多参数呢</span><br><span class="line">sns.kdeplot(s,shade=True,color=&apos;r&apos;)</span><br><span class="line"># shade 是否填充颜色</span><br><span class="line"># bw 控制拟合程度</span><br><span class="line"></span><br><span class="line"># rugplot 小齿条具体设置</span><br><span class="line">sns.rugplot(s,height=0.1,alpha=0.8,color=&apos;k&apos;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/60bcdca58355f7f71888ead4.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 两列数据 密度分布图</span><br><span class="line">rs=np.random.RandomState(2)</span><br><span class="line">df=pd.DataFrame(rs.randn(100,2),</span><br><span class="line">               columns=[&apos;A&apos;,&apos;B&apos;])</span><br><span class="line"></span><br><span class="line">sns.kdeplot(df[&apos;A&apos;],df[&apos;B&apos;],</span><br><span class="line">           cbar=True,#是否显示颜色图例</span><br><span class="line">           shade=True,#是否填充颜色</span><br><span class="line">           cmap=&apos;Reds&apos;,</span><br><span class="line">           shade_lowest=False,# 外围颜色是否显示</span><br><span class="line">           n_levels=10 #曲线个数 越多越平滑</span><br><span class="line">           )</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/60bcdce18355f7f71889a208.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 两列数据 密度分布图 多个图</span><br><span class="line">rs1=np.random.RandomState(2)</span><br><span class="line">rs2=np.random.RandomState(5)</span><br><span class="line">df1=pd.DataFrame(rs1.randn(100,2)+2,columns=[&apos;A&apos;,&apos;B&apos;])</span><br><span class="line">df2=pd.DataFrame(rs2.randn(100,2)-2,columns=[&apos;A&apos;,&apos;B&apos;])</span><br><span class="line"></span><br><span class="line">sns.kdeplot(df1[&apos;A&apos;],df1[&apos;B&apos;],</span><br><span class="line">           cbar=True,</span><br><span class="line">           shade=True,</span><br><span class="line">           cmap=&apos;Greens&apos;,</span><br><span class="line">           shade_lowest=False,</span><br><span class="line">           )</span><br><span class="line"></span><br><span class="line">sns.kdeplot(df2[&apos;A&apos;],df2[&apos;B&apos;],</span><br><span class="line">           cbar=True,</span><br><span class="line">           shade=True,</span><br><span class="line">           cmap=&apos;Blues&apos;,</span><br><span class="line">           shade_lowest=False,</span><br><span class="line">           )</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/60bcdd278355f7f7188a5045.jpg" alt></p>
+<h3 id="分布数据可视化-散点图"><a href="#分布数据可视化-散点图" class="headerlink" title="分布数据可视化 散点图"></a>分布数据可视化 散点图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 分布数据可视化 散点图</span><br><span class="line">rs=np.random.RandomState(2)</span><br><span class="line">df=pd.DataFrame(rs.randn(200,2),columns=[&apos;A&apos;,&apos;B&apos;])</span><br><span class="line"></span><br><span class="line">sns.jointplot(x=df[&apos;A&apos;],y=df[&apos;B&apos;],#x,y轴名称</span><br><span class="line">             data=df, #数据</span><br><span class="line">             color=&apos;g&apos;,</span><br><span class="line">             s=50,edgecolor=&apos;w&apos;,linewidth=1,#散点大小/边缘颜色/线宽(只针对scatter)</span><br><span class="line">             space=0,#散点图与布局图间距</span><br><span class="line">             kind=&apos;scatter&apos;, #还有reg,resid,hex,kde,scatter</span><br><span class="line">             size=5, #图表大小</span><br><span class="line">             ratio=3, #散点图与布局图高度比</span><br><span class="line">             marginal_kws=dict(bins=15,rug=True)#柱状图箱数，以及rug</span><br><span class="line">             )</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/60bde44b844ef46bb2663c96.jpg" alt></p>
+<h3 id="以下内容-数据出现问题-出图很难看"><a href="#以下内容-数据出现问题-出图很难看" class="headerlink" title="以下内容 数据出现问题 出图很难看"></a>以下内容 数据出现问题 出图很难看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 综合散点图 JointGrid() </span><br><span class="line"># 拆分绘制的散点图 即jointplot绘制的图的三个部分分别设置</span><br><span class="line"># 在JointGrid()的基础上通过plot_joint() + ax_marg_x.hist() + ax_marg_y.hist()</span><br><span class="line"></span><br><span class="line">sns.set_style(&apos;white&apos;)</span><br><span class="line"># tips=sns.load_dataset(&apos;tips&apos;) #导入网络数据 失败 解决如下：</span><br><span class="line"></span><br><span class="line">import csv</span><br><span class="line">tmp_lst = []</span><br><span class="line">with open(&apos;./seaborn-data/tips.csv&apos;, &apos;r&apos;,encoding = &apos;utf-8&apos; ) as tips:</span><br><span class="line">    reader = csv.reader(tips)</span><br><span class="line">    for row in reader:</span><br><span class="line">        tmp_lst.append(row)</span><br><span class="line">tips = pd.DataFrame(tmp_lst[1:], columns=tmp_lst[0]) </span><br><span class="line">tips.head()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 创建表格区域g，给定对应数据x,y,data</span><br><span class="line"></span><br><span class="line"># g=sns.JointGrid(x=&apos;total_bill&apos;,y=&apos;tip&apos;,data=tips)#当做一个变量</span><br><span class="line"># g.plot_joint(plt.scatter,color=&apos;m&apos;,edgecolor=&apos;white&apos;)#设置框内散点图 中间大图</span><br><span class="line"># g.ax_marg_x.hist(tips[&apos;total_bill&apos;],color=&apos;g&apos;,</span><br><span class="line">#                  )#设置x直方图 bins=np.arange(0,60,3)</span><br><span class="line"># g.ax_marg_y.hist(tips[&apos;tip&apos;],color=&apos;r&apos;,</span><br><span class="line">#                  orientation=&apos;horizontal&apos;,</span><br><span class="line">#                  )#设置y直方图 bins=np.arange(0,12,1)</span><br><span class="line"></span><br><span class="line"># from scipy import stats</span><br><span class="line"># g.annotate(stats.pearsonr) #设置标注 可以是spearmanr</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 综合散点图 JointGrid() 第二种</span><br><span class="line"># 在JointGrid()的基础上通过plot_joint() + plot_marginals()</span><br><span class="line"></span><br><span class="line"># g=sns.JointGrid(x=&apos;total_bill&apos;,y=&apos;tip&apos;,data=iris)</span><br><span class="line"># g.plot_jiont(plt.scatter,color=&apos;m&apos;)#设置框内图表 </span><br><span class="line"># g.plot_marginals(sns.distplot,kde=True,color=&apos;g&apos;)#同时绘制x,y轴直方图</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 与上面相同，也可以是密度图</span><br><span class="line"># g=sns.JiontGrid(x=&apos;列名1&apos;,y=&apos;列名2&apos;,data=df)</span><br><span class="line"># g.plot_jiont(sns.kdeplot,color=&apos;m&apos;) </span><br><span class="line"># g.plot_marginals(sns.kdeplot,kde=True,color=&apos;g&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 矩阵散点图 sns.pairplot()</span><br><span class="line"># iris=sns.load_dataset(&apos;iris&apos;) 解决如下：</span><br><span class="line"># iris</span><br><span class="line"></span><br><span class="line">import csv</span><br><span class="line">tmp_lst = []</span><br><span class="line">with open(&apos;./seaborn-data/iris.csv&apos;, &apos;r&apos;,encoding = &apos;utf-8&apos; ) as iris:</span><br><span class="line">    reader = csv.reader(iris)</span><br><span class="line">    for row in reader:</span><br><span class="line">        tmp_lst.append(row)</span><br><span class="line">iris = pd.DataFrame(tmp_lst[1:], columns=tmp_lst[0])</span><br><span class="line"># iris.head()</span><br><span class="line"></span><br><span class="line">sns.pairplot(iris,</span><br><span class="line">            kind=&apos;scatter&apos;,# 散点图、回归分布图(reg)</span><br><span class="line">            diag_kind=&apos;hist&apos;,#直方图、密度图(kde)</span><br><span class="line">            hue=&apos;species&apos;, #按照某一字段进行分类</span><br><span class="line">            palette=&apos;husl&apos;, #调色盘</span><br><span class="line">            markers=[&apos;o&apos;,&apos;s&apos;,&apos;D&apos;],#不同列的点样式</span><br><span class="line">            height=2 #图表大小</span><br><span class="line">            )</span><br></pre></td></tr></table></figure>
+<h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># sns.stripplot(x=&apos;day&apos;,#分组统计字段</span><br><span class="line">#                 y=&apos;total_bill&apos;, #分布统计字段</span><br><span class="line">#              data=tips,</span><br><span class="line">#               jitter=True,</span><br><span class="line">#               size=5,edgecolor=&apos;w&apos;,linewidth=1,marker=&apos;o&apos;</span><br><span class="line">#              )</span><br></pre></td></tr></table></figure>
+<h3 id="箱型图"><a href="#箱型图" class="headerlink" title="箱型图"></a>箱型图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.boxplot()</span><br></pre></td></tr></table></figure>
+<h3 id="小提琴图"><a href="#小提琴图" class="headerlink" title="小提琴图"></a>小提琴图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.violinplot()</span><br></pre></td></tr></table></figure>
+<h3 id="统计图"><a href="#统计图" class="headerlink" title="统计图"></a>统计图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sns.barplot()</span><br><span class="line">sns.countplot 计数柱状图</span><br><span class="line">sns.pointplot() 折线图</span><br></pre></td></tr></table></figure>
+<h2 id="线性数据可视化"><a href="#线性数据可视化" class="headerlink" title="线性数据可视化"></a>线性数据可视化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.lmplot()</span><br></pre></td></tr></table></figure>
+<h2 id="时间线图表-热图"><a href="#时间线图表-热图" class="headerlink" title="时间线图表 热图"></a>时间线图表 热图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsplot() 新版没了</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 热图</span><br><span class="line">df=pd.DataFrame(np.random.rand(10,12))</span><br><span class="line">sns.heatmap(df,vmin=0,vmax=1)</span><br></pre></td></tr></table></figure>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
+<center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        
+<div style="text-align:center;color: #006400;font-size:14px;">
+	------ The Happy Ending<i class="fa fa-paw"></i>Thanks for your reading! ------</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>写的不错嘛，赏你吃🍬</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>🤞🤞🤞</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="梦不成 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="梦不成 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不成
+  </li>
+  <li class="post-copyright-link">
+    <strong>原始链接：</strong>
+    <a href="https://shulu520.com/数据可视化/Python数据可视化/" title="Python数据可视化-Seaborn">https://shulu520.com/数据可视化/Python数据可视化/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。欢迎转载，请保留原文链接及作者
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/数据分析/Python数据分析之建模-蒙特卡罗/" rel="next" title="Python数据分析之建模-蒙特卡罗">
+                <i class="fa fa-chevron-left"></i> Python数据分析之建模-蒙特卡罗
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Python数据可视化-Gephi/Python数据可视化-Gephi/" rel="prev" title="Python数据可视化-Gephi">
+                Python数据可视化-Gephi <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzgyMi8yMDM1Nw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head_icon.gif" alt="梦不成">
+            
+              <p class="site-author-name" itemprop="name">梦不成</p>
+              <p class="site-description motion-element" itemprop="description">君子生非异也，善假于物也</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">122</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lqyasl" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2642816105@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据可视化"><span class="nav-number">1.</span> <span class="nav-text">数据可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Seaborn"><span class="nav-number">2.</span> <span class="nav-text">Seaborn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Seaborn-整体风格设置-颜色和比例等"><span class="nav-number">2.1.</span> <span class="nav-text">Seaborn 整体风格设置 颜色和比例等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调色盘"><span class="nav-number">2.2.</span> <span class="nav-text">调色盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分布式数据可视化"><span class="nav-number">2.3.</span> <span class="nav-text">分布式数据可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分布数据可视化-散点图"><span class="nav-number">2.4.</span> <span class="nav-text">分布数据可视化 散点图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以下内容-数据出现问题-出图很难看"><span class="nav-number">2.5.</span> <span class="nav-text">以下内容 数据出现问题 出图很难看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组"><span class="nav-number">2.6.</span> <span class="nav-text">分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箱型图"><span class="nav-number">2.7.</span> <span class="nav-text">箱型图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小提琴图"><span class="nav-number">2.8.</span> <span class="nav-text">小提琴图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#统计图"><span class="nav-number">2.9.</span> <span class="nav-text">统计图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性数据可视化"><span class="nav-number">3.</span> <span class="nav-text">线性数据可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间线图表-热图"><span class="nav-number">4.</span> <span class="nav-text">时间线图表 热图</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梦不成</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">本站字数共计&#58;</span>
+    
+    <span title="本站字数共计">139.8k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("04/17/2019 11:28:36");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-users"></i> 您是第
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      位访客
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 18789,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
+
+  
+
+  
+
+  
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+  
+  undefined
+
+  <!-- 点击复制按钮 -->
+  <script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"superSample":2,"width":160,"height":320,"position":"left","hOffset":-12,"vOffset":-43},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"tagMode":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>

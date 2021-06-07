@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Python,">
 
 
 
@@ -110,17 +110,18 @@
   </script>
 
 
-<meta name="description" content="君子生非异也，善假于物也">
-<meta name="keywords" content="love">
-<meta property="og:type" content="website">
-<meta property="og:title" content="梦不成">
-<meta property="og:url" content="https://shulu520.com/categories/NumPy/index.html">
+<meta name="description" content="分类问题应用场景，给事物打上一个标签">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python数据分析之KNN最临近分类">
+<meta property="og:url" content="https://shulu520.com/数据分析/Python数据分析之建模-KNN最临近分类/index.html">
 <meta property="og:site_name" content="梦不成">
-<meta property="og:description" content="君子生非异也，善假于物也">
+<meta property="og:description" content="分类问题应用场景，给事物打上一个标签">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-06-04T06:55:36.867Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梦不成">
-<meta name="twitter:description" content="君子生非异也，善假于物也">
+<meta name="twitter:title" content="Python数据分析之KNN最临近分类">
+<meta name="twitter:description" content="分类问题应用场景，给事物打上一个标签">
 
 
 
@@ -150,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="https://shulu520.com/categories/NumPy/">
+  <link rel="canonical" href="https://shulu520.com/数据分析/Python数据分析之建模-KNN最临近分类/">
 
 
 
 
 
-  <title>分类: NumPy | 梦不成</title>
+  <title>Python数据分析之KNN最临近分类 | 梦不成</title>
   
 
 
@@ -175,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -332,53 +333,323 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>NumPy<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shulu520.com/数据分析/Python数据分析之建模-KNN最临近分类/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不成">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head_icon.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦不成">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/NumPy/Python数据分析之NumPy笔记/" itemprop="url">
-              
-                <span itemprop="name">数据分析之NumPy笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Python数据分析之KNN最临近分类</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2021-04-08T22:03:00+08:00" content="2021-04-08">
-          04-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-04T12:49:26+08:00">
+                2021-06-04
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新&#58;</span>
+              
+              <time title="更新" itemprop="dateModified" datetime="2021-06-04T14:55:36+08:00">
+                2021-06-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-free-code-camp"></i> 热度
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>🔥
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  718 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  分类问题应用场景，给事物打上一个标签
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>&emsp;&emsp;</p>
+</blockquote>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul>
+<li>指的是从数据中选出已经分好类的训练集，在改分类集上应用数据挖掘分类的技术，建立分类模型，对于没有分类的数据进行分类的分析方法。</li>
+<li>应用场景：分类问题应用场景，给事物打上一个标签，通常结果为离散值，例如判断一幅图片上的动物是小猫还是一只小狗，分类通常建立在回归之上。</li>
+<li>基本的分类方法：KNN最临近算法</li>
+</ul>
+<h2 id="KNN最临近算法"><a href="#KNN最临近算法" class="headerlink" title="KNN最临近算法"></a>KNN最临近算法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"># 引入KNN模块</span><br><span class="line">from sklearn import neighbors</span><br><span class="line">import warnings</span><br><span class="line">warnings.filterwarnings(&apos;ignore&apos;) #不发出警告</span><br><span class="line"></span><br><span class="line">data=pd.DataFrame(&#123;</span><br><span class="line">    &apos;name&apos;:[&apos;北京遇上西雅图&apos;,&apos;喜欢你&apos;,&apos;疯狂动物城&apos;,&apos;战狼2&apos;,&apos;敢死队&apos;,&apos;力王&apos;],</span><br><span class="line">    &apos;fight&apos;:[3,2,1,101,99,97],</span><br><span class="line">    &apos;kiss&apos;:[104,100,81,10,5,2],</span><br><span class="line">    &apos;type&apos;:[&apos;Romans&apos;,&apos;Romans&apos;,&apos;Romans&apos;,&apos;Action&apos;,&apos;Action&apos;,&apos;Action&apos;]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"># 绘制散点图看分布位置</span><br><span class="line"></span><br><span class="line">plt.scatter(data[data[&apos;type&apos;]==&apos;Romans&apos;][&apos;fight&apos;],</span><br><span class="line">            data[data[&apos;type&apos;]==&apos;Romans&apos;][&apos;kiss&apos;],</span><br><span class="line">            color=&apos;r&apos;,marker=&apos;o&apos;,label=&apos;Romans&apos;)</span><br><span class="line"></span><br><span class="line">plt.scatter(data[data[&apos;type&apos;]==&apos;Action&apos;][&apos;fight&apos;],</span><br><span class="line">            data[data[&apos;type&apos;]==&apos;Action&apos;][&apos;kiss&apos;],</span><br><span class="line">            color=&apos;g&apos;,marker=&apos;o&apos;,label=&apos;Action&apos;)</span><br><span class="line"></span><br><span class="line">plt.grid()</span><br><span class="line">plt.legend() #添加图例</span><br><span class="line"></span><br><span class="line">knn=neighbors.KNeighborsClassifier() #建立分类模型</span><br><span class="line">#根据打架和接吻的数据预测电影类型 是爱情片或动作片</span><br><span class="line">knn.fit(data[[&apos;fight&apos;,&apos;kiss&apos;]],data[&apos;type&apos;]) </span><br><span class="line"></span><br><span class="line">#《你的名字》电影的fight&apos;,&apos;kiss&apos;两个数据，预测到类型为爱情片</span><br><span class="line">knn.predict([[18,90]]) </span><br><span class="line"></span><br><span class="line">plt.scatter(19,90,color=&apos;r&apos;,marker=&apos;x&apos;,label=&apos;Romans&apos;)</span><br><span class="line">plt.ylabel=&apos;kiss&apos;</span><br><span class="line">plt.xlabel=&apos;fight&apos;</span><br><span class="line">plt.text(19,90,&apos;《你的名字》&apos;,color=&apos;r&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 一次预测多个电影的类型</span><br><span class="line">data_test=pd.DataFrame(&#123;</span><br><span class="line">    &apos;name&apos;:[&apos;电影x&apos;,&apos;电影y&apos;,&apos;电影z&apos;,&apos;电影m&apos;,&apos;电影n&apos;],</span><br><span class="line">    &apos;fight&apos;:[32,27,11,41,69],</span><br><span class="line">    &apos;kiss&apos;:[24,10,41,110,54]</span><br><span class="line">&#125;)</span><br><span class="line">data_test[&apos;type_test&apos;]=knn.predict(data_test[[&apos;fight&apos;,&apos;kiss&apos;]])</span><br><span class="line">data_test #得到了类型</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># KNN算法-官方案例植物分类 多参数</span><br><span class="line">from sklearn import datasets</span><br><span class="line">iris=datasets.load_iris() #导入数据</span><br><span class="line">print(iris.keys())</span><br><span class="line">print(&apos;数据长度为%i条&apos; % len(iris[&apos;data&apos;]))</span><br><span class="line"></span><br><span class="line">print(iris.feature_names) #特征名称</span><br><span class="line">print(iris.target_names)#分类名称</span><br><span class="line">print(iris.target) #分类后数据</span><br><span class="line"></span><br><span class="line">data=pd.DataFrame(iris.data,columns=iris.feature_names)</span><br><span class="line">data[&apos;target&apos;]=iris.target</span><br><span class="line"></span><br><span class="line">ty=pd.DataFrame(&#123;</span><br><span class="line">    &apos;target&apos;:[0,1,2],</span><br><span class="line">    &apos;target_names&apos;:[&apos;setosa&apos;,&apos;versicolor&apos;,&apos;virginica&apos;]</span><br><span class="line">&#125;)</span><br><span class="line">print(ty)</span><br><span class="line"></span><br><span class="line">df=pd.merge(data,ty,on=&apos;target&apos;)</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">knn=neighbors.KNeighborsClassifier()</span><br><span class="line">knn.fit(iris.data,df[&apos;target_names&apos;]) </span><br><span class="line"></span><br><span class="line">#这是一组检测数据 多组的话类似上面的多个电影</span><br><span class="line"># [0.2,0.1,0.3,0.4]</span><br><span class="line">pre_data=knn.predict([[0.2,0.1,0.3,0.4]])</span><br><span class="line">print(pre_data) #得到花名为setosa</span><br></pre></td></tr></table></figure>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
+<center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
 
 
       
     </div>
+    
+    
+    
 
+    
+      <div>
+        
+<div style="text-align:center;color: #006400;font-size:14px;">
+	------ The Happy Ending<i class="fa fa-paw"></i>Thanks for your reading! ------</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>写的不错嘛，赏你吃🍬</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>🤞🤞🤞</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="梦不成 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="梦不成 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不成
+  </li>
+  <li class="post-copyright-link">
+    <strong>原始链接：</strong>
+    <a href="https://shulu520.com/数据分析/Python数据分析之建模-KNN最临近分类/" title="Python数据分析之KNN最临近分类">https://shulu520.com/数据分析/Python数据分析之建模-KNN最临近分类/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。欢迎转载，请保留原文链接及作者
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/数据分析/Python数据分析之建模-线性回归/" rel="next" title="数据分析之线性回归">
+                <i class="fa fa-chevron-left"></i> 数据分析之线性回归
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/数据分析/Python数据分析之建模-聚类/" rel="prev" title="Python数据分析之聚类">
+                Python数据分析之聚类 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -386,6 +657,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzgyMi8yMDM1Nw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -406,8 +686,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -424,7 +713,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">122</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -446,7 +735,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -493,6 +782,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KNN最临近算法"><span class="nav-number">2.</span> <span class="nav-text">KNN最临近算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -530,7 +835,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">132.7k</span>
+    <span title="本站字数共计">139.8k</span>
   
 </div>
 
@@ -690,6 +995,10 @@ setInterval("createtime()",250);
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -718,6 +1027,17 @@ setInterval("createtime()",250);
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -1102,6 +1422,23 @@ setInterval("createtime()",250);
   </script>
 
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 18789,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
 

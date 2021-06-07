@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="python,">
 
 
 
@@ -110,18 +110,18 @@
   </script>
 
 
-<meta name="description" content="Python数据分析以及机器学习的基础知识NumPy简单了解">
-<meta name="keywords" content="love">
+<meta name="description" content="缺失值，异常值分析处理">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据分析之NumPy笔记">
-<meta property="og:url" content="https://shulu520.com/NumPy/Python数据分析之NumPy笔记/index.html">
+<meta property="og:title" content="数据分析之数据处理">
+<meta property="og:url" content="https://shulu520.com/数据分析/Python数据分析之数据处理-缺失和异常/index.html">
 <meta property="og:site_name" content="梦不成">
-<meta property="og:description" content="Python数据分析以及机器学习的基础知识NumPy简单了解">
+<meta property="og:description" content="缺失值，异常值分析处理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-22T12:32:44.793Z">
+<meta property="og:updated_time" content="2021-06-03T06:02:15.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据分析之NumPy笔记">
-<meta name="twitter:description" content="Python数据分析以及机器学习的基础知识NumPy简单了解">
+<meta name="twitter:title" content="数据分析之数据处理">
+<meta name="twitter:description" content="缺失值，异常值分析处理">
 
 
 
@@ -151,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="https://shulu520.com/NumPy/Python数据分析之NumPy笔记/">
+  <link rel="canonical" href="https://shulu520.com/数据分析/Python数据分析之数据处理-缺失和异常/">
 
 
 
 
 
-  <title>数据分析之NumPy笔记 | 梦不成</title>
+  <title>数据分析之数据处理 | 梦不成</title>
   
 
 
@@ -347,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shulu520.com/NumPy/Python数据分析之NumPy笔记/">
+    <link itemprop="mainEntityOfPage" href="https://shulu520.com/数据分析/Python数据分析之数据处理-缺失和异常/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="梦不成">
@@ -364,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据分析之NumPy笔记</h1>
+          <h1 class="post-title" itemprop="name headline">数据分析之数据处理</h1>
         
 
         <div class="post-meta">
@@ -377,8 +377,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-08T22:03:00+08:00">
-                2021-04-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-02T14:33:28+08:00">
+                2021-06-02
               </time>
             
 
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新&#58;</span>
               
-              <time title="更新" itemprop="dateModified" datetime="2021-04-22T20:32:44+08:00">
-                2021-04-22
+              <time title="更新" itemprop="dateModified" datetime="2021-06-03T14:02:15+08:00">
+                2021-06-03
               </time>
             
           </span>
@@ -412,8 +412,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NumPy/" itemprop="url" rel="index">
-                    <span itemprop="name">NumPy</span>
+                  <a href="/categories/数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数据分析</span>
                   </a>
                 </span>
 
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  1.4k 字
+                  1.7k 字
                 </span>
               
 
@@ -464,7 +464,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6 分钟
+                  8 分钟
                 </span>
               
             </div>
@@ -472,7 +472,7 @@
 
           
               <div class="post-description">
-                  Python数据分析以及机器学习的基础知识NumPy简单了解
+                  缺失值，异常值分析处理
               </div>
           
 
@@ -493,63 +493,23 @@
 <p>&emsp;&emsp;</p>
 </blockquote>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
-<h2 id="NumPy简介"><a href="#NumPy简介" class="headerlink" title="NumPy简介"></a>NumPy简介</h2><ul>
-<li>是一个运行速度非常快的数学库，主要用于数组计算</li>
-<li>NumPy 通常与 SciPy和 Matplotlib（绘图库）一起使用， 这种组合广泛用于替代 MatLab</li>
-<li>是一个强大的科学计算环境，有助于我们通过 Python 学习数据科学或者机器学习</li>
-<li>包含一个强大的N维数组对象 ndarray<h3 id="NumPy数据结构"><a href="#NumPy数据结构" class="headerlink" title="NumPy数据结构"></a>NumPy数据结构</h3></li>
-<li>numpy 支持的数据类型比 Python 内置的类型要多很多，</li>
-<li>基本上可以和 C 语言的数据类型对应上，其中部分类型对应为 Python 内置的类型</li>
+<h2 id="缺失值处理"><a href="#缺失值处理" class="headerlink" title="缺失值处理"></a>缺失值处理</h2><ul>
+<li>数据缺失主要包括记录缺失和字段信息缺失等情况，其对数据分析会有较大影响，导致结果不确定性更加显著</li>
+<li>缺失值的处理：删除记录,数据插补,不处理</li>
 </ul>
-<h2 id="创建Ndarray数组对象"><a href="#创建Ndarray数组对象" class="headerlink" title="创建Ndarray数组对象"></a>创建Ndarray数组对象</h2><h3 id="使用array函数"><a href="#使用array函数" class="headerlink" title="使用array函数"></a>使用array函数</h3><ul>
-<li>numpy默认ndarray的所有元素的类型是相同的，这一点与Python中的list不同</li>
-<li>如果传进来的列表中包含不同的类型，则统一为同一类型，优先级：str&gt;float&gt;int<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一维数组</span><br><span class="line">import numpy as np</span><br><span class="line">arr = np.array([1,2,3,4,5])</span><br><span class="line">print(arr) # [1 2 3 4 5]</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from scipy import stats</span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 判断是否有缺失值数据 </span><br><span class="line"># isnull：缺失值为True，非缺失值为False</span><br><span class="line"># notnull：缺失值为False，非缺失值为True</span><br><span class="line"></span><br><span class="line">s = pd.Series([12,33,45,23,np.nan,np.nan,66,54,np.nan,99])</span><br><span class="line">df = pd.DataFrame(&#123;&apos;value1&apos;:[12,33,45,23,np.nan,np.nan,66,54,np.nan,99,190],</span><br><span class="line">                  &apos;value2&apos;:[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;,np.nan,np.nan,&apos;f&apos;,&apos;g&apos;,np.nan,&apos;g&apos;]&#125;)</span><br><span class="line"></span><br><span class="line">print(s.isnull())  </span><br><span class="line">print(df.notnull()) </span><br><span class="line">print(df[&apos;value1&apos;].notnull())  # 指定列</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s2 = s[s.isnull() == False] #筛选掉空值之后的数据</span><br><span class="line">print(s2)</span><br><span class="line"></span><br><span class="line"># df2 = df[df[&apos;value2&apos;].notnull()]  #得到根据value2筛选之后的df </span><br><span class="line">df2 = df[df[&apos;value2&apos;].notnull()] [&apos;value1&apos;] #得到根据value2筛选之后的value1列</span><br><span class="line">print(df2)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 删除缺失值 - dropna</span><br><span class="line"># drop方法：可直接用于Series，Dataframe</span><br><span class="line"># 注意inplace参数，默认False → 生成新的值</span><br><span class="line"></span><br><span class="line">s = pd.Series([12,33,45,23,np.nan,np.nan,66,54,np.nan,99])</span><br><span class="line">df = pd.DataFrame(&#123;&apos;value1&apos;:[12,33,45,23,np.nan,np.nan,66,54,np.nan,99,190],</span><br><span class="line">                  &apos;value2&apos;:[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;,np.nan,np.nan,&apos;f&apos;,&apos;g&apos;,np.nan,&apos;g&apos;]&#125;)</span><br><span class="line"># print(s)</span><br><span class="line"># print(&apos;------------------&apos;)</span><br><span class="line"># s.dropna(inplace = True)</span><br><span class="line"># print(s)</span><br><span class="line"></span><br><span class="line">print(df)</span><br><span class="line">print(&apos;------------------&apos;)</span><br><span class="line">df2=df[&apos;value1&apos;].dropna() #只会生成新的数据</span><br><span class="line">print(df2)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># 填充/替换缺失数据 - fillna、replace</span><br><span class="line"></span><br><span class="line">s = pd.Series([12,33,45,23,np.nan,np.nan,66,54,np.nan,99])</span><br><span class="line">df = pd.DataFrame(&#123;&apos;value1&apos;:[12,33,45,23,np.nan,np.nan,66,54,np.nan,99,190],</span><br><span class="line">                  &apos;value2&apos;:[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;,np.nan,np.nan,&apos;f&apos;,&apos;g&apos;,np.nan,&apos;g&apos;]&#125;)</span><br><span class="line"></span><br><span class="line">s.fillna(0,inplace = True)</span><br><span class="line">print(s)</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"># s.fillna(value=None, method=None, axis=None, inplace=False, limit=None, downcast=None, **kwargs)</span><br><span class="line"># value：填充值</span><br><span class="line"># 注意inplace参数</span><br><span class="line"></span><br><span class="line">df[&apos;value1&apos;].fillna(method = &apos;pad&apos;,inplace = True)</span><br><span class="line">print(df)</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"># method参数：</span><br><span class="line"># pad / ffill → 用之前的数据填充 </span><br><span class="line"># backfill / bfill → 用之后的数据填充 </span><br><span class="line"></span><br><span class="line">s = pd.Series([1,1,1,1,2,2,2,3,4,5,np.nan,np.nan,66,54,np.nan,99])</span><br><span class="line">s.replace(np.nan,&apos;缺失数据&apos;,inplace = True)</span><br><span class="line">print(s)</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"># df.replace(to_replace=None, value=None, inplace=False, limit=None, regex=False, method=&apos;pad&apos;, axis=None)</span><br><span class="line"># to_replace → 被替换的值</span><br><span class="line"># value → 替换值</span><br><span class="line"></span><br><span class="line">s.replace([1,2,3],np.nan,inplace = True)</span><br><span class="line">print(s)</span><br><span class="line"># 多个值用np.nan代替</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 缺失值插补</span><br><span class="line"># 几种思路：均值/中位数/众数插补、临近值(前面或后面的值)插补、插值法</span><br><span class="line"># （1）均值/中位数/众数插补</span><br><span class="line"></span><br><span class="line">s = pd.Series([1,2,3,np.nan,3,4,5,5,5,5,np.nan,np.nan,6,6,7,12,2,np.nan,3,4])</span><br><span class="line">#print(s)</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"># 创建数据</span><br><span class="line"></span><br><span class="line">u = s.mean()     # 均值</span><br><span class="line">me = s.median()  # 中位数</span><br><span class="line">mod = s.mode()   # 众数</span><br><span class="line">print(&apos;均值为：%.2f, 中位数为：%.2f&apos; % (u,me))</span><br><span class="line">print(&apos;众数为：&apos;, mod.tolist())</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s.fillna(u,inplace = True)# 用均值填补</span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"># 缺失值插补</span><br><span class="line"># （3）插值法 —— 拉格朗日插值法，实际运用</span><br><span class="line"></span><br><span class="line">data = pd.Series(np.random.rand(100)*100)</span><br><span class="line">data[3,6,33,56,45,66,67,80,90] = np.nan</span><br><span class="line">print(data.head())</span><br><span class="line">print(&apos;总数据量:%i&apos; % len(data))</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"></span><br><span class="line"># 缺失值的数量</span><br><span class="line">data_na = data[data.isnull()]</span><br><span class="line">print(&apos;缺失值数据量:%i&apos; % len(data_na))</span><br><span class="line">print(&apos;缺失数据占比:%.2f%%&apos; % (len(data_na) / len(data) * 100))</span><br><span class="line"></span><br><span class="line">data_c = data.fillna(data.median())  #  中位数填充缺失值</span><br><span class="line"></span><br><span class="line">fig,axes = plt.subplots(1,4,figsize = (20,5))</span><br><span class="line"></span><br><span class="line">data.plot.box(ax = axes[0],grid = True,title = &apos;数据分布&apos;)</span><br><span class="line"></span><br><span class="line"># 密度图查看缺失值情况</span><br><span class="line"># 密度曲线默认删除缺失值</span><br><span class="line">data.plot(kind = &apos;kde&apos;,style = &apos;--r&apos;,ax = axes[1],grid = True,title = &apos;删除缺失值&apos;,xlim = [-50,150])</span><br><span class="line"></span><br><span class="line"># 缺失值填充中位数</span><br><span class="line">data_c.plot(kind = &apos;kde&apos;,style = &apos;--b&apos;,ax = axes[2],grid = True,title = &apos;缺失值填充中位数&apos;,xlim = [-50,150])</span><br><span class="line"></span><br><span class="line"># 创建函数，做插值，由于数据量原因，以空值前后5个数据（共10个数据）为例做插值</span><br><span class="line"></span><br><span class="line">def na_c(s,n,k=5): #s:数据，n:插值的位置,k:n前后的5条数据</span><br><span class="line">    y = s[list(range(n-k,n+1+k))] # 取数</span><br><span class="line">    y = y[y.notnull()]  # 剔除空值</span><br><span class="line">    return(lagrange(y.index,list(y))(n))</span><br><span class="line"></span><br><span class="line">na_re = []</span><br><span class="line">for i in range(len(data)):</span><br><span class="line">    if data.isnull()[i]:</span><br><span class="line">        data[i] = na_c(data,i)</span><br><span class="line">        print(na_c(data,i))</span><br><span class="line">        na_re.append(data[i])</span><br><span class="line">data.dropna(inplace=True)  # 清除插值后仍存在的缺失值</span><br><span class="line">data.plot(kind = &apos;kde&apos;,style = &apos;--k&apos;,ax = axes[3],grid = True,title = &apos;拉格朗日插值后&apos;,xlim = [-50,150])</span><br></pre></td></tr></table></figure>
+<h2 id="异常值分析处理"><a href="#异常值分析处理" class="headerlink" title="异常值分析处理"></a>异常值分析处理</h2><ul>
+<li>分析：箱形图(工作中常用)，3σ法则(服从正太分布才行)</li>
+<li>处理：删除，修正、填补</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">二维数组</span><br><span class="line">import numpy as np</span><br><span class="line">arr = np.array([[1,2,3],[4,5,6]])</span><br><span class="line">print(arr)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">常用的二维数组创建方式</span><br><span class="line">a=np.random.randint(0,8,6)</span><br><span class="line">print(a) #[6 2 4 4 0 6]</span><br><span class="line"></span><br><span class="line">a=np.random.randint(0,8,6).reshape(2,3)</span><br><span class="line">print(a) </span><br><span class="line">[[3 1 1]</span><br><span class="line"> [7 6 3]]</span><br><span class="line"></span><br><span class="line">a4=np.arange(0,20,2).reshape(2,5)</span><br><span class="line">print(a4)</span><br><span class="line"></span><br><span class="line">[[ 0,  2,  4,  6,  8],</span><br><span class="line">[10, 12, 14, 16, 18]])</span><br></pre></td></tr></table></figure>
-<h2 id="数组形状"><a href="#数组形状" class="headerlink" title="数组形状"></a>数组形状</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">a4.shape #(2, 5)</span><br><span class="line"></span><br><span class="line">#转置</span><br><span class="line">a5=a4.T</span><br><span class="line">a5</span><br><span class="line"></span><br><span class="line">[[ 0, 10],</span><br><span class="line">  [ 2, 12],</span><br><span class="line">  [ 4, 14],</span><br><span class="line">  [ 6, 16],</span><br><span class="line">  [ 8, 18]]</span><br><span class="line"></span><br><span class="line">a5.shape #(5, 2)</span><br><span class="line"></span><br><span class="line">#resize</span><br><span class="line">a6=np.arange(0,10,2)</span><br><span class="line">print(a6) #[0 2 4 6 8]</span><br><span class="line"></span><br><span class="line">a6.resize(3)</span><br><span class="line">print(a6) #[0 2 4]</span><br><span class="line"></span><br><span class="line">a6.resize(6)</span><br><span class="line">print(a6) #[0 2 4 6 8 0]</span><br><span class="line"></span><br><span class="line">a6.size #6</span><br></pre></td></tr></table></figure>
-<h2 id="数组类型转换"><a href="#数组类型转换" class="headerlink" title="数组类型转换"></a>数组类型转换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=np.random.randint(1,8,3)</span><br><span class="line">a.dtype #dtype(&apos;int32&apos;)</span><br><span class="line"></span><br><span class="line">a=np.random.randint(1,8,3).astype(&apos;int64&apos;)</span><br><span class="line">a.dtype #dtype(&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
-<h2 id="数组拼接"><a href="#数组拼接" class="headerlink" title="数组拼接"></a>数组拼接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a1=np.arange(4)</span><br><span class="line">a2=np.arange(2,6)</span><br><span class="line">print(a1) #[0 1 2 3]</span><br><span class="line">print(a2) #[2 3 4 5]</span><br><span class="line">#横向拼接</span><br><span class="line">print(np.hstack((a1,a2))) #[0 1 2 3 2 3 4 5]</span><br><span class="line"></span><br><span class="line">#竖向拼接</span><br><span class="line">print(np.vstack((a1,a2)))</span><br><span class="line">[[0 1 2 3]</span><br><span class="line"> [2 3 4 5]]</span><br></pre></td></tr></table></figure>
-<h2 id="数组添加"><a href="#数组添加" class="headerlink" title="数组添加"></a>数组添加</h2><ul>
-<li>在数组的末尾添加值</li>
-<li>追加操作会分配整个数组，并把原来的数组复制到新数组中</li>
-<li>输入数组的维度必须匹配否则将生成ValueError</li>
-<li>axis当axis无定义时，是横向加成，返回总是为一维数组！</li>
-<li>当axis有定义的时候，分别为0和1的时候。为0的时候（列数要相同）。</li>
-<li>当axis为1时，数组是加在右边（行数要相同）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">x=np.arange(6).reshape(2,3)</span><br><span class="line">print(x) </span><br><span class="line"># [[0 1 2]</span><br><span class="line"> [3 4 5]]</span><br><span class="line"></span><br><span class="line">y=[7,8,9]</span><br><span class="line">z=np.append(x,y)</span><br><span class="line">print(z)</span><br><span class="line"># [0 1 2 3 4 5 7 8 9]</span><br><span class="line"></span><br><span class="line">z2=np.append(x,[y],axis=0)</span><br><span class="line">print(z2)</span><br><span class="line">#</span><br><span class="line">[[0 1 2]</span><br><span class="line"> [3 4 5]</span><br><span class="line"> [7 8 9]]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>insert()方法</li>
-<li>在给定索引之前，沿给定轴在输入数组中插入值</li>
-</ul>
-<h2 id="delete-删除"><a href="#delete-删除" class="headerlink" title="delete()删除"></a>delete()删除</h2><h2 id="unique-去重"><a href="#unique-去重" class="headerlink" title="unique()去重"></a>unique()去重</h2><h2 id="数组拆分"><a href="#数组拆分" class="headerlink" title="数组拆分"></a>数组拆分</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">a3=np.arange(16).reshape(4,4)</span><br><span class="line">#横向</span><br><span class="line">a4,a5=np.hsplit(a3,2)</span><br><span class="line">print(a3)</span><br><span class="line">print(a4)</span><br><span class="line">print(a5)</span><br><span class="line"></span><br><span class="line">[[ 0  1  2  3]</span><br><span class="line"> [ 4  5  6  7]</span><br><span class="line"> [ 8  9 10 11]</span><br><span class="line"> [12 13 14 15]]</span><br><span class="line"></span><br><span class="line">[[ 0  1]</span><br><span class="line"> [ 4  5]</span><br><span class="line"> [ 8  9]</span><br><span class="line"> [12 13]]</span><br><span class="line"></span><br><span class="line">[[ 2  3]</span><br><span class="line"> [ 6  7]</span><br><span class="line"> [10 11]</span><br><span class="line"> [14 15]]</span><br><span class="line"></span><br><span class="line">#纵向</span><br><span class="line">a6,a7,a8,a9=np.vsplit(a3,4)</span><br><span class="line">print(a6) #[[0 1 2 3]]</span><br><span class="line">print(a7) #[[4 5 6 7]]</span><br><span class="line">print(a8) #[[ 8  9 10 11]]</span><br><span class="line">print(a9) #[[12 13 14 15]]</span><br></pre></td></tr></table></figure>
-<h2 id="数组的复制"><a href="#数组的复制" class="headerlink" title="数组的复制"></a>数组的复制</h2><ul>
-<li>复制数组，产生一个新的数组，而直接赋值的话，一个修改后另一个也跟着变<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([1,2,3])</span><br><span class="line">b=a</span><br><span class="line">print(a) #[1 2 3]</span><br><span class="line">print(b) #[1 2 3]</span><br><span class="line">b[0]=8</span><br><span class="line">print(a) #[8 2 3]</span><br><span class="line">print(b) #[8 2 3]</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c=a.copy()</span><br><span class="line">print(c) #[8 2 3]</span><br><span class="line">c[1]=6</span><br><span class="line">print(a) #[8 2 3]</span><br><span class="line">print(c) #[8 6 3]</span><br></pre></td></tr></table></figure>
-<h2 id="数组索引"><a href="#数组索引" class="headerlink" title="数组索引"></a>数组索引</h2><ul>
-<li>ndarray对象的内容可以通过索引或切片来访问和修改，与Python中list的切片操作一样</li>
-<li>二维时，a[1:,3:],这种第一个表示行索引，第二个表示列索引</li>
-<li>布尔索引通过布尔运算（如：比较运算符）来获取符合指定条件的元素的数组,如print(a[a&gt;5])</li>
-<li>可以通过冒号分隔切片参数 start:stop:step 来进行切片操作</li>
-<li>冒号 : 的解释</li>
-<li>如果只放置一个参数，如 [2]，将返回与该索引相对应的单个元素。如果为 [2:]，表示从该索引开始以后的所有项都将被提取。如果使用了两个参数，如 [2:7]，那么则提取两个索引(不包括停止索引)之间的项</li>
-</ul>
-<h2 id="广播"><a href="#广播" class="headerlink" title="广播"></a>广播</h2><ul>
-<li>是numpy对不同形状(shape)的数组进行数值计算的方式，对数组的算术运算通常在相应的元素上进行</li>
-<li>较小的数组会广播到较大数组的大小，以便使它们的形状可兼容</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([1,2,3])</span><br><span class="line">b=np.arange(12).reshape(4,3)</span><br><span class="line">print(a) #[1 2 3]</span><br><span class="line">print(b) </span><br><span class="line"></span><br><span class="line">[[ 0  1  2]</span><br><span class="line"> [ 3  4  5]</span><br><span class="line"> [ 6  7  8]</span><br><span class="line"> [ 9 10 11]]</span><br><span class="line"></span><br><span class="line">print(a+b)</span><br><span class="line">[[ 1,  3,  5],</span><br><span class="line">[ 4,  6,  8],</span><br><span class="line">[ 7,  9, 11],</span><br><span class="line">[10, 12, 14]]</span><br></pre></td></tr></table></figure>
-<h2 id="extract-函数提取元素"><a href="#extract-函数提取元素" class="headerlink" title="extract()函数提取元素"></a>extract()函数提取元素</h2><ul>
-<li>根据某个条件从数组中抽取元素，返回满足条件的元素</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=np.arange(5)</span><br><span class="line">print(np.extract(a&gt;2,a))</span><br><span class="line"># [3 4]</span><br></pre></td></tr></table></figure>
-<h2 id="arange函数用于创建等差数组"><a href="#arange函数用于创建等差数组" class="headerlink" title="arange函数用于创建等差数组"></a>arange函数用于创建等差数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange([start, ]stop, [step, ]dtype=None)</span><br></pre></td></tr></table></figure>
-<h2 id="np-random随机数"><a href="#np-random随机数" class="headerlink" title="np.random随机数"></a>np.random随机数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">rand()	</span><br><span class="line">生成一个[0,1),不包括1，之间的随机浮点数或N维浮点数组。</span><br><span class="line">1 np.random.rand(a)</span><br><span class="line">表示生成a个[0,1)的数</span><br><span class="line">2 np.random.rand(a,b))</span><br><span class="line">表示生成a行b列的二维数组，值为[0,1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">randn(d0, d1, …, dn)	产生标准正态分布随机数</span><br><span class="line"></span><br><span class="line">randint(low[, high, size, dtype])	产生随机整数</span><br><span class="line"></span><br><span class="line">random_sample([size])	在[0,1）内产生随机数</span><br><span class="line"></span><br><span class="line">choice(a[, size, replace, p])	从a中随机选择指定数据</span><br></pre></td></tr></table></figure>
-<h2 id="NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作"><a href="#NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作" class="headerlink" title="NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作"></a>NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作</h2><p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#异常值分析 3σ法则</span><br><span class="line">#3σ法则：数据服从正态分布，异常数据定义为与平均值的差大于3倍标准差的值</span><br><span class="line">data = pd.Series(np.random.randn(10000)*100)</span><br><span class="line"></span><br><span class="line">u = data.mean()  # 计算均值</span><br><span class="line">std = data.std()  # 计算标准差</span><br><span class="line">stats.kstest(data, &apos;norm&apos;, (u, std)) #正太性检验 若大于0.05则为正态分布</span><br><span class="line">print(&apos;均值为：%.3f，标准差为：%.3f&apos; % (u,std))</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"></span><br><span class="line">fig = plt.figure(figsize = (10,6))</span><br><span class="line">ax1 = fig.add_subplot(2,1,1)</span><br><span class="line"></span><br><span class="line"># 绘制数据密度曲线</span><br><span class="line">data.plot(kind = &apos;kde&apos;,grid = True,style = &apos;-k&apos;,title = &apos;密度曲线&apos;)</span><br><span class="line"># 3σ线 这两条线两边的为异常值</span><br><span class="line">plt.axvline(3*std,color=&apos;r&apos;,linestyle=&quot;--&quot;,alpha=0.8) </span><br><span class="line">plt.axvline(-3*std,color=&apos;r&apos;,linestyle=&quot;--&quot;,alpha=0.8) </span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(2,1,2)</span><br><span class="line"># 筛选出异常值error、剔除异常值之后的数据data_c</span><br><span class="line">error = data[np.abs(data - u) &gt; 3*std]</span><br><span class="line">data_c = data[np.abs(data - u) &lt;= 3*std]</span><br><span class="line">print(&apos;异常值共%i条&apos; % len(error))</span><br><span class="line"></span><br><span class="line">plt.scatter(data_c.index,data_c,color = &apos;k&apos;,marker=&apos;.&apos;,alpha = 0.3)</span><br><span class="line">plt.scatter(error.index,error,color = &apos;r&apos;,marker=&apos;.&apos;,alpha = 0.5)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"># 异常值分析 箱型图分析</span><br><span class="line"></span><br><span class="line">fig = plt.figure(figsize = (14,8))</span><br><span class="line">ax1 = fig.add_subplot(2,1,1)</span><br><span class="line">color = dict(boxes=&apos;DarkGreen&apos;, whiskers=&apos;DarkOrange&apos;, medians=&apos;DarkBlue&apos;, caps=&apos;Gray&apos;)</span><br><span class="line">data.plot.box(vert=False, grid = True,color = color,ax = ax1,label = &apos;样本数据&apos;)</span><br><span class="line"># 箱型图看数据分布情况</span><br><span class="line"># 以内限为界</span><br><span class="line"></span><br><span class="line">s = data.describe()</span><br><span class="line">print(s)</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"># 基本统计量</span><br><span class="line"></span><br><span class="line">q1 = s[&apos;25%&apos;]</span><br><span class="line">q3 = s[&apos;75%&apos;]</span><br><span class="line">iqr = q3 - q1 #分位差</span><br><span class="line">mi = q1 - 1.5*iqr #下限</span><br><span class="line">ma = q3 + 1.5*iqr #上限</span><br><span class="line">print(&apos;分位差为：%.3f，下限为：%.3f，上限为：%.3f&apos; % (iqr,mi,ma))</span><br><span class="line">print(&apos;------&apos;)</span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(2,1,2)</span><br><span class="line"></span><br><span class="line"># 筛选出异常值error、剔除异常值之后的数据data_c</span><br><span class="line">error = data[(data &lt; mi) | (data &gt; ma)]</span><br><span class="line">data_c = data[(data &gt;= mi) &amp; (data &lt;= ma)]</span><br><span class="line">print(&apos;异常值共%i条&apos; % len(error))</span><br><span class="line"></span><br><span class="line">plt.scatter(data_c.index,data_c,color = &apos;k&apos;,marker=&apos;.&apos;,alpha = 0.3)</span><br><span class="line">plt.scatter(error.index,error,color = &apos;r&apos;,marker=&apos;.&apos;,alpha = 0.5)</span><br><span class="line">plt.grid()</span><br><span class="line"># 图表表达</span><br></pre></td></tr></table></figure>
+<p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
 <center><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
 
 
@@ -610,7 +570,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>原始链接：</strong>
-    <a href="https://shulu520.com/NumPy/Python数据分析之NumPy笔记/" title="数据分析之NumPy笔记">https://shulu520.com/NumPy/Python数据分析之NumPy笔记/</a>
+    <a href="https://shulu520.com/数据分析/Python数据分析之数据处理-缺失和异常/" title="数据分析之数据处理">https://shulu520.com/数据分析/Python数据分析之数据处理-缺失和异常/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -622,6 +582,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+        </div>
       
 
       
@@ -651,8 +617,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/excel/excel笔记/" rel="next" title="excel笔记">
-                <i class="fa fa-chevron-left"></i> excel笔记
+              <a href="/统计分析能力/Python数据分析之数据特征分析/" rel="next" title="数据特征分析">
+                <i class="fa fa-chevron-left"></i> 数据特征分析
               </a>
             
           </div>
@@ -661,8 +627,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/pandas/Python数据分析之pandas笔记/" rel="prev" title="Python数据分析之pandas笔记">
-                Python数据分析之pandas笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/数据分析/Python数据分析之数据处理-数据标准化/" rel="prev" title="Python数据分析之数据标准化">
+                Python数据分析之数据标准化 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -753,7 +719,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">122</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -775,7 +741,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -831,7 +797,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy简介"><span class="nav-number">1.</span> <span class="nav-text">NumPy简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NumPy数据结构"><span class="nav-number">1.1.</span> <span class="nav-text">NumPy数据结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Ndarray数组对象"><span class="nav-number">2.</span> <span class="nav-text">创建Ndarray数组对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用array函数"><span class="nav-number">2.1.</span> <span class="nav-text">使用array函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组形状"><span class="nav-number">3.</span> <span class="nav-text">数组形状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组类型转换"><span class="nav-number">4.</span> <span class="nav-text">数组类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组拼接"><span class="nav-number">5.</span> <span class="nav-text">数组拼接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组添加"><span class="nav-number">6.</span> <span class="nav-text">数组添加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#delete-删除"><span class="nav-number">7.</span> <span class="nav-text">delete()删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unique-去重"><span class="nav-number">8.</span> <span class="nav-text">unique()去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组拆分"><span class="nav-number">9.</span> <span class="nav-text">数组拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的复制"><span class="nav-number">10.</span> <span class="nav-text">数组的复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组索引"><span class="nav-number">11.</span> <span class="nav-text">数组索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广播"><span class="nav-number">12.</span> <span class="nav-text">广播</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extract-函数提取元素"><span class="nav-number">13.</span> <span class="nav-text">extract()函数提取元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arange函数用于创建等差数组"><span class="nav-number">14.</span> <span class="nav-text">arange函数用于创建等差数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#np-random随机数"><span class="nav-number">15.</span> <span class="nav-text">np.random随机数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作"><span class="nav-number">16.</span> <span class="nav-text">NumPy是后面pandas的基础，了解一下就行了，以后都是在它的封装之上的pandas上操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缺失值处理"><span class="nav-number">1.</span> <span class="nav-text">缺失值处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常值分析处理"><span class="nav-number">2.</span> <span class="nav-text">异常值分析处理</span></a></li></ol></div>
             
 
           </div>
@@ -875,7 +841,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">132.7k</span>
+    <span title="本站字数共计">139.8k</span>
   
 </div>
 

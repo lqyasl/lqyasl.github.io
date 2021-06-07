@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="pandas,">
+  <meta name="keywords" content="Python,">
 
 
 
@@ -110,18 +110,18 @@
   </script>
 
 
-<meta name="description" content="数据分析工具：Pandas">
-<meta name="keywords" content="pandas">
+<meta name="description" content="数据分析工具：Pandas数据处理">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python数据分析之pandas笔记">
-<meta property="og:url" content="https://shulu520.com/pandas/Python数据分析之pandas笔记/index.html">
+<meta property="og:title" content="Python数据分析之pandas">
+<meta property="og:url" content="https://shulu520.com/数据分析/Python数据分析之工具-pandas笔记/index.html">
 <meta property="og:site_name" content="梦不成">
-<meta property="og:description" content="数据分析工具：Pandas">
+<meta property="og:description" content="数据分析工具：Pandas数据处理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-15T06:39:39.698Z">
+<meta property="og:updated_time" content="2021-06-07T07:59:03.278Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python数据分析之pandas笔记">
-<meta name="twitter:description" content="数据分析工具：Pandas">
+<meta name="twitter:title" content="Python数据分析之pandas">
+<meta name="twitter:description" content="数据分析工具：Pandas数据处理">
 
 
 
@@ -151,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="https://shulu520.com/pandas/Python数据分析之pandas笔记/">
+  <link rel="canonical" href="https://shulu520.com/数据分析/Python数据分析之工具-pandas笔记/">
 
 
 
 
 
-  <title>Python数据分析之pandas笔记 | 梦不成</title>
+  <title>Python数据分析之pandas | 梦不成</title>
   
 
 
@@ -347,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://shulu520.com/pandas/Python数据分析之pandas笔记/">
+    <link itemprop="mainEntityOfPage" href="https://shulu520.com/数据分析/Python数据分析之工具-pandas笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="梦不成">
@@ -364,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python数据分析之pandas笔记</h1>
+          <h1 class="post-title" itemprop="name headline">Python数据分析之pandas</h1>
         
 
         <div class="post-meta">
@@ -393,8 +393,8 @@
               
                 <span class="post-meta-item-text">更新&#58;</span>
               
-              <time title="更新" itemprop="dateModified" datetime="2021-04-15T14:39:39+08:00">
-                2021-04-15
+              <time title="更新" itemprop="dateModified" datetime="2021-06-07T15:59:03+08:00">
+                2021-06-07
               </time>
             
           </span>
@@ -412,8 +412,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/pandas/" itemprop="url" rel="index">
-                    <span itemprop="name">pandas</span>
+                  <a href="/categories/数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数据分析</span>
                   </a>
                 </span>
 
@@ -472,7 +472,7 @@
 
           
               <div class="post-description">
-                  数据分析工具：Pandas
+                  数据分析工具：Pandas数据处理
               </div>
           
 
@@ -493,6 +493,7 @@
 <p>&emsp;&emsp;</p>
 </blockquote>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div><br><a id="more"></a></p>
+<h2 id="pandas-csv转df"><a href="#pandas-csv转df" class="headerlink" title="pandas csv转df"></a>pandas csv转df</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import csv</span><br><span class="line">tmp_lst = []</span><br><span class="line">with open(&apos;./seaborn-data/tips.csv&apos;, &apos;r&apos;,encoding = &apos;utf-8&apos; ) as tips:</span><br><span class="line">    reader = csv.reader(tips)</span><br><span class="line">    for row in reader:</span><br><span class="line">        tmp_lst.append(row)</span><br><span class="line">tips = pd.DataFrame(tmp_lst[1:], columns=tmp_lst[0]) </span><br><span class="line">tips.head()</span><br></pre></td></tr></table></figure>
 <h2 id="pandas数据帧DataFrame列操作"><a href="#pandas数据帧DataFrame列操作" class="headerlink" title="pandas数据帧DataFrame列操作"></a>pandas数据帧DataFrame列操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#创建数据帧</span><br><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">data = &#123;&quot;name&quot;: [&quot;sun&quot;, &quot;liu&quot;, &quot;zhan&quot;, &quot;ren&quot;, &quot;dao&quot;], &quot;age&quot;:[18, 20, 16, 34, 25]&#125;</span><br><span class="line">df = pd.DataFrame(data, index=[&quot;rank1&quot;, &quot;rank2&quot;, &quot;rank3&quot;, &quot;rank4&quot;, &quot;rank5&quot;])</span><br><span class="line">print(df)</span><br><span class="line"></span><br><span class="line">       name  age</span><br><span class="line">rank1   sun   18</span><br><span class="line">rank2   liu   20</span><br><span class="line">rank3  zhan   16</span><br><span class="line">rank4   ren   34</span><br><span class="line">rank5   dao   25</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 列获取</span><br><span class="line">df[&apos;name&apos;] 或df.name 或df.get(&apos;name&apos;) </span><br><span class="line">#只有get方法找不到不报错，返回none</span><br><span class="line"></span><br><span class="line">rank1     sun</span><br><span class="line">rank2     liu</span><br><span class="line">rank3    zhan</span><br><span class="line">rank4     ren</span><br><span class="line">rank5     dao</span><br><span class="line">Name: name, dtype: object</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 列增加或修改</span><br><span class="line">df[&apos;sex&apos;]=[&apos;男&apos;,&apos;女&apos;,&apos;男&apos;,&apos;女&apos;,&apos;男&apos;]</span><br><span class="line">df</span><br><span class="line"></span><br><span class="line">name	age	sex</span><br><span class="line">rank1	sun	18	男</span><br><span class="line">rank2	liu	20	女</span><br><span class="line">rank3	zhan16	男</span><br><span class="line">rank4	ren	34	女</span><br><span class="line">rank5	dao	25	男</span><br></pre></td></tr></table></figure>
@@ -818,7 +819,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>原始链接：</strong>
-    <a href="https://shulu520.com/pandas/Python数据分析之pandas笔记/" title="Python数据分析之pandas笔记">https://shulu520.com/pandas/Python数据分析之pandas笔记/</a>
+    <a href="https://shulu520.com/数据分析/Python数据分析之工具-pandas笔记/" title="Python数据分析之pandas">https://shulu520.com/数据分析/Python数据分析之工具-pandas笔记/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -833,7 +834,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/pandas/" rel="tag"><i class="fa fa-tag"></i> pandas</a>
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
           
         </div>
       
@@ -865,7 +866,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/NumPy/Python数据分析之NumPy笔记/" rel="next" title="数据分析之NumPy笔记">
+              <a href="/数据分析/Python数据分析之工具-NumPy笔记/" rel="next" title="数据分析之NumPy笔记">
                 <i class="fa fa-chevron-left"></i> 数据分析之NumPy笔记
               </a>
             
@@ -875,7 +876,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/数据分析/Python数据分析之Matplotlib笔记/" rel="prev" title="Matplotlib">
+              <a href="/数据分析/Python数据分析之工具-Matplotlib笔记/" rel="prev" title="Matplotlib">
                 Matplotlib <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -967,7 +968,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">116</span>
+                  <span class="site-state-item-count">122</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -989,7 +990,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1045,7 +1046,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas数据帧DataFrame列操作"><span class="nav-number">1.</span> <span class="nav-text">pandas数据帧DataFrame列操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas数据帧DataFrame行操作"><span class="nav-number">2.</span> <span class="nav-text">pandas数据帧DataFrame行操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看头尾"><span class="nav-number">3.</span> <span class="nav-text">查看头尾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重建索引reindex"><span class="nav-number">4.</span> <span class="nav-text">重建索引reindex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">5.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次化索引"><span class="nav-number">6.</span> <span class="nav-text">层次化索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次化索引选择"><span class="nav-number">7.</span> <span class="nav-text">层次化索引选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次化行索引行列转置"><span class="nav-number">8.</span> <span class="nav-text">层次化行索引行列转置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日期与时间"><span class="nav-number">9.</span> <span class="nav-text">日期与时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取日期、时间和时间戳"><span class="nav-number">9.1.</span> <span class="nav-text">获取日期、时间和时间戳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串转为日期时间"><span class="nav-number">9.2.</span> <span class="nav-text">字符串转为日期时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间差"><span class="nav-number">9.3.</span> <span class="nav-text">时间差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间戳索引DatetimeIndex的快速创建"><span class="nav-number">9.4.</span> <span class="nav-text">时间戳索引DatetimeIndex的快速创建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重采样"><span class="nav-number">10.</span> <span class="nav-text">重采样</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#降采样"><span class="nav-number">10.1.</span> <span class="nav-text">降采样</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增采样"><span class="nav-number">10.2.</span> <span class="nav-text">增采样</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述性统计信息函数"><span class="nav-number">11.</span> <span class="nav-text">描述性统计信息函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas的字符串操作"><span class="nav-number">12.</span> <span class="nav-text">pandas的字符串操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列的合并merge-以某个键为参考，默认how-’inner’使用键的交集"><span class="nav-number">13.</span> <span class="nav-text">列的合并merge,以某个键为参考，默认how=’inner’使用键的交集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据帧的堆叠concat，默认join-’outer’取并集，axis-0竖向堆叠"><span class="nav-number">14.</span> <span class="nav-text">数据帧的堆叠concat，默认join=’outer’取并集，axis=0竖向堆叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去重duplicated-drop-duplicates"><span class="nav-number">15.</span> <span class="nav-text">去重duplicated(),drop_duplicates()</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#数据拆分成组并查看"><span class="nav-number"></span> <span class="nav-text">数据拆分成组并查看</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#聚合，操作分组后的数据"><span class="nav-number">1.</span> <span class="nav-text">聚合，操作分组后的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换"><span class="nav-number">2.</span> <span class="nav-text">转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过滤-根据定义的标准，过滤数据并返回数据的子集"><span class="nav-number">3.</span> <span class="nav-text">过滤 根据定义的标准，过滤数据并返回数据的子集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类数据"><span class="nav-number">4.</span> <span class="nav-text">分类数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据透视表"><span class="nav-number">5.</span> <span class="nav-text">数据透视表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据交叉表"><span class="nav-number">6.</span> <span class="nav-text">数据交叉表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO操作-文件读写"><span class="nav-number">7.</span> <span class="nav-text">IO操作 文件读写</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas-csv转df"><span class="nav-number">1.</span> <span class="nav-text">pandas csv转df</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas数据帧DataFrame列操作"><span class="nav-number">2.</span> <span class="nav-text">pandas数据帧DataFrame列操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas数据帧DataFrame行操作"><span class="nav-number">3.</span> <span class="nav-text">pandas数据帧DataFrame行操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看头尾"><span class="nav-number">4.</span> <span class="nav-text">查看头尾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重建索引reindex"><span class="nav-number">5.</span> <span class="nav-text">重建索引reindex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">6.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次化索引"><span class="nav-number">7.</span> <span class="nav-text">层次化索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次化索引选择"><span class="nav-number">8.</span> <span class="nav-text">层次化索引选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次化行索引行列转置"><span class="nav-number">9.</span> <span class="nav-text">层次化行索引行列转置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日期与时间"><span class="nav-number">10.</span> <span class="nav-text">日期与时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取日期、时间和时间戳"><span class="nav-number">10.1.</span> <span class="nav-text">获取日期、时间和时间戳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串转为日期时间"><span class="nav-number">10.2.</span> <span class="nav-text">字符串转为日期时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间差"><span class="nav-number">10.3.</span> <span class="nav-text">时间差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间戳索引DatetimeIndex的快速创建"><span class="nav-number">10.4.</span> <span class="nav-text">时间戳索引DatetimeIndex的快速创建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重采样"><span class="nav-number">11.</span> <span class="nav-text">重采样</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#降采样"><span class="nav-number">11.1.</span> <span class="nav-text">降采样</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增采样"><span class="nav-number">11.2.</span> <span class="nav-text">增采样</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述性统计信息函数"><span class="nav-number">12.</span> <span class="nav-text">描述性统计信息函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas的字符串操作"><span class="nav-number">13.</span> <span class="nav-text">pandas的字符串操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列的合并merge-以某个键为参考，默认how-’inner’使用键的交集"><span class="nav-number">14.</span> <span class="nav-text">列的合并merge,以某个键为参考，默认how=’inner’使用键的交集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据帧的堆叠concat，默认join-’outer’取并集，axis-0竖向堆叠"><span class="nav-number">15.</span> <span class="nav-text">数据帧的堆叠concat，默认join=’outer’取并集，axis=0竖向堆叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去重duplicated-drop-duplicates"><span class="nav-number">16.</span> <span class="nav-text">去重duplicated(),drop_duplicates()</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#数据拆分成组并查看"><span class="nav-number"></span> <span class="nav-text">数据拆分成组并查看</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#聚合，操作分组后的数据"><span class="nav-number">1.</span> <span class="nav-text">聚合，操作分组后的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换"><span class="nav-number">2.</span> <span class="nav-text">转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过滤-根据定义的标准，过滤数据并返回数据的子集"><span class="nav-number">3.</span> <span class="nav-text">过滤 根据定义的标准，过滤数据并返回数据的子集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类数据"><span class="nav-number">4.</span> <span class="nav-text">分类数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据透视表"><span class="nav-number">5.</span> <span class="nav-text">数据透视表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据交叉表"><span class="nav-number">6.</span> <span class="nav-text">数据交叉表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO操作-文件读写"><span class="nav-number">7.</span> <span class="nav-text">IO操作 文件读写</span></a></li></ol></li></div>
             
 
           </div>
@@ -1089,7 +1090,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">132.7k</span>
+    <span title="本站字数共计">139.8k</span>
   
 </div>
 
