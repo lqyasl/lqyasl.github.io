@@ -119,7 +119,7 @@
 <meta property="og:description" content="电脑使用中的Q&amp;A">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png">
-<meta property="og:updated_time" content="2021-07-03T05:40:51.456Z">
+<meta property="og:updated_time" content="2021-07-13T07:37:33.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="电脑问题处理">
 <meta name="twitter:description" content="电脑使用中的Q&amp;A">
@@ -395,8 +395,8 @@
               
                 <span class="post-meta-item-text">更新&#58;</span>
               
-              <time title="更新" itemprop="dateModified" datetime="2021-07-03T13:40:51+08:00">
-                2021-07-03
+              <time title="更新" itemprop="dateModified" datetime="2021-07-13T15:37:33+08:00">
+                2021-07-13
               </time>
             
           </span>
@@ -450,7 +450,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  785 字
+                  1.1k 字
                 </span>
               
 
@@ -466,7 +466,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -524,6 +524,17 @@
 <li>操作方法参考：清除电脑系统垃圾</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">echo &quot;开始删除Navicat Premium 15注册表试用期记录文件,请稍等……&quot;</span><br><span class="line">echo &quot;正在删除 HKEY_CURRENT_USER\Software\Navicat&quot;</span><br><span class="line">reg delete &quot;HKEY_CURRENT_USER\Software\PremiumSoft\Navicat&quot; /f</span><br><span class="line"></span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">for /f &quot;delims=: tokens=1,*&quot; %%i in (&apos;reg query &quot;HKEY_CURRENT_USER\Software\Classes\CLSID&quot;&apos;) do (</span><br><span class="line">    set /a index=0</span><br><span class="line">    set /a num=0</span><br><span class="line">    for /f &quot;delims=: tokens=1,*&quot; %%j in (&apos;reg query %%i&apos;) do (</span><br><span class="line">        set /a index+=1</span><br><span class="line">        for %%a in (%%j) do (</span><br><span class="line">            if %%~nxa==Info if not %%j==%%i (</span><br><span class="line">                set /a num+=1</span><br><span class="line">            )</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    if !num! EQU 1 if !index! EQU 1 (</span><br><span class="line">        echo &quot;正在删除 %%i &quot;</span><br><span class="line">        reg delete &quot;%%i&quot; /f</span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">echo &quot;已完成删除Navicat Premium 15注册表试用期记录文件&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="office2016打开时报错：丢失AppVIsvSubsystems64-dll"><a href="#office2016打开时报错：丢失AppVIsvSubsystems64-dll" class="headerlink" title="office2016打开时报错：丢失AppVIsvSubsystems64.dll"></a>office2016打开时报错：丢失AppVIsvSubsystems64.dll</h2><ul>
+<li>完整报错为：“无法启动此程序，因为计算机中丢失AppVIsvSubsystems64.dll。尝试重新安装程序以解决此问题”</li>
+<li>原因就是软链接指向错误，重建即可。操作如下：</li>
+<li>桌面上新建xxx.cmd文件(其实就是将新建的文本文件改个后缀名即可)，复制进去如下代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">del /F /Q &quot;C:\Program Files\Microsoft Office\root\Office16\AppvIsvStream64.dll&quot;</span><br><span class="line">del /F /Q &quot;C:\Program Files\Microsoft Office\root\Office16\AppvIsvSubsystems64.dll&quot;</span><br><span class="line">del /F /Q &quot;C:\Program Files\Microsoft Office\root\Office16\C2R64.dll&quot;</span><br><span class="line">mklink &quot;C:\Program Files\Microsoft Office\root\Office16\AppvIsvStream64.dll&quot; &quot;C:\Program Files\Common Files\microsoft shared\ClickToRun\AppvIsvStream64.dll&quot;</span><br><span class="line">mklink &quot;C:\Program Files\Microsoft Office\root\Office16\AppvIsvSubsystems64.dll&quot; &quot;C:\Program Files\Common Files\microsoft shared\ClickToRun\AppvIsvSubsystems64.dll&quot;</span><br><span class="line">mklink &quot;C:\Program Files\Microsoft Office\root\Office16\C2R64.dll&quot; &quot;C:\Program Files\Common Files\microsoft shared\ClickToRun\C2R64.dll&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>关闭保存之后，右键以管理员身份运行这个批处理文件(批处理文件就是以.bat或.cmd结尾的文件)</li>
+<li>看到cmd的黑窗口一闪就不见了，表示已经完成了处理，现在打开一个.xlsx文件可以成功打开了。</li>
+</ul>
+<h2 id="python包管理器pip-升级"><a href="#python包管理器pip-升级" class="headerlink" title="python包管理器pip 升级"></a>python包管理器pip 升级</h2><p><code>python -m pip install --upgrade pip --user</code></p>
 <p><div style="width:100%;height:1px;background-color:pink;opacity:.7"></div></p>
 <center><img width="50px" height="50px" src="https://www.z4a.net/images/2019/05/27/20190527-20267.th.png" alt="QQ" border="0"><a target="_blank" style="color:skyblue;font-weight:bold;" href="http://wpa.qq.com/msgrd?v=3&uin=2642816105&site=qq&menu=yes">有事您Q我👇</a></center>
 
@@ -733,7 +744,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">125</span>
+                  <span class="site-state-item-count">126</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -811,7 +822,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件安装注册时"><span class="nav-number">1.</span> <span class="nav-text">软件安装注册时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客文章发表出现的问题"><span class="nav-number">2.</span> <span class="nav-text">博客文章发表出现的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Excel-无法打开文件“新建-Microsoft-Excel-工作表-xlsx”"><span class="nav-number">3.</span> <span class="nav-text">Excel 无法打开文件“新建 Microsoft Excel 工作表.xlsx”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode-更新后自定义背景消失解决方法"><span class="nav-number">4.</span> <span class="nav-text">vscode 更新后自定义背景消失解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除流氓软件注册表，解决弹窗问题"><span class="nav-number">5.</span> <span class="nav-text">删除流氓软件注册表，解决弹窗问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电脑关上屏幕再次开启很慢-解决办法"><span class="nav-number">6.</span> <span class="nav-text">电脑关上屏幕再次开启很慢-解决办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清除电脑系统垃圾"><span class="nav-number">7.</span> <span class="nav-text">清除电脑系统垃圾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#恢复MySQL的操作窗口应用Navicat的试用期"><span class="nav-number">8.</span> <span class="nav-text">恢复MySQL的操作窗口应用Navicat的试用期</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件安装注册时"><span class="nav-number">1.</span> <span class="nav-text">软件安装注册时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客文章发表出现的问题"><span class="nav-number">2.</span> <span class="nav-text">博客文章发表出现的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Excel-无法打开文件“新建-Microsoft-Excel-工作表-xlsx”"><span class="nav-number">3.</span> <span class="nav-text">Excel 无法打开文件“新建 Microsoft Excel 工作表.xlsx”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode-更新后自定义背景消失解决方法"><span class="nav-number">4.</span> <span class="nav-text">vscode 更新后自定义背景消失解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除流氓软件注册表，解决弹窗问题"><span class="nav-number">5.</span> <span class="nav-text">删除流氓软件注册表，解决弹窗问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电脑关上屏幕再次开启很慢-解决办法"><span class="nav-number">6.</span> <span class="nav-text">电脑关上屏幕再次开启很慢-解决办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清除电脑系统垃圾"><span class="nav-number">7.</span> <span class="nav-text">清除电脑系统垃圾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#恢复MySQL的操作窗口应用Navicat的试用期"><span class="nav-number">8.</span> <span class="nav-text">恢复MySQL的操作窗口应用Navicat的试用期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#office2016打开时报错：丢失AppVIsvSubsystems64-dll"><span class="nav-number">9.</span> <span class="nav-text">office2016打开时报错：丢失AppVIsvSubsystems64.dll</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python包管理器pip-升级"><span class="nav-number">10.</span> <span class="nav-text">python包管理器pip 升级</span></a></li></ol></div>
             
 
           </div>
@@ -855,7 +866,7 @@
     
       <span class="post-meta-item-text">本站字数共计&#58;</span>
     
-    <span title="本站字数共计">141k</span>
+    <span title="本站字数共计">142.5k</span>
   
 </div>
 
